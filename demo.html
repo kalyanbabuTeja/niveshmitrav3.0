@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Licenses/NOCs Stats</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .chart-container {
+      display: flex;
+      gap: 50px;
+      justify-content: center;
+    }
+    canvas {
+      max-width: 400px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Licenses/NOCs Statistics - Live Chart</h2>
+
+  <div class="chart-container">
+    <canvas id="barChart"></canvas>
+    <canvas id="doughnutChart"></canvas>
+  </div>
+
+  <script>
+    const data = {
+      labels: ['Issued', 'Rejected', 'Queries/Objections', 'Requests Pending'],
+      values: [1706806, 172824, 40247, 9927],
+      colors: ['#2ca02c', '#ffcc00', '#1f77b4', '#cccccc']
+    };
+
+    // Bar Chart
+    new Chart(document.getElementById('barChart'), {
+      type: 'bar',
+      data: {
+        labels: data.labels,
+        datasets: [{
+          label: 'Count',
+          data: data.values,
+          backgroundColor: data.colors
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false },
+          tooltip: { mode: 'index', intersect: false }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            title: { display: true, text: 'Number of Requests' }
+          }
+        }
+      }
+    });
+
+    // Doughnut Chart
+    new Chart(document.getElementById('doughnutChart'), {
+      type: 'doughnut',
+      data: {
+        labels: data.labels,
+        datasets: [{
+          data: data.values,
+          backgroundColor: data.colors
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { position: 'right' }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
