@@ -25,9 +25,16 @@
     <link rel="stylesheet" href="assets/css/vendor/custom-font.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/custom.css">
+
+     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 
-
+<style>
+    #chart {
+      width: 100%;
+      height: 300px;
+    }
+  </style>
 <body>
 
 
@@ -1271,380 +1278,318 @@
                 </div>
             </section> -->
 
-            <section class="generative-ai-8__area overflow-hidden generative-ai-8 fade-wrapper">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 col-12">
-                            <div class="generative-ai-8__content">
-                                <div class="section__title-wrapper hero mb-50 mb-md-30 mb-sm-30 mb-xs-30">
-                                    <h2 class="section__title-wrapper-title _split_text">
-                                        Generative Performance Monitoring
-                                        
-                                    
-                                    </h2>
-                                </div>
-                                <div class="generative-ai-8__content__list fade-top" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
-                                   <div class="generative-ai-8__content__left">
-                                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                                            <div class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="false" tabindex="-1">
-                                                <ul>
-                                                    <li><span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path opacity="0.24" d="M20.0001 5.81003V11.9001L18.3701 10.5001C17.5901 9.83005 16.3301 9.83005 15.5501 10.5001L11.3901 14.0701C10.6101 14.7401 9.35005 14.7401 8.57004 14.0701L8.23004 13.7901C7.52004 13.1701 6.39003 13.1101 5.59003 13.6501L0.670004 16.9501L0.560003 17.0301C0.190001 16.2301 0 15.2801 0 14.1901V5.81003C0 2.17001 2.17001 0 5.81003 0H14.1901C17.8301 0 20.0001 2.17001 20.0001 5.81003Z" fill="#050513"></path>
-                                                                <path d="M7.00013 8.38014C8.31457 8.38014 9.38014 7.31457 9.38014 6.00013C9.38014 4.68569 8.31457 3.62012 7.00013 3.62012C5.68569 3.62012 4.62012 4.68569 4.62012 6.00013C4.62012 7.31457 5.68569 8.38014 7.00013 8.38014Z" fill="#050513"></path>
-                                                                <path d="M19.9997 11.8996V14.1896C19.9997 17.8296 17.8297 19.9996 14.1896 19.9996H5.8096C3.25958 19.9996 1.41957 18.9296 0.55957 17.0296L0.669571 16.9496L5.5896 13.6496C6.3896 13.1096 7.51961 13.1696 8.22961 13.7896L8.56961 14.0696C9.34962 14.7396 10.6096 14.7396 11.3896 14.0696L15.5496 10.4996C16.3297 9.82957 17.5897 9.82957 18.3697 10.4996L19.9997 11.8996Z" fill="#050513"></path>
-                                                            </svg>
-                                                    </span> Licenses/NOCs Statistics</li>
-                                                </ul>
-                                            </div>
-                                            <div class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false" tabindex="-1">
-                                                <ul>
-                                                    <li><span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M17 5V6.13C16.68 6.04 16.35 6 16 6H4C3.65 6 3.32 6.04 3 6.13V5C3 3.9 3.9 3 5 3H15C16.1 3 17 3.9 17 5Z" fill="#050513"></path>
-                                                                <path opacity="0.24" d="M14 1.51001V3H6V1.51001C6 0.68001 6.68001 0 7.51001 0H12.49C13.32 0 14 0.68001 14 1.51001Z" fill="#050513"></path>
-                                                                <path opacity="0.24" d="M20 10V16C20 18.2 18.2 20 16 20H4C1.8 20 0 18.2 0 16V10C0 8.15 1.28 6.58 3 6.13C3.32 6.04 3.65 6 4 6H16C16.35 6 16.68 6.04 17 6.13C18.72 6.58 20 8.15 20 10Z" fill="#050513"></path>
-                                                                <path d="M13.35 8.50979C13.05 8.27979 12.51 8.05976 11.66 8.28976L9.01001 9.0198C8.18001 9.2398 7.65002 9.93977 7.65002 10.7998V12.3498V14.1498C7.47002 14.0998 7.27001 14.0598 7.07001 14.0598C5.93001 14.0598 5 14.9898 5 16.1298C5 17.2698 5.93001 18.1998 7.07001 18.1998C8.21001 18.1998 9.13001 17.2798 9.14001 16.1498C9.14001 16.1398 9.15002 16.1298 9.15002 16.1198V12.9098L12.5 11.9998V13.2598C12.32 13.2098 12.13 13.1698 11.93 13.1698C10.79 13.1698 9.85999 14.0998 9.85999 15.2398C9.85999 16.3798 10.79 17.3098 11.93 17.3098C13.07 17.3098 14 16.3798 14 15.2398V11.0198V10.0698C14 9.19979 13.64 8.73979 13.35 8.50979ZM7.07001 16.7098C6.75001 16.7098 6.5 16.4498 6.5 16.1398C6.5 15.8298 6.76001 15.5698 7.07001 15.5698C7.38001 15.5698 7.64001 15.8298 7.64001 16.1398C7.64001 16.4498 7.39001 16.7098 7.07001 16.7098ZM11.93 15.8198C11.61 15.8198 11.36 15.5598 11.36 15.2498C11.36 14.9398 11.62 14.6798 11.93 14.6798C12.24 14.6798 12.5 14.9398 12.5 15.2498C12.5 15.5598 12.24 15.8198 11.93 15.8198Z" fill="#050513"></path>
-                                                            </svg>
-                                                    </span> User Experience</li>
-                                                </ul>
-
-                                            </div>
-                                            <div class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false" tabindex="-1">
-                                                <ul>
-                                                    <li><span><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path opacity="0.24" d="M15.0884 4.55594L2.12122 18.0093C0.771469 17.1191 0.241211 15.5287 0.241211 13.9983V5.9963C0.241211 2.57545 1.52347 1.24512 4.82071 1.24512H10.6053C13.3916 1.24512 14.7414 2.19535 15.0884 4.55594Z" fill="#050513"></path>
-                                                                <path opacity="0.24" d="M15.1854 7.24707V13.9988C15.1854 14.0788 15.1757 14.1388 15.1757 14.2088C15.1757 14.2788 15.1661 14.3488 15.1661 14.4189H15.1757C15.0697 17.5296 13.7681 18.7499 10.6059 18.7499H4.82123C4.58021 18.7499 4.35846 18.7399 4.13672 18.7099L15.1854 7.24707Z" fill="#050513"></path>
-                                                                <path opacity="0.4" d="M15.165 14.4181C15.165 14.348 15.175 14.278 15.175 14.208C15.185 14.278 15.185 14.348 15.175 14.4181H15.165Z" fill="#050513"></path>
-                                                                <path opacity="0.4" d="M15.175 5.56738C15.185 5.6374 15.185 5.71742 15.175 5.78744C15.175 5.71742 15.165 5.6474 15.165 5.57739L15.175 5.56738Z" fill="#050513"></path>
-                                                                <path d="M20.0049 6.37619V13.618C20.0049 15.0484 19.3396 15.6185 18.9443 15.8285C18.7612 15.9286 18.4816 16.0386 18.1248 16.0386C17.7103 16.0386 17.1897 15.8986 16.5919 15.4585L15.1747 14.4182H15.165C15.165 14.3482 15.1747 14.2782 15.1747 14.2081C15.1747 14.1381 15.1843 14.0781 15.1843 13.9981V7.2464L18.3369 3.97559C18.5973 3.99559 18.7997 4.07561 18.9443 4.16563C19.3396 4.37569 20.0049 4.94583 20.0049 6.37619Z" fill="#050513"></path>
-                                                                <path d="M19.0604 0.225056C18.7712 -0.0750187 18.2988 -0.0750187 18.0096 0.225056L0.221807 18.6897C-0.0674251 18.9897 -0.0674251 19.4799 0.221807 19.7799C0.366423 19.92 0.549603 20 0.742424 20C0.935245 20 1.11843 19.92 1.26304 19.7699L19.0604 1.30533C19.3593 1.00525 19.3593 0.525131 19.0604 0.225056Z" fill="#050513"></path>
-                                                            </svg>
-                                                    </span> User Feedback</li>
-                                                </ul>
-                                            </div>
-                                            
-                                        </div>
-                                   </div>
-                                    <div class="generative-ai-8__content__right">
-                                        <ul>
-                                            <li><i class="fa-regular fa-check"></i> Operational Analytics Reporting</li>
-                                            <li><i class="fa-regular fa-check"></i> Product/Service Performance</li>
-                                            <li><i class="fa-regular fa-check"></i> Customer Insights Analytics</li>
-                                        </ul>
-                                        <a href="contact.html" class="rr-btn">Learn More <i class="fa-regular fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-12">
-                            <div class="generative-ai-8__thumb p-relative pb-md-40 pb-sm-40 pb-xs-40">
-                                <div class="tab-content" id="v-pills-tabContent">
-                                    <div class="tab-pane fade" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
-                                        <img class="image-1 upDown-top" src="assets/imgs/images/generative-ai-8-01.png" alt="image">
-                                        <img class="image-2 leftRight" src="assets/imgs/images/generative-ai-8-02.png" alt="image">
-                                        <img class="image-3 upDown-bottom" src="assets/imgs/images/generative-ai-8-03.png" alt="image">
-                                        <img class="image-4" src="assets/imgs/images/generative-ai-8-04.png" alt="image">
-                                    </div>
-                                    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">
-                                        <img class="image-1 upDown-top" src="assets/imgs/images/generative-ai-8-01.png" alt="image">
-                                        <img class="image-2 leftRight" src="assets/imgs/images/generative-ai-8-02.png" alt="image">
-                                        <img class="image-3 upDown-bottom" src="assets/imgs/images/generative-ai-8-03.png" alt="image">
-                                        <img class="image-4" src="assets/imgs/images/generative-ai-8-04.png" alt="image">
-                                    </div>
-                                    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">
-                                        <img class="image-1 upDown-top" src="assets/imgs/images/generative-ai-8-01.png" alt="image">
-                                        <img class="image-2 leftRight" src="assets/imgs/images/generative-ai-8-02.png" alt="image">
-                                        <img class="image-3 upDown-bottom" src="assets/imgs/images/generative-ai-8-03.png" alt="image">
-                                        <img class="image-4" src="assets/imgs/images/generative-ai-8-04.png" alt="image">
-                                    </div>
-                                    <div class="tab-pane fade active show" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">
-                                        <img class="image-1 upDown-top" src="assets/imgs/images/generative-ai-8-01.png" alt="image">
-                                        <img class="image-2 leftRight" src="assets/imgs/images/generative-ai-8-02.png" alt="image">
-                                        <img class="image-3 upDown-bottom" src="assets/imgs/images/generative-ai-8-03.png" alt="image">
-                                        <img class="image-4" src="assets/imgs/images/generative-ai-8-04.png" alt="image">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        
+           
             <!--pricing-4-->
           
         
             <!--marketing-team start-->
+
+            
             
         
             <!--testimonial-4-->
-         <section class="blog-4__area">
+         <section class="project-tab-6 green-gray p-relative overflow-hidden section-space z-1">
+                <div class="project-tab-6__shapes">
+                    <div class="project-tab-6__shapes-shape-1">
+                        <img src="assets/imgs/shapes/project-6-bg-shape-1.png" alt="img not found">
+                    </div>
+                </div>
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <div class="section__title-wrapper text-center mb-10 hero mt-20">
-                                <h2 class="section__title-wrapper-title _split_text">Reputable reviews from our customers</h2>
+                            <div class="section__title-wrapper text-center hero mb-45">
+                                <h2 class="section__title-wrapper-title _split_text">
+                                    
+                                    Statistical Insights
+                                </h2>
                             </div>
                         </div>
                     </div>
-                    <div class="row mb-minus-70">
+                    <div class="row">
                         <div class="col-12">
-                            <div class="wrap">
-                                <div class="swiper blog-4__slider blog-4-slider">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <div class="blog-4__item mb-70 mt-30">
-                                                <div class="quote-pattern">
-                        <i class="fa-solid fa-quote-left"></i>
-                     </div>
-                                                 <div class="blog-4__item-content">
-                                                    <h3 class="blog-4__title"><a href="blog.html">“Portal is Easy to Navigate. Also, team of Nivesh Mitra is very supportive”</a></h3>
-                                                    <div class="blog-4__item-content-author">
-                                                        <img src="assets/imgs/test/testi-1.jpg" alt="img not found">
-                                                        <h5 class="title"><span>By</span> Adani Airport</h5>
-                                                    </div>
-                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="blog-4__item mb-70 mt-30">
-                                                <div class="quote-pattern">
-                        <i class="fa-solid fa-quote-left"></i>
-                     </div>
-                                                 <div class="blog-4__item-content">
-                                                    <h3 class="blog-4__title"><a href="blog.html">“Nivesh Mitra portal is very efficient. It saves a lot of time”</a></h3>
-                                                    <div class="blog-4__item-content-author">
-                                                        <img src="assets/imgs/test/testi-2.jpg" alt="img not found">
-                                                        <h5 class="title"><span>By</span> Gail (India) Limited</h5>
-                                                    </div>
-                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="blog-4__item mb-70 mt-30">
-                                                <div class="quote-pattern">
-                        <i class="fa-solid fa-quote-left"></i>
-                     </div>
-                                                 <div class="blog-4__item-content">
-                                                    <h3 class="blog-4__title"><a href="blog.html">“Single Window Portal is very comfortable to get any NOC”</a></h3>
-                                                    <div class="blog-4__item-content-author">
-                                                        <img src="assets/imgs/test/testi-3.jpg" alt="img not found">
-                                                        <h5 class="title"><span>By</span> JK Cement Limited</h5>
-                                                    </div>
-                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="blog-4__item mb-70 mt-30">
-                                                
-                                              <div class="quote-pattern">
-                        <i class="fa-solid fa-quote-left"></i>
-                     </div>
-                                                <div class="blog-4__item-content">
-                                                    <h3 class="blog-4__title"><a href="blog.html">“This is wonderful initiative to provide the latest updates about application”</a></h3>
-                                                    <div class="blog-4__item-content-author">
-                                                        <img src="assets/imgs/test/testi-4.jpg" alt="img not found">
-                                                        <h5 class="title"><span>By</span> Triveni Engineering & Industries Ltd.</h5>
-                                                    </div>
-                                                 </div>
-                                            </div>
-                                        </div>
+                            <div class="project-tab-6__nav-tabs">
+                                <nav class="nav" id="nav-tab" role="tablist">
 
 
+                                    <button class="nav-link active" id="nav-lunch-tab" data-bs-toggle="tab" data-bs-target="#nav-lunch" type="button" role="tab" aria-controls="nav-lunch" aria-selected="true">Licenses/NOCs Statistics</button><span class="brt"></span>
+                                    
+                                    <button class="nav-link" id="morning-tab" data-bs-toggle="tab" data-bs-target="#morning-food" type="button" role="tab" aria-controls="morning-food" aria-selected="false" tabindex="-1">User Experience</button><span class="brt"></span>
+        
+                                    
+        
+        
+                                    <button class="nav-link" id="nav-fast-food-tab" data-bs-toggle="tab" data-bs-target="#nav-fast-food" type="button" role="tab" aria-controls="nav-fast-food" aria-selected="false" tabindex="-1"> User Feedback</button>
 
-                                        <div class="swiper-slide">
-                                            <div class="blog-4__item mb-70 mt-30">
-                                                
-                                              <div class="quote-pattern">
-                        <i class="fa-solid fa-quote-left"></i>
-                     </div>
-                                                <div class="blog-4__item-content">
-                                                    <h3 class="blog-4__title"><a href="blog.html">“Nivesh Mitra is a very entrepreneur friendly portal. It saves a lot of time”</a></h3>
-                                                    <div class="blog-4__item-content-author">
-                                                        <img src="assets/imgs/test/testi-5.jpg" alt="img not found">
-                                                        <h5 class="title"><span>By</span> PNC Infratech Limited</h5>
-                                                    </div>
-                                                 </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+<div class="tab-content mt-40 pastel-blue-bg shwo" id="nav-tabContent">
+                             <div class="tab-pane fade active show" id="nav-lunch" role="tabpanel" aria-labelledby="nav-lunch-tab">
+                                    <div class="project-tab-6__wrapper mt-30">
+                                        <div class="row">
+                                            
+                                            <div class="col-lg-12">
+                                                <div class="section__title-wrapper">
+                                                    <h2 style="text-align: center;font-size: 22px;font-weight: 600;">Licenses/NOCs Statistics</h2>
+                                                    <div id="chart"></div>
+                                                </div>
                                             </div>
                                         </div>
-
-                                        <div class="swiper-slide">
-                                            <div class="blog-4__item mb-70 mt-30">
-                                                
-                                              <div class="quote-pattern">
-                        <i class="fa-solid fa-quote-left"></i>
-                     </div>
-                                                <div class="blog-4__item-content">
-                                                    <h3 class="blog-4__title"><a href="blog.html"> “Its very good tool to obtain the Licenses without facing any trouble and without getting any delay”</a></h3>
-                                                    <div class="blog-4__item-content-author">
-                                                        <img src="assets/imgs/test/testi-6.jpg" alt="img not found">
-                                                        <h5 class="title"><span>By</span> Akshaya Patra</h5>
-                                                    </div>
-                                                 </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="swiper-slide">
-                                            <div class="blog-4__item mb-70 mt-30">
-                                                
-                                              <div class="quote-pattern">
-                        <i class="fa-solid fa-quote-left"></i>
-                     </div>
-                                                <div class="blog-4__item-content">
-                                                    <h3 class="blog-4__title"><a href="blog.html">“Transparent and quick procedure”</a></h3>
-                                                    <div class="blog-4__item-content-author">
-                                                        <img src="assets/imgs/test/testi-7.jpg" alt="img not found">
-                                                        <h5 class="title"><span>By</span> Jaiprakash Associates Limited</h5>
-                                                    </div>
-                                                 </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="swiper-slide">
-                                            <div class="blog-4__item mb-70 mt-30">
-                                                
-                                              <div class="quote-pattern">
-                        <i class="fa-solid fa-quote-left"></i>
-                     </div>
-                                                <div class="blog-4__item-content">
-                                                    <h3 class="blog-4__title"><a href="blog.html"> “It is an easy and smooth platform”</a></h3>
-                                                    <div class="blog-4__item-content-author">
-                                                        <img src="assets/imgs/test/testi-8.jpg" alt="img not found">
-                                                        <h5 class="title"><span>By</span> DLF</h5>
-                                                    </div>
-                                                 </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="swiper-slide">
-                                            <div class="blog-4__item mb-70 mt-30">
-                                                
-                                              <div class="quote-pattern">
-                        <i class="fa-solid fa-quote-left"></i>
-                     </div>
-                                                <div class="blog-4__item-content">
-                                                    <h3 class="blog-4__title"><a href="blog.html"> “Great  Initiative. Thanks to all authorities”</a></h3>
-                                                    <div class="blog-4__item-content-author">
-                                                        <img src="assets/imgs/test/testi-9.jpg" alt="img not found">
-                                                        <h5 class="title"><span>By</span> Inox</h5>
-                                                    </div>
-                                                 </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="swiper-slide">
-                                            <div class="blog-4__item mb-70 mt-30">
-                                                
-                                              <div class="quote-pattern">
-                        <i class="fa-solid fa-quote-left"></i>
-                     </div>
-                                                <div class="blog-4__item-content">
-                                                    <h3 class="blog-4__title"><a href="blog.html">“Thank you for prompt action taken and granting Consents”</a></h3>
-                                                    <div class="blog-4__item-content-author">
-                                                        <img src="assets/imgs/test/testi-10.jpg" alt="img not found">
-                                                        <h5 class="title"><span>By</span> Hindustan Petroleum</h5>
-                                                    </div>
-                                                 </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="swiper-slide">
-                                            <div class="blog-4__item mb-70 mt-30">
-                                                
-                                              <div class="quote-pattern">
-                        <i class="fa-solid fa-quote-left"></i>
-                     </div>
-                                                <div class="blog-4__item-content">
-                                                    <h3 class="blog-4__title"><a href="blog.html">“The experience of using the portal has been good”</a></h3>
-                                                    <div class="blog-4__item-content-author">
-                                                        <img src="assets/imgs/test/testi-11.jpg" alt="img not found">
-                                                        <h5 class="title"><span>By</span> Taj Hotel Lucknow</h5>
-                                                    </div>
-                                                 </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="swiper-slide">
-                                            <div class="blog-4__item mb-70 mt-30">
-                                                
-                                              <div class="quote-pattern">
-                        <i class="fa-solid fa-quote-left"></i>
-                     </div>
-                                                <div class="blog-4__item-content">
-                                                    <h3 class="blog-4__title"><a href="blog.html">“Online procedure is very helpful to apply”</a></h3>
-                                                    <div class="blog-4__item-content-author">
-                                                        <img src="assets/imgs/test/testi-12.jpg" alt="img not found">
-                                                        <h5 class="title"><span>By</span> IFFCO</h5>
-                                                    </div>
-                                                 </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="swiper-slide">
-                                            <div class="blog-4__item mb-70 mt-30">
-                                                
-                                              <div class="quote-pattern">
-                        <i class="fa-solid fa-quote-left"></i>
-                     </div>
-                                                <div class="blog-4__item-content">
-                                                    <h3 class="blog-4__title"><a href="blog.html"> “Good coordination with the department , very efficient Consent Management System”</a></h3>
-                                                    <div class="blog-4__item-content-author">
-                                                        <img src="assets/imgs/test/testi-13.jpg" alt="img not found">
-                                                        <h5 class="title"><span>By</span> India Oil Corporation Ltd.</h5>
-                                                    </div>
-                                                 </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="swiper-slide">
-                                            <div class="blog-4__item mb-70 mt-30">
-                                                
-                                              <div class="quote-pattern">
-                        <i class="fa-solid fa-quote-left"></i>
-                     </div>
-                                                <div class="blog-4__item-content">
-                                                    <h3 class="blog-4__title"><a href="blog.html">“Fast response by Lucknow office, Responsiveness is very good”</a></h3>
-                                                    <div class="blog-4__item-content-author">
-                                                        <img src="assets/imgs/test/testi-14.jpg" alt="img not found">
-                                                        <h5 class="title"><span>By</span> PEPSICO</h5>
-                                                    </div>
-                                                 </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="swiper-slide">
-                                            <div class="blog-4__item mb-70 mt-30">
-                                                
-                                              <div class="quote-pattern">
-                        <i class="fa-solid fa-quote-left"></i>
-                     </div>
-                                                <div class="blog-4__item-content">
-                                                    <h3 class="blog-4__title"><a href="blog.html">“Swift process easy to apply online”</a></h3>
-                                                    <div class="blog-4__item-content-author">
-                                                        <img src="assets/imgs/test/testi-15.jpg" alt="img not found">
-                                                        <h5 class="title"><span>By</span> Asianpaints</h5>
-                                                    </div>
-                                                 </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="swiper-slide">
-                                            <div class="blog-4__item mb-70 mt-30">
-                                                
-                                              <div class="quote-pattern">
-                        <i class="fa-solid fa-quote-left"></i>
-                     </div>
-                                                <div class="blog-4__item-content">
-                                                    <h3 class="blog-4__title"><a href="blog.html">“very convenient and hassle-free portal”</a></h3>
-                                                    <div class="blog-4__item-content-author">
-                                                        <img src="assets/imgs/test/testi-16.jpg" alt="img not found">
-                                                        <h5 class="title"><span>By</span> D.A.V College Managing Committee</h5>
-                                                    </div>
-                                                 </div>
-                                            </div>
-                                        </div>
-
-
                                     </div>
-                                    <div class="swiper-pagination-4"></div>
+                                </div>
+
+
+                            
+                                <div class="tab-pane fade" id="morning-food" role="tabpanel" aria-labelledby="morning-tab">
+                                    <div class="project-tab-6__wrapper mt-30">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="row project-tab-6__left-area">
+                                                    <div class="col-lg-6">
+                                                        <div class="project-tab-left mb-10">
+                                                            <div class="d-flex align-items-end">
+                                                                <div class="project-tab-left-img">
+                                                                    <img src="assets/imgs/project/project-6-img-1.png" alt="tab-1">
+                                                                </div>
+                                                                <div class="project-tab-left-text">
+                                                                    <h6>Pelican Steve</h6>
+                                                                    <span>CEO</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="project-tab-left-text-icon">
+                                                                <a href="https://www.youtube.com/watch?v=DZLlw5BNQ3g" class="popup-video zooming">
+                                                                    <i class="fa-solid fa-play"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="project-tab-left mb-10">
+                                                            <div class="d-flex align-items-end">
+                                                                <div class="project-tab-left-img">
+                                                                    <img src="assets/imgs/project/project-6-img-2.png" alt="tab-1">
+                                                                </div>
+                                                                <div class="project-tab-left-text">
+                                                                    <h6>Malcolm Function</h6>
+                                                                    <span>Marketing Lead</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="project-tab-left-text-icon">
+                                                                <a href="https://www.youtube.com/watch?v=DZLlw5BNQ3g" class="popup-video zooming">
+                                                                    <i class="fa-solid fa-play"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="project-tab-left">
+                                                            <div class="d-flex align-items-end">
+                                                                <div class="project-tab-left-img">
+                                                                    <img src="assets/imgs/project/project-6-img-3.png" alt="tab-1">
+                                                                </div>
+                                                                <div class="project-tab-left-text">
+                                                                    <h6>Theodore Handle</h6>
+                                                                    <span>UI/UX design</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="project-tab-left-text-icon">
+                                                                <a href="https://www.youtube.com/watch?v=DZLlw5BNQ3g" class="popup-video zooming">
+                                                                    <i class="fa-solid fa-play"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="project-tab-right position-relative">
+                                                            <div class="project-tab-right-img">
+                                                                <img src="assets/imgs/project/project-6-big.png" alt="tab-main">
+                                                            </div>
+                                                            <div class="project-tab-right-icon">
+                                                                <a href="https://www.youtube.com/watch?v=DZLlw5BNQ3g" class="popup-video project-tab-icon zooming">
+                                                                    <i class="fa-solid fa-play"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="section__title-wrapper tab-ml-50">
+                                                    <h2 class="section__title-wrapper-title _split_text pb-20">
+                                                        Incessantly Enhancing Its Capabilities.</h2>
+                                                    <p>Fusce interdum neque vehicula ligula interdum, condimentum
+                                                        maximus neque semper. Donec convallis risus vel ullamco
+                                                        habitant morbi tristique senectus et netus et malesuada.</p>
+                                                    <a class="rr-btn mt-40" href="#">Explore the Ai video generator</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                                <div class="tab-pane fade" id="nav-dinner" role="tabpanel" aria-labelledby="nav-dinner-tab">
+                                    <div class="project-tab-6__wrapper mt-30">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="row project-tab-6__left-area">
+                                                    <div class="col-lg-6">
+                                                        <div class="project-tab-left mb-10">
+                                                            <div class="d-flex align-items-end">
+                                                                <div class="project-tab-left-img">
+                                                                    <img src="assets/imgs/project/project-6-img-1.png" alt="tab-1">
+                                                                </div>
+                                                                <div class="project-tab-left-text">
+                                                                    <h6>Pelican Steve</h6>
+                                                                    <span>CEO</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="project-tab-left-text-icon">
+                                                                <a href="https://www.youtube.com/watch?v=DZLlw5BNQ3g" class="popup-video zooming">
+                                                                    <i class="fa-solid fa-play"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="project-tab-left mb-10">
+                                                            <div class="d-flex align-items-end">
+                                                                <div class="project-tab-left-img">
+                                                                    <img src="assets/imgs/project/project-6-img-2.png" alt="tab-1">
+                                                                </div>
+                                                                <div class="project-tab-left-text">
+                                                                    <h6>Malcolm Function</h6>
+                                                                    <span>Marketing Lead</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="project-tab-left-text-icon">
+                                                                <a href="https://www.youtube.com/watch?v=DZLlw5BNQ3g" class="popup-video zooming">
+                                                                    <i class="fa-solid fa-play"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="project-tab-left">
+                                                            <div class="d-flex align-items-end">
+                                                                <div class="project-tab-left-img">
+                                                                    <img src="assets/imgs/project/project-6-img-3.png" alt="tab-1">
+                                                                </div>
+                                                                <div class="project-tab-left-text">
+                                                                    <h6>Theodore Handle</h6>
+                                                                    <span>UI/UX design</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="project-tab-left-text-icon">
+                                                                <a href="https://www.youtube.com/watch?v=DZLlw5BNQ3g" class="popup-video zooming">
+                                                                    <i class="fa-solid fa-play"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="project-tab-right position-relative">
+                                                            <div class="project-tab-right-img">
+                                                                <img src="assets/imgs/project/project-6-big.png" alt="tab-main">
+                                                            </div>
+                                                            <div class="project-tab-right-icon">
+                                                                <a href="https://www.youtube.com/watch?v=DZLlw5BNQ3g" class="popup-video project-tab-icon zooming">
+                                                                    <i class="fa-solid fa-play"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="section__title-wrapper tab-ml-50">
+                                                    <h2 class="section__title-wrapper-title _split_text pb-20">
+                                                        Incessantly Enhancing Its Capabilities.</h2>
+                                                    <p>Fusce interdum neque vehicula ligula interdum, condimentum
+                                                        maximus neque semper. Donec convallis risus vel ullamco
+                                                        habitant morbi tristique senectus et netus et malesuada.</p>
+                                                    <a class="rr-btn mt-40" href="#">Explore the Ai video
+                                                        generator</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="nav-fast-food" role="tabpanel" aria-labelledby="nav-fast-food-tab">
+                                    <div class="project-tab-6__wrapper mt-30">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="row project-tab-6__left-area">
+                                                    <div class="col-lg-6">
+                                                        <div class="project-tab-left mb-10">
+                                                            <div class="d-flex align-items-end">
+                                                                <div class="project-tab-left-img">
+                                                                    <img src="assets/imgs/project/project-6-img-1.png" alt="tab-1">
+                                                                </div>
+                                                                <div class="project-tab-left-text">
+                                                                    <h6>Pelican Steve</h6>
+                                                                    <span>CEO</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="project-tab-left-text-icon">
+                                                                <a href="https://www.youtube.com/watch?v=DZLlw5BNQ3g" class="popup-video zooming">
+                                                                    <i class="fa-solid fa-play"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="project-tab-left mb-10">
+                                                            <div class="d-flex align-items-end">
+                                                                <div class="project-tab-left-img">
+                                                                    <img src="assets/imgs/project/project-6-img-2.png" alt="tab-1">
+                                                                </div>
+                                                                <div class="project-tab-left-text">
+                                                                    <h6>Malcolm Function</h6>
+                                                                    <span>Marketing Lead</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="project-tab-left-text-icon">
+                                                                <a href="https://www.youtube.com/watch?v=DZLlw5BNQ3g" class="popup-video zooming">
+                                                                    <i class="fa-solid fa-play"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="project-tab-left">
+                                                            <div class="d-flex align-items-end">
+                                                                <div class="project-tab-left-img">
+                                                                    <img src="assets/imgs/project/project-6-img-3.png" alt="tab-1">
+                                                                </div>
+                                                                <div class="project-tab-left-text">
+                                                                    <h6>Theodore Handle</h6>
+                                                                    <span>UI/UX design</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="project-tab-left-text-icon">
+                                                                <a href="https://www.youtube.com/watch?v=DZLlw5BNQ3g" class="popup-video zooming">
+                                                                    <i class="fa-solid fa-play"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="project-tab-right position-relative">
+                                                            <div class="project-tab-right-img">
+                                                                <img src="assets/imgs/project/project-6-big.png" alt="tab-main">
+                                                            </div>
+                                                            <div class="project-tab-right-icon">
+                                                                <a href="https://www.youtube.com/watch?v=DZLlw5BNQ3g" class="popup-video project-tab-icon zooming">
+                                                                    <i class="fa-solid fa-play"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="section__title-wrapper tab-ml-50">
+                                                    <h2 class="section__title-wrapper-title _split_text pb-20">
+                                                        Incessantly Enhancing Its Capabilities.</h2>
+                                                    <p>Fusce interdum neque vehicula ligula interdum, condimentum
+                                                        maximus neque semper. Donec convallis risus vel ullamco
+                                                        habitant morbi tristique senectus et netus et malesuada.</p>
+                                                    <a class="rr-btn mt-40" href="service-details.html">Explore the Ai video generator</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1984,7 +1929,36 @@ var swiper = new Swiper('.swiper-container', {
 
 <!-- Swiper JS -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+ <script>
+    const categories = ['Issued', 'Rejected', 'Queries/Objections', 'Pending'];
+    const values = [1708420, 172947, 40260, 10052];
+    const colors = ['#28a745', '#ffc107', '#17a2b8', '#ced4da'];
 
+    const data = [{
+      x: categories,
+      y: values,
+      type: 'bar',
+      marker: {
+        color: colors
+      },
+      text: values.map(v => v.toLocaleString()),
+      textposition: 'auto'
+    }];
+
+    const layout = {
+      margin: { t: 30 },
+      scene: {
+        xaxis: { title: 'Category' },
+        yaxis: { title: 'Count' },
+      },
+      barmode: 'group',
+      paper_bgcolor: '#fff',
+      plot_bgcolor: '#fff'
+    };
+
+    Plotly.newPlot('chart', data, layout);
+  </script>
+ 
 </body>
 
 </html>
