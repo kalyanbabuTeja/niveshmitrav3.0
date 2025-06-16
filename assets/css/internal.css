@@ -1,0 +1,52 @@
+.raisin-black {
+    height: 515px;
+}
+.internalpages {
+    padding: 15px 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    border-radius: 10px;
+    background: url(../../assets/imgs/internal2.png);
+    margin-top: 10px;
+    background-size: cover;
+    background-position: top;
+    box-shadow: 1px 2px 3px #ccc;
+}
+
+.breadcrumb {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 8px 16px;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    .breadcrumb li + li:before {
+      content: "›";
+      padding: 0 8px;
+      color: #999;
+    }
+
+    .breadcrumb li a {
+      text-decoration: none;
+      color: #007bff;
+      transition: color 0.3s;
+    }
+
+    .breadcrumb li a:hover {
+      color: #0056b3;
+    }
+
+    .breadcrumb li:last-child a {
+      color: #333;
+      pointer-events: none;
+      cursor: default;
+      font-weight: bold;
+    }
+
+    .internalpages p {
+    color: #000 !important;
+    font-family: system-ui;
+}
