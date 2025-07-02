@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Nivesh Mitra V3.0 - Admin</title>
+    <!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 11]>
+    	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    	<![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="">
+    <meta name="author" content="Phoenixcoded" />
+    <!-- Favicon icon -->
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+
+    <!-- prism css -->
+    <link rel="stylesheet" href="assets/css/plugins/prism-coy.css">
+    <!-- vendor css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="assets/css/card.css">
+
+     
+     <link rel="stylesheet" href="assets/fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="assets/wizards/css/style.css">
+    
+<style>
+   .review-block {
+    background: url(assets/images/bg/17.jpg);
+    background-position: top;
+    background-size: contain;
+}
+    input.form-control, .form-control {
+    line-height: 21px !important;
+    padding: 0px 10px !important;
+    margin: 0px !important;
+    width: 100%;
+    height: 36px !important;
+}
+    input.checkbox {
+    width: 14%;
+}
+    .form-check.form-check-inline {
+    display: flex;
+    font-size: 16px;
+    text-align: left;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+    .pcoded-wrapper.container-fluid {
+    background: #fff;
+}
+    .content.clearfix {
+    width: 100% !important;
+    height: auto !important;
+}
+.steps ul:after {
+    width: 87% !important;
+    top: 58px !important;
+}
+.form-group.row {
+    padding-bottom: 0px !important;
+}
+.col-form-label {
+    font-size: 16px !important;
+    font-family: system-ui;
+    line-height: 21px !important;
+}
+.title-text {
+    font-size: 16px !important;
+}
+h2 {
+    font-size: 26px !important;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-family: system-ui;
+    color: #464776;
+}
+</style>
+</head>
+<body>
+    <!-- [ Pre-loader ] start -->
+    <div class="loader-bg">
+        <div class="loader-track">
+            <div class="loader-fill"></div>
+        </div>
+    </div>
+    <!-- [ Pre-loader ] End -->
+    <!-- [ navigation menu ] start -->
+    <nav class="pcoded-navbar theme-horizontal menu-light">
+        <div class="navbar-wrapper container-fluid">
+            <div class="navbar-content sidenav-horizontal" id="layout-sidenav">
+                <ul class="nav pcoded-inner-navbar sidenav-inner">
+                    <li class="nav-item pcoded-menu-caption">
+                    	<label>Navigation</label>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
+                    </li>
+                    
+                    <li class="nav-item pcoded-hasmenu">
+                        <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-layout"></i></span><span class="pcoded-mtext">Pre-Establishment</span></a>
+                        <ul class="pcoded-submenu">
+                            <li><a href="Questionnaire.html" target="_blank">Questionnaire</a></li>
+                            <li><a href="layout-horizontal.html" target="_blank">Combined Application Form</a></li>
+                            <li><a href="#">Respond To Query</a></li>
+                            <li><a href="#">Print CFE</a></li>
+                            <li><a href="#">Print Acknowledgment </a></li>
+                            <li><a href="#">Print Acknowledgment with QR Code</a></li>
+                            <li><a href="#">View Receipt</a></li>
+                        </ul>
+                    </li>
+                    
+                    <!-- <li class="nav-item pcoded-hasmenu">
+                    	<a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">Basic</span></a>
+                    	<ul class="pcoded-submenu">
+                    		<li><a href="bc_alert.html">Alert</a></li>
+                    		<li><a href="bc_button.html">Button</a></li>
+                    		<li><a href="bc_badges.html">Badges</a></li>
+                    		<li><a href="bc_breadcrumb-pagination.html">Breadcrumb & paggination</a></li>
+                    		<li><a href="bc_card.html">Cards</a></li>
+                    		<li><a href="bc_collapse.html">Collapse</a></li>
+                    		<li><a href="bc_carousel.html">Carousel</a></li>
+                    		<li><a href="bc_grid.html">Grid system</a></li>
+                    		<li><a href="bc_progress.html">Progress</a></li>
+                    		<li><a href="bc_modal.html">Modal</a></li>
+                    		<li><a href="bc_spinner.html">Spinner</a></li>
+                    		<li><a href="bc_tabs.html">Tabs & pills</a></li>
+                    		<li><a href="bc_typography.html">Typography</a></li>
+                    		<li><a href="bc_tooltip-popover.html">Tooltip & popovers</a></li>
+                    		<li><a href="bc_toasts.html">Toasts</a></li>
+                    		<li><a href="bc_extra.html">Other</a></li>
+                    	</ul>
+                    </li> -->
+                    
+                    
+                    <!-- <li class="nav-item">
+                        <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Industry Registration</span></a>
+                    </li> -->
+                     <li class="nav-item">
+                        <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Land Allotment</span></a>
+                    </li>
+                     <li class="nav-item">
+                        <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Pre-Establishment</span></a>
+                    </li>
+                     <li class="nav-item">
+                        <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Pre-Operational</span></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Incentives</span></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Renewals</span></a>
+                    </li>
+
+
+
+                    <!-- <li class="nav-item">
+                        <a href="tbl_bootstrap.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-align-justify"></i></span><span class="pcoded-mtext">Bootstrap table</span></a>
+                    </li>
+                    <li class="nav-item pcoded-menu-caption">
+                    	<label>Chart & Maps</label>
+                    </li>
+                    <li class="nav-item">
+                        <a href="chart-apex.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-pie-chart"></i></span><span class="pcoded-mtext">Chart</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="map-google.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-map"></i></span><span class="pcoded-mtext">Maps</span></a>
+                    </li>
+                    <li class="nav-item pcoded-menu-caption">
+                    	<label>Pages</label>
+                    </li>
+                    
+                    <li class="nav-item"><a href="sample-page.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-sidebar"></i></span><span class="pcoded-mtext">Sample page</span></a></li> -->
+<li class="nav-item pcoded-hasmenu">
+                        <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-lock"></i></span><span class="pcoded-mtext">Authentication</span></a>
+                        <ul class="pcoded-submenu">
+                            <li><a href="auth-signup.html" target="_blank">Sign up</a></li>
+                            <li><a href="auth-signin.html" target="_blank">Sign in</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- [ navigation menu ] end -->
+    <!-- [ Header ] start -->
+    <header class="navbar pcoded-header navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <div class="m-header">
+                <a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
+                <a href="#!" class="b-brand">
+                    <!-- ========   change your logo hear   ============ -->
+                    <img src="assets/images/investup1.png" alt="" class="logo" style="width: 90%;">
+                    <img src="assets/images/logo-icon.png" alt="" class="logo-thumb">
+                </a>
+                <a href="#!" class="mob-toggler">
+                    <i class="feather icon-more-vertical"></i>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href="#!" class="pop-search"><i class="feather icon-search"></i></a>
+                        <div class="search-bar">
+                            <input type="text" class="form-control border-0 shadow-none" placeholder="Search hear">
+                            <button type="button" class="close" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a class="dropdown-toggle h-drop" href="#" data-toggle="dropdown">
+                                Dropdown
+                            </a>
+                            <div class="dropdown-menu profile-notification ">
+                                <ul class="pro-body">
+                                    <li><a href="user-profile.html" class="dropdown-item"><i class="fas fa-circle"></i> Profile</a></li>
+                                    <li><a href="email_inbox.html" class="dropdown-item"><i class="fas fa-circle"></i> My Messages</a></li>
+                                    <li><a href="auth-signin.html" class="dropdown-item"><i class="fas fa-circle"></i> Lock Screen</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown mega-menu">
+                            <a class="dropdown-toggle h-drop" href="#" data-toggle="dropdown">
+                                Mega
+                            </a>
+                            <div class="dropdown-menu profile-notification ">
+                                <div class="row no-gutters">
+                                    <div class="col">
+                                        <h6 class="mega-title">UI Element</h6>
+                                        <ul class="pro-body">
+                                            <li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i> Alert</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i> Button</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i> Badges</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i> Cards</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i> Modal</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i> Tabs & pills</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col">
+                                        <h6 class="mega-title">Forms</h6>
+                                        <ul class="pro-body">
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-minus"></i> Elements</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-minus"></i> Validation</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-minus"></i> Masking</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-minus"></i> Wizard</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-minus"></i> Picker</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-minus"></i> Select</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col">
+                                        <h6 class="mega-title">Application</h6>
+                                        <ul class="pro-body">
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-mail"></i> Email</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-clipboard"></i> Task</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-check-square"></i> To-Do</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-image"></i> Gallery</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-help-circle"></i> Helpdesk</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col">
+                                        <h6 class="mega-title">Extension</h6>
+                                        <ul class="pro-body">
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-file-plus"></i> Editor</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-file-minus"></i> Invoice</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-calendar"></i> Full calendar</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-upload-cloud"></i> File upload</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-scissors"></i> Image cropper</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li>
+                        <div class="dropdown">
+                            <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+                                <i class="icon feather icon-bell"></i>
+                                <span class="badge badge-pill badge-danger">5</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right notification">
+                                <div class="noti-head">
+                                    <h6 class="d-inline-block m-b-0">Notifications</h6>
+                                    <div class="float-right">
+                                        <a href="#!" class="m-r-10">mark as read</a>
+                                        <a href="#!">clear all</a>
+                                    </div>
+                                </div>
+                                <ul class="noti-body">
+                                    <li class="n-title">
+                                        <p class="m-b-0">NEW</p>
+                                    </li>
+                                    <li class="notification">
+                                        <div class="media">
+                                            <img class="img-radius" src="assets/images/user/avatar-1.jpg" alt="Generic placeholder image">
+                                            <div class="media-body">
+                                                <p><strong>John Doe</strong><span class="n-time text-muted"><i class="icon feather icon-clock m-r-10"></i>5 min</span></p>
+                                                <p>New ticket Added</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="n-title">
+                                        <p class="m-b-0">EARLIER</p>
+                                    </li>
+                                    <li class="notification">
+                                        <div class="media">
+                                            <img class="img-radius" src="assets/images/user/avatar-2.jpg" alt="Generic placeholder image">
+                                            <div class="media-body">
+                                                <p><strong>Joseph William</strong><span class="n-time text-muted"><i class="icon feather icon-clock m-r-10"></i>10 min</span></p>
+                                                <p>Prchace New Theme and make payment</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="notification">
+                                        <div class="media">
+                                            <img class="img-radius" src="assets/images/user/avatar-1.jpg" alt="Generic placeholder image">
+                                            <div class="media-body">
+                                                <p><strong>Sara Soudein</strong><span class="n-time text-muted"><i class="icon feather icon-clock m-r-10"></i>12 min</span></p>
+                                                <p>currently login</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="notification">
+                                        <div class="media">
+                                            <img class="img-radius" src="assets/images/user/avatar-2.jpg" alt="Generic placeholder image">
+                                            <div class="media-body">
+                                                <p><strong>Joseph William</strong><span class="n-time text-muted"><i class="icon feather icon-clock m-r-10"></i>30 min</span></p>
+                                                <p>Prchace New Theme and make payment</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="noti-footer">
+                                    <a href="#!">show all</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown drp-user">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="feather icon-user"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right profile-notification">
+                                <div class="pro-head">
+                                    <img src="assets/images/user/avatar-1.jpg" class="img-radius" alt="User-Profile-Image">
+                                    <span>John Doe</span>
+                                    <a href="auth-signin.html" class="dud-logout" title="Logout">
+                                        <i class="feather icon-log-out"></i>
+                                    </a>
+                                </div>
+                                <ul class="pro-body">
+                                    <li><a href="user-profile.html" class="dropdown-item"><i class="feather icon-user"></i> Profile</a></li>
+                                    <li><a href="email_inbox.html" class="dropdown-item"><i class="feather icon-mail"></i> My Messages</a></li>
+                                    <li><a href="auth-signin.html" class="dropdown-item"><i class="feather icon-lock"></i> Lock Screen</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- [ Header ] end -->
+
+    <!-- [ Main Content ] start -->
+    <div class="pcoded-main-container">
+        <div class="pcoded-wrapper container-fluid">
+            <div class="pcoded-content">
+                <div class="pcoded-inner-content">
+                    <div class="main-body">
+                        <div class="page-wrapper">
+                            <div class="page-header">
+                                <div class="page-block">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-12">
+                                            <!-- <div class="page-header-title">
+                                                <h5 class="m-b-10">Welcome to Kalyanbabu!</h5>
+                                            </div> -->
+                                            <!-- <ul class="breadcrumb">
+                                                <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
+                                                <li class="breadcrumb-item"><a href="#!">Page Layout</a></li>
+                                                <li class="breadcrumb-item"><a href="#!">Horizontal Layout 2</a></li>
+                                            </ul> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- [ Main Content ] start -->
+                            <div class="card table-card review-card">
+                    <div class="card-header borderless ">
+                        <h5>KYA(Questionnaire)</h5>
+                        <div class="card-header-right">
+                            <div class="btn-group card-option">
+                                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="feather icon-more-horizontal"></i>
+                                </button>
+                                <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                                    <li class="dropdown-item full-card"><a href="#!"><span><i class="feather icon-maximize"></i> maximize</span><span style="display:none"><i class="feather icon-minimize"></i> Restore</span></a></li>
+                                    <li class="dropdown-item minimize-card"><a href="#!"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
+                                    <li class="dropdown-item reload-card"><a href="#!"><i class="feather icon-refresh-cw"></i> reload</a></li>
+                                    <li class="dropdown-item close-card"><a href="#!"><i class="feather icon-trash"></i> remove</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body pb-0">
+                        <div class="review-block" style="width: 100%;">
+                            <div class="row">
+                                <form method="POST" id="signup-form" class="signup-form" enctype="multipart/form-data">
+                <h3>
+                    Project Details
+                </h3>
+                <fieldset>
+                    <h2>Project Details</h2>
+                    <div class="card-body">
+                           <div class="col-md-12 d-flex mt-3" id="padding">
+                              <div class="col-md-6">
+                                 <div class="form-group row">
+                                    <label class="col-lg-6 col-form-label">1. Name of
+                                    Unit</label>
+                                    <div class="col-lg-6">
+                                       <input type="text" class="form-control">
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-md-6">
+                                 <div class="form-group row">
+                                    <label class="col-lg-6 col-form-label">2.
+                                    Constitution of the unit</label>
+                                    <div class="col-lg-6">
+                                       <input type="text" class="form-control">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-12 d-flex" id="padding">
+                              <div class="col-md-6">
+                                 <div class="form-group row">
+                                    <label class="col-lg-9 col-form-label">3. Whether
+                                    land purchased from IDA</label>
+                                    <div class="col-lg-3 d-flex">
+                                       <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="gender" id="gender_male" value="option1" checked="">
+                                          <label class="form-check-label" for="gender_male">
+                                          Yes
+                                          </label>
+                                       </div>
+                                       <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="gender" id="gender_female" value="option2">
+                                          <label class="form-check-label" for="gender_female">
+                                          No
+                                          </label>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-md-6">
+                                 <div class="form-group row">
+                                    <label class="col-lg-6 col-form-label">4. Proposed
+                                    Location</label>
+                                    <div class="col-lg-6 d-flex">
+                                        <select class="form-select" aria-label="Default select example">
+  <option selected>Please Select</option>
+  <option value="740" data-entity-level="null">Hapur</option>
+                                          <option value="273" data-entity-level="null">Gaziabad</option>
+                                          <option value="657" data-entity-level="null">GautamBudha Nagar</option>
+                                          <option value="274" data-entity-level="null">Lucknow</option>
+                                          <option value="656" data-entity-level="null">Balia</option>
+                                          <option value="276" data-entity-level="null">Sitapur</option>
+                                          <option value="277" data-entity-level="null">Meeruth</option>
+                                          <option value="663" data-entity-level="null">Kanpur</option>
+                                          <option value="658" data-entity-level="null">Varanshi</option>
+                                          <option value="278" data-entity-level="null">Gorkhpur</option>
+                                          <option value="275" data-entity-level="null">Kushinagar</option>
+                                          <option value="279" data-entity-level="null">Basti</option>
+</select>
+                                     
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-12 d-flex">
+                              <div class="col-md-6">
+                                 <div class="form-group row">
+                                    <label class="col-lg-6 col-form-label">Block
+                                    </label>
+                                    <div class="col-lg-6 d-flex">
+                                        <select class="form-select" aria-label="Default select example">
+  <option selected>Please Select</option>
+  <option value="740" data-entity-level="null">Hapur</option>
+                                          <option value="273" data-entity-level="null">Gaziabad</option>
+                                          <option value="657" data-entity-level="null">Gorkhpur</option>
+                                          <option value="274" data-entity-level="null">Lucknow</option>
+                                          <option value="656" data-entity-level="null">Basti</option>
+</select>
+                                      
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-md-6">
+                                <div class="form-group row">
+                                   <label class="col-lg-6 col-form-label">Village
+                                   </label>
+                                   <div class="col-lg-6 d-flex">
+                                    <select class="form-select" aria-label="Default select example">
+  <option selected>Please Select</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select>
+                                     
+                                   </div>
+                                </div>
+                             </div>
+                           </div>
+                           <div class="col-md-12 d-flex" id="padding">
+                              <div class="col-md-6">
+                                 <div class="form-group row">
+                                    <label class="col-lg-6 col-form-label">5. Total
+                                    Extent of Land</label>
+                                    <div class="col-lg-6 d-flex">
+                                        <select class="form-select" aria-label="Default select example">
+  <option selected>Please Select</option>
+  <option value="1">Acre</option>
+                                          <option value="2">Sq. yard</option>
+                                          <option value="3">Sq.feet</option>
+                                          <option value="4">Hectare</option>
+                                            <option value="4">Square Meter</option>
+</select>
+
+
+                                       
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-md-6">
+                                 <div class="form-group row">
+                                    <label class="col-lg-6 col-form-label">Acres</label>
+                                    <div class="col-lg-6">
+                                       <input type="text" class="form-control">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-12 d-flex" id="padding">
+                              <div class="col-md-6">
+                                 <div class="form-group row">
+                                    <label class="col-lg-6 col-form-label">Sq.feet</label>
+                                    <div class="col-lg-6">
+                                       <input type="text" class="form-control">
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-md-6">
+                                 <div class="form-group row">
+                                    <label class="col-lg-6 col-form-label">In Square
+                                    Meters</label>
+                                    <div class="col-lg-6">
+                                       <input type="text" class="form-control">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-12 d-flex" id="padding">
+                              <div class="col-md-6">
+                                 <div class="form-group row">
+                                    <label class="col-lg-6 col-form-label">6. Built up
+                                    Area (Including Parking Cellars)</label>
+                                    <div class="col-lg-6">
+                                       <input type="text" class="form-control">
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-md-6">
+                                 <div class="form-group row">
+                                    <label class="col-lg-6 col-form-label">7. Pollution
+                                    Category of Enterprise</label>
+                                    <div class="col-lg-6">
+                                       <input type="text" class="form-control">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-12 d-flex" id="padding">
+                              <div class="col-md-6">
+                                 <div class="form-group row">
+                                    <label class="col-lg-6 col-form-label">8. Line of
+                                    Activity</label>
+                                    <div class="col-lg-6">
+                                       <input type="text" class="form-control">
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-md-6">
+                                 <div class="form-group row">
+                                    <label class="col-lg-6 col-form-label">9. Type of
+                                    Enterprise</label>
+                                    <div class="col-lg-6">
+                                       <input type="text" class="form-control">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-12 d-flex mb-5" id="padding">
+                              <div class="col-md-6">
+                                 <div class="form-group row">
+                                    <label class="col-lg-6 col-form-label">10. Location
+                                    of the unit</label>
+                                    <div class="col-lg-6">
+                                       <input type="text" class="form-control">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           
+                        </div>
+                </fieldset>
+
+                <h3>
+                    Project Financials
+                </h3>
+                <fieldset>
+                    <h2>Project Financials</h2>
+                    <div class="card-body">
+                           <div class="row">
+                              <div class="col-md-12 d-flex" id="padding">
+                                 <div class="col-md-6">
+                                    <div class="form-group row">
+                                       <label class="col-lg-6 col-form-label">11. Proposed
+                                       Employment</label>
+                                       <div class="col-lg-6">
+                                          <input type="text" class="form-control" value="50">
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6">
+                                    <div class="form-group row">
+                                       <label class="col-lg-6 col-form-label">12.
+                                       Proposal For</label>
+                                       <div class="col-lg-6">
+                                        <select class="form-select" aria-label="Default select example">
+  <option selected>Please select</option>
+  <option value="1">New</option>
+                                             <option value="2">Expansion</option>
+</select>
+                                          
+                                       </div>
+                                    </div>
+                                 </div>
+                                 </div>
+                                 <div class="col-md-12 d-flex" id="padding">
+                                 <div class="col-md-6">
+                                    <div class="form-group row">
+                                       <label class="col-lg-6 col-form-label">13.
+                                       Project Cost</label>
+                                       <div class="col-lg-6">
+
+                                        <select class="form-select" aria-label="Default select example">
+  <option selected>Please select</option>
+  <option value="1">Crores</option>
+                                             <option value="2">Lakhs</option>
+                                             <option value="3">Thousands</option>
+                                             <option value="4">Hundreds</option>
+                                             <option value="5">Rupes</option>
+</select>
+                                          
+                                       </div>
+                                    </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="table-responsive">
+                                 <table class="table table-bordered mb-0">
+                                    <thead>
+                                       <tr>
+                                          <th colspan="2">(Mention Zero in case of leased
+                                             premises)
+                                          </th>
+                                          <th>New Investment</th>
+                                       </tr>
+                                    </thead>
+                                    <tbody>
+                                       <tr>
+                                          <td rowspan="3">a.</td>
+                                          <td>Value of Land as per saleDeed</td>
+                                          <td><input type="text" class="form-control" value="0"></td>
+                                       </tr>
+                                       <tr>
+                                          <td>In Rs. Lakhs</td>
+                                          <td><input type="text" class="form-control" value="0" disabled=""></td>
+                                       </tr>
+                                       <tr>
+                                          <td>Land Market Value as Per SRO for (14062.37
+                                             Square Meter)
+                                          </td>
+                                          <td><input type="text" class="form-control" value="20000000.00">
+                                             <button type="button" class="btn btn-warning mt-1"><i class="fa fa-inr" aria-hidden="true"></i> Click Here
+                                             to Calculate Market Value as Per
+                                             SRO</button>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td rowspan="2">b.</td>
+                                          <td>Value of Building<span class="text-danger">*</span></td>
+                                          <td><input type="text" class="form-control" value="0"></td>
+                                       </tr>
+                                       <tr>
+                                          <td>In Rs. Lakhs</td>
+                                          <td><input type="text" class="form-control" value="0" disabled=""></td>
+                                       </tr>
+                                       <tr>
+                                          <td rowspan="2">c.</td>
+                                          <td>Value of Plant &amp; Machinery or Service
+                                             Equipment<span class="text-danger">*</span>
+                                          </td>
+                                          <td><input type="text" class="form-control" value="0"></td>
+                                       </tr>
+                                       <tr>
+                                          <td>In Rs. Lakhs</td>
+                                          <td><input type="text" class="form-control" value="0" disabled=""></td>
+                                       </tr>
+                                       <tr>
+                                          <td rowspan="2">d.</td>
+                                          <td>Expected Annual Turnover<span class="text-danger">*</span></td>
+                                          <td><input type="text" class="form-control" value="70000000"></td>
+                                       </tr>
+                                       <tr>
+                                          <td>In Rs. Lakhs</td>
+                                          <td><input type="text" class="form-control" value="700.00000" disabled=""></td>
+                                       </tr>
+                                    </tbody>
+                                    <thead>
+                                       <tr>
+                                          <th colspan="2">Total Project Cost(in
+                                             Lakhs)<span class="text-danger">*</span>
+                                          </th>
+                                          <th>0</th>
+                                       </tr>
+                                    </thead>
+                                 </table>
+                              </div>
+                              <div class="col-md-12 d-flex mt-2 mb-5" id="padding">
+                                 <div class="col-md-6">
+                                    <div class="form-group row">
+                                       <label class="col-lg-6 col-form-label">Category
+                                       enterprise</label>
+                                       <div class="col-lg-3">:</div>
+                                       <div class="col-lg-3">
+                                          <h4>Small</h4>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6">&nbsp;</div>
+                              </div>
+                              <!-- <div class="col-md-12 d-flex my-3" id="padding">
+                                 <div class="col-md-6">
+                                    <a href="#ProjectDetails" data-toggle="tab"><button type="submit" class="btn btn-rounded btn-success">Previous</button></a>
+                                 </div>
+                                 <div class="col-md-6 text-right">
+                                    <a href="#ProjectRequirement" data-toggle="tab"><button type="submit" class="btn btn-info ml-2 btn-rounded">Next</button></a>
+                                 </div>
+                              </div> -->
+                           </div>
+                </fieldset>
+
+                <h3>
+                    Project Requirements
+                </h3>
+                <fieldset> 
+                    <h2>Project Requirements</h2>
+                    <div class="card-body">
+                           <div class="col-md-12 d-flex mt-3" id="padding">
+                              <div class="col-md-6">
+                                 <div class="form-group row">
+                                    <label class="col-lg-6 col-form-label">14. Power
+                                    requirement in HP<span class="text-danger">*</span></label>
+                                    <div class="col-lg-6">
+                                        <select class="form-select" aria-label="Default select example">
+  <option selected>Please select</option>
+  <option value="1">&lt;30 HP</option>
+                                          <option value="2">&gt;=30 HP and &lt;=100 HP
+                                          </option>
+                                          <option value="3">&gt;=101 HP and &lt;=500
+                                             HP
+                                          </option>
+                                          <option selected="selected" value="4">
+                                             &gt;=501 HP and &lt;=1500 HP
+                                          </option>
+                                          <option value="5">&gt;=1501 HP and
+                                             &lt;=10000 HP
+                                          </option>
+                                          <option value="6">&gt;10000 HP</option>
+</select>
+                                      
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-md-6">
+                                 <div class="form-group row">
+                                    <label class="col-lg-6 col-form-label">15(a). Do you
+                                    manufacture, store, sale, transport
+                                    explosives</label>
+                                    <div class="col-lg-6 d-flex">
+                                       <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="gender" id="gender_male" value="option1" checked="">
+                                          <label class="form-check-label" for="gender_male">
+                                          Yes
+                                          </label>
+                                       </div>
+                                       <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="gender" id="gender_female" value="option2">
+                                          <label class="form-check-label" for="gender_female">
+                                          No
+                                          </label>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-12 d-flex" id="padding">
+                              <div class="col-md-6">
+                                 <div class="form-group row">
+                                    <label class="col-lg-6 col-form-label">16. Do you
+                                    have Existing borewell in proposed factory
+                                    Location</label>
+                                    <div class="col-lg-6 d-flex">
+                                       <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="gender" id="gender_male" value="option1" checked="">
+                                          <label class="form-check-label" for="gender_male">
+                                          Yes
+                                          </label>
+                                       </div>
+                                       <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="gender" id="gender_female" value="option2">
+                                          <label class="form-check-label" for="gender_female">
+                                          No
+                                          </label>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-md-6">
+                                 <div class="form-group row">
+                                    <label class="col-lg-6 col-form-label">15(b). Do you
+                                    Manufacture, store, sale, Petroleum, Diesel,
+                                    Kerosene</label>
+                                    <div class="col-lg-6 d-flex">
+                                       <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="gender" id="gender_male" value="option1" checked="">
+                                          <label class="form-check-label" for="gender_male">
+                                          Yes
+                                          </label>
+                                       </div>
+                                       <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="gender" id="gender_female" value="option2">
+                                          <label class="form-check-label" for="gender_female">
+                                          No
+                                          </label>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="table-responsive mb-3">
+                              <table class="table table table-bordered table-striped mb-0">
+                                 <thead>
+                                    <tr class="table-primary">
+                                       <th>Sl. No.</th>
+                                       <th>Select</th>
+                                       <th>Water required from</th>
+                                       <th>Water Required per day( in KLD)</th>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                    <tr>
+                                       <td>1</td>
+                                       <td><input class="checkbox" type="checkbox" name="checkbox"></td>
+                                       <td>HMWS &amp; SB</td>
+                                       <td><input type="text" class="form-control">
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>2</td>
+                                       <td><input class="checkbox" type="checkbox" name="checkbox"></td>
+                                       <td>Rivers/Canals</td>
+                                       <td><input type="text" class="form-control">
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>3</td>
+                                       <td><input class="checkbox" type="checkbox" name="checkbox"></td>
+                                       <td>CDMA</td>
+                                       <td><input type="text" class="form-control">
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>4</td>
+                                       <td><input class="checkbox" type="checkbox" name="checkbox"></td>
+                                       <td>Mission Bhagiratha</td>
+                                       <td><input type="text" class="form-control">
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </div>
+                           <div class="col-md-12 d-flex" id="padding">
+                              <div class="col-md-6">
+                                 <div class="form-group row">
+                                    <label class="col-lg-6 col-form-label">17. Generator
+                                    Requirement</label>
+                                    <div class="col-lg-6 d-flex">
+                                       <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="gender" id="gender_male" value="option1" checked="">
+                                          <label class="form-check-label" for="gender_male">
+                                          Yes
+                                          </label>
+                                       </div>
+                                       <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="gender" id="gender_female" value="option2">
+                                          <label class="form-check-label" for="gender_female">
+                                          No
+                                          </label>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-md-6">
+                                 <div class="form-group row">
+                                    <label class="col-lg-6 col-form-label">18. Height of
+                                    the building(in Meters)</label>
+                                    <div class="col-lg-6">
+                                       <input type="text" class="form-control" value="17.00">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-12 d-flex" id="padding">
+                              <div class="col-md-6">
+                                 <div class="form-group row">
+                                    <label class="col-lg-6 col-form-label">19. Is there
+                                    any need to Fell trees in Proposed Site</label>
+                                    <div class="col-lg-6 d-flex">
+                                       <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="gender" id="gender_male" value="option1" checked="">
+                                          <label class="form-check-label" for="gender_male">
+                                          Yes
+                                          </label>
+                                       </div>
+                                       <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="gender" id="gender_female" value="option2">
+                                          <label class="form-check-label" for="gender_female">
+                                          No
+                                          </label>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-md-6">
+                                 <div class="form-group row">
+                                    <label class="col-lg-6 col-form-label">Number of
+                                    trees to be felled (Girth of tree &gt; 30
+                                    centimeters)</label>
+                                    <div class="col-lg-6">
+                                       <input type="text" class="form-control mt-3" value="44">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-12 d-flex" id="padding">
+                              <div class="col-md-12">
+                                 <div class="form-group row">
+                                    <label class="col-lg-6 col-form-label">Are there any
+                                    trees in Non-Exempted (Other than trees in this
+                                    List )</label>
+                                    <div class="col-lg-6 d-flex">
+                                       <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="gender" id="gender_male" value="option1" checked="">
+                                          <label class="form-check-label" for="gender_male">
+                                          Yes
+                                          </label>
+                                       </div>
+                                       <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="gender" id="gender_female" value="option2">
+                                          <label class="form-check-label" for="gender_female">
+                                          No
+                                          </label>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="table-responsive mb-3">
+                              <table class="table table-bordered mb-0">
+                                 <thead>
+                                    <tr>
+                                       <th colspan="3" style="margin: 0px !important;padding: 3px 14px !important;">20. Labour Application Type</th>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+                                    <tr>
+                                       <td rowspan="2">20 a.</td>
+                                       <td>Does your establishment employ 05 or more contract Labour as defined in the <br>Contract Labour(Regulation and Abolition)Act, 1970?</td>
+                                       <td class="d-flex">
+                                          <div class="form-check form-check-inline">
+                                             <input class="form-check-input" type="radio" name="gender" id="gender_male" value="option1" checked="">
+                                             <label class="form-check-label" for="gender_male">
+                                             Yes
+                                             </label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input class="form-check-input" type="radio" name="gender" id="gender_female" value="option2">
+                                             <label class="form-check-label" for="gender_female">
+                                             No
+                                             </label>
+                                          </div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>No of Workers</td>
+                                       <td><input type="text" class="form-control" value="22"></td>
+                                    </tr>
+                                    <tr>
+                                       <td rowspan="2">20 b.</td>
+                                       <td>Does your establishment employ 05 or more Inter-State migrant workmen as defined<br> in the Inter-state Migrant Workmen Act, 1979?</td>
+                                       <td class="d-flex">
+                                          <div class="form-check form-check-inline">
+                                             <input class="form-check-input" type="radio" name="gender" id="gender_male" value="option1" checked="">
+                                             <label class="form-check-label" for="gender_male">
+                                             Yes
+                                             </label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input class="form-check-input" type="radio" name="gender" id="gender_female" value="option2">
+                                             <label class="form-check-label" for="gender_female">
+                                             No
+                                             </label>
+                                          </div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>No of Workers</td>
+                                       <td><input type="text" class="form-control" value="22"></td>
+                                    </tr>
+                                    <tr>
+                                       <td rowspan="3">20 c.</td>
+                                       <td>Does your establishment fall under the definition of establishment as per Building<br> and Other Constrution Worker(RE&amp;COS) Act, 1996?</td>
+                                       <td class="d-flex">
+                                          <div class="form-check form-check-inline">
+                                             <input class="form-check-input" type="radio" name="gender" id="gender_male" value="option1" checked="">
+                                             <label class="form-check-label" for="gender_male">
+                                             Yes
+                                             </label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input class="form-check-input" type="radio" name="gender" id="gender_female" value="option2">
+                                             <label class="form-check-label" for="gender_female">
+                                             No
+                                             </label>
+                                          </div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>Whether your establishment has employed or had employed on any day of the preceding <br>12 months, 10 or more building workers in any “Building &amp; Other Construction Works”</td>
+                                       <td class="d-flex">
+                                          <div class="form-check form-check-inline">
+                                             <input class="form-check-input" type="radio" name="gender" id="gender_male" value="option1" checked="">
+                                             <label class="form-check-label" for="gender_male">
+                                             Yes
+                                             </label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input class="form-check-input" type="radio" name="gender" id="gender_female" value="option2">
+                                             <label class="form-check-label" for="gender_female">
+                                             No
+                                             </label>
+                                          </div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>No of Workers</td>
+                                       <td><input type="text" class="form-control" value="22"></td>
+                                    </tr>
+                                    <tr>
+                                       <td rowspan="2">20 d.</td>
+                                       <td>Does your establishment provide 05 or more inter-state migrant workmen on contractual basis as <br>defined in the Inter-state Migrant Workmen Act, 1979?(for Contractor)</td>
+                                       <td class="d-flex">
+                                          <div class="form-check form-check-inline">
+                                             <input class="form-check-input" type="radio" name="gender" id="gender_male" value="option1" checked="">
+                                             <label class="form-check-label" for="gender_male">
+                                             Yes
+                                             </label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input class="form-check-input" type="radio" name="gender" id="gender_female" value="option2">
+                                             <label class="form-check-label" for="gender_female">
+                                             No
+                                             </label>
+                                          </div>
+                                       </td>
+                                    </tr>
+                                    <tr>
+                                       <td>No of Workers</td>
+                                       <td><input type="text" class="form-control" value="22"></td>
+                                    </tr>
+                                    <tr>
+                                       <td rowspan="1">20 e.</td>
+                                       <td>Does your establishment employ 05 or more contract labour(License for contractors) as defined <br>in the contract labour(Regulation and Abolition) act, 1970?</td>
+                                       <td class="d-flex">
+                                          <div class="form-check form-check-inline">
+                                             <input class="form-check-input" type="radio" name="gender" id="gender_male" value="option1" checked="">
+                                             <label class="form-check-label" for="gender_male">
+                                             Yes
+                                             </label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                             <input class="form-check-input" type="radio" name="gender" id="gender_female" value="option2">
+                                             <label class="form-check-label" for="gender_female">
+                                             No
+                                             </label>
+                                          </div>
+                                       </td>
+                                    </tr>
+                                 </tbody>
+                              </table>
+                           </div>
+                           <div class="col-md-12 d-flex" id="padding">
+                              <div class="col-md-6">
+                                 <div class="form-group row">
+                                    <label class="col-lg-6 col-form-label">21. Does the unit Location fall within 100mts vicinity of any water body?</label>
+                                    <div class="col-lg-6 d-flex">
+                                       <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="gender" id="gender_male" value="option1" checked="">
+                                          <label class="form-check-label" for="gender_male">
+                                          Yes
+                                          </label>
+                                       </div>
+                                       <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="gender" id="gender_female" value="option2">
+                                          <label class="form-check-label" for="gender_female">
+                                          No
+                                          </label>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-md-6">
+                                 <div class="form-group row">
+                                    <label class="col-lg-6 col-form-label">22. Do you require approval from Commerical Tax</label>
+                                    <div class="col-lg-6 d-flex">
+                                       <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="gender" id="gender_male" value="option1" checked="">
+                                          <label class="form-check-label" for="gender_male">
+                                          Yes
+                                          </label>
+                                       </div>
+                                       <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="gender" id="gender_female" value="option2">
+                                          <label class="form-check-label" for="gender_female">
+                                          No
+                                          </label>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-12 d-flex" id="padding">
+                              <div class="col-md-6">
+                                 <div class="form-group row">
+                                    <label class="col-lg-6 col-form-label">23. DO you Use (High Tension)HT meter Above 70KVA<span class="text-danger">*</span></label>
+                                    <div class="col-lg-6 d-flex">
+                                       <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="gender" id="gender_male" value="option1" checked="">
+                                          <label class="form-check-label" for="gender_male">
+                                          Yes
+                                          </label>
+                                       </div>
+                                       <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="gender" id="gender_female" value="option2">
+                                          <label class="form-check-label" for="gender_female">
+                                          No
+                                          </label>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-md-6">
+                                 <div class="form-group row">
+                                    <label class="col-lg-6 col-form-label">Regulation</label>
+                                    <div class="col-lg-6">
+                                        <select class="form-select" aria-label="Default select example">
+  <option selected>Open this select menu</option>
+  <option selected="selected" value="1">43(3)</option>
+                                          <option value="3">32</option>
+</select>
+
+
+                                      
+                                       <p>43(3)- Electrical Installation/ 32 - Generating Unit/Generators</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-12 d-flex" id="padding">
+                              <div class="col-md-6">
+                                 <div class="form-group row">
+                                    <label class="col-lg-6 col-form-label">Voltage</label>
+                                    <div class="col-lg-6 d-flex">
+
+                                        <select class="form-select" aria-label="Default select example">
+  <option selected>Select</option>
+  <option selected="selected" value="1">11 KV</option>
+                                          <option value="2">33 KV</option>
+                                          <option value="3">132 KV</option>
+                                          <option value="4">Exceeding 220 KV</option>
+                                          <option value="5">220 KV</option>
+                                          <option value="6">140 KV</option>
+</select>
+
+
+                                       
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-md-6">
+                                 <div class="form-group row">
+                                    <label class="col-lg-6 col-form-label">Aggregate Capacity</label>
+                                    <div class="col-lg-6">
+                                       <input type="text" class="form-control" value="550">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-12 d-flex" id="padding">
+                              <div class="col-md-6">
+                                 <div class="form-group row">
+                                    <label class="col-lg-6 col-form-label">24. Do you store RS, DS</label>
+                                    <div class="col-lg-6 d-flex">
+                                       <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="gender" id="gender_male" value="option1" checked="">
+                                          <label class="form-check-label" for="gender_male">
+                                          Yes
+                                          </label>
+                                       </div>
+                                       <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio" name="gender" id="gender_female" value="option2">
+                                          <label class="form-check-label" for="gender_female">
+                                          No
+                                          </label>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-md-6">
+                                 &nbsp;
+                              </div>
+                           </div>
+                           <div class="col-md-12 d-flex text-center my-3" id="padding">
+                              <div class="col-md-4">
+                                 <!-- <a href="#basictab2"> <button type="submit" class="btn 
+                                    
+                                    btn-success1 btn-lg"><span class="spinner-border spinner-border-sm mr-2 mb-1" role="status"></span> Show Approvals Required</button></a> -->
+                              </div>
+                              
+                              <div class="col-md-4">
+                                 <!-- <a href="#basictab2"><button type="submit" class="btn btn-rounded btn-success2 btn-lg">Show Enclousers List</button></a> -->
+                              </div>
+                              <div class="col-md-4">
+                                 <!-- <a href="Dashboard.html"><button type="submit" class="btn btn-rounded btn-primary btn-lg"><span class="spinner-border spinner-border-sm mr-2 mb-1" role="status"></span> Submit Questionnaire</button></a> -->
+                              </div>
+                           </div>
+                           <div class="col-md-12 d-flex my-3" id="padding">
+                              <!-- <div class="col-md-6">
+                                 <a href="#ProjectFinancials" data-toggle="tab"><button type="submit" class="btn btn-rounded btn-success btn-lg">Previous</button></a>
+                              </div> -->
+                           </div>
+                        </div>
+                </fieldset>
+            </form>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                            <!-- [ Main Content ] end -->
+                            <!-- [ Main Content ] start -->
+                            
+                            <!-- [ Main Content ] end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- [ Main Content ] end -->
+
+        <!-- Warning Section start -->
+        <!-- Older IE warning message -->
+        <!--[if lt IE 11]>
+            <div class="ie-warning">
+                <h1>Warning!!</h1>
+                <p>You are using an outdated version of Internet Explorer, please upgrade
+                   <br/>to any of the following web browsers to access this website.
+                </p>
+                <div class="iew-container">
+                    <ul class="iew-download">
+                        <li>
+                            <a href="http://www.google.com/chrome/">
+                                <img src="assets/images/browser/chrome.png" alt="Chrome">
+                                <div>Chrome</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.mozilla.org/en-US/firefox/new/">
+                                <img src="assets/images/browser/firefox.png" alt="Firefox">
+                                <div>Firefox</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.opera.com">
+                                <img src="assets/images/browser/opera.png" alt="Opera">
+                                <div>Opera</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.apple.com/safari/">
+                                <img src="assets/images/browser/safari.png" alt="Safari">
+                                <div>Safari</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                                <img src="assets/images/browser/ie.png" alt="">
+                                <div>IE (11 & above)</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <p>Sorry for the inconvenience!</p>
+            </div>
+        <![endif]-->
+        <!-- Warning Section Ends -->
+
+        <!-- Required Js -->
+        <script src="assets/js/vendor-all.min.js"></script>
+        <script src="assets/js/plugins/bootstrap.min.js"></script>
+        <script src="assets/js/pcoded.min.js"></script>
+
+
+    <!-- prism Js -->
+    <script src="assets/js/plugins/prism.js"></script>
+
+    
+
+
+
+    <script src="assets/js/horizontal-menu.js"></script>
+    <script>
+        (function() {
+            if ($('#layout-sidenav').hasClass('sidenav-horizontal') || window.layoutHelpers.isSmallScreen()) {
+                return;
+            }
+            try {
+                window.layoutHelpers._getSetting("Rtl")
+                window.layoutHelpers.setCollapsed(
+                    localStorage.getItem('layoutCollapsed') === 'true',
+                    false
+                );
+            } catch (e) {}
+        })();
+        $(function() {
+            $('#layout-sidenav').each(function() {
+                new SideNav(this, {
+                    orientation: $(this).hasClass('sidenav-horizontal') ? 'horizontal' : 'vertical'
+                });
+            });
+            $('body').on('click', '.layout-sidenav-toggle', function(e) {
+                e.preventDefault();
+                window.layoutHelpers.toggleCollapsed();
+                if (!window.layoutHelpers.isSmallScreen()) {
+                    try {
+                        localStorage.setItem('layoutCollapsed', String(window.layoutHelpers.isCollapsed()));
+                    } catch (e) {}
+                }
+            });
+        });
+        $(document).ready(function() {
+            $("#pcoded").pcodedmenu({
+                themelayout: 'horizontal',
+                MenuTrigger: 'hover',
+                SubMenuTrigger: 'hover',
+            });
+        });
+    </script>
+
+    <script src="assets/js/analytics.js"></script>
+<script src="assets/wizards/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/wizards/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="assets/wizards/vendor/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="assets/wizards/vendor/jquery-steps/jquery.steps.min.js"></script>
+    <script src="assets/wizards/js/main.js"></script>
+</body>
+
+</html>
