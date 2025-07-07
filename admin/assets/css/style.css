@@ -30187,3 +30187,39 @@ a {
 .fixed-button.active {
     display: none !important;
 }
+
+.footer-2__bottom-wrapper {
+    background: #0D2140 !important;
+}
+
+.container {
+   --bs-gutter-x: 30px;
+    max-width: 1320px;
+}
+
+
+
+.footer-2__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+
+
+.footer-2__bottom-wrapper .container {
+    width: 100%;
+    font-size: 14px;
+}
+
+
+.footer-2__copyright p, .footer-2__copyright-menu p {
+    font-size: 16px;
+    font-family: system-ui !important;
+    font-weight: 600 !important;
+    color: #d2e3fb;
+    margin-bottom: 5px !important;
+    margin: 8px 0px;
+}
