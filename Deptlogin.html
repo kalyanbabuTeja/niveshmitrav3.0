@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login NM V3.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/login.css">
+	<style>
+		.container {
+    width: 400px;
+    }
+.form-container.sign-in-container {
+    width: 100%;
+}
+	</style>
+</head>
+<body>
+    <div class="container" id="container">
+	
+	<div class="form-container sign-in-container">
+		<form action="admin/DeptDashboard.html">
+            <img src="assets/imgs/investup1.jpg" alt="logo" style="width: 100%;"/><br/><br/>
+			<h3>Department Login<br/><br/></h3>
+			
+			<input type="text" placeholder="User Name" />
+			<input type="password" placeholder="Password" />
+			<br/>
+			<button>Login</button>
+            
+			
+			
+		</form>
+	</div>
+	
+</div>
+
+<footer>
+	<div class="footer-2__bottom">
+                            <div class="footer-2__copyright">
+                                <p> © 2025 Copyright Uttar Pradesh State Unit. All Rights Reserved.</p>
+                            </div>
+                            <div class="footer-2__copyright-menu" style="text-align: right;">
+                                <p>Design and Developed by : <img src="assets/imgs/fotterlogo1.png" alt="Fotter CMS logo" style="width: 16%;margin-top: -7px;margin-bottom: -11px;"> </p>
+                            </div>
+                        </div>
+</footer>
+<script>
+    const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+
+signUpButton.addEventListener('click', () => {
+	container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener('click', () => {
+	container.classList.remove("right-panel-active");
+});
+</script>
+</body>
+</html>

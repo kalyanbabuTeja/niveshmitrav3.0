@@ -96,3 +96,15 @@
     color: #ffffff;
     text-shadow: -2px 1px 17px #0e0e0da6;
 }
+
+.breadcrumb {
+    margin: 10px 0px 6px !important;
+    background: #e9ecef !important;
+    padding: 0px 10px !important;
+    font-family: system-ui;
+    font-weight: 500;
+}
+.pcoded-wrapper.container-fluid {
+    margin: 0px !important;
+    padding: 0px !important;
+}
