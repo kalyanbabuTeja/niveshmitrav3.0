@@ -26,26 +26,134 @@
 
     <link rel="stylesheet" href="assets/css/card.css">
 
-     <style>
-        .pcoded-wrapper.container-fluid, .pcoded-main-container {
-    background: url(assets/images/bg/19.jpg) !important;
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    
-}
-.card {
-    box-shadow: 1px 2px 3px #ccc;
-}
-h5 {
-    color: #0e5ca8 !important;
-    font-family: 'Mada', sans-serif !important;
-    font-size: 20px !important;
-}
-     </style>
-    
-    
+     
+     <link rel="stylesheet" href="assets/fonts/material-icon/css/material-design-iconic-font.min.css">
 
+    <!-- Main css -->
+    <link rel="stylesheet" href="assets/wizards/css/style.css">
+    
+<style>
+   .review-block {
+    background: url(assets/images/bg/17.jpg);
+    background-position: top;
+    background-size: contain;
+}
+    input.form-control, .form-control {
+    line-height: 21px !important;
+    padding: 0px 10px !important;
+    margin: 0px !important;
+    width: 100%;
+    height: 36px !important;
+}
+    input.checkbox {
+    width: 14%;
+}
+    .form-check.form-check-inline {
+    display: flex;
+    font-size: 16px;
+    text-align: left;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+    .pcoded-wrapper.container-fluid {
+    background: #fff;
+}
+    .content.clearfix {
+    width: 100% !important;
+    height: auto !important;
+}
+.steps ul:after {
+    width: 87% !important;
+    top: 58px !important;
+}
+.form-group.row {
+    padding-bottom: 0px !important;
+}
+.col-form-label {
+    font-size: 16px !important;
+    font-family: system-ui;
+    line-height: 21px !important;
+}
+.title-text {
+    font-size: 16px !important;
+}
+h2 {
+    font-size: 26px !important;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-family: system-ui;
+    color: #464776;
+}
+</style>
+
+
+<style>
+  body {
+    background: #f5f7fa;
+    font-family: "Poppins", sans-serif;
+}
+
+.card-row {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.dash-card {
+    width: 320px;
+    height: 110px;
+    color: #fff;
+    border-radius: 14px;
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 20px;
+    align-items: center;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.dash-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.20);
+}
+
+/* TEXT */
+.text-box {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+}
+
+.text-box p {
+    margin: 3px 0 0 0;
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+/* ICONS */
+.icon {
+    font-size: 45px;
+    opacity: 0.45;
+}
+
+/* GRADIENT COLORS (2025 Modern) */
+.green {
+    background: linear-gradient(135deg, #2ecc71, #16a085);
+}
+
+.orange {
+    background: linear-gradient(135deg, #ff9a9e, #ff6a00);
+}
+
+.blue {
+    background: linear-gradient(135deg, #6dd5fa, #2980b9);
+}
+
+</style>
 </head>
 <body>
     <!-- [ Pre-loader ] start -->
@@ -122,9 +230,6 @@ h5 {
 
                     <li class="nav-item">
                         <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Renewals</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="Reports.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Reports</span></a>
                     </li>
 
 
@@ -354,22 +459,6 @@ h5 {
                                 <div class="page-block">
                                     <div class="row align-items-center">
                                         <div class="col-md-12">
-
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    <h5 class="m-b-10">Welcome to Kalyanbabu!</h5>   
-                                                    </div>
-                                                    <div class="card-body">
-                                                        <div class="d-flex justify-content-between" style="background: #e0e4fd;padding: 10px 8px 2px;border-radius: 4px;margin-bottom: 10px;">
-			
-									<h4 style="display: flex;align-items: center;">Kalyan Babu, Interested in Starting a New Application Get Started !</h4>
-									<h4><a href="Questionnaire.html" target="_blank"><span class="badge rounded-pill bg-dark text-sm p-2" style="font-size: 16px;color:#fff;background:#033260 !important;display: flex;
-				align-items: center;"><i class="fi fi-tr-bullseye-arrow"></i>&nbsp; Click Here</span></a></h4>
-			
-								</div>
-                                                        </div>
-                                            </div>
-                                            
                                             
                                         </div>
                                     </div>
@@ -378,140 +467,39 @@ h5 {
                             <!-- [ Main Content ] start -->
                             <div class="card table-card review-card">
                     <div class="card-header borderless ">
-                        <h5>Dashbaord</h5>
-                        <div class="card-header-right">
-                            <div class="btn-group card-option">
-                                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="feather icon-more-horizontal"></i>
-                                </button>
-                                <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
-                                    <li class="dropdown-item full-card"><a href="#!"><span><i class="feather icon-maximize"></i> maximize</span><span style="display:none"><i class="feather icon-minimize"></i> Restore</span></a></li>
-                                    <li class="dropdown-item minimize-card"><a href="#!"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
-                                    <li class="dropdown-item reload-card"><a href="#!"><i class="feather icon-refresh-cw"></i> reload</a></li>
-                                    <li class="dropdown-item close-card"><a href="#!"><i class="feather icon-trash"></i> remove</a></li>
-                                </ul>
-                            </div>
-                        </div>
+                        <h5>Welcome to Dashboard</h5>
+                         
                     </div>
-                    <div class="card-body pb-0">
-                        <div class="review-block">
-                            <div class="row">
-                                <div class="">
-                                    <div class="cardmainevent">
-<div class="dashboard-container">
-  <div class="row g-4">
+                    <div class="card-row">
 
-    <div class="col-md-12 d-flex">    <!-- Card 1 -->
-
-
-    <div class="col-md-3">
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front 1 d-flex align-items-center justify-content-center">
-            <div style="width: 100%;">
-              <div class="card-title">Land</div>
-              <p>Hover to see more</p>
-            </div>
-          </div>
-          <div class="flip-card-back">
-            <!-- <h5>Land Details</h5> -->
-            
-            <ul class="points-list">
-                 <li><a href="index.html" class="d-flex justify-content-between"><h6>Approved</h6> <h6><b>20</b></h6></a></li>
-                 <li><a href="index.html" class="d-flex justify-content-between"><h6>Under Process</h6> <h6>20</h6></a></li>
-                 <li><a href="index.html" class="d-flex justify-content-between"><h6>Rejected</h6> <h6>20</h6></a></li>
-                 <li><a href="index.html" class="d-flex justify-content-between"><h6>Query</h6> <h6>20</h6></a></li>
-                 <a href="www.google.com" target="_blank"><p>Click here to View More</p></a>
-              
-            </ul>
-          </div>
+    <div class="dash-card green">
+        <div class="text-box">
+            Industry Registration<br>
+            Under MIIPP 2024
+            <p>(Principle Approval)</p>
         </div>
-      </div>
+        <div class="icon">👥</div>
     </div>
 
-    <!-- Card 2 -->
-    <div class="col-md-3">
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front 2 d-flex align-items-center justify-content-center">
-            <div>
-              <div class="card-title">CFE</div>
-              <p>Hover to see more</p>
-            </div>
-          </div>
-          <div class="flip-card-back">
-            <ul class="points-list">
-                 <li><a href="index.html" class="d-flex justify-content-between"><h6>Approved</h6> <h6><b>20</b></h6></a></li>
-                 <li><a href="index.html" class="d-flex justify-content-between"><h6>Under Process</h6> <h6>20</h6></a></li>
-                 <li><a href="index.html" class="d-flex justify-content-between"><h6>Rejected</h6> <h6>20</h6></a></li>
-                 <li><a href="index.html" class="d-flex justify-content-between"><h6>Query</h6> <h6>20</h6></a></li>
-              
-            </ul>
-          </div>
+    <div class="dash-card orange">
+        <div class="text-box">
+            Films<br>
+            Registrations
         </div>
-      </div>
+        <div class="icon">🎬</div>
     </div>
 
-    <!-- Card 3 -->
-    <div class="col-md-3">
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front 3 d-flex align-items-center justify-content-center">
-            <div>
-              <div class="card-title">CFO</div>
-              <p>Hover to see more</p>
-            </div>
-          </div>
-          <div class="flip-card-back">
-            <ul class="points-list">
-                 <li><a href="index.html" class="d-flex justify-content-between"><h6>Approved</h6> <h6><b>20</b></h6></a></li>
-                 <li><a href="index.html" class="d-flex justify-content-between"><h6>Under Process</h6> <h6>20</h6></a></li>
-                 <li><a href="index.html" class="d-flex justify-content-between"><h6>Rejected</h6> <h6>20</h6></a></li>
-                 <li><a href="index.html" class="d-flex justify-content-between"><h6>Query</h6> <h6>20</h6></a></li>
-              
-            </ul>
-          </div>
+    <div class="dash-card blue">
+        <div class="text-box">
+            Parking Scheme<br>
+            Registration
         </div>
-      </div>
-    </div>
-
-    <div class="col-md-3">
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front 4 d-flex align-items-center justify-content-center">
-            <div>
-              <div class="card-title">Incentives</div>
-              <p>Hover to see more</p>
-            </div>
-          </div>
-          <div class="flip-card-back">
-           <ul class="points-list">
-                 <li><a href="index.html" class="d-flex justify-content-between"><h6>Approved</h6> <h6><b>20</b></h6></a></li>
-                 <li><a href="index.html" class="d-flex justify-content-between"><h6>Under Process</h6> <h6>20</h6></a></li>
-                 <li><a href="index.html" class="d-flex justify-content-between"><h6>Rejected</h6> <h6>20</h6></a></li>
-                 <li><a href="index.html" class="d-flex justify-content-between"><h6>Query</h6> <h6>20</h6></a></li>
-              
-            </ul>
-          </div>
-        </div>
-      </div>
+        <div class="icon">🅿️</div>
     </div>
 
 </div>
 
 
-
-
-
-  </div>
-</div>
-                                </div>
-                                </div>
-                               
-                            </div>
-                            
-                        </div>
-                    </div>
                 </div>
                             <!-- [ Main Content ] end -->
                             <!-- [ Main Content ] start -->
@@ -523,6 +511,9 @@ h5 {
             </div>
         </div>
     </div>
+
+
+    
                <div class="footer-2__bottom-wrapper">
                     <div class="container">
                         <div class="footer-2__bottom">
@@ -535,7 +526,7 @@ h5 {
                         </div>
                     </div>
                 </div>
-
+                
     <!-- [ Main Content ] end -->
 
         <!-- Warning Section start -->
@@ -638,7 +629,11 @@ h5 {
     </script>
 
     <script src="assets/js/analytics.js"></script>
-
+<script src="assets/wizards/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/wizards/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="assets/wizards/vendor/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="assets/wizards/vendor/jquery-steps/jquery.steps.min.js"></script>
+    <script src="assets/wizards/js/main.js"></script>
 </body>
 
 </html>

@@ -24,7 +24,12 @@
     <!-- vendor css -->
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <link rel="stylesheet" href="assets/css/dept.css">
+
     <link rel="stylesheet" href="assets/css/card.css">
+
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.js">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 
      <style>
         .pcoded-wrapper.container-fluid, .pcoded-main-container {
@@ -45,7 +50,37 @@ h5 {
      </style>
     
     
+<style>
+        .card svg {
+        position: absolute;
+        top: 53px !important;
+        right: 20px !important;
+        width: 48px !important;
+        height: 48px !important;
+        box-shadow: 1px 2px 3px #fff;
+        border-radius: 8px;
+        color: #ffffff;
+        background: linear-gradient(45deg, #c4527ea6, #6f3e9a00);
+        padding: 11px;
+    }
 
+    .bg1 {
+        background: linear-gradient(135deg, rgb(18 86 141 / 83%) 0%, rgb(39 57 155 / 70%) 100%), url(assets/images/dashbg.jpg) center center no-repeat !important;
+        background-size: cover !important;
+    }
+    .bg2 {
+        background: linear-gradient(135deg, rgb(137 22 157 / 79%) 0%, rgb(233 30 99 / 87%) 100%), url(assets/images/dashbg.jpg) center center no-repeat !important;
+        background-size: cover !important;
+    }
+    .bg3 {
+        background: linear-gradient(135deg, #15570e 0%, rgb(7 131 41 / 63%) 100%), url(assets/images/dashbg.jpg) center center no-repeat !important;
+        background-size: cover !important;
+    }
+    .bg4 {
+        background: linear-gradient(135deg, #F44336 0%, rgb(224 21 6 / 58%) 100%), url(assets/images/dashbg.jpg) center center no-repeat !important;
+        background-size: cover !important;
+    }
+</style>
 </head>
 <body>
     <!-- [ Pre-loader ] start -->
@@ -67,92 +102,9 @@ h5 {
                         <a href="index.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
                     </li>
                     
-                    <li class="nav-item pcoded-hasmenu">
-                        <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-layout"></i></span><span class="pcoded-mtext">Pre-Establishment</span></a>
-                        <ul class="pcoded-submenu">
-                            <li><a href="Questionnaire.html" target="_blank">Questionnaire</a></li>
-                            <li><a href="layout-horizontal.html" target="_blank">Combined Application Form</a></li>
-                            <li><a href="#">Respond To Query</a></li>
-                            <li><a href="#">Print CFE</a></li>
-                            <li><a href="#">Print Acknowledgment </a></li>
-                            <li><a href="#">Print Acknowledgment with QR Code</a></li>
-                            <li><a href="#">View Receipt</a></li>
-                        </ul>
-                    </li>
-                    
-                    <!-- <li class="nav-item pcoded-hasmenu">
-                    	<a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">Basic</span></a>
-                    	<ul class="pcoded-submenu">
-                    		<li><a href="bc_alert.html">Alert</a></li>
-                    		<li><a href="bc_button.html">Button</a></li>
-                    		<li><a href="bc_badges.html">Badges</a></li>
-                    		<li><a href="bc_breadcrumb-pagination.html">Breadcrumb & paggination</a></li>
-                    		<li><a href="bc_card.html">Cards</a></li>
-                    		<li><a href="bc_collapse.html">Collapse</a></li>
-                    		<li><a href="bc_carousel.html">Carousel</a></li>
-                    		<li><a href="bc_grid.html">Grid system</a></li>
-                    		<li><a href="bc_progress.html">Progress</a></li>
-                    		<li><a href="bc_modal.html">Modal</a></li>
-                    		<li><a href="bc_spinner.html">Spinner</a></li>
-                    		<li><a href="bc_tabs.html">Tabs & pills</a></li>
-                    		<li><a href="bc_typography.html">Typography</a></li>
-                    		<li><a href="bc_tooltip-popover.html">Tooltip & popovers</a></li>
-                    		<li><a href="bc_toasts.html">Toasts</a></li>
-                    		<li><a href="bc_extra.html">Other</a></li>
-                    	</ul>
-                    </li> -->
                     
                     
-                    <!-- <li class="nav-item">
-                        <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Industry Registration</span></a>
-                    </li> -->
-                     <li class="nav-item">
-                        <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Land Allotment</span></a>
-                    </li>
-                     <li class="nav-item">
-                        <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Pre-Establishment</span></a>
-                    </li>
-                     <li class="nav-item">
-                        <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Pre-Operational</span></a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Incentives</span></a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Renewals</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="Reports.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Reports</span></a>
-                    </li>
-
-
-
-                    <!-- <li class="nav-item">
-                        <a href="tbl_bootstrap.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-align-justify"></i></span><span class="pcoded-mtext">Bootstrap table</span></a>
-                    </li>
-                    <li class="nav-item pcoded-menu-caption">
-                    	<label>Chart & Maps</label>
-                    </li>
-                    <li class="nav-item">
-                        <a href="chart-apex.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-pie-chart"></i></span><span class="pcoded-mtext">Chart</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="map-google.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-map"></i></span><span class="pcoded-mtext">Maps</span></a>
-                    </li>
-                    <li class="nav-item pcoded-menu-caption">
-                    	<label>Pages</label>
-                    </li>
                     
-                    <li class="nav-item"><a href="sample-page.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-sidebar"></i></span><span class="pcoded-mtext">Sample page</span></a></li> -->
-<li class="nav-item pcoded-hasmenu">
-                        <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-lock"></i></span><span class="pcoded-mtext">Authentication</span></a>
-                        <ul class="pcoded-submenu">
-                            <li><a href="auth-signup.html" target="_blank">Sign up</a></li>
-                            <li><a href="auth-signin.html" target="_blank">Sign in</a></li>
-                        </ul>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -346,39 +298,23 @@ h5 {
     <!-- [ Main Content ] start -->
     <div class="pcoded-main-container">
         <div class="pcoded-wrapper container-fluid">
+            <div class="breadcrumb">
+            <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="DeptDashboard.html">Dashboard</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Grievance</li>
+        </ol>
+    </nav>
+    </div>
             <div class="pcoded-content">
                 <div class="pcoded-inner-content">
                     <div class="main-body">
                         <div class="page-wrapper">
-                            <div class="page-header">
-                                <div class="page-block">
-                                    <div class="row align-items-center">
-                                        <div class="col-md-12">
-
-                                            <div class="card">
-                                                <div class="card-header">
-                                                    <h5 class="m-b-10">Welcome to Kalyanbabu!</h5>   
-                                                    </div>
-                                                    <div class="card-body">
-                                                        <div class="d-flex justify-content-between" style="background: #e0e4fd;padding: 10px 8px 2px;border-radius: 4px;margin-bottom: 10px;">
-			
-									<h4 style="display: flex;align-items: center;">Kalyan Babu, Interested in Starting a New Application Get Started !</h4>
-									<h4><a href="Questionnaire.html" target="_blank"><span class="badge rounded-pill bg-dark text-sm p-2" style="font-size: 16px;color:#fff;background:#033260 !important;display: flex;
-				align-items: center;"><i class="fi fi-tr-bullseye-arrow"></i>&nbsp; Click Here</span></a></h4>
-			
-								</div>
-                                                        </div>
-                                            </div>
-                                            
-                                            
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                           
                             <!-- [ Main Content ] start -->
                             <div class="card table-card review-card">
                     <div class="card-header borderless ">
-                        <h5>Dashbaord</h5>
+                        <h5>Grievance Applications</h5>
                         <div class="card-header-right">
                             <div class="btn-group card-option">
                                 <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -403,100 +339,43 @@ h5 {
 
     <div class="col-md-12 d-flex">    <!-- Card 1 -->
 
+<div class="deptdata Grievance">
 
-    <div class="col-md-3">
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front 1 d-flex align-items-center justify-content-center">
-            <div style="width: 100%;">
-              <div class="card-title">Land</div>
-              <p>Hover to see more</p>
-            </div>
-          </div>
-          <div class="flip-card-back">
-            <!-- <h5>Land Details</h5> -->
-            
-            <ul class="points-list">
-                 <li><a href="index.html" class="d-flex justify-content-between"><h6>Approved</h6> <h6><b>20</b></h6></a></li>
-                 <li><a href="index.html" class="d-flex justify-content-between"><h6>Under Process</h6> <h6>20</h6></a></li>
-                 <li><a href="index.html" class="d-flex justify-content-between"><h6>Rejected</h6> <h6>20</h6></a></li>
-                 <li><a href="index.html" class="d-flex justify-content-between"><h6>Query</h6> <h6>20</h6></a></li>
-                 <a href="www.google.com" target="_blank"><p>Click here to View More</p></a>
-              
-            </ul>
-          </div>
-        </div>
-      </div>
+<div class="dashboard">
+    <a href="InternalGrievanceDashboard.html">
+    <div class="card bg1">
+      <h3>To Be Processed</h3>
+      <div class="count">10</div>
+      <i data-lucide="clipboard-list"></i>
     </div>
-
-    <!-- Card 2 -->
-    <div class="col-md-3">
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front 2 d-flex align-items-center justify-content-center">
-            <div>
-              <div class="card-title">CFE</div>
-              <p>Hover to see more</p>
-            </div>
-          </div>
-          <div class="flip-card-back">
-            <ul class="points-list">
-                 <li><a href="index.html" class="d-flex justify-content-between"><h6>Approved</h6> <h6><b>20</b></h6></a></li>
-                 <li><a href="index.html" class="d-flex justify-content-between"><h6>Under Process</h6> <h6>20</h6></a></li>
-                 <li><a href="index.html" class="d-flex justify-content-between"><h6>Rejected</h6> <h6>20</h6></a></li>
-                 <li><a href="index.html" class="d-flex justify-content-between"><h6>Query</h6> <h6>20</h6></a></li>
-              
-            </ul>
-          </div>
-        </div>
-      </div>
+    </a>
+    <div class="card bg2">
+      <h3>In Process</h3>
+      <div class="count">2</div>
+      <i data-lucide="user-plus"></i>
     </div>
-
-    <!-- Card 3 -->
-    <div class="col-md-3">
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front 3 d-flex align-items-center justify-content-center">
-            <div>
-              <div class="card-title">CFO</div>
-              <p>Hover to see more</p>
-            </div>
-          </div>
-          <div class="flip-card-back">
-            <ul class="points-list">
-                 <li><a href="index.html" class="d-flex justify-content-between"><h6>Approved</h6> <h6><b>20</b></h6></a></li>
-                 <li><a href="index.html" class="d-flex justify-content-between"><h6>Under Process</h6> <h6>20</h6></a></li>
-                 <li><a href="index.html" class="d-flex justify-content-between"><h6>Rejected</h6> <h6>20</h6></a></li>
-                 <li><a href="index.html" class="d-flex justify-content-between"><h6>Query</h6> <h6>20</h6></a></li>
-              
-            </ul>
-          </div>
-        </div>
-      </div>
+    <div class="card bg3">
+      <h3>Approved</h3>
+      <div class="count">6</div>
+      <i data-lucide="file-edit"></i>
     </div>
-
-    <div class="col-md-3">
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front 4 d-flex align-items-center justify-content-center">
-            <div>
-              <div class="card-title">Incentives</div>
-              <p>Hover to see more</p>
-            </div>
-          </div>
-          <div class="flip-card-back">
-           <ul class="points-list">
-                 <li><a href="index.html" class="d-flex justify-content-between"><h6>Approved</h6> <h6><b>20</b></h6></a></li>
-                 <li><a href="index.html" class="d-flex justify-content-between"><h6>Under Process</h6> <h6>20</h6></a></li>
-                 <li><a href="index.html" class="d-flex justify-content-between"><h6>Rejected</h6> <h6>20</h6></a></li>
-                 <li><a href="index.html" class="d-flex justify-content-between"><h6>Query</h6> <h6>20</h6></a></li>
-              
-            </ul>
-          </div>
-        </div>
-      </div>
+    <div class="card bg4">
+       <h3>Rejected</h3>
+      <div class="count">2</div>
+      <i data-lucide="newspaper"></i>
     </div>
-
+    <!-- <div class="card bg5">
+      <h3>Pre-Operational<br/>Approval</h3>
+      <div class="count">&nbsp;</div>
+      <i data-lucide="id-card"></i>
+    </div>
+    <div class="card bg6">
+      <h3>Renewal Approval</h3>
+      <div class="count">&nbsp;</div>
+      <i data-lucide="user"></i>
+    </div> -->
+  </div>
+  </div>
 </div>
 
 
@@ -590,7 +469,10 @@ h5 {
         <script src="assets/js/plugins/bootstrap.min.js"></script>
         <script src="assets/js/pcoded.min.js"></script>
 
-
+ <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
     <!-- prism Js -->
     <script src="assets/js/plugins/prism.js"></script>
 
