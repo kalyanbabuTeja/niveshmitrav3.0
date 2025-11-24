@@ -497,3 +497,75 @@ h3.title._split_text {
     
     border-radius: 20px;
 }
+
+
+.table-wrapper {
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.15);
+    padding: 25px;
+    margin: 30px auto;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    width: 95%;
+}
+
+/* Filter Bar */
+.filter-bar {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.filter-bar input,
+.filter-bar select {
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: none;
+    background: #ffffffaa;
+    backdrop-filter: blur(6px);
+    font-size: 15px;
+    outline: none;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.10);
+}
+
+/* Table Styling */
+.modern-table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #fff;
+}
+
+/* Gradient Header */
+.modern-table thead tr {
+    background: linear-gradient(90deg, #43cea2, #185a9d);
+    color: white;
+    font-size: 16px;
+}
+
+.modern-table th, .modern-table td {
+    padding: 14px 18px;
+    text-align: left;
+}
+
+/* Hover & Zebra */
+.modern-table tbody tr:nth-child(even) {
+    background: #f5f8ff;
+}
+.modern-table tbody tr:hover {
+    background: #e8f0fe;
+    transition: 0.2s ease-in-out;
+}
+
+/* Sticky Header */
+.modern-table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* Table Border Bottom */
+.modern-table td {
+    border-bottom: 1px solid #e1e1e1;
+}
