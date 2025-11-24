@@ -26,6 +26,28 @@
     <link href="assets/css/custom.min.css" rel="stylesheet" type="text/css">
     <link href="assets/css/custom.css" rel="stylesheet" type="text/css">
 <style>
+    .footer-2__bottom-wrapper {
+    background: #0D2140 !important;
+}
+.footer-2__bottom-wrapper .container {
+    width: 100%;
+    font-size: 14px;
+}
+.footer-2__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+.footer-2__copyright p, .footer-2__copyright-menu p {
+    font-size: 16px;
+    font-family: system-ui !important;
+    font-weight: 600 !important;
+    color: #d2e3fb;
+    margin-bottom: 5px !important;
+    margin: 8px 0px;
+}
     .modern-table {
     width: 100%;
     border-collapse: collapse;
@@ -66,6 +88,37 @@
 .modern-table td {
     border-bottom: 1px solid #e1e1e1;
 }
+
+.scroll-box {
+    width: 275px;
+    height: 375px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    padding: 10px;
+  }
+
+  .scroll-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    animation: scrollDown 12s linear infinite;
+  }
+
+  @keyframes scrollDown {
+    0%   { transform: translateY(0); }
+    100% { transform: translateY(-100%); }
+  }
+
+  .scroll-item {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #333;
+    background: #f8f8f8;
+    padding: 8px;
+    border-radius: 6px;
+  }
 </style>
 </head>
 
@@ -1805,7 +1858,7 @@
                                     <div class="col-12">
                                         <div class="d-flex align-items-lg-center flex-lg-row flex-column">
                                             <div class="flex-grow-1">
-                                                <h4 class="fs-16 mb-1">Good Morning, Anna!</h4>
+                                                <h4 class="fs-16 mb-1">Good Morning, Dev!</h4>
                                                 <p class="text-muted mb-0">Here's what's happening with your store today.</p>
                                             </div>
                                             <div class="mt-3 mt-lg-0">
@@ -1843,7 +1896,7 @@
                                                         </div> -->
                                                         <!--end col-->
                                                         <div class="col-auto">
-                                                            <button type="button" class="btn btn-soft-info btn-icon waves-effect material-shadow-none waves-light layout-rightside-btn"><i class="ri-pulse-line"></i></button>
+                                                            <button type="button" class="w-100 p-2 btn btn-soft-info btn-icon waves-effect material-shadow-none waves-light layout-rightside-btn">Submit</button>
                                                         </div>
                                                         <!--end col-->
                                                     </div>
@@ -1878,7 +1931,7 @@
                                                     </div>
                                                     <div class="avatar-sm flex-shrink-0">
                                                         <span class="avatar-title bg-success-subtle rounded fs-3">
-                                                            <i class="bx bx-dollar-circle text-success"></i>
+                                                            <i class="bx bx-user-circle text-success"></i>
                                                         </span>
                                                     </div>
                                                 </div>
@@ -2300,7 +2353,7 @@
                                     <div class="col-xl-6">
                                         <div class="card card-height-100">
                                             <div class="card-header align-items-center d-flex">
-                                                <h4 class="card-title mb-0 flex-grow-1">Top Sellers</h4>
+                                                <h4 class="card-title mb-0 flex-grow-1">Distric Wise Sectors</h4>
                                                 <div class="flex-shrink-0">
                                                     <div class="dropdown card-header-dropdown">
                                                         <a class="text-reset dropdown-btn" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -2870,7 +2923,7 @@
                         <div class="col-xl-3">
                             <div class="card">
                                 <div class="card-header align-items-center d-flex">
-                                    <h4 class="card-title mb-0 flex-grow-1">Recent Comment</h4>
+                                    <h4 class="card-title mb-0 flex-grow-1">Latest Updates</h4>
                                     <div class="flex-shrink-0">
                                         <button type="button" class="btn btn-soft-primary btn-sm">
                                             View All
@@ -2878,354 +2931,57 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <div data-simplebar="init" class="mx-n3 px-3 simplebar-scrollable-y" style="height: 375px;"><div class="simplebar-wrapper" style="margin: 0px -16px;"><div class="simplebar-height-auto-observer-wrapper"><div class="simplebar-height-auto-observer"></div></div><div class="simplebar-mask"><div class="simplebar-offset" style="right: 0px; bottom: 0px;"><div class="simplebar-content-wrapper" tabindex="0" role="region" aria-label="scrollable content" style="height: 100%; overflow: hidden scroll;"><div class="simplebar-content" style="padding: 0px 16px;">
-                                        <div class="vstack gap-3">
-                                            <div class="d-flex gap-3">
-                                                <img src="assets/images/users/avatar-3.jpg" alt="" class="avatar-sm rounded flex-shrink-0">
-                                                <div class="flex-shrink-1">
-                                                    <h6 class="mb-2">Diana Kohler <span class="text-muted">Has commented</span></h6>
-                                                    <p class="text-muted mb-0">" Really well-written and informative. The emotional connection strategy is something I’ll be testing out more! "</p>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex gap-3">
-                                                <img src="assets/images/users/avatar-5.jpg" alt="" class="avatar-sm rounded flex-shrink-0">
-                                                <div class="flex-shrink-1">
-                                                    <h6 class="mb-2">Tonya Noble <span class="text-muted">Has commented</span></h6>
-                                                    <p class="text-muted mb-0">" Incredibly helpful tips, especially about adding a call to action. I’ve been missing that step and will implement it in my next post! "</p>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex gap-3">
-                                                <img src="assets/images/users/avatar-6.jpg" alt="" class="avatar-sm rounded flex-shrink-0">
-                                                <div class="flex-shrink-1">
-                                                    <h6 class="mb-2">Donald Palmer <span class="text-muted">Has commented</span></h6>
-                                                    <p class="text-muted mb-0">" Fantastic read! The power of visuals and trends really stood out to me. Thanks for sharing these useful insights! "</p>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex gap-3">
-                                                <img src="assets/images/users/avatar-7.jpg" alt="" class="avatar-sm rounded flex-shrink-0">
-                                                <div class="flex-shrink-1">
-                                                    <h6 class="mb-2">Joseph Parker <span class="text-muted">Has commented</span></h6>
-                                                    <p class="text-muted mb-0">" Great post! Simple yet powerful tips that I can start using immediately. Thanks for sharing your expertise! "</p>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex gap-3">
-                                                <img src="assets/images/users/avatar-9.jpg" alt="" class="avatar-sm rounded flex-shrink-0">
-                                                <div class="flex-shrink-1">
-                                                    <h6 class="mb-2">Timothy Smith <span class="text-muted">Has commented</span></h6>
-                                                    <p class="text-muted mb-0">" Wow, this has opened my eyes to a new perspective on creating content. Emotional triggers—such a smart way to engage users! "</p>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex gap-3">
-                                                <img src="assets/images/users/avatar-10.jpg" alt="" class="avatar-sm rounded flex-shrink-0">
-                                                <div class="flex-shrink-1">
-                                                    <h6 class="mb-2">Alexis Clarke <span class="text-muted">Has commented</span></h6>
-                                                    <p class="text-muted mb-0">" Fantastic read! The power of visuals and trends really stood out to me. Thanks for sharing these useful insights! "</p>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex gap-3">
-                                                <img src="assets/images/users/avatar-2.jpg" alt="" class="avatar-sm rounded flex-shrink-0">
-                                                <div class="flex-shrink-1">
-                                                    <h6 class="mb-2">Thomas Taylor <span class="text-muted">Has commented</span></h6>
-                                                    <p class="text-muted mb-0">" Loved the section on visual storytelling. It’s true that images speak louder on social media platforms. More visuals in my next posts for sure! "</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div></div></div></div><div class="simplebar-placeholder" style="width: 273px; height: 948px;"></div></div><div class="simplebar-track simplebar-horizontal" style="visibility: hidden;"><div class="simplebar-scrollbar" style="width: 0px; display: none;"></div></div><div class="simplebar-track simplebar-vertical" style="visibility: visible;"><div class="simplebar-scrollbar" style="height: 148px; transform: translate3d(0px, 0px, 0px); display: block;"></div></div></div>
+                                    <div class="scroll-box">
+  <div class="scroll-list">
+    
+    <div class="scroll-item">
+      <b>NM-3.0 Approvals Overview:</b><br>
+      7,585 approvals, ₹22.89k earnings, 367 refunds, 18.92% conversion ratio.
+    </div>
+
+    <div class="scroll-item">
+      <b>Agro Based Sector:</b><br>
+      2,762 industries with ₹4,250.40 Cr investment.
+    </div>
+
+    <div class="scroll-item">
+      <b>Cement & Fly Ash Bricks:</b><br>
+      ₹6,155.82 Cr investment recorded.
+    </div>
+
+    <div class="scroll-item">
+      <b>Automobile Sector:</b><br>
+      Strong employment with 28,917 jobs.
+    </div>
+
+    <div class="scroll-item">
+      <b>Agro Based incl. Cold Storages:</b><br>
+      leads with 2762 industries and ₹4250.40 Cr investment.
+    </div>
+
+    <div class="scroll-item">
+      <b>Cement & Fly Ash Bricks:</b><br>
+      shows a high investment of ₹6155.82 Cr.
+    </div>
+
+    <div class="scroll-item">
+      <b>Automobile sector:</b><br>
+      shows strong employment with 28,917 jobs.
+    </div>
+
+     <div class="scroll-item">
+      <b>NM-3.0 Approvals Overview:</b><br>
+      7,585 total approvals issued under NM-3.0.
+    </div>
+
+
+  </div>
+</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-8">
-                            <div class="card">
-                                <div class="card-header align-items-center d-flex">
-                                    <h4 class="card-title mb-0 flex-grow-1">Recent Article</h4>
-                                    <div class="flex-shrink-0">
-                                        <div class="dropdown card-header-dropdown">
-                                            <a class="text-reset dropdown-btn" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <span class="fw-semibold text-uppercase fs-12">Sort by: </span><span class="text-muted">Popular <i class="mdi mdi-chevron-down ms-1"></i></span>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a class="dropdown-item" href="#">Popular</a>
-                                                <a class="dropdown-item" href="#">Newest</a>
-                                                <a class="dropdown-item" href="#">Oldest</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div class="table-responsive table-card">
-                                        <table class="table table-hover table-nowrap align-middle mb-0">
-                                            <thead class="table-light">
-                                                <tr class="text-muted">
-                                                    <th scope="col">No</th>
-                                                    <th scope="col">Blog Title</th>
-                                                    <th scope="col">Post Date</th>
-                                                    <th scope="col">Category</th>
-                                                    <th scope="col">Comment</th>
-                                                    <th scope="col">Like</th>
-                                                    <th scope="col">Shared</th>
-                                                    <th scope="col">Viewers</th>
-                                                </tr>
-                                            </thead>
-
-                                            <tbody>
-                                                <tr>
-                                                    <td>01</td>
-                                                    <td>
-                                                        <img src="assets/images/blog/img-2.jpg" alt="" class="me-2 rounded" height="40">
-                                                        <a href="#!" class="text-body fw-medium">The Evolution of Minimalism in Design</a>
-                                                    </td>
-                                                    <td>20 Sep, 2024</td>
-                                                    <td><span class="badge bg-success-subtle text-success p-2">MinimalDesign</span></td>
-                                                    <td>23</td>
-                                                    <td>157</td>
-                                                    <td>11</td>
-                                                    <td>2149</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>02</td>
-                                                    <td>
-                                                        <img src="assets/images/blog/img-3.jpg" alt="" class="me-2 rounded" height="40">
-                                                        <a href="#!" class="text-body fw-medium">Mastering User Experience Through Storytelling</a>
-                                                    </td>
-                                                    <td>11 Feb, 2024</td>
-                                                    <td><span class="badge bg-success-subtle text-success p-2">UXDesign</span></td>
-                                                    <td>547</td>
-                                                    <td>1458</td>
-                                                    <td>317</td>
-                                                    <td>34978</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>03</td>
-                                                    <td>
-                                                        <img src="assets/images/blog/img-4.jpg" alt="" class="me-2 rounded" height="40">
-                                                        <a href="#!" class="text-body fw-medium">Designing for Purpose: A Mindful Approach</a>
-                                                    </td>
-                                                    <td>15 Sep, 2024</td>
-                                                    <td><span class="badge bg-success-subtle text-success p-2">CreativeProcess</span></td>
-                                                    <td>88</td>
-                                                    <td>649</td>
-                                                    <td>237</td>
-                                                    <td>1982</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>04</td>
-                                                    <td>
-                                                        <img src="assets/images/blog/img-5.jpg" alt="" class="me-2 rounded" height="40">
-                                                        <a href="#!" class="text-body fw-medium">How to Overcome Creative Block</a>
-                                                    </td>
-                                                    <td>09 July, 2024</td>
-                                                    <td><span class="badge bg-success-subtle text-success p-2">CreativeBlock</span></td>
-                                                    <td>67</td>
-                                                    <td>1114</td>
-                                                    <td>1547</td>
-                                                    <td>15747</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>05</td>
-                                                    <td>
-                                                        <img src="assets/images/blog/img-6.jpg" alt="" class="me-2 rounded" height="40">
-                                                        <a href="#!" class="text-body fw-medium">Building Brand Identity through Design</a>
-                                                    </td>
-                                                    <td>19 Nov, 2024</td>
-                                                    <td><span class="badge bg-success-subtle text-success p-2">BrandDesign</span></td>
-                                                    <td>8</td>
-                                                    <td>10</td>
-                                                    <td>7</td>
-                                                    <td>110</td>
-                                                </tr>
-                                            </tbody><!-- end tbody -->
-                                        </table><!-- end table -->
-                                    </div>
-                                    <div class="align-items-center mt-3 row g-3 text-center text-sm-start">
-                                        <div class="col-sm">
-                                            <div class="text-muted">Showing <span class="fw-semibold">5</span> of <span class="fw-semibold">14</span> Results
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-auto">
-                                            <ul class="pagination pagination-separated pagination-sm justify-content-center justify-content-sm-start mb-0">
-                                                <li class="page-item disabled">
-                                                    <a href="#!" class="page-link">←</a>
-                                                </li>
-                                                <li class="page-item">
-                                                    <a href="#!" class="page-link">1</a>
-                                                </li>
-                                                <li class="page-item active">
-                                                    <a href="#!" class="page-link">2</a>
-                                                </li>
-                                                <li class="page-item">
-                                                    <a href="#!" class="page-link">3</a>
-                                                </li>
-                                                <li class="page-item">
-                                                    <a href="#!" class="page-link">→</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!--end col-->
-                        <div class="col-xl-4">
-                            <div class="row">
-                                <div class="col-xl-12">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="d-flex">
-                                                <div class="flex-shrink-0 me-3">
-                                                    <img src="assets/images/users/avatar-1.jpg" alt="" class="avatar-sm rounded-circle img-thumbnail">
-                                                </div>
-                                                <div class="flex-grow-1">
-                                                    <div class="d-flex">
-                                                        <div class="flex-grow-1">
-                                                            <h5 class="mb-1 card-title">Anna Adame</h5>
-                                                            <p class="mb-0 text-muted">Founder</p>
-                                                        </div>
-        
-                                                        <div class="flex-shrink-0 dropdown ms-2">
-                                                            <button class="btn btn-light btn-sm" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                <i class="bx bxs-cog align-middle me-1"></i> Setting
-                                                            </button>
-                                                            <div class="dropdown-menu dropdown-menu-end">
-                                                                <a class="dropdown-item" href="#">Action</a>
-                                                                <a class="dropdown-item" href="#">Another action</a>
-                                                                <a class="dropdown-item" href="#">Something else</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row mt-3">
-                                                        <div class="col-4">
-                                                            <div class="border p-2 rounded border-dashed">
-                                                                <p class="text-muted text-truncate mb-2">Total Post</p>
-                                                                <h5 class="mb-0">26</h5>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <div class="border p-2 rounded border-dashed">
-                                                                <p class="text-muted text-truncate mb-2">Subscribes</p>
-                                                                <h5 class="mb-0">17k</h5>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-4">
-                                                            <div class="border p-2 rounded border-dashed">
-                                                                <p class="text-muted text-truncate mb-2">Viewers</p>
-                                                                <h5 class="mb-0">487k</h5>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                                <div class="col-xl-12">
-                                    <div class="card">
-                                        <div class="card-header align-items-center d-flex">
-                                            <h5 class="card-title mb-0 flex-grow-1">Used Device</h5>
-                                            <div class="flex-shrink-0">
-                                                <div class="dropdown card-header-dropdown">
-                                                    <a class="text-reset dropdown-btn" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                        <span class="text-muted fs-16"><i class="mdi mdi-dots-vertical align-middle"></i></span>
-                                                    </a>
-                                                    <div class="dropdown-menu dropdown-menu-end">
-                                                        <a class="dropdown-item" href="#">Today</a>
-                                                        <a class="dropdown-item" href="#">Last Week</a>
-                                                        <a class="dropdown-item" href="#">Last Month</a>
-                                                        <a class="dropdown-item" href="#">Current Year</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div><!-- end card header -->
-                                        <div class="card-body">
-                                            <div id="gradient_chart" data-colors="[&quot;--vz-primary&quot;, &quot;--vz-success&quot;, &quot;--vz-warning&quot;]" class="apex-charts" dir="ltr" style="min-height: 210px;"><div id="apexcharts68nwp223" class="apexcharts-canvas apexcharts68nwp223 apexcharts-theme-light" style="width: 340px; height: 210px;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" class="apexcharts-svg" xmlns:data="ApexChartsNS" transform="translate(0, 0)" width="340" height="210"><foreignObject x="0" y="0" width="340" height="210"><style type="text/css">
-      .apexcharts-flip-y {
-        transform: scaleY(-1) translateY(-100%);
-        transform-origin: top;
-        transform-box: fill-box;
-      }
-      .apexcharts-flip-x {
-        transform: scaleX(-1);
-        transform-origin: center;
-        transform-box: fill-box;
-      }
-      .apexcharts-legend {
-        display: flex;
-        overflow: auto;
-        padding: 0 10px;
-      }
-      .apexcharts-legend.apexcharts-legend-group-horizontal {
-        flex-direction: column;
-      }
-      .apexcharts-legend-group {
-        display: flex;
-      }
-      .apexcharts-legend-group-vertical {
-        flex-direction: column-reverse;
-      }
-      .apexcharts-legend.apx-legend-position-bottom, .apexcharts-legend.apx-legend-position-top {
-        flex-wrap: wrap
-      }
-      .apexcharts-legend.apx-legend-position-right, .apexcharts-legend.apx-legend-position-left {
-        flex-direction: column;
-        bottom: 0;
-      }
-      .apexcharts-legend.apx-legend-position-bottom.apexcharts-align-left, .apexcharts-legend.apx-legend-position-top.apexcharts-align-left, .apexcharts-legend.apx-legend-position-right, .apexcharts-legend.apx-legend-position-left {
-        justify-content: flex-start;
-        align-items: flex-start;
-      }
-      .apexcharts-legend.apx-legend-position-bottom.apexcharts-align-center, .apexcharts-legend.apx-legend-position-top.apexcharts-align-center {
-        justify-content: center;
-        align-items: center;
-      }
-      .apexcharts-legend.apx-legend-position-bottom.apexcharts-align-right, .apexcharts-legend.apx-legend-position-top.apexcharts-align-right {
-        justify-content: flex-end;
-        align-items: flex-end;
-      }
-      .apexcharts-legend-series {
-        cursor: pointer;
-        line-height: normal;
-        display: flex;
-        align-items: center;
-      }
-      .apexcharts-legend-text {
-        position: relative;
-        font-size: 14px;
-      }
-      .apexcharts-legend-text *, .apexcharts-legend-marker * {
-        pointer-events: none;
-      }
-      .apexcharts-legend-marker {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        margin-right: 1px;
-      }
-
-      .apexcharts-legend-series.apexcharts-no-click {
-        cursor: auto;
-      }
-      .apexcharts-legend .apexcharts-hidden-zero-series, .apexcharts-legend .apexcharts-hidden-null-series {
-        display: none !important;
-      }
-      .apexcharts-inactive-legend {
-        opacity: 0.45;
-      }
-
-    </style></foreignObject><g class="apexcharts-inner apexcharts-graphical" transform="translate(0, 0)"><defs><clipPath id="gridRectMask68nwp223"><rect width="346" height="182" x="-3" y="-3" rx="0" ry="0" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0" fill="#fff"></rect></clipPath><clipPath id="gridRectBarMask68nwp223"><rect width="346" height="182" x="-3" y="-3" rx="0" ry="0" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0" fill="#fff"></rect></clipPath><clipPath id="gridRectMarkerMask68nwp223"><rect width="340" height="176" x="0" y="0" rx="0" ry="0" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0" fill="#fff"></rect></clipPath><clipPath id="forecastMask68nwp223"></clipPath><clipPath id="nonForecastMask68nwp223"></clipPath><radialGradient gradientUnits="userSpaceOnUse" cx="170" cy="88" r="79.85365853658537" id="SvgjsRadialGradient1010"><stop stop-opacity="1" stop-color="rgba(131,142,178,1)" offset="0.8"></stop><stop stop-opacity="1" stop-color="rgba(64,81,137,1)" offset="1"></stop><stop stop-opacity="1" stop-color="rgba(64,81,137,1)" offset="1"></stop></radialGradient><radialGradient gradientUnits="userSpaceOnUse" cx="170" cy="88" r="79.85365853658537" id="SvgjsRadialGradient1011"><stop stop-opacity="1" stop-color="rgba(96,206,191,1)" offset="0.8"></stop><stop stop-opacity="1" stop-color="rgba(10,179,156,1)" offset="1"></stop><stop stop-opacity="1" stop-color="rgba(10,179,156,1)" offset="1"></stop></radialGradient><radialGradient gradientUnits="userSpaceOnUse" cx="170" cy="88" r="79.85365853658537" id="SvgjsRadialGradient1012"><stop stop-opacity="1" stop-color="rgba(250,209,138,1)" offset="0.8"></stop><stop stop-opacity="1" stop-color="rgba(247,184,75,1)" offset="1"></stop><stop stop-opacity="1" stop-color="rgba(247,184,75,1)" offset="1"></stop></radialGradient></defs><g class="apexcharts-pie"><g transform="translate(0, 0) scale(1)"><circle r="51.90487804878049" cx="170" cy="88" fill="transparent"></circle><g class="apexcharts-slices"><g class="apexcharts-series apexcharts-pie-series" seriesName="Desktop" rel="1" data:realIndex="0"><path d="M 90.14634146341463 87.99999999999999 A 79.85365853658537 79.85365853658537 0 0 1 220.01541031781554 25.749975803875188 L 202.5100167065801 47.537484272518874 A 51.90487804878049 51.90487804878049 0 0 0 118.09512195121951 88 L 90.14634146341463 87.99999999999999 z " fill="url(#SvgjsRadialGradient1010)" fill-opacity="1" stroke="#ffffff" stroke-opacity="1" stroke-linecap="butt" stroke-width="2" stroke-dasharray="0" class="apexcharts-pie-area apexcharts-donut-slice-0" index="0" j="0" data:angle="128.78048780487805" data:startAngle="-90" data:strokeWidth="2" data:value="44" data:pathOrig="M 90.14634146341463 87.99999999999999 A 79.85365853658537 79.85365853658537 0 0 1 220.01541031781554 25.749975803875188 L 202.5100167065801 47.537484272518874 A 51.90487804878049 51.90487804878049 0 0 0 118.09512195121951 88 L 90.14634146341463 87.99999999999999 z "></path></g><g class="apexcharts-series apexcharts-pie-series" seriesName="Mobile" rel="2" data:realIndex="1"><path d="M 220.01541031781554 25.749975803875188 A 79.85365853658537 79.85365853658537 0 0 1 143.00811561196494 163.15347602646548 L 152.4552751477772 136.84975941720256 A 51.90487804878049 51.90487804878049 0 0 0 202.5100167065801 47.537484272518874 L 220.01541031781554 25.749975803875188 z " fill="url(#SvgjsRadialGradient1011)" fill-opacity="1" stroke="#ffffff" stroke-opacity="1" stroke-linecap="butt" stroke-width="2" stroke-dasharray="0" class="apexcharts-pie-area apexcharts-donut-slice-1" index="0" j="1" data:angle="160.97560975609755" data:startAngle="38.78048780487805" data:strokeWidth="2" data:value="55" data:pathOrig="M 220.01541031781554 25.749975803875188 A 79.85365853658537 79.85365853658537 0 0 1 143.00811561196494 163.15347602646548 L 152.4552751477772 136.84975941720256 A 51.90487804878049 51.90487804878049 0 0 0 202.5100167065801 47.537484272518874 L 220.01541031781554 25.749975803875188 z "></path></g><g class="apexcharts-series apexcharts-pie-series" seriesName="Laptop" rel="3" data:realIndex="2"><path d="M 143.00811561196494 163.15347602646548 A 79.85365853658537 79.85365853658537 0 0 1 90.14634267965539 88.01393709254148 L 118.09512274177601 88.00905911015197 A 51.90487804878049 51.90487804878049 0 0 0 152.4552751477772 136.84975941720256 L 143.00811561196494 163.15347602646548 z " fill="url(#SvgjsRadialGradient1012)" fill-opacity="1" stroke="#ffffff" stroke-opacity="1" stroke-linecap="butt" stroke-width="2" stroke-dasharray="0" class="apexcharts-pie-area apexcharts-donut-slice-2" index="0" j="2" data:angle="70.2439024390244" data:startAngle="199.7560975609756" data:strokeWidth="2" data:value="24" data:pathOrig="M 143.00811561196494 163.15347602646548 A 79.85365853658537 79.85365853658537 0 0 1 90.14634267965539 88.01393709254148 L 118.09512274177601 88.00905911015197 A 51.90487804878049 51.90487804878049 0 0 0 152.4552751477772 136.84975941720256 L 143.00811561196494 163.15347602646548 z "></path></g></g></g></g><line x1="0" y1="0" x2="340" y2="0" stroke="#b6b6b6" stroke-dasharray="0" stroke-width="1" stroke-linecap="butt" class="apexcharts-ycrosshairs"></line><line x1="0" y1="0" x2="340" y2="0" stroke="#b6b6b6" stroke-dasharray="0" stroke-width="0" stroke-linecap="butt" class="apexcharts-ycrosshairs-hidden"></line></g><g class="apexcharts-datalabels-group" transform="translate(0, 0) scale(1)"></g><g class="apexcharts-datalabels-group" transform="translate(0, 0) scale(1)"></g></svg><div class="apexcharts-legend apexcharts-align-center apx-legend-position-bottom" style="right: 0px; position: absolute; left: 0px; top: 185px; max-height: 105px;"><div class="apexcharts-legend-series" rel="1" seriesname="Desktop" data:collapsed="false" style="margin: 4px 5px;"><span class="apexcharts-legend-marker" rel="1" data:collapsed="false" style="height: 16px; width: 16px; left: 0px; top: 0px;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%"><path d="M 0, 0 
-           m -7, 0 
-           a 7,7 0 1,0 14,0 
-           a 7,7 0 1,0 -14,0" fill="#405189" fill-opacity="1" stroke="#ffffff" stroke-opacity="0.9" stroke-linecap="butt" stroke-width="1" stroke-dasharray="0" cx="0" cy="0" shape="circle" class="apexcharts-legend-marker apexcharts-marker apexcharts-marker-circle" style="transform: translate(50%, 50%);"></path></svg></span><span class="apexcharts-legend-text" rel="1" i="0" data:default-text="Desktop" data:collapsed="false" style="color: rgb(55, 61, 63); font-size: 12px; font-weight: 400; font-family: Helvetica, Arial, sans-serif;">Desktop</span></div><div class="apexcharts-legend-series" rel="2" seriesname="Mobile" data:collapsed="false" style="margin: 4px 5px;"><span class="apexcharts-legend-marker" rel="2" data:collapsed="false" style="height: 16px; width: 16px; left: 0px; top: 0px;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%"><path d="M 0, 0 
-           m -7, 0 
-           a 7,7 0 1,0 14,0 
-           a 7,7 0 1,0 -14,0" fill="#0ab39c" fill-opacity="1" stroke="#ffffff" stroke-opacity="0.9" stroke-linecap="butt" stroke-width="1" stroke-dasharray="0" cx="0" cy="0" shape="circle" class="apexcharts-legend-marker apexcharts-marker apexcharts-marker-circle" style="transform: translate(50%, 50%);"></path></svg></span><span class="apexcharts-legend-text" rel="2" i="1" data:default-text="Mobile" data:collapsed="false" style="color: rgb(55, 61, 63); font-size: 12px; font-weight: 400; font-family: Helvetica, Arial, sans-serif;">Mobile</span></div><div class="apexcharts-legend-series" rel="3" seriesname="Laptop" data:collapsed="false" style="margin: 4px 5px;"><span class="apexcharts-legend-marker" rel="3" data:collapsed="false" style="height: 16px; width: 16px; left: 0px; top: 0px;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%"><path d="M 0, 0 
-           m -7, 0 
-           a 7,7 0 1,0 14,0 
-           a 7,7 0 1,0 -14,0" fill="#f7b84b" fill-opacity="1" stroke="#ffffff" stroke-opacity="0.9" stroke-linecap="butt" stroke-width="1" stroke-dasharray="0" cx="0" cy="0" shape="circle" class="apexcharts-legend-marker apexcharts-marker apexcharts-marker-circle" style="transform: translate(50%, 50%);"></path></svg></span><span class="apexcharts-legend-text" rel="3" i="2" data:default-text="Laptop" data:collapsed="false" style="color: rgb(55, 61, 63); font-size: 12px; font-weight: 400; font-family: Helvetica, Arial, sans-serif;">Laptop</span></div></div><div class="apexcharts-tooltip apexcharts-theme-dark"><div class="apexcharts-tooltip-series-group apexcharts-tooltip-series-group-0" style="order: 1;"><span class="apexcharts-tooltip-marker" shape="circle" style="background-color: rgb(64, 81, 137);"></span><div class="apexcharts-tooltip-text" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px;"><div class="apexcharts-tooltip-y-group"><span class="apexcharts-tooltip-text-y-label"></span><span class="apexcharts-tooltip-text-y-value"></span></div><div class="apexcharts-tooltip-goals-group"><span class="apexcharts-tooltip-text-goals-label"></span><span class="apexcharts-tooltip-text-goals-value"></span></div><div class="apexcharts-tooltip-z-group"><span class="apexcharts-tooltip-text-z-label"></span><span class="apexcharts-tooltip-text-z-value"></span></div></div></div><div class="apexcharts-tooltip-series-group apexcharts-tooltip-series-group-1" style="order: 2;"><span class="apexcharts-tooltip-marker" shape="circle" style="background-color: rgb(10, 179, 156);"></span><div class="apexcharts-tooltip-text" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px;"><div class="apexcharts-tooltip-y-group"><span class="apexcharts-tooltip-text-y-label"></span><span class="apexcharts-tooltip-text-y-value"></span></div><div class="apexcharts-tooltip-goals-group"><span class="apexcharts-tooltip-text-goals-label"></span><span class="apexcharts-tooltip-text-goals-value"></span></div><div class="apexcharts-tooltip-z-group"><span class="apexcharts-tooltip-text-z-label"></span><span class="apexcharts-tooltip-text-z-value"></span></div></div></div><div class="apexcharts-tooltip-series-group apexcharts-tooltip-series-group-2" style="order: 3;"><span class="apexcharts-tooltip-marker" shape="circle" style="background-color: rgb(247, 184, 75);"></span><div class="apexcharts-tooltip-text" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px;"><div class="apexcharts-tooltip-y-group"><span class="apexcharts-tooltip-text-y-label"></span><span class="apexcharts-tooltip-text-y-value"></span></div><div class="apexcharts-tooltip-goals-group"><span class="apexcharts-tooltip-text-goals-label"></span><span class="apexcharts-tooltip-text-goals-value"></span></div><div class="apexcharts-tooltip-z-group"><span class="apexcharts-tooltip-text-z-label"></span><span class="apexcharts-tooltip-text-z-value"></span></div></div></div></div></div></div>
-                                        </div>
-                                    </div>
-                                </div><!--end col-->
-                            </div><!--end row-->
-                        </div><!--end col-->
+                       
+                        
                     </div>
                             </div> <!-- end .h-100-->
 
@@ -3237,7 +2993,7 @@
                                 <div class="card h-100 rounded-0">
                                     <div class="card-body p-0">
                                         <div class="p-3">
-                                            <h6 class="text-muted mb-0 text-uppercase fw-semibold">Recent Activity</h6>
+                                            <h6 class="text-muted mb-0 text-uppercase fw-semibold">Latest Updated</h6>
                                         </div>
                                         <div data-simplebar="" style="max-height: 410px;" class="p-3 pt-0">
                                             <div class="acitivity-timeline acitivity-main">
@@ -3665,20 +3421,18 @@
             </div>
             <!-- End Page-content -->
 
-            <footer class="footer">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <script>document.write(new Date().getFullYear())</script> © Velzon.
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="text-sm-end d-none d-sm-block">
-                                Design & Develop by Themesbrand
+            <div class="footer-2__bottom-wrapper">
+                    <div class="container">
+                        <div class="footer-2__bottom">
+                            <div class="footer-2__copyright">
+                                <p> © 2025 Copyright Uttar Pradesh State Unit. All Rights Reserved.</p>
+                            </div>
+                            <div class="footer-2__copyright-menu" style="text-align: right;">
+                                <p>Design and Developed by : <img src="../assets/imgs/fotterlogo1.png" alt="Fotter CMS logo" style="width: 16%;margin-top: -5px;"> </p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </footer>
         </div>
         <!-- end main content-->
 
