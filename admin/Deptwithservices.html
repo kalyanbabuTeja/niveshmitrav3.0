@@ -87,6 +87,7 @@ h2 {
     font-family: system-ui;
     color: #464776;
 }
+
 ol.breadcrumb {
     background: #e2f1ff;
     padding: 5px 10px;
@@ -401,7 +402,7 @@ ol.breadcrumb {
                                 <div class="page-block">
                                     <div class="row align-items-center">
                                         <div class="col-md-12">
-                                           <nav aria-label="breadcrumb">
+                                          <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <a href="index.html"><li class="breadcrumb-item active mt-1" aria-current="page">Dashboard</li></a>
     <a href="index.html" class="btn btn-sm"><li class="" aria-current="page" style="
@@ -427,7 +428,7 @@ ol.breadcrumb {
                             <!-- [ Main Content ] start -->
                             <div class="card table-card review-card">
                     <div class="card-header borderless ">
-                        <h5>KYA(Questionnaire)</h5>
+                        <h5>Without KYA(Questionnaire)</h5>
                         <div class="card-header-right">
                             <div class="btn-group card-option">
                                 <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -803,511 +804,63 @@ ol.breadcrumb {
                 </fieldset>
 
                 <h3>
-                    Project Requirements
+                    List of Departments
                 </h3>
                 <fieldset> 
-                    <h2>Project Requirements</h2>
+                    <h2 style="text-transform: none !important;">List of Departments</h2>
                     <div class="card-body">
-                           <div class="col-md-12 d-flex mt-3" id="padding">
-                              <div class="col-md-6">
-                                 <div class="form-group row">
-                                    <label class="col-lg-6 col-form-label">14. Power
-                                    requirement in HP<span class="text-danger">*</span></label>
-                                    <div class="col-lg-6">
-                                        <select class="form-select" aria-label="Default select example">
-  <option selected>Please select</option>
-  <option value="1">&lt;30 HP</option>
-                                          <option value="2">&gt;=30 HP and &lt;=100 HP
-                                          </option>
-                                          <option value="3">&gt;=101 HP and &lt;=500
-                                             HP
-                                          </option>
-                                          <option selected="selected" value="4">
-                                             &gt;=501 HP and &lt;=1500 HP
-                                          </option>
-                                          <option value="5">&gt;=1501 HP and
-                                             &lt;=10000 HP
-                                          </option>
-                                          <option value="6">&gt;10000 HP</option>
-</select>
-                                      
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-md-6">
-                                 <div class="form-group row">
-                                    <label class="col-lg-6 col-form-label">15(a). Do you
-                                    manufacture, store, sale, transport
-                                    explosives</label>
-                                    <div class="col-lg-6 d-flex">
-                                       <div class="form-check form-check-inline">
-                                          <input class="form-check-input" type="radio" name="gender" id="gender_male" value="option1" checked="">
-                                          <label class="form-check-label" for="gender_male">
-                                          Yes
-                                          </label>
-                                       </div>
-                                       <div class="form-check form-check-inline">
-                                          <input class="form-check-input" type="radio" name="gender" id="gender_female" value="option2">
-                                          <label class="form-check-label" for="gender_female">
-                                          No
-                                          </label>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-md-12 d-flex" id="padding">
-                              <div class="col-md-6">
-                                 <div class="form-group row">
-                                    <label class="col-lg-6 col-form-label">16. Do you
-                                    have Existing borewell in proposed factory
-                                    Location</label>
-                                    <div class="col-lg-6 d-flex">
-                                       <div class="form-check form-check-inline">
-                                          <input class="form-check-input" type="radio" name="gender" id="gender_male" value="option1" checked="">
-                                          <label class="form-check-label" for="gender_male">
-                                          Yes
-                                          </label>
-                                       </div>
-                                       <div class="form-check form-check-inline">
-                                          <input class="form-check-input" type="radio" name="gender" id="gender_female" value="option2">
-                                          <label class="form-check-label" for="gender_female">
-                                          No
-                                          </label>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-md-6">
-                                 <div class="form-group row">
-                                    <label class="col-lg-6 col-form-label">15(b). Do you
-                                    Manufacture, store, sale, Petroleum, Diesel,
-                                    Kerosene</label>
-                                    <div class="col-lg-6 d-flex">
-                                       <div class="form-check form-check-inline">
-                                          <input class="form-check-input" type="radio" name="gender" id="gender_male" value="option1" checked="">
-                                          <label class="form-check-label" for="gender_male">
-                                          Yes
-                                          </label>
-                                       </div>
-                                       <div class="form-check form-check-inline">
-                                          <input class="form-check-input" type="radio" name="gender" id="gender_female" value="option2">
-                                          <label class="form-check-label" for="gender_female">
-                                          No
-                                          </label>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
+                           
+                          
                            <div class="table-responsive mb-3">
-                              <table class="table table table-bordered table-striped mb-0">
+                              <table class="table table-bordered mb-0">
                                  <thead>
                                     <tr class="table-primary">
                                        <th>Sl. No.</th>
-                                       <th>Select</th>
-                                       <th>Water required from</th>
-                                       <th>Water Required per day( in KLD)</th>
+                                       
+                                       <th>Service</th>
+                                       <th>Department</th>
+                                       <th>Apply for Approval</th>
                                     </tr>
                                  </thead>
                                  <tbody>
                                     <tr>
                                        <td>1</td>
-                                       <td><input class="checkbox" type="checkbox" name="checkbox"></td>
-                                       <td>HMWS &amp; SB</td>
-                                       <td><input type="text" class="form-control">
-                                       </td>
+                                       <td>Building Plan Approval</td>
+                                       <td>Housing Department</td>
+                                       <td><input class="form-check-input ml-4" type="checkbox" value="" id="flexCheckDefault"></td>
                                     </tr>
                                     <tr>
                                        <td>2</td>
-                                       <td><input class="checkbox" type="checkbox" name="checkbox"></td>
-                                       <td>Rivers/Canals</td>
-                                       <td><input type="text" class="form-control">
-                                       </td>
+                                       <td>Registration under UP Shops and Establishment Act, 1962</td>
+                                       <td>Labour Department</td>
+                                       <td><input class="form-check-input ml-4" type="checkbox" value="" id="flexCheckDefault"></td>
                                     </tr>
                                     <tr>
                                        <td>3</td>
-                                       <td><input class="checkbox" type="checkbox" name="checkbox"></td>
-                                       <td>CDMA</td>
-                                       <td><input type="text" class="form-control">
-                                       </td>
+                                       <td>"Hindu Marriage registration</td>
+                                       <td>Stamp and Registration</td>
+                                       <td><input class="form-check-input ml-4" type="checkbox" value="" id="flexCheckDefault"></td>
                                     </tr>
                                     <tr>
                                        <td>4</td>
-                                       <td><input class="checkbox" type="checkbox" name="checkbox"></td>
-                                       <td>Mission Bhagiratha</td>
-                                       <td><input type="text" class="form-control">
-                                       </td>
-                                    </tr>
-                                 </tbody>
-                              </table>
-                           </div>
-                           <div class="col-md-12 d-flex" id="padding">
-                              <div class="col-md-6">
-                                 <div class="form-group row">
-                                    <label class="col-lg-6 col-form-label">17. Generator
-                                    Requirement</label>
-                                    <div class="col-lg-6 d-flex">
-                                       <div class="form-check form-check-inline">
-                                          <input class="form-check-input" type="radio" name="gender" id="gender_male" value="option1" checked="">
-                                          <label class="form-check-label" for="gender_male">
-                                          Yes
-                                          </label>
-                                       </div>
-                                       <div class="form-check form-check-inline">
-                                          <input class="form-check-input" type="radio" name="gender" id="gender_female" value="option2">
-                                          <label class="form-check-label" for="gender_female">
-                                          No
-                                          </label>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-md-6">
-                                 <div class="form-group row">
-                                    <label class="col-lg-6 col-form-label">18. Height of
-                                    the building(in Meters)</label>
-                                    <div class="col-lg-6">
-                                       <input type="text" class="form-control" value="17.00">
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-md-12 d-flex" id="padding">
-                              <div class="col-md-6">
-                                 <div class="form-group row">
-                                    <label class="col-lg-6 col-form-label">19. Is there
-                                    any need to Fell trees in Proposed Site</label>
-                                    <div class="col-lg-6 d-flex">
-                                       <div class="form-check form-check-inline">
-                                          <input class="form-check-input" type="radio" name="gender" id="gender_male" value="option1" checked="">
-                                          <label class="form-check-label" for="gender_male">
-                                          Yes
-                                          </label>
-                                       </div>
-                                       <div class="form-check form-check-inline">
-                                          <input class="form-check-input" type="radio" name="gender" id="gender_female" value="option2">
-                                          <label class="form-check-label" for="gender_female">
-                                          No
-                                          </label>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-md-6">
-                                 <div class="form-group row">
-                                    <label class="col-lg-6 col-form-label">Number of
-                                    trees to be felled (Girth of tree &gt; 30
-                                    centimeters)</label>
-                                    <div class="col-lg-6">
-                                       <input type="text" class="form-control mt-3" value="44">
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-md-12 d-flex" id="padding">
-                              <div class="col-md-12">
-                                 <div class="form-group row">
-                                    <label class="col-lg-6 col-form-label">Are there any
-                                    trees in Non-Exempted (Other than trees in this
-                                    List )</label>
-                                    <div class="col-lg-6 d-flex">
-                                       <div class="form-check form-check-inline">
-                                          <input class="form-check-input" type="radio" name="gender" id="gender_male" value="option1" checked="">
-                                          <label class="form-check-label" for="gender_male">
-                                          Yes
-                                          </label>
-                                       </div>
-                                       <div class="form-check form-check-inline">
-                                          <input class="form-check-input" type="radio" name="gender" id="gender_female" value="option2">
-                                          <label class="form-check-label" for="gender_female">
-                                          No
-                                          </label>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="table-responsive mb-3">
-                              <table class="table table-bordered mb-0">
-                                 <thead>
-                                    <tr>
-                                       <th colspan="3" style="margin: 0px !important;padding: 3px 14px !important;">20. Labour Application Type</th>
-                                    </tr>
-                                 </thead>
-                                 <tbody>
-                                    <tr>
-                                       <td rowspan="2">20 a.</td>
-                                       <td>Does your establishment employ 05 or more contract Labour as defined in the <br>Contract Labour(Regulation and Abolition)Act, 1970?</td>
-                                       <td class="d-flex">
-                                          <div class="form-check form-check-inline">
-                                             <input class="form-check-input" type="radio" name="gender" id="gender_male" value="option1" checked="">
-                                             <label class="form-check-label" for="gender_male">
-                                             Yes
-                                             </label>
-                                          </div>
-                                          <div class="form-check form-check-inline">
-                                             <input class="form-check-input" type="radio" name="gender" id="gender_female" value="option2">
-                                             <label class="form-check-label" for="gender_female">
-                                             No
-                                             </label>
-                                          </div>
-                                       </td>
+                                       <td>"Property Registration</td>
+                                       <td>Pollution Control Board</td>
+                                       <td><input class="form-check-input ml-4" type="checkbox" value="" id="flexCheckDefault"></td>
                                     </tr>
                                     <tr>
-                                       <td>No of Workers</td>
-                                       <td><input type="text" class="form-control" value="22"></td>
+                                       <td>5</td>
+                                       <td>Certified Copy of Deed</td>
+                                       <td>Pollution Control Board</td>
+                                       <td><input class="form-check-input ml-4" type="checkbox" value="" id="flexCheckDefault"></td>
                                     </tr>
-                                    <tr>
-                                       <td rowspan="2">20 b.</td>
-                                       <td>Does your establishment employ 05 or more Inter-State migrant workmen as defined<br> in the Inter-state Migrant Workmen Act, 1979?</td>
-                                       <td class="d-flex">
-                                          <div class="form-check form-check-inline">
-                                             <input class="form-check-input" type="radio" name="gender" id="gender_male" value="option1" checked="">
-                                             <label class="form-check-label" for="gender_male">
-                                             Yes
-                                             </label>
-                                          </div>
-                                          <div class="form-check form-check-inline">
-                                             <input class="form-check-input" type="radio" name="gender" id="gender_female" value="option2">
-                                             <label class="form-check-label" for="gender_female">
-                                             No
-                                             </label>
-                                          </div>
-                                       </td>
-                                    </tr>
-                                    <tr>
-                                       <td>No of Workers</td>
-                                       <td><input type="text" class="form-control" value="22"></td>
-                                    </tr>
-                                    <tr>
-                                       <td rowspan="3">20 c.</td>
-                                       <td>Does your establishment fall under the definition of establishment as per Building<br> and Other Constrution Worker(RE&amp;COS) Act, 1996?</td>
-                                       <td class="d-flex">
-                                          <div class="form-check form-check-inline">
-                                             <input class="form-check-input" type="radio" name="gender" id="gender_male" value="option1" checked="">
-                                             <label class="form-check-label" for="gender_male">
-                                             Yes
-                                             </label>
-                                          </div>
-                                          <div class="form-check form-check-inline">
-                                             <input class="form-check-input" type="radio" name="gender" id="gender_female" value="option2">
-                                             <label class="form-check-label" for="gender_female">
-                                             No
-                                             </label>
-                                          </div>
-                                       </td>
-                                    </tr>
-                                    <tr>
-                                       <td>Whether your establishment has employed or had employed on any day of the preceding <br>12 months, 10 or more building workers in any “Building &amp; Other Construction Works”</td>
-                                       <td class="d-flex">
-                                          <div class="form-check form-check-inline">
-                                             <input class="form-check-input" type="radio" name="gender" id="gender_male" value="option1" checked="">
-                                             <label class="form-check-label" for="gender_male">
-                                             Yes
-                                             </label>
-                                          </div>
-                                          <div class="form-check form-check-inline">
-                                             <input class="form-check-input" type="radio" name="gender" id="gender_female" value="option2">
-                                             <label class="form-check-label" for="gender_female">
-                                             No
-                                             </label>
-                                          </div>
-                                       </td>
-                                    </tr>
-                                    <tr>
-                                       <td>No of Workers</td>
-                                       <td><input type="text" class="form-control" value="22"></td>
-                                    </tr>
-                                    <tr>
-                                       <td rowspan="2">20 d.</td>
-                                       <td>Does your establishment provide 05 or more inter-state migrant workmen on contractual basis as <br>defined in the Inter-state Migrant Workmen Act, 1979?(for Contractor)</td>
-                                       <td class="d-flex">
-                                          <div class="form-check form-check-inline">
-                                             <input class="form-check-input" type="radio" name="gender" id="gender_male" value="option1" checked="">
-                                             <label class="form-check-label" for="gender_male">
-                                             Yes
-                                             </label>
-                                          </div>
-                                          <div class="form-check form-check-inline">
-                                             <input class="form-check-input" type="radio" name="gender" id="gender_female" value="option2">
-                                             <label class="form-check-label" for="gender_female">
-                                             No
-                                             </label>
-                                          </div>
-                                       </td>
-                                    </tr>
-                                    <tr>
-                                       <td>No of Workers</td>
-                                       <td><input type="text" class="form-control" value="22"></td>
-                                    </tr>
-                                    <tr>
-                                       <td rowspan="1">20 e.</td>
-                                       <td>Does your establishment employ 05 or more contract labour(License for contractors) as defined <br>in the contract labour(Regulation and Abolition) act, 1970?</td>
-                                       <td class="d-flex">
-                                          <div class="form-check form-check-inline">
-                                             <input class="form-check-input" type="radio" name="gender" id="gender_male" value="option1" checked="">
-                                             <label class="form-check-label" for="gender_male">
-                                             Yes
-                                             </label>
-                                          </div>
-                                          <div class="form-check form-check-inline">
-                                             <input class="form-check-input" type="radio" name="gender" id="gender_female" value="option2">
-                                             <label class="form-check-label" for="gender_female">
-                                             No
-                                             </label>
-                                          </div>
-                                       </td>
-                                    </tr>
-                                 </tbody>
-                              </table>
-                           </div>
-                           <div class="col-md-12 d-flex" id="padding">
-                              <div class="col-md-6">
-                                 <div class="form-group row">
-                                    <label class="col-lg-6 col-form-label">21. Does the unit Location fall within 100mts vicinity of any water body?</label>
-                                    <div class="col-lg-6 d-flex">
-                                       <div class="form-check form-check-inline">
-                                          <input class="form-check-input" type="radio" name="gender" id="gender_male" value="option1" checked="">
-                                          <label class="form-check-label" for="gender_male">
-                                          Yes
-                                          </label>
-                                       </div>
-                                       <div class="form-check form-check-inline">
-                                          <input class="form-check-input" type="radio" name="gender" id="gender_female" value="option2">
-                                          <label class="form-check-label" for="gender_female">
-                                          No
-                                          </label>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-md-6">
-                                 <div class="form-group row">
-                                    <label class="col-lg-6 col-form-label">22. Do you require approval from Commerical Tax</label>
-                                    <div class="col-lg-6 d-flex">
-                                       <div class="form-check form-check-inline">
-                                          <input class="form-check-input" type="radio" name="gender" id="gender_male" value="option1" checked="">
-                                          <label class="form-check-label" for="gender_male">
-                                          Yes
-                                          </label>
-                                       </div>
-                                       <div class="form-check form-check-inline">
-                                          <input class="form-check-input" type="radio" name="gender" id="gender_female" value="option2">
-                                          <label class="form-check-label" for="gender_female">
-                                          No
-                                          </label>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-md-12 d-flex" id="padding">
-                              <div class="col-md-6">
-                                 <div class="form-group row">
-                                    <label class="col-lg-6 col-form-label">23. DO you Use (High Tension)HT meter Above 70KVA<span class="text-danger">*</span></label>
-                                    <div class="col-lg-6 d-flex">
-                                       <div class="form-check form-check-inline">
-                                          <input class="form-check-input" type="radio" name="gender" id="gender_male" value="option1" checked="">
-                                          <label class="form-check-label" for="gender_male">
-                                          Yes
-                                          </label>
-                                       </div>
-                                       <div class="form-check form-check-inline">
-                                          <input class="form-check-input" type="radio" name="gender" id="gender_female" value="option2">
-                                          <label class="form-check-label" for="gender_female">
-                                          No
-                                          </label>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-md-6">
-                                 <div class="form-group row">
-                                    <label class="col-lg-6 col-form-label">Regulation</label>
-                                    <div class="col-lg-6">
-                                        <select class="form-select" aria-label="Default select example">
-  <option selected>Open this select menu</option>
-  <option selected="selected" value="1">43(3)</option>
-                                          <option value="3">32</option>
-</select>
-
-
-                                      
-                                       <p>43(3)- Electrical Installation/ 32 - Generating Unit/Generators</p>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-md-12 d-flex" id="padding">
-                              <div class="col-md-6">
-                                 <div class="form-group row">
-                                    <label class="col-lg-6 col-form-label">Voltage</label>
-                                    <div class="col-lg-6 d-flex">
-
-                                        <select class="form-select" aria-label="Default select example">
-  <option selected>Select</option>
-  <option selected="selected" value="1">11 KV</option>
-                                          <option value="2">33 KV</option>
-                                          <option value="3">132 KV</option>
-                                          <option value="4">Exceeding 220 KV</option>
-                                          <option value="5">220 KV</option>
-                                          <option value="6">140 KV</option>
-</select>
-
-
-                                       
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-md-6">
-                                 <div class="form-group row">
-                                    <label class="col-lg-6 col-form-label">Aggregate Capacity</label>
-                                    <div class="col-lg-6">
-                                       <input type="text" class="form-control" value="550">
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-md-12 d-flex" id="padding">
-                              <div class="col-md-6">
-                                 <div class="form-group row">
-                                    <label class="col-lg-6 col-form-label">24. Do you store RS, DS</label>
-                                    <div class="col-lg-6 d-flex">
-                                       <div class="form-check form-check-inline">
-                                          <input class="form-check-input" type="radio" name="gender" id="gender_male" value="option1" checked="">
-                                          <label class="form-check-label" for="gender_male">
-                                          Yes
-                                          </label>
-                                       </div>
-                                       <div class="form-check form-check-inline">
-                                          <input class="form-check-input" type="radio" name="gender" id="gender_female" value="option2">
-                                          <label class="form-check-label" for="gender_female">
-                                          No
-                                          </label>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-md-6">
-                                 &nbsp;
-                              </div>
-                           </div>
-                           <div class="col-md-12 d-flex text-center my-3" id="padding">
-                              <div class="col-md-4">
-                                 <!-- <a href="#basictab2"> <button type="submit" class="btn 
+                                   
                                     
-                                    btn-success1 btn-lg"><span class="spinner-border spinner-border-sm mr-2 mb-1" role="status"></span> Show Approvals Required</button></a> -->
-                              </div>
-                              
-                              <div class="col-md-4">
-                                 <!-- <a href="#basictab2"><button type="submit" class="btn btn-rounded btn-success2 btn-lg">Show Enclousers List</button></a> -->
-                              </div>
-                              <div class="col-md-4">
-                                 <!-- <a href="Dashboard.html"><button type="submit" class="btn btn-rounded btn-primary btn-lg"><span class="spinner-border spinner-border-sm mr-2 mb-1" role="status"></span> Submit Questionnaire</button></a> -->
-                              </div>
+                                    
+                                 </tbody>
+                              </table>
                            </div>
-                           <div class="col-md-12 d-flex my-3" id="padding">
+                           
+                           <div class="col-md-12 d-flex my-3 mt-5" id="padding">
                               <!-- <div class="col-md-6">
                                  <a href="#ProjectFinancials" data-toggle="tab"><button type="submit" class="btn btn-rounded btn-success btn-lg">Previous</button></a>
                               </div> -->
