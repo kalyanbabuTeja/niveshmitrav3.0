@@ -33,6 +33,21 @@
     <link rel="stylesheet" href="assets/wizards/css/style.css">
     
 <style>
+       .modal-lg, .modal-xl {
+        --bs-modal-width: 1075px;
+    }
+    .modal-dialog.modal-lg {
+    margin-top: 75px;
+}
+.modal-body {
+    font-family: system-ui;
+    font-size: 14px !important;
+}
+.modal-header h5 {
+    font-family: system-ui;
+    font-size: 20px;
+    color: #3F51B5;
+}
    .review-block {
     background: url(assets/images/bg/17.jpg);
     background-position: top;
@@ -1345,6 +1360,48 @@ ol.breadcrumb {
                         </div>
                     </div>
                 </div>
+
+
+                <!-- Button is optional – Modal opens automatically -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#guidelinesModal">Open</button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="guidelinesModal" tabindex="-1" aria-labelledby="guidelinesLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="guidelinesLabel">Combined Application Form (CAF) – Guidelines</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+  <span aria-hidden="true">&times;</span>
+</button>
+      </div>
+
+      <div class="modal-body">
+        
+        <p>
+          The Combined Application Form (CAF) is a <span style="font-weight: 700;">common form that enables investors to apply for multiple department services available on the Nivesh Mitra 3.0 Single Window Portal (NMSWP)
+          without the need to fill the same information repeatedly</span>.</p>
+
+        <h5>Instructions for filling the CAF:</h5>
+        <ul>
+          <li>The CAF requires details related to applicant, enterprise, project costs, employment, utilities.
+              Kindly ensure availability of all information before you begin.</li>
+          <li>Documents to be uploaded after filling CAF:
+            <ul>
+              <li style="font-weight: 700;">Self certifications</li>
+              <li style="font-weight: 700;">Workflow (Only for Manufacturing enterprises)</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      
+
+    </div>
+  </div>
+</div>
+
                 
     <!-- [ Main Content ] end -->
 
@@ -1404,7 +1461,21 @@ ol.breadcrumb {
     <!-- prism Js -->
     <script src="assets/js/plugins/prism.js"></script>
 
-    
+    <!-- <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    if (!localStorage.getItem("caf_popup_shown")) {
+      var myModal = new bootstrap.Modal(document.getElementById('guidelinesModal'));
+      myModal.show();
+      localStorage.setItem("caf_popup_shown", "flase");
+    }
+  });
+</script> -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var myModal = new bootstrap.Modal(document.getElementById('guidelinesModal'));
+    myModal.show();
+  });
+</script>
 
 
 
