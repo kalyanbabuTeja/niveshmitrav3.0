@@ -47,34 +47,34 @@
             overflow: hidden;
         }
 
-        .form-button:hover {
-            background-color: #155a9a;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
-        }
+            .form-button:hover {
+                background-color: #155a9a;
+                transform: translateY(-2px);
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+            }
 
-        .form-button:active {
-            transform: translateY(0);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        }
+            .form-button:active {
+                transform: translateY(0);
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            }
 
-        .form-button::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 5px;
-            height: 5px;
-            background: rgba(255, 255, 255, 0.5);
-            opacity: 0;
-            border-radius: 100%;
-            transform: scale(1, 1) translate(-50%);
-            transform-origin: 50% 50%;
-        }
+            .form-button::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 5px;
+                height: 5px;
+                background: rgba(255, 255, 255, 0.5);
+                opacity: 0;
+                border-radius: 100%;
+                transform: scale(1, 1) translate(-50%);
+                transform-origin: 50% 50%;
+            }
 
-        .form-button:focus:not(:active)::after {
-            animation: ripple 1s ease-out;
-        }
+            .form-button:focus:not(:active)::after {
+                animation: ripple 1s ease-out;
+            }
 
         @keyframes ripple {
             0% {
@@ -90,38 +90,35 @@
 
 
         /* .constrain input{
-  margin-bottom: 40px;
-}
+          margin-bottom: 40px;
+        }
 
- .constrain .input-elevated{
-font-size: 16px;
-line-height: 1.5;
-border: none;
-background: #FFFFFF;
-background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'><path fill='%23838D99' d='M13.22 14.63a8 8 0 1 1 1.41-1.41l4.29 4.29a1 1 0 1 1-1.41 1.41l-4.29-4.29zm-.66-2.07a6 6 0 1 0-8.49-8.49 6 6 0 0 0 8.49 8.49z'></path></svg>");
-background-repeat: no-repeat;
-background-position: 10px 10px;
-background-size: 20px 20px;
-border: 1px solid #C5CBD5;
-border-radius: 5px;
-width: 300px;
-padding: .5em 1em .5em 2.5em;
-} 
+         .constrain .input-elevated{
+        font-size: 16px;
+        line-height: 1.5;
+        border: none;
+        background: #FFFFFF;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'><path fill='%23838D99' d='M13.22 14.63a8 8 0 1 1 1.41-1.41l4.29 4.29a1 1 0 1 1-1.41 1.41l-4.29-4.29zm-.66-2.07a6 6 0 1 0-8.49-8.49 6 6 0 0 0 8.49 8.49z'></path></svg>");
+        background-repeat: no-repeat;
+        background-position: 10px 10px;
+        background-size: 20px 20px;
+        border: 1px solid #C5CBD5;
+        border-radius: 5px;
+        width: 300px;
+        padding: .5em 1em .5em 2.5em;
+        }
 
- .constrain .input-elevated::placeholder{
-  color: #838D99;
-}
- 
- .constrain .input-elevated:focus {
-  outline: none;
-  box-shadow: 0 4px 10px 0 rgba(0,0,0,0.16);
-} */
-button.btn.btn-clear.btn-sm.mr-2 {
-    background: #8c4cff;
-    color: #fff;
-}
+         .constrain .input-elevated::placeholder{
+          color: #838D99;
+        }
+
+         .constrain .input-elevated:focus {
+          outline: none;
+          box-shadow: 0 4px 10px 0 rgba(0,0,0,0.16);
+        } */
+
         fieldset.scheduler-border {
-            border: 1px solid #61439c !important;
+            border: 1px solid red !important;
             padding: 1.5em 1em 1em 1em !important;
             margin: 0 0 1.5em 0 !important;
             border-radius: 5px;
@@ -131,7 +128,7 @@ button.btn.btn-clear.btn-sm.mr-2 {
         legend.scheduler-border {
             font-size: 1.2rem;
             font-weight: 600;
-            color: rgb(33 86 165) !important;
+            color: #d9534f;
             padding: 0 10px;
             margin-left: 10px;
             background: #fff;
@@ -145,12 +142,12 @@ button.btn.btn-clear.btn-sm.mr-2 {
         }
     </style>
 
-   
+
 </head>
 
 <body>
- 
-   
+
+
     <div class="loader-bg">
         <div class="loader-track">
             <div class="loader-fill"></div>
@@ -166,13 +163,18 @@ button.btn.btn-clear.btn-sm.mr-2 {
                         <label>Navigation</label>
                     </li>
                     <li class="nav-item">
-                        <a href="index.html" class="nav-link "><span class="pcoded-micon"><i
-                                    class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
+                        <a href="index.html" class="nav-link ">
+                            <span class="pcoded-micon">
+                                <i class="feather icon-home"></i>
+                            </span><span class="pcoded-mtext">Dashboard</span>
+                        </a>
                     </li>
                     <li class="nav-item pcoded-hasmenu">
-                        <a href="#!" class="nav-link "><span class="pcoded-micon"><i
-                                    class="feather icon-layout"></i></span><span
-                                class="pcoded-mtext">Pre-Establishment</span></a>
+                        <a href="#!" class="nav-link ">
+                            <span class="pcoded-micon">
+                                <i class="feather icon-layout"></i>
+                            </span><span class="pcoded-mtext">Pre-Establishment</span>
+                        </a>
                         <ul class="pcoded-submenu">
                             <li><a href="Questionnaire.html" target="_blank">Questionnaire</a></li>
                             <li><a href="layout-horizontal.html" target="_blank">Combined Application Form</a></li>
@@ -186,51 +188,64 @@ button.btn.btn-clear.btn-sm.mr-2 {
                     <!-- <li class="nav-item pcoded-hasmenu">
                      <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">Basic</span></a>
                      <ul class="pcoded-submenu">
-                     	<li><a href="bc_alert.html">Alert</a></li>
-                     	<li><a href="bc_button.html">Button</a></li>
-                     	<li><a href="bc_badges.html">Badges</a></li>
-                     	<li><a href="bc_breadcrumb-pagination.html">Breadcrumb & paggination</a></li>
-                     	<li><a href="bc_card.html">Cards</a></li>
-                     	<li><a href="bc_collapse.html">Collapse</a></li>
-                     	<li><a href="bc_carousel.html">Carousel</a></li>
-                     	<li><a href="bc_grid.html">Grid system</a></li>
-                     	<li><a href="bc_progress.html">Progress</a></li>
-                     	<li><a href="bc_modal.html">Modal</a></li>
-                     	<li><a href="bc_spinner.html">Spinner</a></li>
-                     	<li><a href="bc_tabs.html">Tabs & pills</a></li>
-                     	<li><a href="bc_typography.html">Typography</a></li>
-                     	<li><a href="bc_tooltip-popover.html">Tooltip & popovers</a></li>
-                     	<li><a href="bc_toasts.html">Toasts</a></li>
-                     	<li><a href="bc_extra.html">Other</a></li>
+                        <li><a href="bc_alert.html">Alert</a></li>
+                        <li><a href="bc_button.html">Button</a></li>
+                        <li><a href="bc_badges.html">Badges</a></li>
+                        <li><a href="bc_breadcrumb-pagination.html">Breadcrumb & paggination</a></li>
+                        <li><a href="bc_card.html">Cards</a></li>
+                        <li><a href="bc_collapse.html">Collapse</a></li>
+                        <li><a href="bc_carousel.html">Carousel</a></li>
+                        <li><a href="bc_grid.html">Grid system</a></li>
+                        <li><a href="bc_progress.html">Progress</a></li>
+                        <li><a href="bc_modal.html">Modal</a></li>
+                        <li><a href="bc_spinner.html">Spinner</a></li>
+                        <li><a href="bc_tabs.html">Tabs & pills</a></li>
+                        <li><a href="bc_typography.html">Typography</a></li>
+                        <li><a href="bc_tooltip-popover.html">Tooltip & popovers</a></li>
+                        <li><a href="bc_toasts.html">Toasts</a></li>
+                        <li><a href="bc_extra.html">Other</a></li>
                      </ul>
                      </li> -->
                     <!-- <li class="nav-item">
                      <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Industry Registration</span></a>
                      </li> -->
                     <li class="nav-item">
-                        <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i
-                                    class="feather icon-file-text"></i></span><span class="pcoded-mtext">Land
-                                Allotment</span></a>
+                        <a href="form_elements.html" class="nav-link ">
+                            <span class="pcoded-micon">
+                                <i class="feather icon-file-text"></i>
+                            </span><span class="pcoded-mtext">
+                                Land
+                                Allotment
+                            </span>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i
-                                    class="feather icon-file-text"></i></span><span
-                                class="pcoded-mtext">Pre-Establishment</span></a>
+                        <a href="form_elements.html" class="nav-link ">
+                            <span class="pcoded-micon">
+                                <i class="feather icon-file-text"></i>
+                            </span><span class="pcoded-mtext">Pre-Establishment</span>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i
-                                    class="feather icon-file-text"></i></span><span
-                                class="pcoded-mtext">Pre-Operational</span></a>
+                        <a href="form_elements.html" class="nav-link ">
+                            <span class="pcoded-micon">
+                                <i class="feather icon-file-text"></i>
+                            </span><span class="pcoded-mtext">Pre-Operational</span>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i
-                                    class="feather icon-file-text"></i></span><span
-                                class="pcoded-mtext">Incentives</span></a>
+                        <a href="form_elements.html" class="nav-link ">
+                            <span class="pcoded-micon">
+                                <i class="feather icon-file-text"></i>
+                            </span><span class="pcoded-mtext">Incentives</span>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i
-                                    class="feather icon-file-text"></i></span><span
-                                class="pcoded-mtext">Renewals</span></a>
+                        <a href="form_elements.html" class="nav-link ">
+                            <span class="pcoded-micon">
+                                <i class="feather icon-file-text"></i>
+                            </span><span class="pcoded-mtext">Renewals</span>
+                        </a>
                     </li>
                     <!-- <li class="nav-item">
                      <a href="tbl_bootstrap.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-align-justify"></i></span><span class="pcoded-mtext">Bootstrap table</span></a>
@@ -247,12 +262,14 @@ button.btn.btn-clear.btn-sm.mr-2 {
                      <li class="nav-item pcoded-menu-caption">
                      <label>Pages</label>
                      </li>
-                     
+
                      <li class="nav-item"><a href="sample-page.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-sidebar"></i></span><span class="pcoded-mtext">Sample page</span></a></li> -->
                     <li class="nav-item pcoded-hasmenu">
-                        <a href="#!" class="nav-link "><span class="pcoded-micon"><i
-                                    class="feather icon-lock"></i></span><span
-                                class="pcoded-mtext">Authentication</span></a>
+                        <a href="#!" class="nav-link ">
+                            <span class="pcoded-micon">
+                                <i class="feather icon-lock"></i>
+                            </span><span class="pcoded-mtext">Authentication</span>
+                        </a>
                         <ul class="pcoded-submenu">
                             <li><a href="auth-signup.html" target="_blank">Sign up</a></li>
                             <li><a href="auth-signin.html" target="_blank">Sign in</a></li>
@@ -295,12 +312,24 @@ button.btn.btn-clear.btn-sm.mr-2 {
                             </a>
                             <div class="dropdown-menu profile-notification ">
                                 <ul class="pro-body">
-                                    <li><a href="user-profile.html" class="dropdown-item"><i class="fas fa-circle"></i>
-                                            Profile</a></li>
-                                    <li><a href="email_inbox.html" class="dropdown-item"><i class="fas fa-circle"></i>
-                                            My Messages</a></li>
-                                    <li><a href="auth-signin.html" class="dropdown-item"><i class="fas fa-circle"></i>
-                                            Lock Screen</a></li>
+                                    <li>
+                                        <a href="user-profile.html" class="dropdown-item">
+                                            <i class="fas fa-circle"></i>
+                                            Profile
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="email_inbox.html" class="dropdown-item">
+                                            <i class="fas fa-circle"></i>
+                                            My Messages
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="auth-signin.html" class="dropdown-item">
+                                            <i class="fas fa-circle"></i>
+                                            Lock Screen
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -315,65 +344,147 @@ button.btn.btn-clear.btn-sm.mr-2 {
                                     <div class="col">
                                         <h6 class="mega-title">UI Element</h6>
                                         <ul class="pro-body">
-                                            <li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i>
-                                                    Alert</a></li>
-                                            <li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i>
-                                                    Button</a></li>
-                                            <li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i>
-                                                    Badges</a></li>
-                                            <li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i>
-                                                    Cards</a></li>
-                                            <li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i>
-                                                    Modal</a></li>
-                                            <li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i> Tabs &
-                                                    pills</a></li>
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="fas fa-circle"></i>
+                                                    Alert
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="fas fa-circle"></i>
+                                                    Button
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="fas fa-circle"></i>
+                                                    Badges
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="fas fa-circle"></i>
+                                                    Cards
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="fas fa-circle"></i>
+                                                    Modal
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="fas fa-circle"></i> Tabs &
+                                                    pills
+                                                </a>
+                                            </li>
                                         </ul>
                                     </div>
                                     <div class="col">
                                         <h6 class="mega-title">Forms</h6>
                                         <ul class="pro-body">
-                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-minus"></i>
-                                                    Elements</a></li>
-                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-minus"></i>
-                                                    Validation</a></li>
-                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-minus"></i>
-                                                    Masking</a></li>
-                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-minus"></i>
-                                                    Wizard</a></li>
-                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-minus"></i>
-                                                    Picker</a></li>
-                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-minus"></i>
-                                                    Select</a></li>
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="feather icon-minus"></i>
+                                                    Elements
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="feather icon-minus"></i>
+                                                    Validation
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="feather icon-minus"></i>
+                                                    Masking
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="feather icon-minus"></i>
+                                                    Wizard
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="feather icon-minus"></i>
+                                                    Picker
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="feather icon-minus"></i>
+                                                    Select
+                                                </a>
+                                            </li>
                                         </ul>
                                     </div>
                                     <div class="col">
                                         <h6 class="mega-title">Application</h6>
                                         <ul class="pro-body">
-                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-mail"></i>
-                                                    Email</a></li>
-                                            <li><a href="#!" class="dropdown-item"><i
-                                                        class="feather icon-clipboard"></i> Task</a></li>
-                                            <li><a href="#!" class="dropdown-item"><i
-                                                        class="feather icon-check-square"></i> To-Do</a></li>
-                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-image"></i>
-                                                    Gallery</a></li>
-                                            <li><a href="#!" class="dropdown-item"><i
-                                                        class="feather icon-help-circle"></i> Helpdesk</a></li>
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="feather icon-mail"></i>
+                                                    Email
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="feather icon-clipboard"></i> Task
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="feather icon-check-square"></i> To-Do
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="feather icon-image"></i>
+                                                    Gallery
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="feather icon-help-circle"></i> Helpdesk
+                                                </a>
+                                            </li>
                                         </ul>
                                     </div>
                                     <div class="col">
                                         <h6 class="mega-title">Extension</h6>
                                         <ul class="pro-body">
-                                            <li><a href="#!" class="dropdown-item"><i
-                                                        class="feather icon-file-plus"></i> Editor</a></li>
-                                            <li><a href="#!" class="dropdown-item"><i
-                                                        class="feather icon-file-minus"></i> Invoice</a></li>
-                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-calendar"></i>
-                                                    Full calendar</a></li>
-                                            <li><a href="#!" class="dropdown-item"><i
-                                                        class="feather icon-upload-cloud"></i> File upload</a></li>
-                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-scissors"></i>
-                                                    Image cropper</a></li>
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="feather icon-file-plus"></i> Editor
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="feather icon-file-minus"></i> Invoice
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="feather icon-calendar"></i>
+                                                    Full calendar
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="feather icon-upload-cloud"></i> File upload
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="feather icon-scissors"></i>
+                                                    Image cropper
+                                                </a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -403,10 +514,13 @@ button.btn.btn-clear.btn-sm.mr-2 {
                                     <li class="notification">
                                         <div class="media">
                                             <img class="img-radius" src="assets/images/user/avatar-1.jpg"
-                                                alt="Generic placeholder image">
+                                                 alt="Generic placeholder image">
                                             <div class="media-body">
-                                                <p><strong>John Doe</strong><span class="n-time text-muted"><i
-                                                            class="icon feather icon-clock m-r-10"></i>5 min</span></p>
+                                                <p>
+                                                    <strong>John Doe</strong><span class="n-time text-muted">
+                                                        <i class="icon feather icon-clock m-r-10"></i>5 min
+                                                    </span>
+                                                </p>
                                                 <p>New ticket Added</p>
                                             </div>
                                         </div>
@@ -417,10 +531,13 @@ button.btn.btn-clear.btn-sm.mr-2 {
                                     <li class="notification">
                                         <div class="media">
                                             <img class="img-radius" src="assets/images/user/avatar-2.jpg"
-                                                alt="Generic placeholder image">
+                                                 alt="Generic placeholder image">
                                             <div class="media-body">
-                                                <p><strong>Joseph William</strong><span class="n-time text-muted"><i
-                                                            class="icon feather icon-clock m-r-10"></i>10 min</span></p>
+                                                <p>
+                                                    <strong>Joseph William</strong><span class="n-time text-muted">
+                                                        <i class="icon feather icon-clock m-r-10"></i>10 min
+                                                    </span>
+                                                </p>
                                                 <p>Prchace New Theme and make payment</p>
                                             </div>
                                         </div>
@@ -428,10 +545,13 @@ button.btn.btn-clear.btn-sm.mr-2 {
                                     <li class="notification">
                                         <div class="media">
                                             <img class="img-radius" src="assets/images/user/avatar-1.jpg"
-                                                alt="Generic placeholder image">
+                                                 alt="Generic placeholder image">
                                             <div class="media-body">
-                                                <p><strong>Sara Soudein</strong><span class="n-time text-muted"><i
-                                                            class="icon feather icon-clock m-r-10"></i>12 min</span></p>
+                                                <p>
+                                                    <strong>Sara Soudein</strong><span class="n-time text-muted">
+                                                        <i class="icon feather icon-clock m-r-10"></i>12 min
+                                                    </span>
+                                                </p>
                                                 <p>currently login</p>
                                             </div>
                                         </div>
@@ -439,10 +559,13 @@ button.btn.btn-clear.btn-sm.mr-2 {
                                     <li class="notification">
                                         <div class="media">
                                             <img class="img-radius" src="assets/images/user/avatar-2.jpg"
-                                                alt="Generic placeholder image">
+                                                 alt="Generic placeholder image">
                                             <div class="media-body">
-                                                <p><strong>Joseph William</strong><span class="n-time text-muted"><i
-                                                            class="icon feather icon-clock m-r-10"></i>30 min</span></p>
+                                                <p>
+                                                    <strong>Joseph William</strong><span class="n-time text-muted">
+                                                        <i class="icon feather icon-clock m-r-10"></i>30 min
+                                                    </span>
+                                                </p>
                                                 <p>Prchace New Theme and make payment</p>
                                             </div>
                                         </div>
@@ -462,19 +585,28 @@ button.btn.btn-clear.btn-sm.mr-2 {
                             <div class="dropdown-menu dropdown-menu-right profile-notification">
                                 <div class="pro-head">
                                     <img src="assets/images/user/avatar-1.jpg" class="img-radius"
-                                        alt="User-Profile-Image">
+                                         alt="User-Profile-Image">
                                     <span>John Doe</span>
                                     <a href="auth-signin.html" class="dud-logout" title="Logout">
                                         <i class="feather icon-log-out"></i>
                                     </a>
                                 </div>
                                 <ul class="pro-body">
-                                    <li><a href="user-profile.html" class="dropdown-item"><i
-                                                class="feather icon-user"></i> Profile</a></li>
-                                    <li><a href="email_inbox.html" class="dropdown-item"><i
-                                                class="feather icon-mail"></i> My Messages</a></li>
-                                    <li><a href="auth-signin.html" class="dropdown-item"><i
-                                                class="feather icon-lock"></i> Lock Screen</a></li>
+                                    <li>
+                                        <a href="user-profile.html" class="dropdown-item">
+                                            <i class="feather icon-user"></i> Profile
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="email_inbox.html" class="dropdown-item">
+                                            <i class="feather icon-mail"></i> My Messages
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="auth-signin.html" class="dropdown-item">
+                                            <i class="feather icon-lock"></i> Lock Screen
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -496,13 +628,13 @@ button.btn.btn-clear.btn-sm.mr-2 {
                                     <div class="row align-items-center">
                                         <div class="col-md-12">
                                             <!-- <div class="page-header-title">
-                                       <h5 class="m-b-10">Welcome to Kalyanbabu!</h5>
-                                       </div> -->
+                                            <h5 class="m-b-10">Welcome to Kalyanbabu!</h5>
+                                            </div> -->
                                             <!-- <ul class="breadcrumb">
-                                       <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
-                                       <li class="breadcrumb-item"><a href="#!">Page Layout</a></li>
-                                       <li class="breadcrumb-item"><a href="#!">Horizontal Layout 2</a></li>
-                                       </ul> -->
+                                            <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
+                                            <li class="breadcrumb-item"><a href="#!">Page Layout</a></li>
+                                            <li class="breadcrumb-item"><a href="#!">Horizontal Layout 2</a></li>
+                                            </ul> -->
                                         </div>
                                     </div>
                                 </div>
@@ -514,22 +646,40 @@ button.btn.btn-clear.btn-sm.mr-2 {
                                     <div class="card-header-right">
                                         <div class="btn-group card-option">
                                             <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"
-                                                aria-haspopup="true" aria-expanded="false">
+                                                    aria-haspopup="true" aria-expanded="false">
                                                 <i class="feather icon-more-horizontal"></i>
                                             </button>
                                             <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
-                                                <li class="dropdown-item full-card"><a href="#!"><span><i
-                                                                class="feather icon-maximize"></i> maximize</span><span
-                                                            style="display:none"><i class="feather icon-minimize"></i>
-                                                            Restore</span></a></li>
-                                                <li class="dropdown-item minimize-card"><a href="#!"><span><i
-                                                                class="feather icon-minus"></i> collapse</span><span
-                                                            style="display:none"><i class="feather icon-plus"></i>
-                                                            expand</span></a></li>
-                                                <li class="dropdown-item reload-card"><a href="#!"><i
-                                                            class="feather icon-refresh-cw"></i> reload</a></li>
-                                                <li class="dropdown-item close-card"><a href="#!"><i
-                                                            class="feather icon-trash"></i> remove</a></li>
+                                                <li class="dropdown-item full-card">
+                                                    <a href="#!">
+                                                        <span>
+                                                            <i class="feather icon-maximize"></i> maximize
+                                                        </span><span style="display:none">
+                                                            <i class="feather icon-minimize"></i>
+                                                            Restore
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li class="dropdown-item minimize-card">
+                                                    <a href="#!">
+                                                        <span>
+                                                            <i class="feather icon-minus"></i> collapse
+                                                        </span><span style="display:none">
+                                                            <i class="feather icon-plus"></i>
+                                                            expand
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li class="dropdown-item reload-card">
+                                                    <a href="#!">
+                                                        <i class="feather icon-refresh-cw"></i> reload
+                                                    </a>
+                                                </li>
+                                                <li class="dropdown-item close-card">
+                                                    <a href="#!">
+                                                        <i class="feather icon-trash"></i> remove
+                                                    </a>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -616,7 +766,7 @@ button.btn.btn-clear.btn-sm.mr-2 {
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label class="col-form-label required">Date</label>
-                                                    <input type="date" class="form-control valid" id="txtDate" data-val="true" data-val-required="Please Enter Date" name="date" value="11/30/2025 12:00:00 AM" aria-describedby="txtDate-error" aria-invalid="false">
+                                                    <input type="text" class="form-control valid" id="txtDate" data-val="true" data-val-required="Please Enter Date" name="date" value="11-30-2025" aria-describedby="txtDate-error" aria-invalid="false">
                                                     <span class="text-danger error-msg field-validation-valid" data-valmsg-for="date" data-valmsg-replace="true"></span>
                                                 </div>
                                                 <div class="col-md-4">
@@ -697,11 +847,15 @@ button.btn.btn-clear.btn-sm.mr-2 {
                                                             <th>BRAND NAME</th>
                                                             <th>LIQUOR TYPE</th>
                                                             <th>LIQUOR SUB TYPE</th>
-                                                            <th>DESCRIPTION</th>
+                                                            <th>
+                                                                LIQUOR DETAILED DESCRIPTION
+                                                            </th>
                                                             <th>PACKAGING SIZE</th>
                                                             <th>PACKAGING TYPE</th>
                                                             <th>BOTTLES/CASE</th>
-                                                            <th>NO. OF CASES</th>
+                                                            <th>
+                                                                NO OF CASES/MONO CARTONS
+                                                            </th>
                                                             <th>NO. OF BOTTLES</th>
 
                                                             <th style="width:100px;">ACTION</th>
@@ -726,6 +880,35 @@ button.btn.btn-clear.btn-sm.mr-2 {
                                                     </tbody>
                                                 </table>
                                             </div>
+
+                                            <div class="row mt-3">
+                                                <div class="col-md-4">
+                                                    <label class="col-form-label required">
+                                                        Total Number of Cases
+
+                                                    </label>
+                                                    <input type="text" class="form-control" id="txtVehicleNo" data-val="true" data-val-required="Please Enter Vehicle No" name="vehicleno" value="43434">
+                                                    <span class="text-danger field-validation-valid" data-valmsg-for="vehicleno" data-valmsg-replace="true"></span>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label class="col-form-label required">
+                                                        Total Number of Bottles
+
+                                                    </label>
+                                                    <input type="text" class="form-control" id="txtVehicleNo" name="remarkes" value="">
+                                                    <span class="text-danger field-validation-valid" data-valmsg-for="remarkes" data-valmsg-replace="true"></span>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label class="col-form-label required">
+                                                        Total Bulk Liters
+
+                                                    </label>
+                                                    <input type="text" class="form-control" id="txtVehicleNo" name="remarkes" value="">
+                                                    <span class="text-danger field-validation-valid" data-valmsg-for="remarkes" data-valmsg-replace="true"></span>
+                                                </div>
+
+                                            </div>
+
 
 
 
@@ -849,8 +1032,8 @@ button.btn.btn-clear.btn-sm.mr-2 {
                                                 <div class="col-md-12">
                                                     <div class="form-group row">
                                                         <!--<label class="col-form-label required">
-                            9. Bank/term Loan Details
-                        </label>-->
+                                                            9. Bank/term Loan Details
+                                                        </label>-->
                                                         <div class="col-lg-12 d-flex">
                                                             <table class="table">
                                                                 <thead class="thead-light">
@@ -878,6 +1061,11 @@ button.btn.btn-clear.btn-sm.mr-2 {
                                                             </table>
                                                         </div>
                                                     </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label class="col-form-label required">Total Duty Amount</label>
+                                                    <input type="text" class="form-control decimal-allowed" id="txtDutyTotalAmount" disabled="" name="totaldutyamount" value="84.00">
+                                                    <span class="text-danger error-msg field-validation-valid" data-valmsg-for="totaldutyamount" data-valmsg-replace="true"></span>
                                                 </div>
 
                                             </div>
