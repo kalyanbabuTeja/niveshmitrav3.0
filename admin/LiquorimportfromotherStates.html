@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Nivesh Mitra V3.0 - Admin</title>
+    <!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 11]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="">
+    <meta name="author" content="Phoenixcoded" />
+    <!-- Favicon icon -->
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+    <!-- prism css -->
+    <link rel="stylesheet" href="assets/css/plugins/prism-coy.css">
+    <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css">
+
+    <!-- vendor css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/card.css">
+    <link rel="stylesheet" href="assets/fonts/material-icon/css/material-design-iconic-font.min.css">
+    <!-- Main css -->
+    <link rel="stylesheet" href="assets/wizards/css/style.css">
+    <link rel="stylesheet" href="assets/css/forest.css">\
+    <style>
+        .form-button {
+            background-color: #1e6bb8;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 16px 32px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            text-align: center;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .form-button:hover {
+            background-color: #155a9a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+        }
+
+        .form-button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-button::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 5px;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.5);
+            opacity: 0;
+            border-radius: 100%;
+            transform: scale(1, 1) translate(-50%);
+            transform-origin: 50% 50%;
+        }
+
+        .form-button:focus:not(:active)::after {
+            animation: ripple 1s ease-out;
+        }
+
+        @keyframes ripple {
+            0% {
+                transform: scale(0, 0);
+                opacity: 0.5;
+            }
+
+            100% {
+                transform: scale(20, 20);
+                opacity: 0;
+            }
+        }
+
+
+        /* .constrain input{
+  margin-bottom: 40px;
+}
+
+ .constrain .input-elevated{
+font-size: 16px;
+line-height: 1.5;
+border: none;
+background: #FFFFFF;
+background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'><path fill='%23838D99' d='M13.22 14.63a8 8 0 1 1 1.41-1.41l4.29 4.29a1 1 0 1 1-1.41 1.41l-4.29-4.29zm-.66-2.07a6 6 0 1 0-8.49-8.49 6 6 0 0 0 8.49 8.49z'></path></svg>");
+background-repeat: no-repeat;
+background-position: 10px 10px;
+background-size: 20px 20px;
+border: 1px solid #C5CBD5;
+border-radius: 5px;
+width: 300px;
+padding: .5em 1em .5em 2.5em;
+} 
+
+ .constrain .input-elevated::placeholder{
+  color: #838D99;
+}
+ 
+ .constrain .input-elevated:focus {
+  outline: none;
+  box-shadow: 0 4px 10px 0 rgba(0,0,0,0.16);
+} */
+button.btn.btn-clear.btn-sm.mr-2 {
+    background: #8c4cff;
+    color: #fff;
+}
+        fieldset.scheduler-border {
+            border: 1px solid #61439c !important;
+            padding: 1.5em 1em 1em 1em !important;
+            margin: 0 0 1.5em 0 !important;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        legend.scheduler-border {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: rgb(33 86 165) !important;
+            padding: 0 10px;
+            margin-left: 10px;
+            background: #fff;
+            width: auto;
+            float: none;
+            display: inline-block;
+        }
+
+        .fnt_r_12 {
+            font-size: 12px;
+        }
+    </style>
+
+   
+</head>
+
+<body>
+ 
+   
+    <div class="loader-bg">
+        <div class="loader-track">
+            <div class="loader-fill"></div>
+        </div>
+    </div>
+    <!-- [ Pre-loader ] End -->
+    <!-- [ navigation menu ] start -->
+    <nav class="pcoded-navbar theme-horizontal menu-light">
+        <div class="navbar-wrapper container-fluid">
+            <div class="navbar-content sidenav-horizontal" id="layout-sidenav">
+                <ul class="nav pcoded-inner-navbar sidenav-inner">
+                    <li class="nav-item pcoded-menu-caption">
+                        <label>Navigation</label>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
+                    </li>
+                    <li class="nav-item pcoded-hasmenu">
+                        <a href="#!" class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-layout"></i></span><span
+                                class="pcoded-mtext">Pre-Establishment</span></a>
+                        <ul class="pcoded-submenu">
+                            <li><a href="Questionnaire.html" target="_blank">Questionnaire</a></li>
+                            <li><a href="layout-horizontal.html" target="_blank">Combined Application Form</a></li>
+                            <li><a href="#">Respond To Query</a></li>
+                            <li><a href="#">Print CFE</a></li>
+                            <li><a href="#">Print Acknowledgment </a></li>
+                            <li><a href="#">Print Acknowledgment with QR Code</a></li>
+                            <li><a href="#">View Receipt</a></li>
+                        </ul>
+                    </li>
+                    <!-- <li class="nav-item pcoded-hasmenu">
+                     <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">Basic</span></a>
+                     <ul class="pcoded-submenu">
+                     	<li><a href="bc_alert.html">Alert</a></li>
+                     	<li><a href="bc_button.html">Button</a></li>
+                     	<li><a href="bc_badges.html">Badges</a></li>
+                     	<li><a href="bc_breadcrumb-pagination.html">Breadcrumb & paggination</a></li>
+                     	<li><a href="bc_card.html">Cards</a></li>
+                     	<li><a href="bc_collapse.html">Collapse</a></li>
+                     	<li><a href="bc_carousel.html">Carousel</a></li>
+                     	<li><a href="bc_grid.html">Grid system</a></li>
+                     	<li><a href="bc_progress.html">Progress</a></li>
+                     	<li><a href="bc_modal.html">Modal</a></li>
+                     	<li><a href="bc_spinner.html">Spinner</a></li>
+                     	<li><a href="bc_tabs.html">Tabs & pills</a></li>
+                     	<li><a href="bc_typography.html">Typography</a></li>
+                     	<li><a href="bc_tooltip-popover.html">Tooltip & popovers</a></li>
+                     	<li><a href="bc_toasts.html">Toasts</a></li>
+                     	<li><a href="bc_extra.html">Other</a></li>
+                     </ul>
+                     </li> -->
+                    <!-- <li class="nav-item">
+                     <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Industry Registration</span></a>
+                     </li> -->
+                    <li class="nav-item">
+                        <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-file-text"></i></span><span class="pcoded-mtext">Land
+                                Allotment</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-file-text"></i></span><span
+                                class="pcoded-mtext">Pre-Establishment</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-file-text"></i></span><span
+                                class="pcoded-mtext">Pre-Operational</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-file-text"></i></span><span
+                                class="pcoded-mtext">Incentives</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-file-text"></i></span><span
+                                class="pcoded-mtext">Renewals</span></a>
+                    </li>
+                    <!-- <li class="nav-item">
+                     <a href="tbl_bootstrap.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-align-justify"></i></span><span class="pcoded-mtext">Bootstrap table</span></a>
+                     </li>
+                     <li class="nav-item pcoded-menu-caption">
+                     <label>Chart & Maps</label>
+                     </li>
+                     <li class="nav-item">
+                     <a href="chart-apex.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-pie-chart"></i></span><span class="pcoded-mtext">Chart</span></a>
+                     </li>
+                     <li class="nav-item">
+                     <a href="map-google.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-map"></i></span><span class="pcoded-mtext">Maps</span></a>
+                     </li>
+                     <li class="nav-item pcoded-menu-caption">
+                     <label>Pages</label>
+                     </li>
+                     
+                     <li class="nav-item"><a href="sample-page.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-sidebar"></i></span><span class="pcoded-mtext">Sample page</span></a></li> -->
+                    <li class="nav-item pcoded-hasmenu">
+                        <a href="#!" class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-lock"></i></span><span
+                                class="pcoded-mtext">Authentication</span></a>
+                        <ul class="pcoded-submenu">
+                            <li><a href="auth-signup.html" target="_blank">Sign up</a></li>
+                            <li><a href="auth-signin.html" target="_blank">Sign in</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- [ navigation menu ] end -->
+    <!-- [ Header ] start -->
+    <header class="navbar pcoded-header navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <div class="m-header">
+                <a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
+                <a href="#!" class="b-brand">
+                    <!-- ========   change your logo hear   ============ -->
+                    <img src="assets/images/investup1.png" alt="" class="logo" style="width: 90%;">
+                    <img src="assets/images/logo-icon.png" alt="" class="logo-thumb">
+                </a>
+                <a href="#!" class="mob-toggler">
+                    <i class="feather icon-more-vertical"></i>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href="#!" class="pop-search"><i class="feather icon-search"></i></a>
+                        <div class="search-bar">
+                            <input type="text" class="form-control border-0 shadow-none" placeholder="Search hear">
+                            <button type="button" class="close" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a class="dropdown-toggle h-drop" href="#" data-toggle="dropdown">
+                                Dropdown
+                            </a>
+                            <div class="dropdown-menu profile-notification ">
+                                <ul class="pro-body">
+                                    <li><a href="user-profile.html" class="dropdown-item"><i class="fas fa-circle"></i>
+                                            Profile</a></li>
+                                    <li><a href="email_inbox.html" class="dropdown-item"><i class="fas fa-circle"></i>
+                                            My Messages</a></li>
+                                    <li><a href="auth-signin.html" class="dropdown-item"><i class="fas fa-circle"></i>
+                                            Lock Screen</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown mega-menu">
+                            <a class="dropdown-toggle h-drop" href="#" data-toggle="dropdown">
+                                Mega
+                            </a>
+                            <div class="dropdown-menu profile-notification ">
+                                <div class="row no-gutters">
+                                    <div class="col">
+                                        <h6 class="mega-title">UI Element</h6>
+                                        <ul class="pro-body">
+                                            <li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i>
+                                                    Alert</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i>
+                                                    Button</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i>
+                                                    Badges</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i>
+                                                    Cards</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i>
+                                                    Modal</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i> Tabs &
+                                                    pills</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col">
+                                        <h6 class="mega-title">Forms</h6>
+                                        <ul class="pro-body">
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-minus"></i>
+                                                    Elements</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-minus"></i>
+                                                    Validation</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-minus"></i>
+                                                    Masking</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-minus"></i>
+                                                    Wizard</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-minus"></i>
+                                                    Picker</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-minus"></i>
+                                                    Select</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col">
+                                        <h6 class="mega-title">Application</h6>
+                                        <ul class="pro-body">
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-mail"></i>
+                                                    Email</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i
+                                                        class="feather icon-clipboard"></i> Task</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i
+                                                        class="feather icon-check-square"></i> To-Do</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-image"></i>
+                                                    Gallery</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i
+                                                        class="feather icon-help-circle"></i> Helpdesk</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col">
+                                        <h6 class="mega-title">Extension</h6>
+                                        <ul class="pro-body">
+                                            <li><a href="#!" class="dropdown-item"><i
+                                                        class="feather icon-file-plus"></i> Editor</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i
+                                                        class="feather icon-file-minus"></i> Invoice</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-calendar"></i>
+                                                    Full calendar</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i
+                                                        class="feather icon-upload-cloud"></i> File upload</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-scissors"></i>
+                                                    Image cropper</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li>
+                        <div class="dropdown">
+                            <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+                                <i class="icon feather icon-bell"></i>
+                                <span class="badge badge-pill badge-danger">5</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right notification">
+                                <div class="noti-head">
+                                    <h6 class="d-inline-block m-b-0">Notifications</h6>
+                                    <div class="float-right">
+                                        <a href="#!" class="m-r-10">mark as read</a>
+                                        <a href="#!">clear all</a>
+                                    </div>
+                                </div>
+                                <ul class="noti-body">
+                                    <li class="n-title">
+                                        <p class="m-b-0">NEW</p>
+                                    </li>
+                                    <li class="notification">
+                                        <div class="media">
+                                            <img class="img-radius" src="assets/images/user/avatar-1.jpg"
+                                                alt="Generic placeholder image">
+                                            <div class="media-body">
+                                                <p><strong>John Doe</strong><span class="n-time text-muted"><i
+                                                            class="icon feather icon-clock m-r-10"></i>5 min</span></p>
+                                                <p>New ticket Added</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="n-title">
+                                        <p class="m-b-0">EARLIER</p>
+                                    </li>
+                                    <li class="notification">
+                                        <div class="media">
+                                            <img class="img-radius" src="assets/images/user/avatar-2.jpg"
+                                                alt="Generic placeholder image">
+                                            <div class="media-body">
+                                                <p><strong>Joseph William</strong><span class="n-time text-muted"><i
+                                                            class="icon feather icon-clock m-r-10"></i>10 min</span></p>
+                                                <p>Prchace New Theme and make payment</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="notification">
+                                        <div class="media">
+                                            <img class="img-radius" src="assets/images/user/avatar-1.jpg"
+                                                alt="Generic placeholder image">
+                                            <div class="media-body">
+                                                <p><strong>Sara Soudein</strong><span class="n-time text-muted"><i
+                                                            class="icon feather icon-clock m-r-10"></i>12 min</span></p>
+                                                <p>currently login</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="notification">
+                                        <div class="media">
+                                            <img class="img-radius" src="assets/images/user/avatar-2.jpg"
+                                                alt="Generic placeholder image">
+                                            <div class="media-body">
+                                                <p><strong>Joseph William</strong><span class="n-time text-muted"><i
+                                                            class="icon feather icon-clock m-r-10"></i>30 min</span></p>
+                                                <p>Prchace New Theme and make payment</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="noti-footer">
+                                    <a href="#!">show all</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown drp-user">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="feather icon-user"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right profile-notification">
+                                <div class="pro-head">
+                                    <img src="assets/images/user/avatar-1.jpg" class="img-radius"
+                                        alt="User-Profile-Image">
+                                    <span>John Doe</span>
+                                    <a href="auth-signin.html" class="dud-logout" title="Logout">
+                                        <i class="feather icon-log-out"></i>
+                                    </a>
+                                </div>
+                                <ul class="pro-body">
+                                    <li><a href="user-profile.html" class="dropdown-item"><i
+                                                class="feather icon-user"></i> Profile</a></li>
+                                    <li><a href="email_inbox.html" class="dropdown-item"><i
+                                                class="feather icon-mail"></i> My Messages</a></li>
+                                    <li><a href="auth-signin.html" class="dropdown-item"><i
+                                                class="feather icon-lock"></i> Lock Screen</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- [ Header ] end -->
+    <!-- [ Main Content ] start -->
+    <div class="pcoded-main-container">
+        <div class="pcoded-wrapper container-fluid">
+            <div class="pcoded-content">
+                <div class="pcoded-inner-content">
+                    <div class="main-body">
+                        <div class="page-wrapper">
+                            <div class="page-header">
+                                <div class="page-block">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-12">
+                                            <!-- <div class="page-header-title">
+                                       <h5 class="m-b-10">Welcome to Kalyanbabu!</h5>
+                                       </div> -->
+                                            <!-- <ul class="breadcrumb">
+                                       <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
+                                       <li class="breadcrumb-item"><a href="#!">Page Layout</a></li>
+                                       <li class="breadcrumb-item"><a href="#!">Horizontal Layout 2</a></li>
+                                       </ul> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- [ Main Content ] start -->
+                            <div class="card table-card review-card">
+                                <div class="card-header borderless ">
+                                    <h5>Liquor import from other States (SC18015)</h5>
+                                    <div class="card-header-right">
+                                        <div class="btn-group card-option">
+                                            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false">
+                                                <i class="feather icon-more-horizontal"></i>
+                                            </button>
+                                            <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                                                <li class="dropdown-item full-card"><a href="#!"><span><i
+                                                                class="feather icon-maximize"></i> maximize</span><span
+                                                            style="display:none"><i class="feather icon-minimize"></i>
+                                                            Restore</span></a></li>
+                                                <li class="dropdown-item minimize-card"><a href="#!"><span><i
+                                                                class="feather icon-minus"></i> collapse</span><span
+                                                            style="display:none"><i class="feather icon-plus"></i>
+                                                            expand</span></a></li>
+                                                <li class="dropdown-item reload-card"><a href="#!"><i
+                                                            class="feather icon-refresh-cw"></i> reload</a></li>
+                                                <li class="dropdown-item close-card"><a href="#!"><i
+                                                            class="feather icon-trash"></i> remove</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body p-5" id="">
+
+                                    <fieldset class="scheduler-border">
+                                        <legend class="scheduler-border text-danger">
+                                            From Unit Details
+                                        </legend>
+
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <label class="col-form-label required">License Type</label>
+                                                <select class="form-select valid" id="ddlLicType" required="" data-val="true" data-val-required="Please select License Type" name="fromlicense_type" aria-describedby="ddlLicType-error" aria-invalid="false">
+                                                    <option value="">--Select--</option>
+                                                    <option value="BWFL2A" selected="selected">BWFL2A</option>
+                                                    <option value="BWFL2B">BWFL2B</option>
+                                                    <option value="BWFL2C">BWFL2C</option>
+                                                    <option value="BWFL2D">BWFL2D</option>
+                                                </select>
+                                                <span class="text-danger field-validation-valid" data-valmsg-for="fromlicense_type" data-valmsg-replace="true"></span>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="col-form-label required">Unit Name</label>
+                                                <input type="text" class="form-control" id="txtUnitName" data-val="true" data-val-required="Please Enter Unit Name" name="fromunit_name" value="fggf">
+                                                <span class="text-danger field-validation-valid" data-valmsg-for="fromunit_name" data-valmsg-replace="true"></span>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label class="col-form-label required">Unit Address</label>
+                                                <input type="text" class="form-control" id="txtUnitAddress" data-val="true" data-val-required="Please Enter Unit Address" name="fromunitaddress" value="fgfg">
+                                                <span class="text-danger field-validation-valid" data-valmsg-for="fromunitaddress" data-valmsg-replace="true"></span>
+                                            </div>
+                                        </div>
+
+                                        <fieldset class="scheduler-border">
+                                            <legend class="scheduler-border text-danger">Consigner Details</legend>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <label class="col-form-label required">License Type</label>
+                                                    <select class="form-select valid" id="ddlLicenseType" required="" data-val="true" data-val-required="Please Enter Consigner License Type" name="consignerlicense_type" aria-describedby="ddlLicenseType-error" aria-invalid="false">
+                                                        <option value="">--Select--</option>
+                                                        <option value="Distillery" selected="selected">Distillery</option>
+                                                        <option value="Bottling">Bottling</option>
+                                                        <option value="Brewery">Brewery</option>
+                                                        <option value="Vintinery">Vintinery</option>
+                                                    </select>
+                                                    <span class="text-danger field-validation-valid" data-valmsg-for="consignerlicense_type" data-valmsg-replace="true"></span>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label class="col-form-label required">Unit Type</label>
+                                                    <select class="form-select" id="ddlConsignerUnitType" name="consignerunittype">
+                                                        <option value="">--Select--</option>
+                                                    </select>
+                                                    <span class="text-danger field-validation-valid" data-valmsg-for="consignerunittype" data-valmsg-replace="true"></span>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label class="col-form-label required">Unit Name</label>
+                                                    <select class="form-select" id="ddlConsignerUnit_Name" name="consignerunit_name">
+                                                        <option value="">--Select--</option>
+                                                    </select>
+                                                    <span class="text-danger field-validation-valid" data-valmsg-for="consignerunit_name" data-valmsg-replace="true"></span>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-3">
+                                                <div class="col-md-4">
+                                                    <label class="col-form-label required">Unit Address</label>
+                                                    <input type="text" class="form-control" id="txtConUnitAddress" data-val="true" data-val-required="Please Enter Consigner Unit Address" name="consignerunitaddress" value="fgfgg">
+                                                    <span class="text-danger field-validation-valid" data-valmsg-for="consignerunitaddress" data-valmsg-replace="true"></span>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+
+
+                                        <fieldset class="scheduler-border">
+                                            <legend class="scheduler-border text-danger">Import Details</legend>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <label class="col-form-label required">Brand Name</label>
+                                                    <select class="form-select" id="ddlBrandName" name="brandDetails[0].brandname">
+                                                        <option value="">--Select--</option>
+                                                    </select>
+                                                    <span class="text-danger error-msg field-validation-valid" data-valmsg-for="brandDetails[0].brandname" data-valmsg-replace="true"></span>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label class="col-form-label required">Date</label>
+                                                    <input type="date" class="form-control valid" id="txtDate" data-val="true" data-val-required="Please Enter Date" name="date" value="11/30/2025 12:00:00 AM" aria-describedby="txtDate-error" aria-invalid="false">
+                                                    <span class="text-danger error-msg field-validation-valid" data-valmsg-for="date" data-valmsg-replace="true"></span>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label class="col-form-label required">Liquor Type</label>
+                                                    <input type="text" class="form-control valid" id="txtLiquorType" name="brandDetails[0].liquortype" value="" aria-invalid="false">
+                                                    <span class="text-danger error-msg field-validation-valid" data-valmsg-for="brandDetails[0].liquortype" data-valmsg-replace="true"></span>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-3">
+                                                <div class="col-md-4">
+                                                    <label class="col-form-label required">Liquor Sub Type</label>
+                                                    <select class="form-select" id="ddlLiquorSubType" name="brandDetails[0].liquorsubtype">
+                                                        <option value="">--Select--</option>
+                                                    </select>
+                                                    <span class="text-danger error-msg field-validation-valid" data-valmsg-for="brandDetails[0].liquorsubtype" data-valmsg-replace="true"></span>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label class="col-form-label required">Brand Name</label>
+                                                    <input type="text" class="form-control" id="txtBrandName" data-val="true" data-val-required="Please Enter Brand Name Details" name="brandnamedet" value="fgfg">
+                                                    <span class="text-danger error-msg field-validation-valid" data-valmsg-for="brandnamedet" data-valmsg-replace="true"></span>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label class="col-form-label required">Liquor Description</label>
+                                                    <input type="text" class="form-control valid" id="txtLiquorDescription" name="brandDetails[0].liquordescription" value="" aria-invalid="false">
+                                                    <span class="text-danger error-msg field-validation-valid" data-valmsg-for="brandDetails[0].liquordescription" data-valmsg-replace="true"></span>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row mt-3">
+                                                <div class="col-md-4">
+                                                    <label class="col-form-label required">Package Size</label>
+                                                    <input type="text" class="form-control valid" id="txtPackageSize" name="brandDetails[0].packagesize" value="" aria-invalid="false">
+                                                    <span class="text-danger error-msg field-validation-valid" data-valmsg-for="brandDetails[0].packagesize" data-valmsg-replace="true"></span>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label class="col-form-label required">Package Type</label>
+                                                    <input type="text" class="form-control valid" id="txtPackageType" name="brandDetails[0].packagetype" value="" aria-invalid="false">
+                                                    <span class="text-danger error-msg field-validation-valid" data-valmsg-for="brandDetails[0].packagetype" data-valmsg-replace="true"></span>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label class="col-form-label required">No of Bottles Per Case</label>
+                                                    <input type="text" class="form-control numeric-5 valid" id="txtBottleCase" name="brandDetails[0].noofbottlespercase" value="" aria-invalid="false">
+                                                    <span class="text-danger error-msg field-validation-valid" data-valmsg-for="brandDetails[0].noofbottlespercase" data-valmsg-replace="true"></span>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row mt-3">
+                                                <div class="col-md-4">
+                                                    <label class="col-form-label required">ETIN</label>
+                                                    <input type="text" class="form-control" id="txtETIN" data-val="true" data-val-required="Please Enter ETIN" name="etin" value="ffgfggf">
+                                                    <span class="text-danger error-msg field-validation-valid" data-valmsg-for="etin" data-valmsg-replace="true"></span>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label class="col-form-label required">No of Cases/Mono Cartons</label>
+                                                    <input type="text" class="form-control numeric-5 valid" id="txtMonoCartons" name="brandDetails[0].noofcases" value="" aria-invalid="false">
+                                                    <span class="text-danger error-msg field-validation-valid" data-valmsg-for="brandDetails[0].noofcases" data-valmsg-replace="true"></span>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label class="col-form-label required">No of Bottles</label>
+                                                    <input type="text" class="form-control numeric-5" id="txtNoofBottle" disabled="" name="brandDetails[0].noofbottles" value="">
+                                                    <span class="text-danger error-msg field-validation-valid" data-valmsg-for="brandDetails[0].noofbottles" data-valmsg-replace="true"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="text-end mt-3">
+                                                <button type="button" id="btnAdd" class="btn btn-primary">Add</button>
+                                                <button type="button" id="btnClear" class="btn btn-secondary">Clear</button>
+                                            </div>
+
+                                            <hr>
+                                            <div class="table-responsive">
+                                                <table class="table table-bordered mt-3" id="tblImportList" style="width: 100%;">
+                                                    <thead class="table-light">
+                                                        <tr>
+                                                            <th style="width:50px;">S.NO</th>
+                                                            <th>BRAND NAME</th>
+                                                            <th>LIQUOR TYPE</th>
+                                                            <th>LIQUOR SUB TYPE</th>
+                                                            <th>DESCRIPTION</th>
+                                                            <th>PACKAGING SIZE</th>
+                                                            <th>PACKAGING TYPE</th>
+                                                            <th>BOTTLES/CASE</th>
+                                                            <th>NO. OF CASES</th>
+                                                            <th>NO. OF BOTTLES</th>
+
+                                                            <th style="width:100px;">ACTION</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1</td>
+                                                            <td>--Select--</td>
+                                                            <td>fggff</td>
+                                                            <td>--Select--</td>
+                                                            <td>g</td>
+                                                            <td>dff</td>
+                                                            <td>ddf</td>
+                                                            <td>12</td>
+                                                            <td>12</td>
+                                                            <td>144</td>
+                                                            <td>
+                                                                <button type="button" class="btn btn-danger btnRemove">Remove</button>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+
+
+                                            <div class="row mt-3">
+                                                <div class="col-md-4">
+                                                    <label class="col-form-label required">Expected Delivery Date</label>
+                                                    <input type="date" class="form-control" id="txtExpectedDate" data-val="true" data-val-required="Please Enter Expected Delivery Date" name="expecteddeliverydate" value="2025-11-30"><input name="__Invariant" type="hidden" value="expecteddeliverydate">
+                                                    <span class="text-danger field-validation-valid" data-valmsg-for="expecteddeliverydate" data-valmsg-replace="true"></span>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label class="col-form-label required">Transport </label>
+                                                    <select class="form-select" id="ddlTransport" name="transport">
+                                                        <option value="">--Select--</option>
+                                                        <option value="By Road">By Road</option>
+                                                        <option value="By Other">By Other</option>
+                                                    </select>
+                                                    <span class="text-danger field-validation-valid" data-valmsg-for="transport" data-valmsg-replace="true"></span>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label class="col-form-label required">Major Route</label>
+                                                    <input type="text" class="form-control" id="txtMajorRoute" data-val="true" data-val-required="Please Enter Major Route" name="majorroute" value="fgfg">
+                                                    <span class="text-danger field-validation-valid" data-valmsg-for="majorroute" data-valmsg-replace="true"></span>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row mt-3">
+                                                <div class="col-md-4">
+                                                    <label class="col-form-label required">
+                                                        Vehicle Number
+                                                    </label>
+                                                    <input type="text" class="form-control" id="txtVehicleNo" data-val="true" data-val-required="Please Enter Vehicle No" name="vehicleno" value="43434">
+                                                    <span class="text-danger field-validation-valid" data-valmsg-for="vehicleno" data-valmsg-replace="true"></span>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label class="col-form-label required">
+                                                        Remarks
+                                                    </label>
+                                                    <input type="text" class="form-control" id="txtVehicleNo" name="remarkes" value="">
+                                                    <span class="text-danger field-validation-valid" data-valmsg-for="remarkes" data-valmsg-replace="true"></span>
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <div class="form-group row">
+                                                        <label class="col-form-label required">Is Payment Done</label>
+                                                        <div class="col-lg-12 d-flex">
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="radio" name="option" id="yesOption" value="yes">
+
+                                                                <label class="form-check-label" for="yesOption">Yes</label>
+                                                            </div>
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="radio" name="option" id="noOption" value="no">
+
+                                                                <label class="form-check-label" for="noOption">No</label>
+                                                            </div>
+                                                            <span class="text-danger field-validation-valid" data-valmsg-for="ispaymentdone" data-valmsg-replace="true"></span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </fieldset>
+
+
+                                        <fieldset class="scheduler-border">
+                                            <legend class="scheduler-border text-danger">Fees Details</legend>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <label class="col-form-label required">Scanning Fees (per pc)</label>
+                                                    <input type="text" class="form-control decimal-allowed" id="txtScanningFees" data-val="true" data-val-required="Please Enter Scanning Fees" name="scanningfees" value="12.00">
+                                                    <span class="text-danger error-msg field-validation-valid" data-valmsg-for="scanningfees" data-valmsg-replace="true"></span>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label class="col-form-label required">Special Fees (per pc)</label>
+                                                    <input class="form-control decimal-allowed" id="txtSpecialFees" type="text" data-val="true" data-val-required="Please Enter Special Fees" name="specialfees" value="12.00">
+                                                    <span class="text-danger error-msg field-validation-valid" data-valmsg-for="specialfees" data-valmsg-replace="true"></span>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label class="col-form-label required">Import Permit</label>
+                                                    <input type="text" class="form-control decimal-allowed" id="txtImportPermit" data-val="true" data-val-required="Please Enter Unit Address" name="importpermit" value="12.00">
+                                                    <span class="text-danger error-msg field-validation-valid" data-valmsg-for="importpermit" data-valmsg-replace="true"></span>
+                                                </div>
+
+
+                                                <div class="col-md-4 mt-4">
+                                                    <label class="col-form-label required">Consideration Fees</label>
+                                                    <input type="text" class="form-control decimal-allowed" id="txtConsiderationFees" data-val="true" data-val-required="Please Enter Consideration Fees" name="considerationfees" value="12.00">
+                                                    <span class="text-danger error-msg field-validation-valid" data-valmsg-for="considerationfees" data-valmsg-replace="true"></span>
+                                                </div>
+                                                <div class="col-md-4 mt-4">
+                                                    <label class="col-form-label required">Additional Consideration Fees</label>
+                                                    <input type="text" class="form-control decimal-allowed" id="txtAdditionalFees" data-val="true" data-val-required="Please Enter Additional Consideration Fees" name="additionalconsiderationfees" value="12.00">
+                                                    <span class="text-danger error-msg field-validation-valid" data-valmsg-for="additionalconsiderationfees" data-valmsg-replace="true"></span>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label class="col-form-label required">Special Additional Consideration<br> Fees/Covid Fees</label>
+                                                    <input type="text" class="form-control decimal-allowed" id="txtCovidFees" data-val="true" data-val-required="Please Enter Special Additional Consideration Fees" name="specialadditionalconsiderationfees" value="12.00">
+                                                    <span class="text-danger error-msg field-validation-valid" data-valmsg-for="specialadditionalconsiderationfees" data-valmsg-replace="true"></span>
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <label class="col-form-label required">EAL Fees</label>
+                                                    <input type="text" class="form-control decimal-allowed valid" id="txtTotalAmount" data-val="true" data-val-required="Please Enter Total Duty Amount" name="ealfee" value="" aria-describedby="txtTotalAmount-error" aria-invalid="false">
+                                                    <span class="text-danger error-msg field-validation-valid" data-valmsg-for="ealfee" data-valmsg-replace="true"></span>
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <label class="col-form-label required">Total Duty Amount</label>
+                                                    <input type="text" class="form-control decimal-allowed" id="txtDutyTotalAmount" disabled="" name="totaldutyamount" value="84.00">
+                                                    <span class="text-danger error-msg field-validation-valid" data-valmsg-for="totaldutyamount" data-valmsg-replace="true"></span>
+                                                </div>
+
+                                            </div>
+                                        </fieldset>
+                                        <fieldset class="scheduler-border">
+                                            <legend class="scheduler-border text-danger">Payment Details</legend>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group row">
+                                                        <!--<label class="col-form-label required">
+                            9. Bank/term Loan Details
+                        </label>-->
+                                                        <div class="col-lg-12 d-flex">
+                                                            <table class="table">
+                                                                <thead class="thead-light">
+                                                                    <tr>
+                                                                        <th scope="col">Duty</th>
+                                                                        <th scope="col">Fee Amount</th>
+                                                                        <th scope="col">Challan Head</th>
+                                                                        <th scope="col">G6</th>
+                                                                        <th scope="col">Advance Duty Balance</th>
+                                                                        <th scope="col">Mode of Payment</th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td id="tdDuty">Import Duty</td>
+                                                                        <td id="tdFeeAmount">36.00</td>
+                                                                        <td id="tdChallanHead">003900103</td>
+                                                                        <td id="tdG6">G6-22</td>
+                                                                        <td id="tdAdvanceBalance">0.00</td>
+                                                                        <td id="tdModePayment"><button onclick="openDutyRegister()" class="btn btn-primary btn-sm w-auto">Advance Duty Register</button></td>
+
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </fieldset>
+                                        <fieldset class="scheduler-border">
+                                            <legend class="scheduler-border text-danger">Brand Wise Payment Details</legend>
+
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group row">
+                                                        <div class="col-lg-12">
+
+                                                            <div class="table-responsive">
+
+                                                                <table class="table table-bordered">
+                                                                    <thead class="thead-light">
+                                                                        <tr>
+                                                                            <th>Brand Name</th>
+                                                                            <th>Packaging Size</th>
+                                                                            <th>Packaging Type</th>
+                                                                            <th>Special Fees (per pc)</th>
+                                                                            <th>Import Permit</th>
+                                                                            <th>Scanning Fees (per pc)</th>
+                                                                            <th>Consideration Fees</th>
+                                                                            <th>Additional Consideration Fees</th>
+                                                                            <th>Special Consideration Fees</th>
+                                                                            <th>EAL Fees</th>
+                                                                            <th>Total</th>
+                                                                        </tr>
+                                                                    </thead>
+
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td id="tdBrandName"></td>
+                                                                            <td id="tdPackSize"></td>
+                                                                            <td id="tdPackType"></td>
+                                                                            <td id="tdSpecialFees">12.00</td>
+                                                                            <td id="tdImportPermit">12.00</td>
+                                                                            <td id="tdScanningFees">12.00</td>
+                                                                            <td id="tdConsideration">12.00</td>
+                                                                            <td id="tdAdditionalFees">12.00</td>
+                                                                            <td id="tdCovidFees">12.00</td>
+                                                                            <td id="tdEALFees">12.00</td>
+                                                                            <td id="tdTotal">84.00</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </fieldset>
+
+
+
+
+                                    </fieldset>
+
+
+                                    <div class="row mt-3">
+                                        <div class="col-md-12">
+                                            <div class="form-group d-flex justify-content-center">
+                                                <button type="button" class="btn btn-clear btn-sm mr-2">
+                                                    Clear All
+                                                </button>
+                                                <button type="submit" name="actionType" value="Save" class="btn btn-primary btn-sm mr-2">Save</button>
+                                                <button type="button" class="btn btn-danger btn-sm mr-2">Previous</button>
+                                                <button type="button" class="btn btn-success btn-sm">Next</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="assets/js/vendor-all.min.js"></script>
+        <script src="assets/js/plugins/bootstrap.min.js"></script>
+        <script src="assets/js/pcoded.min.js"></script>
+        <!-- prism Js -->
+        <script src="assets/js/plugins/prism.js"></script>
+        <script src="assets/js/horizontal-menu.js"></script>
+        <script>
+            (function () {
+                if ($('#layout-sidenav').hasClass('sidenav-horizontal') || window.layoutHelpers.isSmallScreen()) {
+                    return;
+                }
+                try {
+                    window.layoutHelpers._getSetting("Rtl")
+                    window.layoutHelpers.setCollapsed(
+                        localStorage.getItem('layoutCollapsed') === 'true',
+                        false
+                    );
+                } catch (e) { }
+            })();
+            $(function () {
+                $('#layout-sidenav').each(function () {
+                    new SideNav(this, {
+                        orientation: $(this).hasClass('sidenav-horizontal') ? 'horizontal' : 'vertical'
+                    });
+                });
+                $('body').on('click', '.layout-sidenav-toggle', function (e) {
+                    e.preventDefault();
+                    window.layoutHelpers.toggleCollapsed();
+                    if (!window.layoutHelpers.isSmallScreen()) {
+                        try {
+                            localStorage.setItem('layoutCollapsed', String(window.layoutHelpers.isCollapsed()));
+                        } catch (e) { }
+                    }
+                });
+            });
+            $(document).ready(function () {
+                $("#pcoded").pcodedmenu({
+                    themelayout: 'horizontal',
+                    MenuTrigger: 'hover',
+                    SubMenuTrigger: 'hover',
+                });
+                // Initialize all tooltips
+                var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+                var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                    return new bootstrap.Tooltip(tooltipTriggerEl)
+                });
+            });
+
+        </script>
+        <script src="assets/js/analytics.js"></script>
+        <script src="assets/wizards/vendor/jquery/jquery.min.js"></script>
+        <script src="assets/wizards/js/bootstrap.bundle.js"></script>
+        <script src="assets/wizards/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+        <script src="assets/wizards/vendor/jquery-validation/dist/additional-methods.min.js"></script>
+        <script src="assets/wizards/vendor/jquery-steps/jquery.steps.min.js"></script>
+        <script src="assets/wizards/js/main.js"></script>
+</body>
+
+</html>
