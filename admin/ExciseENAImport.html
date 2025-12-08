@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Nivesh Mitra V3.0 - Admin</title>
+    <!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 11]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="">
+    <meta name="author" content="Phoenixcoded" />
+    <!-- Favicon icon -->
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+    <!-- prism css -->
+    <link rel="stylesheet" href="assets/css/plugins/prism-coy.css">
+    <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css">
+
+    <!-- vendor css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/card.css">
+    <link rel="stylesheet" href="assets/fonts/material-icon/css/material-design-iconic-font.min.css">
+    <!-- Main css -->
+    <link rel="stylesheet" href="assets/wizards/css/style.css">
+    <link rel="stylesheet" href="assets/css/forest.css">
+    <style>
+        .row.pt-0:hover {
+    background: #fff !important;
+}
+.row.pt-0 {
+    background: #fff;
+}
+        .form-button {
+            background-color: #1e6bb8;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 16px 32px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            text-align: center;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+
+            .form-button:hover {
+                background-color: #155a9a;
+                transform: translateY(-2px);
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+            }
+
+            .form-button:active {
+                transform: translateY(0);
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            }
+
+            .form-button::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 5px;
+                height: 5px;
+                background: rgba(255, 255, 255, 0.5);
+                opacity: 0;
+                border-radius: 100%;
+                transform: scale(1, 1) translate(-50%);
+                transform-origin: 50% 50%;
+            }
+
+            .form-button:focus:not(:active)::after {
+                animation: ripple 1s ease-out;
+            }
+
+        @keyframes ripple {
+            0% {
+                transform: scale(0, 0);
+                opacity: 0.5;
+            }
+
+            100% {
+                transform: scale(20, 20);
+                opacity: 0;
+            }
+        }
+
+
+        /* .constrain input{
+          margin-bottom: 40px;
+        }
+
+         .constrain .input-elevated{
+        font-size: 16px;
+        line-height: 1.5;
+        border: none;
+        background: #FFFFFF;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'><path fill='%23838D99' d='M13.22 14.63a8 8 0 1 1 1.41-1.41l4.29 4.29a1 1 0 1 1-1.41 1.41l-4.29-4.29zm-.66-2.07a6 6 0 1 0-8.49-8.49 6 6 0 0 0 8.49 8.49z'></path></svg>");
+        background-repeat: no-repeat;
+        background-position: 10px 10px;
+        background-size: 20px 20px;
+        border: 1px solid #C5CBD5;
+        border-radius: 5px;
+        width: 300px;
+        padding: .5em 1em .5em 2.5em;
+        }
+
+         .constrain .input-elevated::placeholder{
+          color: #838D99;
+        }
+
+         .constrain .input-elevated:focus {
+          outline: none;
+          box-shadow: 0 4px 10px 0 rgba(0,0,0,0.16);
+        } */
+
+        fieldset.scheduler-border {
+            border: 1px solid red !important;
+            padding: 1.5em 1em 1em 1em !important;
+            margin: 0 0 1.5em 0 !important;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        legend.scheduler-border {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #d9534f;
+            padding: 0 10px;
+            margin-left: 10px;
+            background: #fff;
+            width: auto;
+            float: none;
+            display: inline-block;
+        }
+
+        .fnt_r_12 {
+            font-size: 12px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+
+    <div class="loader-bg">
+        <div class="loader-track">
+            <div class="loader-fill"></div>
+        </div>
+    </div>
+    <!-- [ Pre-loader ] End -->
+    <!-- [ navigation menu ] start -->
+    <nav class="pcoded-navbar theme-horizontal menu-light">
+        <div class="navbar-wrapper container-fluid">
+            <div class="navbar-content sidenav-horizontal" id="layout-sidenav">
+                <ul class="nav pcoded-inner-navbar sidenav-inner">
+                    <li class="nav-item pcoded-menu-caption">
+                        <label>Navigation</label>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link ">
+                            <span class="pcoded-micon">
+                                <i class="feather icon-home"></i>
+                            </span><span class="pcoded-mtext">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item pcoded-hasmenu">
+                        <a href="#!" class="nav-link ">
+                            <span class="pcoded-micon">
+                                <i class="feather icon-layout"></i>
+                            </span><span class="pcoded-mtext">Pre-Establishment</span>
+                        </a>
+                        <ul class="pcoded-submenu">
+                            <li><a href="Questionnaire.html" target="_blank">Questionnaire</a></li>
+                            <li><a href="layout-horizontal.html" target="_blank">Combined Application Form</a></li>
+                            <li><a href="#">Respond To Query</a></li>
+                            <li><a href="#">Print CFE</a></li>
+                            <li><a href="#">Print Acknowledgment </a></li>
+                            <li><a href="#">Print Acknowledgment with QR Code</a></li>
+                            <li><a href="#">View Receipt</a></li>
+                        </ul>
+                    </li>
+                    <!-- <li class="nav-item pcoded-hasmenu">
+                     <a href="#!" class="nav-link "><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">Basic</span></a>
+                     <ul class="pcoded-submenu">
+                        <li><a href="bc_alert.html">Alert</a></li>
+                        <li><a href="bc_button.html">Button</a></li>
+                        <li><a href="bc_badges.html">Badges</a></li>
+                        <li><a href="bc_breadcrumb-pagination.html">Breadcrumb & paggination</a></li>
+                        <li><a href="bc_card.html">Cards</a></li>
+                        <li><a href="bc_collapse.html">Collapse</a></li>
+                        <li><a href="bc_carousel.html">Carousel</a></li>
+                        <li><a href="bc_grid.html">Grid system</a></li>
+                        <li><a href="bc_progress.html">Progress</a></li>
+                        <li><a href="bc_modal.html">Modal</a></li>
+                        <li><a href="bc_spinner.html">Spinner</a></li>
+                        <li><a href="bc_tabs.html">Tabs & pills</a></li>
+                        <li><a href="bc_typography.html">Typography</a></li>
+                        <li><a href="bc_tooltip-popover.html">Tooltip & popovers</a></li>
+                        <li><a href="bc_toasts.html">Toasts</a></li>
+                        <li><a href="bc_extra.html">Other</a></li>
+                     </ul>
+                     </li> -->
+                    <!-- <li class="nav-item">
+                     <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Industry Registration</span></a>
+                     </li> -->
+                    <li class="nav-item">
+                        <a href="form_elements.html" class="nav-link ">
+                            <span class="pcoded-micon">
+                                <i class="feather icon-file-text"></i>
+                            </span><span class="pcoded-mtext">
+                                Land
+                                Allotment
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="form_elements.html" class="nav-link ">
+                            <span class="pcoded-micon">
+                                <i class="feather icon-file-text"></i>
+                            </span><span class="pcoded-mtext">Pre-Establishment</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="form_elements.html" class="nav-link ">
+                            <span class="pcoded-micon">
+                                <i class="feather icon-file-text"></i>
+                            </span><span class="pcoded-mtext">Pre-Operational</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="form_elements.html" class="nav-link ">
+                            <span class="pcoded-micon">
+                                <i class="feather icon-file-text"></i>
+                            </span><span class="pcoded-mtext">Incentives</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="form_elements.html" class="nav-link ">
+                            <span class="pcoded-micon">
+                                <i class="feather icon-file-text"></i>
+                            </span><span class="pcoded-mtext">Renewals</span>
+                        </a>
+                    </li>
+                    <!-- <li class="nav-item">
+                     <a href="tbl_bootstrap.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-align-justify"></i></span><span class="pcoded-mtext">Bootstrap table</span></a>
+                     </li>
+                     <li class="nav-item pcoded-menu-caption">
+                     <label>Chart & Maps</label>
+                     </li>
+                     <li class="nav-item">
+                     <a href="chart-apex.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-pie-chart"></i></span><span class="pcoded-mtext">Chart</span></a>
+                     </li>
+                     <li class="nav-item">
+                     <a href="map-google.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-map"></i></span><span class="pcoded-mtext">Maps</span></a>
+                     </li>
+                     <li class="nav-item pcoded-menu-caption">
+                     <label>Pages</label>
+                     </li>
+
+                     <li class="nav-item"><a href="sample-page.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-sidebar"></i></span><span class="pcoded-mtext">Sample page</span></a></li> -->
+                    <li class="nav-item pcoded-hasmenu">
+                        <a href="#!" class="nav-link ">
+                            <span class="pcoded-micon">
+                                <i class="feather icon-lock"></i>
+                            </span><span class="pcoded-mtext">Authentication</span>
+                        </a>
+                        <ul class="pcoded-submenu">
+                            <li><a href="auth-signup.html" target="_blank">Sign up</a></li>
+                            <li><a href="auth-signin.html" target="_blank">Sign in</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- [ navigation menu ] end -->
+    <!-- [ Header ] start -->
+    <header class="navbar pcoded-header navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <div class="m-header">
+                <a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
+                <a href="#!" class="b-brand">
+                    <!-- ========   change your logo hear   ============ -->
+                    <img src="assets/images/investup1.png" alt="" class="logo" style="width: 90%;">
+                    <img src="assets/images/logo-icon.png" alt="" class="logo-thumb">
+                </a>
+                <a href="#!" class="mob-toggler">
+                    <i class="feather icon-more-vertical"></i>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href="#!" class="pop-search"><i class="feather icon-search"></i></a>
+                        <div class="search-bar">
+                            <input type="text" class="form-control border-0 shadow-none" placeholder="Search hear">
+                            <button type="button" class="close" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a class="dropdown-toggle h-drop" href="#" data-toggle="dropdown">
+                                Dropdown
+                            </a>
+                            <div class="dropdown-menu profile-notification ">
+                                <ul class="pro-body">
+                                    <li>
+                                        <a href="user-profile.html" class="dropdown-item">
+                                            <i class="fas fa-circle"></i>
+                                            Profile
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="email_inbox.html" class="dropdown-item">
+                                            <i class="fas fa-circle"></i>
+                                            My Messages
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="auth-signin.html" class="dropdown-item">
+                                            <i class="fas fa-circle"></i>
+                                            Lock Screen
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown mega-menu">
+                            <a class="dropdown-toggle h-drop" href="#" data-toggle="dropdown">
+                                Mega
+                            </a>
+                            <div class="dropdown-menu profile-notification ">
+                                <div class="row no-gutters">
+                                    <div class="col">
+                                        <h6 class="mega-title">UI Element</h6>
+                                        <ul class="pro-body">
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="fas fa-circle"></i>
+                                                    Alert
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="fas fa-circle"></i>
+                                                    Button
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="fas fa-circle"></i>
+                                                    Badges
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="fas fa-circle"></i>
+                                                    Cards
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="fas fa-circle"></i>
+                                                    Modal
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="fas fa-circle"></i> Tabs &
+                                                    pills
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col">
+                                        <h6 class="mega-title">Forms</h6>
+                                        <ul class="pro-body">
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="feather icon-minus"></i>
+                                                    Elements
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="feather icon-minus"></i>
+                                                    Validation
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="feather icon-minus"></i>
+                                                    Masking
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="feather icon-minus"></i>
+                                                    Wizard
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="feather icon-minus"></i>
+                                                    Picker
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="feather icon-minus"></i>
+                                                    Select
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col">
+                                        <h6 class="mega-title">Application</h6>
+                                        <ul class="pro-body">
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="feather icon-mail"></i>
+                                                    Email
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="feather icon-clipboard"></i> Task
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="feather icon-check-square"></i> To-Do
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="feather icon-image"></i>
+                                                    Gallery
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="feather icon-help-circle"></i> Helpdesk
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col">
+                                        <h6 class="mega-title">Extension</h6>
+                                        <ul class="pro-body">
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="feather icon-file-plus"></i> Editor
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="feather icon-file-minus"></i> Invoice
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="feather icon-calendar"></i>
+                                                    Full calendar
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="feather icon-upload-cloud"></i> File upload
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#!" class="dropdown-item">
+                                                    <i class="feather icon-scissors"></i>
+                                                    Image cropper
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li>
+                        <div class="dropdown">
+                            <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+                                <i class="icon feather icon-bell"></i>
+                                <span class="badge badge-pill badge-danger">5</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right notification">
+                                <div class="noti-head">
+                                    <h6 class="d-inline-block m-b-0">Notifications</h6>
+                                    <div class="float-right">
+                                        <a href="#!" class="m-r-10">mark as read</a>
+                                        <a href="#!">clear all</a>
+                                    </div>
+                                </div>
+                                <ul class="noti-body">
+                                    <li class="n-title">
+                                        <p class="m-b-0">NEW</p>
+                                    </li>
+                                    <li class="notification">
+                                        <div class="media">
+                                            <img class="img-radius" src="assets/images/user/avatar-1.jpg"
+                                                 alt="Generic placeholder image">
+                                            <div class="media-body">
+                                                <p>
+                                                    <strong>John Doe</strong><span class="n-time text-muted">
+                                                        <i class="icon feather icon-clock m-r-10"></i>5 min
+                                                    </span>
+                                                </p>
+                                                <p>New ticket Added</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="n-title">
+                                        <p class="m-b-0">EARLIER</p>
+                                    </li>
+                                    <li class="notification">
+                                        <div class="media">
+                                            <img class="img-radius" src="assets/images/user/avatar-2.jpg"
+                                                 alt="Generic placeholder image">
+                                            <div class="media-body">
+                                                <p>
+                                                    <strong>Joseph William</strong><span class="n-time text-muted">
+                                                        <i class="icon feather icon-clock m-r-10"></i>10 min
+                                                    </span>
+                                                </p>
+                                                <p>Prchace New Theme and make payment</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="notification">
+                                        <div class="media">
+                                            <img class="img-radius" src="assets/images/user/avatar-1.jpg"
+                                                 alt="Generic placeholder image">
+                                            <div class="media-body">
+                                                <p>
+                                                    <strong>Sara Soudein</strong><span class="n-time text-muted">
+                                                        <i class="icon feather icon-clock m-r-10"></i>12 min
+                                                    </span>
+                                                </p>
+                                                <p>currently login</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="notification">
+                                        <div class="media">
+                                            <img class="img-radius" src="assets/images/user/avatar-2.jpg"
+                                                 alt="Generic placeholder image">
+                                            <div class="media-body">
+                                                <p>
+                                                    <strong>Joseph William</strong><span class="n-time text-muted">
+                                                        <i class="icon feather icon-clock m-r-10"></i>30 min
+                                                    </span>
+                                                </p>
+                                                <p>Prchace New Theme and make payment</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="noti-footer">
+                                    <a href="#!">show all</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown drp-user">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="feather icon-user"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right profile-notification">
+                                <div class="pro-head">
+                                    <img src="assets/images/user/avatar-1.jpg" class="img-radius"
+                                         alt="User-Profile-Image">
+                                    <span>John Doe</span>
+                                    <a href="auth-signin.html" class="dud-logout" title="Logout">
+                                        <i class="feather icon-log-out"></i>
+                                    </a>
+                                </div>
+                                <ul class="pro-body">
+                                    <li>
+                                        <a href="user-profile.html" class="dropdown-item">
+                                            <i class="feather icon-user"></i> Profile
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="email_inbox.html" class="dropdown-item">
+                                            <i class="feather icon-mail"></i> My Messages
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="auth-signin.html" class="dropdown-item">
+                                            <i class="feather icon-lock"></i> Lock Screen
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- [ Header ] end -->
+    <!-- [ Main Content ] start -->
+    <div class="pcoded-main-container">
+        <div class="pcoded-wrapper container-fluid">
+            <div class="pcoded-content">
+                <div class="pcoded-inner-content">
+                    <div class="main-body">
+                        <div class="page-wrapper">
+                         
+                            <!-- [ Main Content ] start -->
+                            <div class="card table-card review-card">
+		<div class="card-header borderless ">
+			<h5> ENA (Extra Neutral Alcohol) Import (SC18018)</h5>
+			<div class="card-header-right">
+				<div class="btn-group card-option">
+					<button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<i class="feather icon-more-horizontal"></i>
+					</button>
+					<ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+						<li class="dropdown-item full-card">
+							<a href="#!">
+								<span><i class="feather icon-maximize"></i> maximize</span><span style="display:none">
+									<i class="feather icon-minimize"></i>
+									Restore
+								</span>
+							</a>
+						</li>
+						<li class="dropdown-item minimize-card">
+							<a href="#!">
+								<span><i class="feather icon-minus"></i> collapse</span><span style="display:none">
+									<i class="feather icon-plus"></i>
+									expand
+								</span>
+							</a>
+						</li>
+						<li class="dropdown-item reload-card"><a href="#!"><i class="feather icon-refresh-cw"></i> reload</a></li>
+						<li class="dropdown-item close-card"><a href="#!"><i class="feather icon-trash"></i> remove</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="card-body pb-0">
+			<div class="review-block" style="width: 100%; ">
+				<div class="row pt-0">
+					<form method="post" enctype="multipart/form-data" action="/Entrepreneur/Excise/SaveENAImport" novalidate="novalidate">
+
+						<div class="steps clearfix">
+							<div class="card-body p-5" id="">
+
+
+								<fieldset class="scheduler-border">
+									<legend class="scheduler-border text-danger">Importer Details</legend>
+									<div class="row">
+										<div class="col-md-4">
+											<label class="col-form-label required">Financial Year <span class="text-danger"></span></label>
+											<input type="text" class="form-control" id="txtFinancialYear" name="financialyear" value="">
+											<span class="text-danger field-validation-valid" data-valmsg-for="financialyear" data-valmsg-replace="true"></span>
+										</div>
+										<div class="col-md-4">
+											<label class="col-form-label required">License Type <span class="text-danger"></span></label>
+											<select class="form-select" id="ddlLicenseType" name="licensetype">
+												<option value="">--Select--</option>
+												<option value="PD2">PD2</option>
+												<option value="PD33">PD33</option>
+												<!--<option value="LIC123">LIC123</option>-->
+											</select>
+											<span class="text-danger field-validation-valid" data-valmsg-for="licensetype" data-valmsg-replace="true"></span>
+										</div>
+										<div class="col-md-4">
+											<label class="col-form-label required">License Number <span class="text-danger"></span></label>
+											<select class="form-select" id="ddlLicenseNumber" name="licensenumber">
+												<option value="">--Select--</option>
+												<option value="LIC123">LIC123</option>
+											</select>
+											<span class="text-danger field-validation-valid" data-valmsg-for="licensenumber" data-valmsg-replace="true"></span>
+										</div>
+									</div>
+									<div class="row mt-3">
+										<div class="col-md-4">
+											<label class="col-form-label required">Distillery Name  <span class="text-danger"></span></label>
+											<input type="text" class="form-control" id="txtDistilleryName" name="distilleryname" value="">
+											<span class="text-danger field-validation-valid" data-valmsg-for="distilleryname" data-valmsg-replace="true"></span>
+										</div>
+										<div class="col-md-4">
+											<label class="col-form-label required">Unit Type <span class="text-danger"></span></label>
+											<input type="text" class="form-control" id="txtUnitType" name="unittype" value="">
+											<span class="text-danger field-validation-valid" data-valmsg-for="unittype" data-valmsg-replace="true"></span>
+										</div>
+										<div class="col-md-4">
+											<label class="col-form-label required">Distillery Address <span class="text-danger"></span></label>
+											<input type="text" class="form-control" id="txtdistilleryaddress" name="distilleryaddress" value="">
+											<span class="text-danger field-validation-valid" data-valmsg-for="distilleryaddress" data-valmsg-replace="true"></span>
+										</div>
+									</div>
+
+
+									<div class="row mt-3">
+										<div class="col-md-4">
+											<label class="col-form-label required">District  <span class="text-danger"></span></label>
+											<select class="form-select" id="ddlDistrict" name="district">
+												<option value="">--Select--</option>
+												<option value="LIC123">LIC123</option>
+											</select>
+											<span class="text-danger field-validation-valid" data-valmsg-for="district" data-valmsg-replace="true"></span>
+										</div>
+										<div class="col-md-4">
+											<label class="col-form-label required">Importing From</label>
+											<select class="form-select" id="ddlImportingFrom" name="importingfrom">
+												<option value="">--Select--</option>
+												<option value="Outside UP">Outside UP</option>
+												<option value="Overseas">Overseas</option>
+
+											</select>
+											<span class="text-danger field-validation-valid" data-valmsg-for="importingfrom" data-valmsg-replace="true"></span>
+										</div>
+										<div class="col-md-4">
+											<label class="col-form-label required">State/Country</label>
+											<select class="form-select" id="ddlstatecountry" name="statecountry">
+												<option value="">--Select--</option>
+												<option value="UP">UP</option>
+												<option value="USA">USA</option>
+												<option value="Others">Others</option>
+											</select>
+										</div>
+										<div class="col-md-4">
+											<label class="col-form-label required">Request Date</label>
+											<input type="date" class="form-control" id="txtRequestDate" name="requestdate" value=""><input name="__Invariant" type="hidden" value="requestdate">
+
+											<span class="text-danger field-validation-valid" data-valmsg-for="requestdate" data-valmsg-replace="true"></span>
+										</div>
+										<div class="col-md-4">
+											<label class="col-form-label required">Purpose of Purchase<span class="text-danger"></span></label>
+											<input type="text" class="form-control" id="txtpurposeofPurchase" name="purposeofPurchase" value="">
+											<span class="text-danger field-validation-valid" data-valmsg-for="purposeofPurchase" data-valmsg-replace="true"></span>
+
+										</div>
+										<div class="col-md-4">
+											<label class="col-form-label required">Purpose   <span class="text-danger"></span></label>
+											<select class="form-select" id="ddlPurpose" name="purpose">
+												<option value="">--Select--</option>
+												<option value="CL">CL</option>
+												<option value="FL">FL</option>
+												<option value="Other">Other</option>
+												<option value="Wine">Wine</option>
+
+											</select>
+											<span class="text-danger field-validation-valid" data-valmsg-for="purpose" data-valmsg-replace="true"></span>
+										</div>
+									</div>
+
+									<div class="row mt-3">
+
+										<div class="col-md-4">
+											<label class="col-form-label required">Sr. No. </label>
+											<input type="text" class="form-control" id="txtSrNo" data-val="true" data-val-required="Please Enter SrNo" name="srno" value="">
+											<span class="text-danger field-validation-valid" data-valmsg-for="srno" data-valmsg-replace="true"></span>
+										</div>
+										<div class="col-md-4">
+											<label class="col-form-label required">Spirit Type  <span class="text-danger"></span></label>
+											<select class="form-select" id="ddlSpiritType" name="spirittype">
+												<option value="">--Select--</option>
+												<option value="LIC123">LIC123</option>
+
+											</select>
+											<span class="text-danger field-validation-valid" data-valmsg-for="spirittype" data-valmsg-replace="true"></span>
+										</div>
+										<div class="col-md-4">
+											<label class="col-form-label required">Details of Spirit </label>
+											<input type="text" class="form-control" id="txtDetailsofSpirit" data-val="true" data-val-required="Please Enter Details of Spirit" name="detailsofspirit" value="">
+											<span class="text-danger field-validation-valid" data-valmsg-for="detailsofspirit" data-valmsg-replace="true"></span>
+										</div>
+									</div>
+
+									<div class="row mt-3">
+
+										<div class="col-md-4">
+											<label class="col-form-label required">Spirit Raw Material Type</label>
+											<select class="form-select" id="ddlSpiritRawMaterialType" name="spiritrawmaterialtype">
+												<option value="">--Select--</option>
+												<option value="B Heavy Molasses">B Heavy Molasses </option>
+												<option value="Cane Syrup">Cane Syrup</option>
+												<option value="Malt"> Malt</option>
+												<option value="Wheat">Wheat</option>
+												<option value="Others">Others</option>
+
+
+											</select>
+											<span class="text-danger field-validation-valid" data-valmsg-for="spiritrawmaterialtype" data-valmsg-replace="true"></span>
+										</div>
+										<div class="col-md-4">
+											<label class="col-form-label required">
+												Requested Quantity* (BL)
+											</label>
+											<input type="number" class="form-control" id="txtRequestedQuantityBL" data-val="true" data-val-required="Please Enter Requested Quantity (BL)" name="requestedquantitybl" value=""><input name="__Invariant" type="hidden" value="requestedquantitybl">
+
+											<span class="text-danger field-validation-valid" data-valmsg-for="requestedquantitybl" data-valmsg-replace="true"></span>
+										</div>
+										<div class="col-md-4">
+											<label class="col-form-label required">
+												Strength (% v/v)
+											</label>
+											<input type="number" class="form-control" id="txtStrength" data-val="true" data-val-required="Please Enter Strength (% v/v)" name="strength" value=""><input name="__Invariant" type="hidden" value="strength">
+
+											<span class="text-danger field-validation-valid" data-valmsg-for="strength" data-valmsg-replace="true"></span>
+										</div>
+									</div>
+
+
+									<div class="row mt-3">
+
+										<div class="col-md-4">
+											<label class="col-form-label required">Requested Quantity* (AL)</label>
+											<input type="text" class="form-control" id="txtRequestedQuantityAL" data-val="true" data-val-required="Please Enter Requested Quantity" name="requestedquantityal" value="">
+											<span class="text-danger field-validation-valid" data-valmsg-for="requestedquantityal" data-valmsg-replace="true"></span>
+										</div>
+									</div>
+									<br>
+
+									<table class="table table-bordered">
+										<thead>
+											<tr>
+												<th>S.No</th>
+												<th>Name</th>
+												<th>Additional Spirit</th>
+												<th>Action</th>
+											</tr>
+										</thead>
+
+										<tbody id="importerTableBody">
+
+												<!-- Show at least one empty row when Model is empty -->
+												<tr>
+													<td>1</td>
+													<td>
+														<input type="text" name="ImporterDetails[0].name" class="form-control">
+													</td>
+													<td>
+														<input type="text" name="ImporterDetails[0].additionalspirit" class="form-control">
+													</td>
+													<td>
+														<button type="button" class="btn btn-success add-row">+ Add</button>
+														<button type="button" class="btn btn-danger remove-row">X</button>
+													</td>
+												</tr>
+										</tbody>
+									</table>
+									<div class="row mt-3">
+										<div class="col-md-4">
+											<label class="col-form-label required">
+												Installed Capacity(In BL)
+											</label>
+											<input type="text" class="form-control" id="txtinstalledcapacity" name="installedcapacity" value="">
+											<span class="text-danger field-validation-valid" data-valmsg-for="installedcapacity" data-valmsg-replace="true"></span>
+
+										</div>
+										<div class="col-md-4">
+											<label class="col-form-label required">
+												Production Quantity(in BL)
+											</label>
+											<input type="text" class="form-control" id="txtproductionquantity" name="productionquantity" value="">
+											<span class="text-danger field-validation-valid" data-valmsg-for="productionquantity" data-valmsg-replace="true"></span>
+
+										</div>
+										<div class="col-md-4">
+											<label class="col-form-label required">
+												Purchase Quantity (in BL
+											</label>
+											<input type="text" class="form-control" id="txtpurchasequantity" name="purchasequantity" value="">
+											<span class="text-danger field-validation-valid" data-valmsg-for="purchasequantity" data-valmsg-replace="true"></span>
+
+										</div>
+										<div class="col-md-4">
+											<label class="col-form-label required">
+												Balance Quantity (in BL)
+											</label>
+											<input type="text" class="form-control" id="txtbalancequantity" name="balancequantity" value="">
+											<span class="text-danger field-validation-valid" data-valmsg-for="balancequantity" data-valmsg-replace="true"></span>
+
+										</div>
+									</div>
+
+
+									<fieldset class="scheduler-border">
+										<legend class="scheduler-border text-danger">Exporter Details</legend>
+										<div class="row">
+											<div class="col-md-4">
+												<label class="col-form-label required">Unit Name <span class="text-danger"></span></label>
+												<input type="text" class="form-control" id="txtexporterunitname" name="exporterunitname" value="">
+												<span class="text-danger field-validation-valid" data-valmsg-for="exporterunitname" data-valmsg-replace="true"></span>
+											</div>
+											<div class="col-md-4">
+												<label class="col-form-label required">
+													Unit Address
+													<span class="text-danger">*</span>
+												</label>
+												<input type="text" class="form-control" id="txtexporterunitaddress" name="exporterunitaddress" value="">
+												<span class="text-danger field-validation-valid" data-valmsg-for="exporterunitaddress" data-valmsg-replace="true"></span>
+											</div>
+											<div class="col-md-4">
+												<label class="col-form-label required">
+													Upload Consent
+													<span class="text-danger"></span>
+												</label>
+												<input type="file" class="" id="">
+
+											</div>
+											<div class="row mt-3">
+												<div class="col-md-4">
+													<label class="col-form-label required">
+														Remarks *
+													</label>
+													<input type="text" class="form-control" id="txtexporterremark" name="exporterremark" value="">
+													<span class="text-danger field-validation-valid" data-valmsg-for="exporterremark" data-valmsg-replace="true"></span>
+												</div>
+											</div>
+										</div>
+
+									</fieldset>
+
+									<fieldset class="scheduler-border">
+										<legend class="scheduler-border text-danger">Potable Distillery</legend>
+										<div class="row">
+											<div class="row mt-3">
+												<div class="col-md-4">
+													<label class="col-form-label required">Installed Capacity (in BL)  <span class="text-danger"></span></label>
+													<input type="number" class="form-control" id="txtinstalledcapacitypotable" name="installedcapacitypotable" value=""><input name="__Invariant" type="hidden" value="installedcapacitypotable">
+													<span class="text-danger field-validation-valid" data-valmsg-for="installedcapacitypotable" data-valmsg-replace="true"></span>
+												</div>
+												<div class="col-md-4">
+													<label class="col-form-label required">
+														Production Quantity (in BL)
+													</label>
+													<input type="number" class="form-control" id="txtproductionquantitypotable" name="productionquantitypotable" value=""><input name="__Invariant" type="hidden" value="productionquantitypotable">
+													<span class="text-danger field-validation-valid" data-valmsg-for="productionquantitypotable" data-valmsg-replace="true"></span>
+												</div>
+												<div class="col-md-4">
+													<label class="col-form-label required">
+														Purchase Quantity (in BL)
+													</label>
+													<input type="number" class="form-control" id="txtpurchasequantitypotable" name="purchasequantitypotable" value=""><input name="__Invariant" type="hidden" value="purchasequantitypotable">
+													<span class="text-danger field-validation-valid" data-valmsg-for="purchasequantitypotable" data-valmsg-replace="true"></span>
+												</div>
+											</div>
+
+											<div class="row mt-3">
+												<div class="col-md-4">
+													<label class="col-form-label required">
+														Balance Quantity (in BL)
+														<span class="text-danger"></span>
+													</label>
+													<input type="text" class="form-control" id="txtbalancequantitypotable" name="balancequantitypotable" value="">
+													<span class="text-danger field-validation-valid" data-valmsg-for="balancequantitypotable" data-valmsg-replace="true"></span>
+												</div>
+
+											</div>
+
+										</div>
+									</fieldset>
+
+									<fieldset class="scheduler-border">
+										<legend class="scheduler-border text-danger">Industrial Distillery</legend>
+										<div class="row">
+											<div class="row mt-3">
+												<div class="col-md-4">
+													<label class="col-form-label required">Installed Capacity (in BL)  <span class="text-danger">*</span></label>
+													<input type="number" class="form-control" id="txtinstalledcapacityindustrial" name="installedcapacityindustrial" value=""><input name="__Invariant" type="hidden" value="installedcapacityindustrial">
+													<span class="text-danger field-validation-valid" data-valmsg-for="installedcapacityindustrial" data-valmsg-replace="true"></span>
+												</div>
+												<div class="col-md-4">
+													<label class="col-form-label required">
+														Production Quantity (in BL)
+													</label>
+													<input type="number" class="form-control" id="txtproductionquantityindustrial" name="productionquantityindustrial" value=""><input name="__Invariant" type="hidden" value="productionquantityindustrial">
+													<span class="text-danger field-validation-valid" data-valmsg-for="productionquantityindustrial" data-valmsg-replace="true"></span>
+												</div>
+												<div class="col-md-4">
+													<label class="col-form-label required">
+														Purchase Quantity (in BL)
+													</label>
+													<input type="number" class="form-control" id="txtpurchasequantityindustrial" name="purchasequantityindustrial" value=""><input name="__Invariant" type="hidden" value="purchasequantityindustrial">
+													<span class="text-danger field-validation-valid" data-valmsg-for="purchasequantityindustrial" data-valmsg-replace="true"></span>
+												</div>
+											</div>
+
+											<div class="row mt-3">
+												<div class="col-md-4">
+													<label class="col-form-label required">
+														Balance Quantity (in BL)
+														<span class="text-danger">*</span>
+													</label>
+													<input type="text" class="form-control" id="txtbalancequantityindustrial" name="balancequantityindustrial" value="">
+													<span class="text-danger field-validation-valid" data-valmsg-for="balancequantityindustrial" data-valmsg-replace="true"></span>
+												</div>
+
+											</div>
+
+										</div>
+									</fieldset>
+
+									<fieldset class="scheduler-border">
+										<legend class="scheduler-border text-danger">Duty Details</legend>
+										<div class="row">
+											<div class="col-md-4">
+												<label class="col-form-label required">
+													Advance Duty* (Rs)
+													<span class="text-danger"></span>
+												</label>
+												<input class="form-control" id="txtadvanceduty" type="text" name="advanceduty" value="">
+												<span class="text-danger field-validation-valid" data-valmsg-for="advanceduty" data-valmsg-replace="true"></span>
+											</div>
+											<div class="col-md-4">
+												<label class="col-form-label required">Import Permit Processing Fee* (Rs)  <span class="text-danger"></span></label>
+												<input type="text" class="form-control" id="txtimportpermitprocessingfee" name="importpermitprocessingfee" value="">
+												<span class="text-danger field-validation-valid" data-valmsg-for="importpermitprocessingfee" data-valmsg-replace="true"></span>
+											</div>
+										</div>
+
+									</fieldset>
+								</fieldset>
+
+
+								<div class="row mt-3">
+									<div class="col-md-12">
+										<div class="form-group d-flex justify-content-center">
+											<button type="submit" name="actionType" value="Clear" class="btn btn-clear btn-sm mr-2">
+												Clear All
+											</button>
+											<button type="submit" name="actionType" value="Save" class="btn btn-primary btn-sm mr-2">Save</button>
+											<button type="button" class="btn btn-danger btn-sm mr-2">Previous</button>
+											<button type="button" class="btn btn-success btn-sm">Next</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					<input name="__RequestVerificationToken" type="hidden" value="CfDJ8NoL4FekTvFNs65bC66VOly8JAArJpeXWK1jtpnlg4DCNs7W4QFxQgpNE2D_wsgUB5QNoOMpeoBZeoPU6dGMxA3hlngR60fcjXv3shwkKVmxbEANBK9b-qUg1SG-QCHbP7rwpYhZ1FkZOUJsMPPIsEnPbVMkGgHqQ4BjHtkNhbjAPH3ue_J7yE9gsod-X7-AlA"></form>
+				</div>
+			</div>
+		</div>
+	</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="assets/js/vendor-all.min.js"></script>
+        <script src="assets/js/plugins/bootstrap.min.js"></script>
+        <script src="assets/js/pcoded.min.js"></script>
+        <!-- prism Js -->
+        <script src="assets/js/plugins/prism.js"></script>
+        <script src="assets/js/horizontal-menu.js"></script>
+        <script>
+            (function () {
+                if ($('#layout-sidenav').hasClass('sidenav-horizontal') || window.layoutHelpers.isSmallScreen()) {
+                    return;
+                }
+                try {
+                    window.layoutHelpers._getSetting("Rtl")
+                    window.layoutHelpers.setCollapsed(
+                        localStorage.getItem('layoutCollapsed') === 'true',
+                        false
+                    );
+                } catch (e) { }
+            })();
+            $(function () {
+                $('#layout-sidenav').each(function () {
+                    new SideNav(this, {
+                        orientation: $(this).hasClass('sidenav-horizontal') ? 'horizontal' : 'vertical'
+                    });
+                });
+                $('body').on('click', '.layout-sidenav-toggle', function (e) {
+                    e.preventDefault();
+                    window.layoutHelpers.toggleCollapsed();
+                    if (!window.layoutHelpers.isSmallScreen()) {
+                        try {
+                            localStorage.setItem('layoutCollapsed', String(window.layoutHelpers.isCollapsed()));
+                        } catch (e) { }
+                    }
+                });
+            });
+            $(document).ready(function () {
+                $("#pcoded").pcodedmenu({
+                    themelayout: 'horizontal',
+                    MenuTrigger: 'hover',
+                    SubMenuTrigger: 'hover',
+                });
+                // Initialize all tooltips
+                var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+                var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                    return new bootstrap.Tooltip(tooltipTriggerEl)
+                });
+            });
+
+        </script>
+        <script src="assets/js/analytics.js"></script>
+        <script src="assets/wizards/vendor/jquery/jquery.min.js"></script>
+        <script src="assets/wizards/js/bootstrap.bundle.js"></script>
+        <script src="assets/wizards/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+        <script src="assets/wizards/vendor/jquery-validation/dist/additional-methods.min.js"></script>
+        <script src="assets/wizards/vendor/jquery-steps/jquery.steps.min.js"></script>
+        <script src="assets/wizards/js/main.js"></script>
+</body>
+
+</html>
