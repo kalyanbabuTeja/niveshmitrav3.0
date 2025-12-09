@@ -712,7 +712,7 @@
                                                                 </div>
                                                                 <div class="col-md-4">
                                                                     <label class="col-form-label">Distillery Address <span class="text-danger"></span></label>
-                                                                    @* <textarea class="form-control" id="colFormLabel" placeholder="" style="height: 100px !important;"></textarea> *@
+                                                                    
                                                                     <input type="text" asp-for="distilleryaddress" class="form-control" id="txtdistilleryaddress" />
                                                                     <span asp-validation-for="distilleryaddress" class="text-danger"></span>
                                                                 </div>
@@ -746,7 +746,7 @@
                                                                 </div>
                                                                 <div class="col-md-4">
                                                                     <label class="col-form-label">Request Date</label>
-                                                                    @* 	<input type="date" asp-for="requestdate" class="form-control" id="txtRequestDate" /> *@
+                                                                    <!-- @* 	<input type="date" asp-for="requestdate" class="form-control" id="txtRequestDate" /> *@ -->
                                                                     <input type="date" asp-for="requestdate"
                                                                            class="form-control"
                                                                            value="2025-09-12" />
@@ -876,8 +876,8 @@
                                                                             <span class="text-danger"></span>
                                                                         </label>
                                                                         <input type="file" class="" id="" />
-                                                                        @* <input type="file" asp-for="UploadConsent" class="form-control" id="txtUploadConsent" />
-                                                                        <span asp-validation-for="UploadConsent" class="text-danger"></span> *@
+                                                                        <!-- @* <input type="file" asp-for="UploadConsent" class="form-control" id="txtUploadConsent" />
+                                                                        <span asp-validation-for="UploadConsent" class="text-danger"></span> *@ -->
                                                                     </div>
                                                                     <div class="col-md-4">
                                                                         <label class="col-form-label">
@@ -1005,7 +1005,7 @@
 
                                                             <div class="text-muted" style="font-size: 13px;">
                                                                 <strong>Note:</strong>
-                                                                <ul style="margin-left: -20px;">
+                                                                <ul>
                                                                     <li>The file(s) should be up to 6 MB in size.</li>
                                                                     <li>Allowed file types: pdf, jpeg, jpg, png, x-png.</li>
                                                                 </ul>
