@@ -30,12 +30,14 @@
     <link rel="stylesheet" href="assets/wizards/css/style.css">
     <link rel="stylesheet" href="assets/css/forest.css">
     <style>
-          .row.pt-0:hover {
-    background: #fff !important;
-}
-.row.pt-0 {
-    background: #fff;
-}
+        .row.pt-0:hover {
+            background: #fff !important;
+        }
+
+        .row.pt-0 {
+            background: #fff;
+        }
+
         .form-button {
             background-color: #1e6bb8;
             color: white;
@@ -629,389 +631,414 @@
                 <div class="pcoded-inner-content">
                     <div class="main-body">
                         <div class="page-wrapper">
-                            
+
                             <!-- [ Main Content ] start -->
                             <div class="card table-card review-card">
-		<div class="card-header borderless ">
-			<h5> ENA (Extra Neutral Alcohol) Export (SC18019)</h5>
-			<div class="card-header-right">
-				<div class="btn-group card-option">
-					<button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						<i class="feather icon-more-horizontal"></i>
-					</button>
-					<ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
-						<li class="dropdown-item full-card">
-							<a href="#!">
-								<span><i class="feather icon-maximize"></i> maximize</span><span style="display:none">
-									<i class="feather icon-minimize"></i>
-									Restore
-								</span>
-							</a>
-						</li>
-						<li class="dropdown-item minimize-card">
-							<a href="#!">
-								<span><i class="feather icon-minus"></i> collapse</span><span style="display:none">
-									<i class="feather icon-plus"></i>
-									expand
-								</span>
-							</a>
-						</li>
-						<li class="dropdown-item reload-card"><a href="#!"><i class="feather icon-refresh-cw"></i> reload</a></li>
-						<li class="dropdown-item close-card"><a href="#!"><i class="feather icon-trash"></i> remove</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="card-body pb-0">
-			<div class="review-block" style="width: 100%; ">
-				<div class="row pt-0">
-					<form method="post" action="/Entrepreneur/Excise/SaveENAExport" novalidate="novalidate">
-						<div class="steps clearfix">
-							<div class="card-body p-5" id="">
+                                <div class="card-header borderless ">
+                                    <h5> ENA (Extra Neutral Alcohol) Export (SC18019)</h5>
+                                    <div class="card-header-right">
+                                        <div class="btn-group card-option">
+                                            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="feather icon-more-horizontal"></i>
+                                            </button>
+                                            <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                                                <li class="dropdown-item full-card">
+                                                    <a href="#!">
+                                                        <span><i class="feather icon-maximize"></i> maximize</span><span style="display:none">
+                                                            <i class="feather icon-minimize"></i>
+                                                            Restore
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li class="dropdown-item minimize-card">
+                                                    <a href="#!">
+                                                        <span><i class="feather icon-minus"></i> collapse</span><span style="display:none">
+                                                            <i class="feather icon-plus"></i>
+                                                            expand
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li class="dropdown-item reload-card"><a href="#!"><i class="feather icon-refresh-cw"></i> reload</a></li>
+                                                <li class="dropdown-item close-card"><a href="#!"><i class="feather icon-trash"></i> remove</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body pb-0">
+                                    <div class="review-block" style="width: 100%; ">
+                                        <div class="row pt-0">
+                                            <form method="post" action="/Entrepreneur/Excise/SaveENAExport" novalidate="novalidate">
+                                                <div class="steps clearfix">
+                                                    <div class="card-body p-5" id="">
 
 
-								<fieldset class="scheduler-border">
-									<legend class="scheduler-border text-danger">Importer Details</legend>
+                                                        <fieldset class="scheduler-border">
+                                                            <legend class="scheduler-border text-danger">Export Details</legend>
 
-									<div class="row">
-										<div class="col-md-4">
-											<label class="col-form-label">Financial Year <span class="text-danger"></span></label>
-											<input type="text" class="form-control" id="txtFinancialYear" name="financialyear" value="">
-											<span class="text-danger field-validation-valid" data-valmsg-for="financialyear" data-valmsg-replace="true"></span>
-										</div>
-										<div class="col-md-4">
-											<label class="col-form-label">License Type <span class="text-danger"></span></label>
-											<select class="form-select" id="ddlLicenseType" name="licensetype">
-												<option value="">--Select--</option>
-											</select>
-											<span class="text-danger field-validation-valid" data-valmsg-for="licensetype" data-valmsg-replace="true"></span>
-										</div>
-										<div class="col-md-4">
-											<label class="col-form-label">License Number <span class="text-danger"></span></label>
-											<select class="form-select" id="ddlLicenseNumber" name="licensenumber">
-												<option value="">--Select--</option>
-											</select>
-											<span class="text-danger field-validation-valid" data-valmsg-for="licensenumber" data-valmsg-replace="true"></span>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-md-4">
-											<label class="col-form-label">Distillery Name  <span class="text-danger"></span></label>
-											<input type="text" class="form-control" id="txtDistilleryName" name="distilleryname" value="">
-											<span class="text-danger field-validation-valid" data-valmsg-for="distilleryname" data-valmsg-replace="true"></span>
-										</div>
-										<div class="col-md-4">
-											<label class="col-form-label">Unit Type <span class="text-danger"></span></label>
-											<input type="text" class="form-control" id="txtUnitType" name="unittype" value="">
-											<span class="text-danger field-validation-valid" data-valmsg-for="unittype" data-valmsg-replace="true"></span>
-										</div>
-										<div class="col-md-4">
-											<label class="col-form-label">Distillery Address <span class="text-danger"></span></label>
-											<input type="text" class="form-control" id="txtdistilleryaddress" name="distilleryaddress" value="">
-											<span class="text-danger field-validation-valid" data-valmsg-for="distilleryaddress" data-valmsg-replace="true"></span>
-										</div>
-									</div>
+                                                            <div class="row">
+                                                                <div class="col-md-4">
+                                                                    <label class="col-form-label">Financial Year <span class="text-danger"></span></label>
+                                                                    <input type="text" asp-for="financialyear" class="form-control" id="txtFinancialYear" />
+                                                                    <span asp-validation-for="financialyear" class="text-danger"></span>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <label class="col-form-label">License Type <span class="text-danger"></span></label>
+                                                                    <select asp-for="licensetype" class="form-select" id="ddlLicenseType">
+                                                                        <option value="">--Select--</option>
+                                                                        <option value="PD2">
+                                                                            PD2
+                                                                        </option>
+                                                                    </select>
+                                                                    <span asp-validation-for="licensetype" class="text-danger"></span>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <label class="col-form-label">License Number <span class="text-danger"></span></label>
+                                                                    <select asp-for="licensenumber" class="form-select" id="ddlLicenseNumber">
+                                                                        <option value="">--Select--</option>
+                                                                    </select>
+                                                                    <span asp-validation-for="licensenumber" class="text-danger"></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-4">
+                                                                    <label class="col-form-label">Distillery Name  <span class="text-danger"></span></label>
+                                                                    <input type="text" asp-for="distilleryname" class="form-control" id="txtDistilleryName" />
+                                                                    <span asp-validation-for="distilleryname" class="text-danger"></span>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <label class="col-form-label">Unit Type <span class="text-danger"></span></label>
+                                                                    <input type="text" asp-for="unittype" class="form-control" id="txtUnitType" />
+                                                                    <span asp-validation-for="unittype" class="text-danger"></span>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <label class="col-form-label">Distillery Address <span class="text-danger"></span></label>
+                                                                    @* <textarea class="form-control" id="colFormLabel" placeholder="" style="height: 100px !important;"></textarea> *@
+                                                                    <input type="text" asp-for="distilleryaddress" class="form-control" id="txtdistilleryaddress" />
+                                                                    <span asp-validation-for="distilleryaddress" class="text-danger"></span>
+                                                                </div>
+                                                            </div>
 
-									<div class="row mt-3">
-										<div class="col-md-4">
-											<label class="col-form-label">District  <span class="text-danger"></span></label>
-											<select class="form-select" id="ddlDistrict" name="district">
-												<option value="">--Select--</option>
-											</select>
-											<span class="text-danger field-validation-valid" data-valmsg-for="district" data-valmsg-replace="true"></span>
-										</div>
-										<div class="col-md-4">
-											<label class="col-form-label">Exporting To</label>
-											<select class="form-select" id="ddlExportingTo" name="exportingto">
-												<option value="">--Select--</option>
-												<option value="Outside UP">Outside UP</option>
-												<option value="Overseas">Overseas</option>
-											</select>
-											<span class="text-danger field-validation-valid" data-valmsg-for="exportingto" data-valmsg-replace="true"></span>
-										</div>
-										<div class="col-md-4">
-											<label class="col-form-label">State/Country</label>
-											<select class="form-select" id="ddlstatecountry" name="statecountry">
-												<option value="">--Select--</option>
-												<option value="USA">USA</option>
-												<option value="Agra">Agra</option>
-											</select>
+                                                            <div class="row mt-3">
+                                                                <div class="col-md-4">
+                                                                    <label class="col-form-label">District  <span class="text-danger"></span></label>
+                                                                    <select asp-for="district" class="form-select" id="ddlDistrict">
+                                                                        <option value="">--Select--</option>
+                                                                    </select>
+                                                                    <span asp-validation-for="district" class="text-danger"></span>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <label class="col-form-label">Exporting To</label>
+                                                                    <select asp-for="exportingto" class="form-select" id="ddlExportingTo">
+                                                                        <option value="">--Select--</option>
+                                                                        <option value="Outside UP">Outside UP</option>
+                                                                        <option value="Overseas">Overseas</option>
+                                                                    </select>
+                                                                    <span asp-validation-for="exportingto" class="text-danger"></span>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <label class="col-form-label">State/Country</label>
+                                                                    <select asp-for="statecountry" class="form-select" id="ddlstatecountry">
+                                                                        <option value="">--Select--</option>
+                                                                        <option value="USA">USA</option>
+                                                                        <option value="Agra">Agra</option>
+                                                                    </select>
 
-										</div>
-										<div class="col-md-4">
-											<label class="col-form-label">Request Date</label>
-											<input type="date" class="form-control" id="txtRequestDate" name="requestdate" value=""><input name="__Invariant" type="hidden" value="requestdate">
-
-											<span class="text-danger field-validation-valid" data-valmsg-for="requestdate" data-valmsg-replace="true"></span>
-										</div>
-										<div class="col-md-4">
-											<label class="col-form-label">Spirit Type  <span class="text-danger"></span></label>
-											<select class="form-select" id="ddlSpiritType" name="spirittype">
-												<option value="">--Select--</option>
-												<option value="">ENA</option>
-												<option value="">SDS</option>
-												<option value="">Grain</option>
-												<option value="">GIN Spirit</option>
-											</select>
-											<span class="text-danger field-validation-valid" data-valmsg-for="spirittype" data-valmsg-replace="true"></span>
-										</div>
-										<div class="col-md-4">
-											<label class="col-form-label">Spirit Raw Material Type</label>
-											<select class="form-select" id="ddlSpiritRawMaterialType" name="spiritrawmaterialtype">
-												<option value="">--Select--</option>
-												<option value="">B Heavy Molasses</option>
-												<option value="">Cane Syrup</option>
-												<option value="">Malt</option>
-												<option value="">Wheat</option>
-												<option value="">Others</option>
-											</select>
-											<span class="text-danger field-validation-valid" data-valmsg-for="spiritrawmaterialtype" data-valmsg-replace="true"></span>
-										</div>
-										<div class="col-md-4">
-											<label class="col-form-label">
-												Purpose of Export
-											</label>
-											<input type="text" class="form-control" id="">
-										</div>
-										<div class="col-md-4">
-											<label class="col-form-label">
-												Strength (% v/v)
-											</label>
-											<input type="number" class="form-control" id="txtStrength" data-val="true" data-val-required="Please Enter Strength (% v/v)" name="strength" value=""><input name="__Invariant" type="hidden" value="strength">
-
-											<span class="text-danger field-validation-valid" data-valmsg-for="strength" data-valmsg-replace="true"></span>
-										</div>
-										<div class="col-md-4">
-											<label class="col-form-label">
-												Requested Quantity* (BL)
-											</label>
-											<input type="number" class="form-control" id="txtRequestedQuantity" name="requestedquantity" value=""><input name="__Invariant" type="hidden" value="requestedquantity">
-
-											<span class="text-danger field-validation-valid" data-valmsg-for="requestedquantity" data-valmsg-replace="true"></span>
-										</div>
-										<div class="col-md-4">
-											<label class="col-form-label">Purpose   <span class="text-danger"></span></label>
-											<select class="form-select" id="ddlPurpose" name="purpose">
-												<option value="">--Select--</option>
-												<option value="">CL</option>
-												<option value="">FL</option>
-												<option value="">Other</option>
-												<option value="">Wine</option>
-											</select>
-											<span class="text-danger field-validation-valid" data-valmsg-for="purpose" data-valmsg-replace="true"></span>
-										</div>
-
-									</div>
-
-									<fieldset class="scheduler-border">
-										<legend class="scheduler-border text-danger">Exporter Details</legend>
-										<div class="row">
-											<div class="col-md-4">
-												<label class="col-form-label">Unit Name <span class="text-danger"></span></label>
-												<input type="text" class="form-control" id="txtUnitNameDetails" name="exporterunitnamedetails" value="">
-												<span class="text-danger field-validation-valid" data-valmsg-for="exporterunitnamedetails" data-valmsg-replace="true"></span>
-											</div>
-											<div class="col-md-4">
-												<label class="col-form-label">
-													Potable Distillery
-													<span class="text-danger"></span>
-												</label>
-												<input type="text" class="form-control" id="txtexporterunitnamepotabledistillery" name="exporterunitnamepotabledistillery" value="">
-												<span class="text-danger field-validation-valid" data-valmsg-for="exporterunitnamepotabledistillery" data-valmsg-replace="true"></span>
-											</div>
-											<div class="col-md-4">
-												<label class="col-form-label">
-													Installed Capacity (in BL)
-													<span class="text-danger"></span>
-												</label>
-												<input type="text" class="form-control" id="txtexporterunitinstalledcapacity" name="exporterunitinstalledcapacity" value="">
-												<span class="text-danger field-validation-valid" data-valmsg-for="exporterunitinstalledcapacity" data-valmsg-replace="true"></span>
-											</div>
-											<div class="col-md-4">
-												<label class="col-form-label">
-													Production Quantity (in BL)
-													<span class="text-danger"></span>
-												</label>
-												<input type="text" class="form-control" id="txtexporterproductionquantity" name="exporterproductionquantity" value="">
-												<span class="text-danger field-validation-valid" data-valmsg-for="exporterproductionquantity" data-valmsg-replace="true"></span>
-											</div>
-											<div class="col-md-4">
-												<label class="col-form-label">
-													Purchase Quantity (in BL)
-													<span class="text-danger"></span>
-												</label>
-												<input type="text" class="form-control" id="txtexporterpurchasequantity" name="exporterpurchasequantity" value="">
-												<span class="text-danger field-validation-valid" data-valmsg-for="exporterpurchasequantity" data-valmsg-replace="true"></span>
-											</div>
-											<div class="col-md-4">
-												<label class="col-form-label">
-													Balance Quantity (in BL)
-													<input type="text" class="form-control" id="txtexporterbalancequantity" name="exporterbalancequantity" value="">
-													<span class="text-danger field-validation-valid" data-valmsg-for="exporterbalancequantity" data-valmsg-replace="true"></span>
-												</label>
-											</div>
-											<div class="col-md-4">
-												<label class="col-form-label">
-													Unit Address
-													<input type="text" class="form-control" id="txtexporterunitaddress" name="exporterunitaddress" value="">
-													<span class="text-danger field-validation-valid" data-valmsg-for="exporterunitaddress" data-valmsg-replace="true"></span>
-												</label>
-											</div>
-
-											<div class="col-md-4">
-												<label class="col-form-label">
-													Upload Consent
-													<span class="text-danger"></span>
-												</label>
-												<input type="file" class="" id="">
-											</div>
-											<div class="col-md-4">
-												<label class="col-form-label">
-													Remarks
-													<span class="text-danger"></span>
-												</label>
-												<input type="text" class="form-control" id="txtexporterremarks" name="exporterremarks" value="">
-												<span class="text-danger field-validation-valid" data-valmsg-for="exporterremarks" data-valmsg-replace="true"></span>
-											</div>
-
-										</div>
-
-									</fieldset>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <label class="col-form-label">Request Date</label>
+                                                                    @* 	<input type="date" asp-for="requestdate" class="form-control" id="txtRequestDate" /> *@
+                                                                    <input type="date" asp-for="requestdate"
+                                                                           class="form-control"
+                                                                           value="2025-09-12" />
 
 
-									<fieldset class="scheduler-border">
-										<legend class="scheduler-border text-danger">Potable Distillery</legend>
-										<div class="row">
-											<div class="row mt-3">
-												<div class="col-md-4">
-													<label class="col-form-label">Installed Capacity (in BL)  <span class="text-danger"></span></label>
-													<input type="number" class="form-control" id="txtInstalledCapacityPotable" name="potabledistilleryinstalledcapacity" value=""><input name="__Invariant" type="hidden" value="potabledistilleryinstalledcapacity">
-													<span class="text-danger field-validation-valid" data-valmsg-for="potabledistilleryinstalledcapacity" data-valmsg-replace="true"></span>
-												</div>
-												<div class="col-md-4">
-													<label class="col-form-label">
-														Production Quantity (in BL)
-													</label>
-													<input type="number" class="form-control" id="txtProductionQuantityPotable" name="potabledistilleryproductionquantity" value=""><input name="__Invariant" type="hidden" value="potabledistilleryproductionquantity">
-													<span class="text-danger field-validation-valid" data-valmsg-for="potabledistilleryproductionquantity" data-valmsg-replace="true"></span>
-												</div>
-												<div class="col-md-4">
-													<label class="col-form-label">
-														Purchase Quantity (in BL)
-													</label>
-													<input type="number" class="form-control" id="txtPurchaseQuantityPotable" name="potabledistillerypurchasequantity" value=""><input name="__Invariant" type="hidden" value="potabledistillerypurchasequantity">
-													<span class="text-danger field-validation-valid" data-valmsg-for="potabledistillerypurchasequantity" data-valmsg-replace="true"></span>
-												</div>
-											</div>
+                                                                    <span asp-validation-for="requestdate" class="text-danger"></span>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <label class="col-form-label">Spirit Type  <span class="text-danger"></span></label>
+                                                                    <select asp-for="spirittype" class="form-select" id="ddlSpiritType">
+                                                                        <option value="">--Select--</option>
+                                                                        <option value="">ENA</option>
+                                                                        <option value="">SDS</option>
+                                                                        <option value="">Grain</option>
+                                                                        <option value="">GIN Spirit</option>
+                                                                    </select>
+                                                                    <span asp-validation-for="spirittype" class="text-danger"></span>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <label class="col-form-label">Spirit Raw Material Type</label>
+                                                                    <select asp-for="spiritrawmaterialtype" class="form-select" id="ddlSpiritRawMaterialType">
+                                                                        <option value="">--Select--</option>
+                                                                        <option value="">B Heavy Molasses</option>
+                                                                        <option value="">Cane Syrup</option>
+                                                                        <option value="">Malt</option>
+                                                                        <option value="">Wheat</option>
+                                                                        <option value="">Others</option>
+                                                                    </select>
+                                                                    <span asp-validation-for="spiritrawmaterialtype" class="text-danger"></span>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <label class="col-form-label">
+                                                                        Purpose of Export
+                                                                    </label>
+                                                                    <input type="number" asp-for="purposeexport" class="form-control" id="txtpurposeexport" />
+                                                                    <span asp-validation-for="purposeexport" class="text-danger"></span>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <label class="col-form-label">
+                                                                        Strength (% v/v)
+                                                                    </label>
+                                                                    <input type="number" asp-for="strength" class="form-control" id="txtStrength" />
 
-											<div class="row mt-3">
-												<div class="col-md-4">
-													<label class="col-form-label">
-														Balance Quantity (in BL)
-														<span class="text-danger"></span>
-													</label>
-													<input type="text" class="form-control" id="txtBalanceQuantityPotable" name="potabledistillerybalancequantity" value="">
-													<span class="text-danger field-validation-valid" data-valmsg-for="potabledistillerybalancequantity" data-valmsg-replace="true"></span>
-												</div>
+                                                                    <span asp-validation-for="strength" class="text-danger"></span>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <label class="col-form-label">
+                                                                        Requested Quantity* (BL)
+                                                                    </label>
+                                                                    <input type="number" asp-for="requestedquantity" class="form-control" id="txtRequestedQuantity" />
 
-											</div>
+                                                                    <span asp-validation-for="requestedquantity" class="text-danger"></span>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <label class="col-form-label">Purpose   <span class="text-danger"></span></label>
+                                                                    <select asp-for="purpose" class="form-select" id="ddlPurpose">
+                                                                        <option value="">--Select--</option>
+                                                                        <option value="">CL</option>
+                                                                        <option value="">FL</option>
+                                                                        <option value="">Other</option>
+                                                                        <option value="">Wine</option>
+                                                                    </select>
+                                                                    <span asp-validation-for="purpose" class="text-danger"></span>
+                                                                </div>
 
-										</div>
-									</fieldset>
+                                                            </div>
+                                                            <fieldset class="scheduler-border">
+                                                                <legend class="scheduler-border text-danger">Potable Distillery</legend>
+                                                                <div class="row">
+                                                                    <div class="col-md-4">
+                                                                        <label class="col-form-label">
+                                                                            Installed Capacity (in BL)
+                                                                            <span class="text-danger"></span>
+                                                                        </label>
+                                                                        <input type="text" asp-for="exporterunitinstalledcapacity" class="form-control" id="txtexporterunitinstalledcapacity" />
+                                                                        <span asp-validation-for="exporterunitinstalledcapacity" class="text-danger"></span>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <label class="col-form-label">
+                                                                            Production Quantity (in BL)
+                                                                            <span class="text-danger"></span>
+                                                                        </label>
+                                                                        <input type="text" asp-for="exporterproductionquantity" class="form-control" id="txtexporterproductionquantity" />
+                                                                        <span asp-validation-for="exporterproductionquantity" class="text-danger"></span>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <label class="col-form-label">
+                                                                            Purchase Quantity (in BL)
+                                                                            <span class="text-danger"></span>
+                                                                        </label>
+                                                                        <input type="text" asp-for="exporterpurchasequantity" class="form-control" id="txtexporterpurchasequantity" />
+                                                                        <span asp-validation-for="exporterpurchasequantity" class="text-danger"></span>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <label class="col-form-label">
+                                                                            Balance Quantity (in BL)
+                                                                            <span class="text-danger"></span>
+                                                                        </label>
+                                                                        <input type="text" asp-for="exporterbalancequantity" class="form-control" id="txtexporterbalancequantity" />
+                                                                        <span asp-validation-for="exporterbalancequantity" class="text-danger"></span>
+
+                                                                    </div>
+
+                                                                </div>
+                                                            </fieldset>
+
+                                                            <fieldset class="scheduler-border">
+                                                                <legend class="scheduler-border text-danger">Exporter Details</legend>
+                                                                <div class="row">
+                                                                    <div class="col-md-4">
+                                                                        <label class="col-form-label">Unit Name <span class="text-danger"></span></label>
+                                                                        <input type="text" asp-for="exporterunitnamedetails" class="form-control" id="txtUnitNameDetails" />
+                                                                        <span asp-validation-for="exporterunitnamedetails" class="text-danger"></span>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <label class="col-form-label">
+                                                                            Unit Address<span class="text-danger"></span>
+                                                                        </label>
+                                                                        <input type="text" asp-for="exporterunitaddress" class="form-control" id="txtexporterunitaddress" />
+                                                                        <span asp-validation-for="exporterunitaddress" class="text-danger"></span>
+
+                                                                    </div>
+
+                                                                    <div class="col-md-4">
+                                                                        <label class="col-form-label">
+                                                                            Upload Consent
+                                                                            <span class="text-danger"></span>
+                                                                        </label>
+                                                                        <input type="file" class="" id="" />
+                                                                        @* <input type="file" asp-for="UploadConsent" class="form-control" id="txtUploadConsent" />
+                                                                        <span asp-validation-for="UploadConsent" class="text-danger"></span> *@
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <label class="col-form-label">
+                                                                            Remarks
+                                                                            <span class="text-danger"></span>
+                                                                        </label>
+                                                                        <input type="text" asp-for="exporterremarks" class="form-control" id="txtexporterremarks" />
+                                                                        <span asp-validation-for="exporterremarks" class="text-danger"></span>
+                                                                    </div>
+                                                                    <div class="col-md-4" hidden>
+                                                                        <label class="col-form-label">
+                                                                            Potable Distillery
+                                                                            <span class="text-danger"></span>
+                                                                        </label>
+                                                                        <input type="text" asp-for="exporterunitnamepotabledistillery" class="form-control" id="txtexporterunitnamepotabledistillery" />
+                                                                        <span asp-validation-for="exporterunitnamepotabledistillery" class="text-danger"></span>
+                                                                    </div>
+                                                                </div>
+
+                                                                <fieldset class="scheduler-border">
+                                                                    <legend class="scheduler-border text-danger">Potable Distillery</legend>
+                                                                    <div class="row">
+                                                                        <div class="row mt-3">
+                                                                            <div class="col-md-4">
+                                                                                <label class="col-form-label">Installed Capacity (in BL)  <span class="text-danger"></span></label>
+                                                                                <input type="number" asp-for="potabledistilleryinstalledcapacity" class="form-control" id="txtInstalledCapacityPotable" />
+                                                                                <span asp-validation-for="potabledistilleryinstalledcapacity" class="text-danger"></span>
+                                                                            </div>
+                                                                            <div class="col-md-4">
+                                                                                <label class="col-form-label">
+                                                                                    Production Quantity (in BL)
+                                                                                </label>
+                                                                                <input type="number" asp-for="potabledistilleryproductionquantity" class="form-control" id="txtProductionQuantityPotable" />
+                                                                                <span asp-validation-for="potabledistilleryproductionquantity" class="text-danger"></span>
+                                                                            </div>
+                                                                            <div class="col-md-4">
+                                                                                <label class="col-form-label">
+                                                                                    Purchase Quantity (in BL)
+                                                                                </label>
+                                                                                <input type="number" asp-for="potabledistillerypurchasequantity" class="form-control" id="txtPurchaseQuantityPotable" />
+                                                                                <span asp-validation-for="potabledistillerypurchasequantity" class="text-danger"></span>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="row mt-3">
+                                                                            <div class="col-md-4">
+                                                                                <label class="col-form-label">
+                                                                                    Balance Quantity (in BL)
+                                                                                    <span class="text-danger"></span>
+                                                                                </label>
+                                                                                <input type="text" asp-for="potabledistillerybalancequantity" class="form-control" id="txtBalanceQuantityPotable" />
+                                                                                <span asp-validation-for="potabledistillerybalancequantity" class="text-danger"></span>
+                                                                            </div>
+
+                                                                        </div>
+
+                                                                    </div>
+                                                                </fieldset>
 
 
-									<fieldset class="scheduler-border">
-										<legend class="scheduler-border text-danger">Industrial Distillery</legend>
-										<div class="row">
-											<div class="row mt-3">
-												<div class="col-md-4">
-													<label class="col-form-label">Installed Capacity (in BL)  <span class="text-danger"></span></label>
-													<input type="number" class="form-control" id="txtInstalledCapacityIndustrial" name="industrialdistilleryinstalledcapacity" value=""><input name="__Invariant" type="hidden" value="industrialdistilleryinstalledcapacity">
-													<span class="text-danger field-validation-valid" data-valmsg-for="industrialdistilleryinstalledcapacity" data-valmsg-replace="true"></span>
-												</div>
-												<div class="col-md-4">
-													<label>
-														Production Quantity (in BL)
-													</label>
-													<input type="number" class="form-control" id="txtProductionQuantityIndustrial" name="industrialdistilleryproductionquantity" value=""><input name="__Invariant" type="hidden" value="industrialdistilleryproductionquantity">
-													<span class="text-danger field-validation-valid" data-valmsg-for="industrialdistilleryproductionquantity" data-valmsg-replace="true"></span>
-												</div>
-												<div class="col-md-4">
-													<label class="col-form-label">
-														Purchase Quantity (in BL)
-													</label>
-													<input type="number" class="form-control" id="txtPurchaseQuantityIndustrial" name="industrialdistillerypurchasequantity" value=""><input name="__Invariant" type="hidden" value="industrialdistillerypurchasequantity">
-													<span class="text-danger field-validation-valid" data-valmsg-for="industrialdistillerypurchasequantity" data-valmsg-replace="true"></span>
-												</div>
-											</div>
+                                                                <fieldset class="scheduler-border">
+                                                                    <legend class="scheduler-border text-danger">Industrial Distillery</legend>
+                                                                    <div class="row">
+                                                                        <div class="row mt-3">
+                                                                            <div class="col-md-4">
+                                                                                <label class="col-form-label">Installed Capacity (in BL)  <span class="text-danger"></span></label>
+                                                                                <input type="number" asp-for="industrialdistilleryinstalledcapacity" class="form-control" id="txtInstalledCapacityIndustrial" />
+                                                                                <span asp-validation-for="industrialdistilleryinstalledcapacity" class="text-danger"></span>
+                                                                            </div>
+                                                                            <div class="col-md-4">
+                                                                                <label>
+                                                                                    Production Quantity (in BL)
+                                                                                </label>
+                                                                                <input type="number" asp-for="industrialdistilleryproductionquantity" class="form-control" id="txtProductionQuantityIndustrial" />
+                                                                                <span asp-validation-for="industrialdistilleryproductionquantity" class="text-danger"></span>
+                                                                            </div>
+                                                                            <div class="col-md-4">
+                                                                                <label class="col-form-label">
+                                                                                    Purchase Quantity (in BL)
+                                                                                </label>
+                                                                                <input type="number" asp-for="industrialdistillerypurchasequantity" class="form-control" id="txtPurchaseQuantityIndustrial" />
+                                                                                <span asp-validation-for="industrialdistillerypurchasequantity" class="text-danger"></span>
+                                                                            </div>
+                                                                        </div>
 
-											<div class="row mt-3">
-												<div class="col-md-4">
-													<label class="col-form-label">
-														Balance Quantity (in BL)
-														<span class="text-danger"></span>
-													</label>
-													<input type="text" class="form-control" id="txtBalanceQuantityIndustrial" name="industrialdistillerybalancequantity" value="">
-													<span class="text-danger field-validation-valid" data-valmsg-for="industrialdistillerybalancequantity" data-valmsg-replace="true"></span>
-												</div>
+                                                                        <div class="row mt-3">
+                                                                            <div class="col-md-4">
+                                                                                <label class="col-form-label">
+                                                                                    Balance Quantity (in BL)
+                                                                                    <span class="text-danger"></span>
+                                                                                </label>
+                                                                                <input type="text" asp-for="industrialdistillerybalancequantity" class="form-control" id="txtBalanceQuantityIndustrial" />
+                                                                                <span asp-validation-for="industrialdistillerybalancequantity" class="text-danger"></span>
+                                                                            </div>
 
-											</div>
+                                                                        </div>
 
-										</div>
-									</fieldset>
+                                                                    </div>
+                                                                </fieldset>
 
-
-									<fieldset class="scheduler-border">
-										<legend class="scheduler-border text-danger">Duty Details</legend>
-										<div class="row">
-											<div class="col-md-4">
-												<label class="col-form-label">
-													Advance Duty* (Rs)
-													<span class="text-danger"></span>
-												</label>
-												<input class="form-control" id="txtAdvanceDuty" type="text" name="dutyadvanceduty" value="">
-												<span class="text-danger field-validation-valid" data-valmsg-for="dutyadvanceduty" data-valmsg-replace="true"></span>
-											</div>
-											<div class="col-md-4">
-												<label class="col-form-label">Export pass fee* (Rs) <span class="text-danger"></span></label>
-												<input class="form-control" id="txtAdvanceDuty" type="text" name="dutyexportpassfee" value="">
-												<span class="text-danger field-validation-valid" data-valmsg-for="dutyexportpassfee" data-valmsg-replace="true"></span>
-
-											</div>
-
-										</div>
-
-									</fieldset>
+                                                            </fieldset>
 
 
+                                                            <fieldset class="scheduler-border">
+                                                                <legend class="scheduler-border text-danger">Duty Details</legend>
+                                                                <div class="row">
+                                                                    <div class="col-md-4">
+                                                                        <label class="col-form-label">
+                                                                            Advance Duty* (Rs)
+                                                                            <span class="text-danger"></span>
+                                                                        </label>
+                                                                        <input asp-for="dutyadvanceduty" class="form-control" id="txtAdvanceDuty" />
+                                                                        <span asp-validation-for="dutyadvanceduty" class="text-danger"></span>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <label class="col-form-label">Export pass fee* (Rs) <span class="text-danger"></span></label>
+                                                                        <input asp-for="dutyexportpassfee" class="form-control" id="txtAdvanceDuty" />
+                                                                        <span asp-validation-for="dutyexportpassfee" class="text-danger"></span>
 
-								</fieldset>
+                                                                    </div>
+
+                                                                </div>
+
+                                                            </fieldset>
+
+                                                            <div class="text-muted" style="font-size: 13px;">
+                                                                <strong>Note:</strong>
+                                                                <ul style="margin-left: -20px;">
+                                                                    <li>The file(s) should be up to 6 MB in size.</li>
+                                                                    <li>Allowed file types: pdf, jpeg, jpg, png, x-png.</li>
+                                                                </ul>
+                                                            </div>
+
+                                                        </fieldset>
 
 
-								<div class="row mt-3">
-									<div class="col-md-12">
-										<div class="form-group d-flex justify-content-center">
-											<button type="submit" name="actionType" value="Clear" class="btn btn-clear btn-sm mr-2">
-												Clear All
-											</button>
+                                                        <div class="row mt-3">
+                                                            <div class="col-md-12">
+                                                                <div class="form-group d-flex justify-content-center">
+                                                                    <button type="submit" name="actionType" value="Clear" class="btn btn-clear btn-sm mr-2">
+                                                                        Clear All
+                                                                    </button>
 
-											<button type="submit" name="actionType" value="Save" class="btn btn-primary btn-sm mr-2">
-												Save
-											</button>
+                                                                    <button type="submit" name="actionType" value="Save" class="btn btn-primary btn-sm mr-2">
+                                                                        Save
+                                                                    </button>
 
-											<button type="button" class="btn btn-danger btn-sm mr-2">Previous</button>
-											<button type="button" class="btn btn-success btn-sm">Next</button>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+                                                                    <button type="button" class="btn btn-danger btn-sm mr-2">Previous</button>
+                                                                    <button type="button" class="btn btn-success btn-sm">Next</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
 
-					<input name="__RequestVerificationToken" type="hidden" value="CfDJ8NoL4FekTvFNs65bC66VOlw1s3cOjt1gbZsY4ysMpmRI9H4ZOlzKOID6wd972nd9xiyn-zjPWZg48KRQkaznDwg986nffzCEjmBx0sxQPAqxRwI8T3kuwuv0z3K3jZNg4q5GwXVMdW7e_aH83Cd2dA8w2yuiam-A0VabtOA1athRQnQf8ZD3ktocXVS5FNPrhg"></form>
-				</div>
-			</div>
-		</div>
-	</div>
+                                                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8NoL4FekTvFNs65bC66VOlw1s3cOjt1gbZsY4ysMpmRI9H4ZOlzKOID6wd972nd9xiyn-zjPWZg48KRQkaznDwg986nffzCEjmBx0sxQPAqxRwI8T3kuwuv0z3K3jZNg4q5GwXVMdW7e_aH83Cd2dA8w2yuiam-A0VabtOA1athRQnQf8ZD3ktocXVS5FNPrhg">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
