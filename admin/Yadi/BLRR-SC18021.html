@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Nivesh Mitra V3.0 - Admin</title>
+    <!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 11]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="">
+    <meta name="author" content="Phoenixcoded" />
+    <!-- Favicon icon -->
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+    <!-- prism css -->
+    <link rel="stylesheet" href="assets/css/plugins/prism-coy.css">
+    <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css">
+
+    <!-- vendor css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/card.css">
+    <link rel="stylesheet" href="assets/fonts/material-icon/css/material-design-iconic-font.min.css">
+    <!-- Main css -->
+    <link rel="stylesheet" href="assets/wizards/css/style.css">
+    <link rel="stylesheet" href="assets/css/forest.css">
+
+
+    <style>
+        input[type="checkbox"] {
+    width: 30%;
+    margin: auto;
+}
+    </style>
+
+    </style>
+</head>
+
+<body>
+ 
+   
+    <div class="loader-bg">
+        <div class="loader-track">
+            <div class="loader-fill"></div>
+        </div>
+    </div>
+    <!-- [ Pre-loader ] End -->
+    <!-- [ navigation menu ] start -->
+    <nav class="pcoded-navbar theme-horizontal menu-light">
+        <div class="navbar-wrapper container-fluid">
+            <div class="navbar-content sidenav-horizontal" id="layout-sidenav">
+                <ul class="nav pcoded-inner-navbar sidenav-inner">
+                    <li class="nav-item pcoded-menu-caption">
+                        <label>Navigation</label>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
+                    </li>
+                    <li class="nav-item pcoded-hasmenu">
+                        <a href="#!" class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-layout"></i></span><span
+                                class="pcoded-mtext">Pre-Establishment</span></a>
+                        <ul class="pcoded-submenu">
+                            <li><a href="Questionnaire.html" target="_blank">Questionnaire</a></li>
+                            <li><a href="layout-horizontal.html" target="_blank">Combined Application Form</a></li>
+                            <li><a href="#">Respond To Query</a></li>
+                            <li><a href="#">Print CFE</a></li>
+                            <li><a href="#">Print Acknowledgment </a></li>
+                            <li><a href="#">Print Acknowledgment with QR Code</a></li>
+                            <li><a href="#">View Receipt</a></li>
+                        </ul>
+                    </li>
+                   
+                    <li class="nav-item">
+                        <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-file-text"></i></span><span class="pcoded-mtext">Land
+                                Allotment</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-file-text"></i></span><span
+                                class="pcoded-mtext">Pre-Establishment</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-file-text"></i></span><span
+                                class="pcoded-mtext">Pre-Operational</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-file-text"></i></span><span
+                                class="pcoded-mtext">Incentives</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-file-text"></i></span><span
+                                class="pcoded-mtext">Renewals</span></a>
+                    </li>
+                    
+                    <li class="nav-item pcoded-hasmenu">
+                        <a href="#!" class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-lock"></i></span><span
+                                class="pcoded-mtext">Authentication</span></a>
+                        <ul class="pcoded-submenu">
+                            <li><a href="auth-signup.html" target="_blank">Sign up</a></li>
+                            <li><a href="auth-signin.html" target="_blank">Sign in</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- [ navigation menu ] end -->
+    <!-- [ Header ] start -->
+    <header class="navbar pcoded-header navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <div class="m-header">
+                <a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
+                <a href="#!" class="b-brand">
+                    <!-- ========   change your logo hear   ============ -->
+                    <img src="assets/images/investup1.png" alt="" class="logo" style="width: 90%;">
+                    <img src="assets/images/logo-icon.png" alt="" class="logo-thumb">
+                </a>
+                <a href="#!" class="mob-toggler">
+                    <i class="feather icon-more-vertical"></i>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href="#!" class="pop-search"><i class="feather icon-search"></i></a>
+                        <div class="search-bar">
+                            <input type="text" class="form-control border-0 shadow-none" placeholder="Search hear">
+                            <button type="button" class="close" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a class="dropdown-toggle h-drop" href="#" data-toggle="dropdown">
+                                Dropdown
+                            </a>
+                            <div class="dropdown-menu profile-notification ">
+                                <ul class="pro-body">
+                                    <li><a href="user-profile.html" class="dropdown-item"><i class="fas fa-circle"></i>
+                                            Profile</a></li>
+                                    <li><a href="email_inbox.html" class="dropdown-item"><i class="fas fa-circle"></i>
+                                            My Messages</a></li>
+                                    <li><a href="auth-signin.html" class="dropdown-item"><i class="fas fa-circle"></i>
+                                            Lock Screen</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown mega-menu">
+                            <a class="dropdown-toggle h-drop" href="#" data-toggle="dropdown">
+                                Mega
+                            </a>
+                            <div class="dropdown-menu profile-notification ">
+                                <div class="row no-gutters">
+                                    <div class="col">
+                                        <h6 class="mega-title">UI Element</h6>
+                                        <ul class="pro-body">
+                                            <li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i>
+                                                    Alert</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i>
+                                                    Button</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i>
+                                                    Badges</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i>
+                                                    Cards</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i>
+                                                    Modal</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i> Tabs &
+                                                    pills</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col">
+                                        <h6 class="mega-title">Forms</h6>
+                                        <ul class="pro-body">
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-minus"></i>
+                                                    Elements</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-minus"></i>
+                                                    Validation</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-minus"></i>
+                                                    Masking</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-minus"></i>
+                                                    Wizard</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-minus"></i>
+                                                    Picker</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-minus"></i>
+                                                    Select</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col">
+                                        <h6 class="mega-title">Application</h6>
+                                        <ul class="pro-body">
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-mail"></i>
+                                                    Email</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i
+                                                        class="feather icon-clipboard"></i> Task</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i
+                                                        class="feather icon-check-square"></i> To-Do</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-image"></i>
+                                                    Gallery</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i
+                                                        class="feather icon-help-circle"></i> Helpdesk</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col">
+                                        <h6 class="mega-title">Extension</h6>
+                                        <ul class="pro-body">
+                                            <li><a href="#!" class="dropdown-item"><i
+                                                        class="feather icon-file-plus"></i> Editor</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i
+                                                        class="feather icon-file-minus"></i> Invoice</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-calendar"></i>
+                                                    Full calendar</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i
+                                                        class="feather icon-upload-cloud"></i> File upload</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-scissors"></i>
+                                                    Image cropper</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li>
+                        <div class="dropdown">
+                            <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+                                <i class="icon feather icon-bell"></i>
+                                <span class="badge badge-pill badge-danger">5</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right notification">
+                                <div class="noti-head">
+                                    <h6 class="d-inline-block m-b-0">Notifications</h6>
+                                    <div class="float-right">
+                                        <a href="#!" class="m-r-10">mark as read</a>
+                                        <a href="#!">clear all</a>
+                                    </div>
+                                </div>
+                                <ul class="noti-body">
+                                    <li class="n-title">
+                                        <p class="m-b-0">NEW</p>
+                                    </li>
+                                    <li class="notification">
+                                        <div class="media">
+                                            <img class="img-radius" src="assets/images/user/avatar-1.jpg"
+                                                alt="Generic placeholder image">
+                                            <div class="media-body">
+                                                <p><strong>John Doe</strong><span class="n-time text-muted"><i
+                                                            class="icon feather icon-clock m-r-10"></i>5 min</span></p>
+                                                <p>New ticket Added</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="n-title">
+                                        <p class="m-b-0">EARLIER</p>
+                                    </li>
+                                    <li class="notification">
+                                        <div class="media">
+                                            <img class="img-radius" src="assets/images/user/avatar-2.jpg"
+                                                alt="Generic placeholder image">
+                                            <div class="media-body">
+                                                <p><strong>Joseph William</strong><span class="n-time text-muted"><i
+                                                            class="icon feather icon-clock m-r-10"></i>10 min</span></p>
+                                                <p>Prchace New Theme and make payment</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="notification">
+                                        <div class="media">
+                                            <img class="img-radius" src="assets/images/user/avatar-1.jpg"
+                                                alt="Generic placeholder image">
+                                            <div class="media-body">
+                                                <p><strong>Sara Soudein</strong><span class="n-time text-muted"><i
+                                                            class="icon feather icon-clock m-r-10"></i>12 min</span></p>
+                                                <p>currently login</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="notification">
+                                        <div class="media">
+                                            <img class="img-radius" src="assets/images/user/avatar-2.jpg"
+                                                alt="Generic placeholder image">
+                                            <div class="media-body">
+                                                <p><strong>Joseph William</strong><span class="n-time text-muted"><i
+                                                            class="icon feather icon-clock m-r-10"></i>30 min</span></p>
+                                                <p>Prchace New Theme and make payment</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="noti-footer">
+                                    <a href="#!">show all</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown drp-user">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="feather icon-user"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right profile-notification">
+                                <div class="pro-head">
+                                    <img src="assets/images/user/avatar-1.jpg" class="img-radius"
+                                        alt="User-Profile-Image">
+                                    <span>John Doe</span>
+                                    <a href="auth-signin.html" class="dud-logout" title="Logout">
+                                        <i class="feather icon-log-out"></i>
+                                    </a>
+                                </div>
+                                <ul class="pro-body">
+                                    <li><a href="user-profile.html" class="dropdown-item"><i
+                                                class="feather icon-user"></i> Profile</a></li>
+                                    <li><a href="email_inbox.html" class="dropdown-item"><i
+                                                class="feather icon-mail"></i> My Messages</a></li>
+                                    <li><a href="auth-signin.html" class="dropdown-item"><i
+                                                class="feather icon-lock"></i> Lock Screen</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- [ Header ] end -->
+    <!-- [ Main Content ] start -->
+    <div class="pcoded-main-container">
+        <div class="pcoded-wrapper container-fluid">
+            <div class="pcoded-content">
+                <div class="pcoded-inner-content">
+                    <div class="main-body">
+                        <div class="page-wrapper">
+                            <div class="page-header">
+                                <div class="page-block">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-12">
+                                            <!-- <div class="page-header-title">
+                                       <h5 class="m-b-10">Welcome to Kalyanbabu!</h5>
+                                       </div> -->
+                                            <!-- <ul class="breadcrumb">
+                                       <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
+                                       <li class="breadcrumb-item"><a href="#!">Page Layout</a></li>
+                                       <li class="breadcrumb-item"><a href="#!">Horizontal Layout 2</a></li>
+                                       </ul> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- [ Main Content ] start -->
+                            <div class="card table-card review-card">
+                                <div class="card-header borderless ">
+                                    <h5>Brand & Label Registration Renewal (SC18021)</h5>
+                                    <div class="card-header-right">
+                                        <div class="btn-group card-option">
+                                            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false">
+                                                <i class="feather icon-more-horizontal"></i>
+                                            </button>
+                                            <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                                                <li class="dropdown-item full-card"><a href="#!"><span><i
+                                                                class="feather icon-maximize"></i> maximize</span><span
+                                                            style="display:none"><i class="feather icon-minimize"></i>
+                                                            Restore</span></a></li>
+                                                <li class="dropdown-item minimize-card"><a href="#!"><span><i
+                                                                class="feather icon-minus"></i> collapse</span><span
+                                                            style="display:none"><i class="feather icon-plus"></i>
+                                                            expand</span></a></li>
+                                                <li class="dropdown-item reload-card"><a href="#!"><i
+                                                            class="feather icon-refresh-cw"></i> reload</a></li>
+                                                <li class="dropdown-item close-card"><a href="#!"><i
+                                                            class="feather icon-trash"></i> remove</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body pb-0">
+                                    <div class="review-block" style="width: 100%; ">
+                                        <div class="row pt-0">
+                                            <form method="POST" id="signup-form" class="signup-form" enctype="">
+                                                <div class="card-body p-5" id="">
+
+                                                     
+
+                                                    <fieldset class="scheduler-border">
+                                                        <legend class="scheduler-border text-danger">
+                                                           Brand Details
+                                                        </legend>
+
+                                                        <div class="row">
+
+                                                            <div class="col-md-4">
+                                                                <div class="form-group row">
+                                                                    <label class="col-form-label required">Application Number
+                                                                    </label>
+                                                                    <div class="col-lg-12 d-flex">
+                                                                      <input type="text" class="" id="colFormLabel">
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="form-group row">
+                                                                    <label class="col-form-label required">License Type
+                                                                    </label>
+                                                                    <div class="col-lg-12 d-flex">
+                                                                     <select class="form-select">
+                                                                         <option value="">--Select--</option>
+                                                                         <option value=""></option>                          
+                                                                     </select>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="form-group row">
+                                                                    <label class="col-form-label required">License Number
+                                                                    </label>
+                                                                    <div class="col-lg-12 d-flex">
+                                                                      <input type="text" class="" id="colFormLabel">
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="form-group row">
+                                                                    <label class="col-form-label required">Parent ETIN
+                                                                    </label>
+                                                                    <div class="col-lg-12 d-flex">
+                                                                      <input type="text" class="" id="colFormLabel">
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="form-group row">
+                                                                    <label class="col-form-label required">Brand Name
+                                                                    </label>
+                                                                    <div class="col-lg-12 d-flex">
+                                                                      <select class="form-select">
+                                                                         <option value="">--Select--</option>
+                                                                         <option value=""></option>                          
+                                                                      </select>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="form-group row">
+                                                                    <label class="col-form-label required">Liquor Type
+                                                                    </label>
+                                                                    <div class="col-lg-12 d-flex">
+                                                                      <input type="text" class="" id="colFormLabel">
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="form-group row">
+                                                                    <label class="col-form-label required">Sub Liquor Type
+                                                                    </label>
+                                                                    <div class="col-lg-12 d-flex">
+                                                                     <select class="form-select">
+                                                                         <option value="">--Select--</option>
+                                                                         <option value="">Rum</option> 
+                                                                         <option value="">GIN</option> 
+                                                                         <option value="">whisky</option>                          
+                                                                         <option value="">Vodka</option> 
+                                                                      </select>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="form-group row">
+                                                                    <label class="col-form-label required">Validity of Registration
+                                                                    </label>
+                                                                    <div class="col-lg-12 d-flex">
+                                                                     <input type="text" class="" id="colFormLabel">
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="form-group row">
+                                                                    <label class="col-form-label required">Liquor Detailed Description
+                                                                    </label>
+                                                                    <div class="col-lg-12 d-flex">
+                                                                       <select class="form-select">
+                                                                         <option value="">--Select--</option>
+                                                                         <option value=""></option>                          
+                                                                      </select>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="form-group row">
+                                                                    <label class="col-form-label required">Strength
+                                                                    </label>
+                                                                    <div class="col-lg-12 d-flex">
+                                                                       <input type="text" class="" id="colFormLabel">
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="form-group row">
+                                                                    <label class="col-form-label required">Supply Typle
+                                                                    </label>
+                                                                    <div class="col-lg-12 d-flex">
+                                                                       <select class="form-select">
+                                                                         <option value="">--Select--</option>
+                                                                         <option value=""></option>                          
+                                                                      </select>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="form-group row">
+                                                                    <label class="col-form-label required">Domain
+                                                                    </label>
+                                                                    <div class="col-lg-12 d-flex">
+                                                                        <input type="text" class="" id="colFormLabel">
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="form-group row">
+                                                                    <label class="col-form-label required">EDP Category
+                                                                    </label>
+                                                                    <div class="col-lg-12 d-flex">
+                                                                        <select class="form-select">
+                                                                         <option value="">--Select--</option>
+                                                                         <option value="">Economy</option>  
+                                                                         <option value="">Medium</option>                        
+                                                                         <option value="">Not Applicable</option>
+                                                                         <option value="">Premium</option>
+                                                                        </select>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="form-group row">
+                                                                    <label class="col-form-label required">Brand Registration For (Year)
+                                                                    </label>
+                                                                    <div class="col-lg-12 d-flex">
+                                                                        <select class="form-select">
+                                                                         <option value="">--Select--</option>
+                                                                         <option value=""></option>                          
+                                                                      </select>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="form-group row">
+                                                                    <label class="col-form-label required">Trademark Registration
+                                                                    </label>
+                                                                    <div class="col-lg-12 d-flex">
+                                                                        <input type="file" width="100%">
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="form-group row">
+                                                                    <label class="col-form-label required">Brand Ownership Certificate
+                                                                    </label>
+                                                                    <div class="col-lg-12 d-flex">
+                                                                        <input type="file" width="100%">
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="form-group row">
+                                                                    <label class="col-form-label required">Affidavit
+                                                                    </label>
+                                                                    <div class="col-lg-12 d-flex">
+                                                                        <input type="file" width="100%">
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="form-group row">
+                                                                    <label class="col-form-label required">Registration For No of Years
+                                                                    </label>
+                                                                    <div class="col-lg-12 d-flex">
+                                                                        <select class="form-select">
+                                                                         <option value="">--Select--</option>
+                                                                         <option value=""></option>                          
+                                                                        </select>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                             <div class="col-md-4">
+                                                                <div class="form-group row">
+                                                                    <label class="col-form-label required">Validity of Registration
+                                                                    </label>
+                                                                    <div class="col-lg-12 d-flex">
+                                                                        <input type="text" class="" id="colFormLabel">
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                             <div class="col-md-4">
+                                                                <div class="form-group row">
+                                                                    <label class="col-form-label required">Brand Registration Fees
+                                                                    </label>
+                                                                    <div class="col-lg-12 d-flex">
+                                                                        <input type="text" class="" id="colFormLabel">
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                          <fieldset class="scheduler-border">
+                                    <legend class="scheduler-border text-danger">
+                                      Label Details
+                                    </legend>
+                                    <div class="row">
+
+                                        <div class="col-md-12">
+                                            <div class="form-group row">
+                                                <!--<label class="col-form-label required">
+                                                </label>-->
+                                                <div class="col-lg-12 d-flex">
+                                                    <table class="table table-responsive">
+				<thead class="table-light">
+								<tr>
+												<th>SI.NO</th>
+												<th>Select</th>
+												<th>Renew Brand</th>
+												<th>New Label</th>
+												<th>Update Label</th>
+												<th>Download</th>
+												<th>Packaging Size (ML)</th>
+												<th>Packaging Type</th>
+												<th>Domain</th>
+												<th>Supply Type</th>
+												<th>ETIN</th>
+												<th>GSTIN</th>
+												<th>Carton Size/Mono-Carton</th>
+												<th>EDP price</th>
+												<th>No of Labels</th>
+												<th>Label Fees</th>
+												<th>Upload Labels</th>
+												<th>Label Event</th>
+												<th>Currently With</th>
+												<th>Status</th>
+												<th>Total Label Fees</th>
+												<th>Submit</th>
+												<th>Cancel</th>
+								</tr>
+				</thead>
+				<tbody>
+								<tr>
+												<td>1</td>
+												<td><input type="checkbox"></td>
+												<td><button type="button" class="btn btn-success btn-sm">Renew Brand</button></td>
+												<td><button type="button" class="btn btn-success btn-sm">New Label</button></td>
+												<td><input type="file" class="" id=""></td>
+                                                <td><button type="button" class="btn btn-info btn-sm">Download File</button></td>
+												<!--<td><a href="file.pdf" download>Download File</a></td>-->
+												<td><input type="text" class="" id="colformabel"></td>
+												<td><input type="text" class="" id="colformabel"></td>
+                                                <td>
+																<select  class="form-select" id="">
+																	<option value="">--Select--</option>
+																	<option value="">Within UP</option>
+																	<option value="">Outside UP</option>
+																	<option value="">Overseas</option>
+																</select>
+												</td>
+												<td>
+																<select class="form-select" id="">
+																	<option value="">--Select--</option>
+																	<option value="">Civil</option>
+																	<option value="">CSD</option>
+																	<option value="">Paramilitary</option>
+																	<option value="">All</option>
+																</select>
+												</td>
+												<td><input type="text" class="" id="colformabel"></td>
+												<td><input type="text" class="" id="colformabel"></td>
+												<td><input type="text" class="" id="colformabel"></td>
+												<td><input type="text" class="" id="colformabel"></td>
+												<td><input type="text" class="" id="colformabel"></td>
+												<td><input type="text" class="" id="colformabel"></td>
+												<td><input type="file" class="" id=""></td>
+												<td><input type="text" class="" id="colformabel"></td>
+												<td><input type="text" class="" id="colformabel"></td>
+												<td><input type="text" class="" id="colformabel"></td>
+												<td><input type="text" class="" id="colformabel"></td>
+												<td><button type="submit" class="btn btn-primary btn-sm">Submit</button></td>
+												<td><button type="button" class="btn btn-clear btn-sm">Cancel</button></td>
+								</tr>
+				</tbody>
+</table>             
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                              </fieldset>
+                                               <fieldset class="scheduler-border">
+                                    <legend class="scheduler-border text-danger">
+                                      Raw Material Details
+                                    </legend>
+                                    <div class="row">
+
+                                        <div class="col-md-12">
+                                            <div class="form-group row">
+                                                <!--<label class="col-form-label required">
+                                                </label>-->
+                                                <div class="col-lg-12 d-flex">
+                                                    <table class="table">
+                                                                            <thead class="thead-light">
+                                                                                <tr>
+                                                                                    <th scope="col">Sr. No.</th>
+                                                                                    <th scope="col">Raw Material Name</th>
+                                                                                    <th scope="col">Unit of Measurement</th>
+                                                                                     <th scope="col">Quantity</th>
+
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <th scope="row">1</th>
+                                                                                    <td><input type="text" class="" id="colFormLabel"></td>
+                                                                                    <td><input type="text" class="" id="colFormLabel"></td>
+                                                                                   <td><input type="number" class="" id="colFormLabel"></td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                              </fieldset>
+                                               <fieldset class="scheduler-border">
+                                    <legend class="scheduler-border text-danger">
+                                      Application Logs
+                                    </legend>
+                                    <div class="row">
+
+                                        <div class="col-md-12">
+                                            <div class="form-group row">
+                                                <!--<label class="col-form-label required">
+                                                </label>-->
+                                                <div class="col-lg-12 d-flex">
+                                                    <table class="table">
+                                                                            <thead class="thead-light">
+                                                                                <tr>
+                                                                                    <th style="width: 7%;" scope="col">Sr. No.</th>
+                                                                                    <th scope="col">Date</th>
+                                                                                    <th scope="col">Packaging Size (ML)</th>
+                                                                                    <th scope="col">Packaging Type</th>
+                                                                                    <th scope="col">ETIN</th>
+                                                                                    <th scope="col">Activity</th>
+                                                                                    <th scope="col">Logs</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <th scope="row">1</th>
+                                                                                    <td><input type="date" class="" id="colFormLabel"></td>
+                                                                                    <td><input type="text" class="" id="colFormLabel"></td>
+                                                                                    <td><input type="text" class="" id="colFormLabel"></td>
+                                                                                    <td><input type="text" class="" id="colFormLabel"></td>
+                                                                                    <td><input type="text" class="" id="colFormLabel"></td>
+                                                                                    <td><button type="button" class="btn btn-success btn-sm">Action</button></td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                              </fieldset>
+                                              
+                                                    </fieldset>
+                                                    <div class="row mt-3">
+                                                        <div class="col-md-12">
+                                                            <div class="form-group d-flex justify-content-center">
+                                                                <button type="button"
+                                                                    class="btn btn-clear btn-sm mr-2">Clear All
+                                                                </button>
+                                                                <button type="submit"
+                                                                    class="btn btn-primary btn-sm mr-2">Save</button>
+                                                                <button type="button"
+                                                                    class="btn btn-danger btn-sm mr-2">Previous</button>
+                                                                <button type="button"
+                                                                    class="btn btn-success btn-sm">Next</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- [ Main Content ] end -->
+                                <!-- [ Main Content ] start -->
+                                <!-- [ Main Content ] end -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="assets/js/vendor-all.min.js"></script>
+        <script src="assets/js/plugins/bootstrap.min.js"></script>
+        <script src="assets/js/pcoded.min.js"></script>
+        <!-- prism Js -->
+        <script src="assets/js/plugins/prism.js"></script>
+        <script src="assets/js/horizontal-menu.js"></script>
+        <script>
+            (function () {
+                if ($('#layout-sidenav').hasClass('sidenav-horizontal') || window.layoutHelpers.isSmallScreen()) {
+                    return;
+                }
+                try {
+                    window.layoutHelpers._getSetting("Rtl")
+                    window.layoutHelpers.setCollapsed(
+                        localStorage.getItem('layoutCollapsed') === 'true',
+                        false
+                    );
+                } catch (e) { }
+            })();
+            $(function () {
+                $('#layout-sidenav').each(function () {
+                    new SideNav(this, {
+                        orientation: $(this).hasClass('sidenav-horizontal') ? 'horizontal' : 'vertical'
+                    });
+                });
+                $('body').on('click', '.layout-sidenav-toggle', function (e) {
+                    e.preventDefault();
+                    window.layoutHelpers.toggleCollapsed();
+                    if (!window.layoutHelpers.isSmallScreen()) {
+                        try {
+                            localStorage.setItem('layoutCollapsed', String(window.layoutHelpers.isCollapsed()));
+                        } catch (e) { }
+                    }
+                });
+            });
+            $(document).ready(function () {
+                $("#pcoded").pcodedmenu({
+                    themelayout: 'horizontal',
+                    MenuTrigger: 'hover',
+                    SubMenuTrigger: 'hover',
+                });
+                // Initialize all tooltips
+                var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+                var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                    return new bootstrap.Tooltip(tooltipTriggerEl)
+                });
+            });
+
+        </script>
+        <script src="assets/js/analytics.js"></script>
+        <script src="assets/wizards/vendor/jquery/jquery.min.js"></script>
+        <script src="assets/wizards/js/bootstrap.bundle.js"></script>
+        <script src="assets/wizards/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+        <script src="assets/wizards/vendor/jquery-validation/dist/additional-methods.min.js"></script>
+        <script src="assets/wizards/vendor/jquery-steps/jquery.steps.min.js"></script>
+        <script src="assets/wizards/js/main.js"></script>
+</body>
+
+</html>
