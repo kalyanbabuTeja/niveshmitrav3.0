@@ -39,6 +39,9 @@
 thead.thead-light tr th {
     white-space: nowrap !important;
 }
+thead.thead-light th {
+    text-transform: capitalize;
+}
     </style>
 </head>
 
@@ -365,7 +368,7 @@ thead.thead-light tr th {
                             <!-- [ Main Content ] start -->
                             <div class="card table-card review-card">
                                 <div class="card-header borderless ">
-                                    <h5>Application to Establish a Distillery in U.P (Form PD32)(SC18007)</h5>
+                                    <h5>PD-34 - Application For Grant of a Licence in form PD1 or PD2</h5>
                                     <div class="card-header-right">
                                         <div class="btn-group card-option">
                                             <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"
@@ -672,8 +675,30 @@ thead.thead-light tr th {
                                                 </label>
                                                 <div class="col-lg-12 d-flex">
                                                     <select class="form-select">
-                                                      <option value="">--Select--</option>            
+                                                      <option value="">--Select--</option>
+                                                      <option value="">Urban</option>
+                                                      <option value="">Rural</option>            
                                                      </select>                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                         <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Municipality
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="" id="colFormLabel">                      
+                                                </div>
+                                            </div>
+                                        </div>
+                                         <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Ward
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="" id="colFormLabel">                      
                                                 </div>
                                             </div>
                                         </div>
@@ -799,16 +824,21 @@ thead.thead-light tr th {
                                                 Group Details
                                                 </label>
                                                 <div class="col-lg-12 d-flex">
-                                                                        <div class="form-check form-check-inline">
-                                                                            <input class="form-check-input" type="radio" name="option" id="yesOption" value="">
-                                                                            <label class="form-check-label" for="yesOption">Yes</label>
-                                                                        </div>
-                                                                        <div class="form-check form-check-inline">
-                                                                            <input class="form-check-input" type="radio" name="option" id="noOption" value="">
-                                                                            <label class="form-check-label" for="noOption">No</label>
-                                                                        </div>
-                                                                      
-                                                                    </div>
+                                                                                <div
+                                                                                    class="form-check form-check-inline">
+                                                                                    <input class="form-check-input" type="radio" name="option" id="YesOption" value="Yes" onclick="document.getElementById('asd').style.display='inline-block'">
+                                                                                     <label class="form-check-label" for="YesOption">Yes</label>
+                                                                                </div>
+                                                                                <div
+                                                                                    class="form-check form-check-inline">
+                                                                                     <input class="form-check-input" type="radio" name="option" id="NoOption" value="No" onclick="document.getElementById('asd').style.display='none'">
+                                                                                    <label class="form-check-label" for="NoOption">No</label>
+                                                                                </div>
+                                                                                <div class="col-lg-6 d-flex">
+                                                                                    <input type="text" class="" id="asd" style="display:none;" placeholder="Enter text">
+                                                                                </div>
+                                                                            </div>
+                                              
                                             </div>
                                         </div>
                                        
@@ -883,8 +913,30 @@ thead.thead-light tr th {
                                                 </label>
                                                 <div class="col-lg-12 d-flex">
                                                     <select class="form-select">
-                                                      <option value="">--Select--</option>            
+                                                      <option value="">--Select--</option>
+                                                      <option value="">Urban</option>
+                                                      <option value="">Rural</option>            
                                                      </select>                       
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Municipality
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="" id="colFormLabel">                       
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Ward
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="" id="colFormLabel">                       
                                                 </div>
                                             </div>
                                         </div>
@@ -962,7 +1014,7 @@ thead.thead-light tr th {
                                                                         </div>
                                                                         <div class="form-check form-check-inline">
                                                                             <input class="form-check-input" type="radio" name="option" id="noOption2" value="">
-                                                                            <label class="form-check-label" for="noOption2">Other Company</label>
+                                                                            <label class="form-check-label" for="noOption2">Others</label>
                                                                         </div>                   
                                                 </div>
                                             </div>
@@ -989,7 +1041,7 @@ thead.thead-light tr th {
                                                                                     <td><input type="number" class="" id="colFormLabel"></td>
                                                                                 </tr>
                                                                                 <tr>
-                                                                                    <td>(ii) Is sued</td>
+                                                                                    <td>(ii) Issued</td>
                                                                                     <td><input type="number" class="" id="colFormLabel"></td>
                                                                                    
                                                                                 </tr>
@@ -1004,6 +1056,15 @@ thead.thead-light tr th {
                                                                                     <td>(iv) Borrowings, if any (for Proposed)</td>
                                                                                     <td><input type="text" class="" id="colFormLabel"></td>
                                                                                     
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td rowspan="2">Others</td>
+                                                                                    <td  style="padding-left: 25px;">Capital (In Lakhs)</td>
+                                                                                    <td><input type="number" class="" id="colFormLabel"></td> 
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Borrowings, if any</td>
+                                                                                    <td><input type="number" class="" id="colFormLabel"></td>
                                                                                 </tr>
                                                                                 <tr>
                                                                                     <td rowspan="4">Capital Structure / Details<br/> of investment - I. Fixed Assets</td>
@@ -1358,7 +1419,7 @@ thead.thead-light tr th {
                                         <div class="col-md-6">
                                             <div class="form-group row">
                                                 <label class="col-form-label required">
-                                                 Blueprint of the Unit
+                                                 Blueprint of the Unit (PNG/JPG/JPEG/PDF, up to 2 MB)
                                                 </label>
                                                 <div class="col-lg-12 d-flex">
                                                    <input type="file" width="100%">
@@ -1369,7 +1430,7 @@ thead.thead-light tr th {
                                         <div class="col-md-6">
                                             <div class="form-group row">
                                                 <label class="col-form-label required">
-                                             Land Document
+                                             Land Document (PNG/JPG/JPEG/PDF, up to 2 MB)
                                                 </label>
                                                 <div class="col-lg-12 d-flex">
                                                     <input type="file" width="100%">
@@ -1380,7 +1441,7 @@ thead.thead-light tr th {
                                         <div class="col-md-6">
                                             <div class="form-group row">
                                                 <label class="col-form-label required">
-                                             MOA of the Company with List of Directors
+                                             MOA of the Company with List of Directors <br>(PNG/JPG/JPEG/PDF, up to 2 MB)
                                                 </label>
                                                 <div class="col-lg-12 d-flex">
                                                     <input type="file" width="100%">
@@ -1391,21 +1452,9 @@ thead.thead-light tr th {
                                         <div class="col-md-6">
                                             <div class="form-group row">
                                                 <label class="col-form-label required">
-                                            Application Submitted for Fire Department
+                                            Application Submitted for Fire Department<br> (PNG/JPG/JPEG/PDF, up to 2 MB)
                                                 </label>
                                                 <div class="col-lg-12 d-flex">
-                                                    <input type="file" width="100%">
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 mt-3">
-                                            <div class="form-group row">
-                                                <label class="col-form-label required">
-                                             Ethanol Storage License from PESO (if Ethanol Production)
-
-                                                </label>
-                                                <div class="col-lg-12 d-flex mt-1">
                                                     <input type="file" width="100%">
                                                 </div>
 
@@ -1414,7 +1463,19 @@ thead.thead-light tr th {
                                         <div class="col-md-6">
                                             <div class="form-group row">
                                                 <label class="col-form-label required">
-                                             IEM (Industrial Entrepreneur Memorandum) to Ministry of Industries, GOI* (PNG/JPG/JPEG/PDF, up to 2 MB)
+                                             Ethanol Storage License from PESO (if Ethanol Production) (PNG/JPG/JPEG/PDF, up to 2 MB)
+
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="file" width="100%">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                             IEM (Industrial Entrepreneur Memorandum) to Ministry of Industries, GOI (PNG/JPG/JPEG/PDF, up to 2 MB)
 
                                                 </label>
                                                 <div class="col-lg-12 d-flex">
@@ -1423,10 +1484,46 @@ thead.thead-light tr th {
 
                                             </div>
                                         </div>
+                                        <div class="col-md-6 mt-3">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                             NOC from Pollution Control Board UP (PNG/JPG/JPEG/PDF, up to 2 MB)
+
+                                                </label>
+                                                <div class="col-lg-12 d-flex mt-1">
+                                                    <input type="file" width="100%">
+                                                </div>
+
+                                            </div>
+                                        </div>
                                         <div class="col-md-6">
                                             <div class="form-group row">
                                                 <label class="col-form-label required">
-                                             NOC from Pollution Control Board UP
+                                             NOC from Ministry of Environment and Climate Change (PNG/JPG/JPEG/PDF, up to 2 MB)
+
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="file" width="100%">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mt-3">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                             No Dues Certificate by DM Office (PNG/JPG/JPEG/PDF, up to 2 MB)
+
+                                                </label>
+                                                <div class="col-lg-12 d-flex mt-1">
+                                                    <input type="file" width="100%">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                             Ministry of Industries registration certificate/application (PNG/JPG/JPEG/PDF, up to 2 MB)
 
                                                 </label>
                                                 <div class="col-lg-12 d-flex">
@@ -1438,43 +1535,7 @@ thead.thead-light tr th {
                                         <div class="col-md-6">
                                             <div class="form-group row">
                                                 <label class="col-form-label required">
-                                             NOC from Ministry of Environment and Climate Change
-
-                                                </label>
-                                                <div class="col-lg-12 d-flex">
-                                                    <input type="file" width="100%">
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group row">
-                                                <label class="col-form-label required">
-                                             No Dues Certificate by DM Office
-
-                                                </label>
-                                                <div class="col-lg-12 d-flex">
-                                                    <input type="file" width="100%">
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group row">
-                                                <label class="col-form-label required">
-                                             Ministry of Industries registration certificate/application
-
-                                                </label>
-                                                <div class="col-lg-12 d-flex">
-                                                    <input type="file" width="100%">
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group row">
-                                                <label class="col-form-label required">
-                                             Other Document (PDF, up to 2 MB)
+                                             Other Document (PNG/JPG/JPEG/PDF, up to 2 MB) 
 
                                                 </label>
                                                 <div class="col-lg-12 d-flex">
@@ -1486,7 +1547,7 @@ thead.thead-light tr th {
                                         <div class="col-md-6">
                                             <div class="form-group row">
                                                 <label class="col-form-label required">
-                                             Blueprint of Plan and elevation* (PDF, up to 6 MB)
+                                             Blueprint of Plan and elevation (PNG/JPG/JPEG/PDF, up to 6 MB)
 
                                                 </label>
                                                 <div class="col-lg-12 d-flex">
@@ -1498,7 +1559,7 @@ thead.thead-light tr th {
                                         <div class="col-md-6 mt-3">
                                             <div class="form-group row">
                                                 <label class="col-form-label required">
-                                             NOC from Fire Department* (PDF, up to 2 MB)
+                                             NOC from Fire Department (PNG/JPG/JPEG/PDF, up to 2 MB)
 
                                                 </label>
                                                 <div class="col-lg-12 d-flex mt-1">
@@ -1510,7 +1571,7 @@ thead.thead-light tr th {
                                         <div class="col-md-6">
                                             <div class="form-group row">
                                                 <label class="col-form-label required">
-                                             Application submitted for Pollution Control Board of UP* (PNG/JPG/JPEG/PDF, up to 2 MB)
+                                             Application submitted for Pollution Control Board of UP (PNG/JPG/JPEG/PDF, up to 2 MB)
 
                                                 </label>
                                                 <div class="col-lg-12 d-flex">
@@ -1522,7 +1583,7 @@ thead.thead-light tr th {
                                         <div class="col-md-6">
                                             <div class="form-group row">
                                                 <label class="col-form-label required">
-                                             Environment clearance for environment forest & climate change ministry Govt of India & forest department Govt of U.P* (PNG/JPG/JPEG/PDF, up to 2 MB)
+                                             Environment clearance for environment forest & climate change ministry Govt of India & forest department Govt of U.P (PNG/JPG/JPEG/PDF, up to 2 MB)
 
                                                 </label>
                                                 <div class="col-lg-12 d-flex">
@@ -1534,7 +1595,7 @@ thead.thead-light tr th {
                                         <div class="col-md-6 mt-3">
                                             <div class="form-group row">
                                                 <label class="col-form-label required">
-                                             Details of Molasses Storage Tank/Grain Storage/ Cane Juice/Cane Juice Syrup
+                                             Details of Molasses Storage Tank/Grain Storage/ Cane Juice/Cane Juice Syrup (PNG/JPG/JPEG/PDF, up to 2 MB)  
 
                                                 </label>
                                                 <div class="col-lg-12 d-flex mt-1">
@@ -1546,7 +1607,7 @@ thead.thead-light tr th {
                                         <div class="col-md-6">
                                             <div class="form-group row">
                                                 <label class="col-form-label required">
-                                             Details of Plants and Machineries in the form of A B C D (attached) as prescribed by the Excise Department. In case of Alcohol Production, Milling and liquefaction details required
+                                             Details of Plants and Machineries in the form of A B C D (attached) as prescribed by the Excise Department. In case of Alcohol Production, Milling and liquefaction details required (PNG/JPG/JPEG/PDF, up to 2 MB)
 
                                                 </label>
                                                 <div class="col-lg-12 d-flex">
@@ -1558,7 +1619,7 @@ thead.thead-light tr th {
                                         <div class="col-md-6">
                                             <div class="form-group row">
                                                 <label class="col-form-label required">
-                                             Document for Calculation of capacity of the distillery on the basis of Fermentation House and Distillation House* (PNG/JPG/JPEG/PDF, up to 2 MB)
+                                             Document for Calculation of capacity of the distillery on the basis of Fermentation House and Distillation House (PNG/JPG/JPEG/PDF, up to 2 MB)
 
                                                 </label>
                                                 <div class="col-lg-12 d-flex">
@@ -1570,7 +1631,7 @@ thead.thead-light tr th {
                                         <div class="col-md-6">
                                             <div class="form-group row">
                                                 <label class="col-form-label required">
-                                            Information as per notification no. 7184/Pravidhik Niti/PD-1 & 2/2018 dated 02.03.2019 for the potable distillery* (PNG/JPG/JPEG/PDF, up to 2 MB)
+                                            Information as per notification no. 7184/Pravidhik Niti/PD-1 & 2/2018 dated 02.03.2019 for the potable distillery (PNG/JPG/JPEG/PDF, up to 2 MB)
 
                                                 </label>
                                                 <div class="col-lg-12 d-flex">
@@ -1582,7 +1643,7 @@ thead.thead-light tr th {
                                         <div class="col-md-6">
                                             <div class="form-group row">
                                                 <label class="col-form-label required">
-                                            Document depicting Flow Diagram of each and every section* (PNG/JPG/JPEG/PDF, up to 2 MB)
+                                            Document depicting Flow Diagram of each and every section (PNG/JPG/JPEG/PDF, up to 2 MB)
 
                                                 </label>
                                                 <div class="col-lg-12 d-flex">
@@ -1614,7 +1675,7 @@ thead.thead-light tr th {
                                         <div class="col-md-6">
                                             <div class="form-group row">
                                                 <label class="col-form-label required">
-                                            Blueprint of fermentation and distillation section. i.e, Cooling tower, Boilers(With Capacity),Tubewell etc* (PNG/JPG/JPEG/PDF, up to 2 MB)
+                                            Blueprint of fermentation and distillation section. i.e, Cooling tower, Boilers(With Capacity),Tubewell etc (PNG/JPG/JPEG/PDF, up to 2 MB)
                                                 </label>
                                                 <div class="col-lg-12 d-flex">
                                                     <input type="file" width="100%">
@@ -1624,7 +1685,7 @@ thead.thead-light tr th {
                                         <div class="col-md-6">
                                             <div class="form-group row">
                                                 <label class="col-form-label required">
-                                            Document detailing utility of distillery with blueprint* (PNG/JPG/JPEG/PDF, up to 2 MB)
+                                            Document detailing utility of distillery with blueprint (PNG/JPG/JPEG/PDF, up to 2 MB)
                                                 </label>
                                                 <div class="col-lg-12 d-flex">
                                                     <input type="file" width="100%">
@@ -1634,7 +1695,7 @@ thead.thead-light tr th {
                                         <div class="col-md-6">
                                             <div class="form-group row">
                                                 <label class="col-form-label required">
-                                            Notarized Affidavit declaring that No Government Dues are pending and Not penalized in cognizant offense* (PNG/JPG/JPEG/PDF, up to 2 MB)
+                                            Notarized Affidavit declaring that No Government Dues are pending and Not penalized in cognizant offense (PNG/JPG/JPEG/PDF, up to 2 MB)
                                                 </label>
                                                 <div class="col-lg-12 d-flex">
                                                     <input type="file" width="100%">
@@ -1644,7 +1705,7 @@ thead.thead-light tr th {
                                         <div class="col-md-6">
                                             <div class="form-group row">
                                                 <label class="col-form-label required">
-                                            No Dues Certificate from District Collector of the concerned district* (PNG/JPG/JPEG/PDF, up to 2 MB)
+                                            No Dues Certificate from District Collector of the concerned district (PNG/JPG/JPEG/PDF, up to 2 MB)
                                                 </label>
                                                 <div class="col-lg-12 d-flex">
                                                     <input type="file" width="100%">
@@ -1654,7 +1715,7 @@ thead.thead-light tr th {
                                         <div class="col-md-6">
                                             <div class="form-group row">
                                                 <label class="col-form-label required">
-                                            In case of production of Liquor, details of Blending Tank Dimension* (PNG/JPG/JPEG/PDF, up to 2 MB)
+                                            In case of production of Liquor, details of Blending Tank Dimension (PNG/JPG/JPEG/PDF, up to 2 MB)
                                                 </label>
                                                 <div class="col-lg-12 d-flex">
                                                     <input type="file" width="100%">
@@ -1694,7 +1755,7 @@ thead.thead-light tr th {
                                         <div class="col-md-6">
                                             <div class="form-group row">
                                                 <label class="col-form-label required">
-                                                    Upload GST Registration Certificate (PDF, up to 2 MB)
+                                                    Upload GST Registration Certificate (PNG/JPG/JPEG/PDF, up to 2 MB)
                                                 </label>
                                                 <div class="col-lg-12 d-flex">
                                                     <input type="file" width="100%">
@@ -1724,7 +1785,7 @@ thead.thead-light tr th {
                                         <div class="col-md-6">
                                             <div class="form-group row">
                                                 <label class="col-form-label required">
-                                           Pollution NOC by UP Govt (PDF, upto 2 MB)
+                                           Pollution NOC by UP Govt (PNG/JPG/JPEG/PDF, upto 2 MB)
                                                 </label>
                                                 <div class="col-lg-12 d-flex">
                                                     <input type="file" width="100%">
@@ -1764,7 +1825,7 @@ thead.thead-light tr th {
                                         <div class="col-md-6">
                                             <div class="form-group row">
                                                 <label class="col-form-label required">
-                                           Details of Plans and Machineries in the form of A B C D (attached) as prescribed by the Excise Department. In the case of Alcohol Production, Milling and liquefaction details are required (In case of Grain-based) Completed (PNG/JPG/JPEG/PDF, upto 2 MB)
+                                           Details of Plants and Machineries in the form of A B C D (attached) as prescribed by the Excise Department. In the case of Alcohol Production, Milling and liquefaction details are required (In case of Grain-based) Completed (PNG/JPG/JPEG/PDF, upto 2 MB)
                                                 </label>
                                                 <div class="col-lg-12 d-flex">
                                                     <input type="file" width="100%">
@@ -1784,7 +1845,7 @@ thead.thead-light tr th {
                                         <div class="col-md-6">
                                             <div class="form-group row">
                                                 <label class="col-form-label required">
-                                           Detail of Storage tank with Dimension Completed (PNG/JPG/JPEG/PDF, upto 2 MB)
+                                           Detail of Storage tank with Dimension Completed <br>(PNG/JPG/JPEG/PDF, upto 2 MB)
                                                 </label>
                                                 <div class="col-lg-12 d-flex">
                                                     <input type="file" width="100%">
@@ -2105,8 +2166,8 @@ thead.thead-light tr th {
                                                                             <thead class="thead-light">
                                                                                 <tr>
                                                                                     <th scope="col">SI. No.</th>
-                                                                                    <th scope="col">Premises Photo (PNG/JPG/JPEG, up to 2 MB)*</th>
-                                                                                    <th scope="col">Premises Description*</th>
+                                                                                    <th scope="col">Premises Photo (PNG/JPG/JPEG, up to 2 MB)</th>
+                                                                                    <th scope="col">Premises Description</th>
                                                                                      <th scope="col">Action</th>
                                                                                 </tr>
                                                                             </thead>
@@ -2185,7 +2246,49 @@ thead.thead-light tr th {
                                          
                                     </div>
                                 </fieldset>
-
+                                <fieldset class="scheduler-border">
+                                    <legend class="scheduler-border text-danger">
+                                      Bank Details of Unit
+                                    </legend>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Payment Licence Fees 
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="number" class="" id="colFormLabel">                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                         
+                                    </div>
+                                </fieldset>
+                                <fieldset class="scheduler-border">
+                                    <legend class="scheduler-border text-danger">
+                                      Applicant Consent
+                                    </legend>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group row">
+                                                <!--<label class="col-form-label required">
+                                                 Applicant Consent
+                                                </label>-->
+                                                <div class="col-lg-12 d-flex">
+                                                                        <div class="form-check">
+                                                                            <input type="checkbox"
+                                                                                class="form-check-input" id="option1"
+                                                                                value="Application Software">
+                                                                            <label class="form-check-label"
+                                                                                for="option1">I hereby declare that the information provided above is true and correct to the best of my knowledge and belief. I fully understand the consequences of giving false information. If the information/Affidavit uploaded found to be false in future, I shall be liable for prosecution and punishment under Indian Penal Code and/or any other law applicable thereto.<br>
+I hereby declare that I shall abide by the United Provinces Excise Act 1910 and the relevant rules made there under. The orders/directions issued by Excise Commissioner in this behalf from time to time.</label>
+                                                                        </div>                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                         
+                                    </div>
+                                </fieldset>
                                                     </fieldset>
                                                     <div class="row mt-3">
                                                         <div class="col-md-12">
