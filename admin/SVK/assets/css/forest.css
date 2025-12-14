@@ -1,0 +1,10 @@
+.review-block {
+    background: url("../assets/images/bg/17.jpg");
+    background-position: top;
+    background-size: cover;
+}
+        .review-block{
+    background-image: url("../images/dashboard-bgtwo.jpg") !important;
+    background-position: center;
+    background-size: cover;
+}
