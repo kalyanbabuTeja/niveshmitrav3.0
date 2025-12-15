@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Nivesh Mitra V3.0 - Admin</title>
+    <!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 11]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="">
+    <meta name="author" content="Phoenixcoded" />
+    <!-- Favicon icon -->
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+    <!-- prism css -->
+    <link rel="stylesheet" href="assets/css/plugins/prism-coy.css">
+    <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css">
+
+    <!-- vendor css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/card.css">
+    <link rel="stylesheet" href="assets/fonts/material-icon/css/material-design-iconic-font.min.css">
+    <!-- Main css -->
+    <link rel="stylesheet" href="assets/wizards/css/style.css">
+    <link rel="stylesheet" href="assets/css/forest.css">
+
+<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
+
+   <style>
+    .card-body.countsdashbaord{
+    :root{
+      --bg: #0f1724;
+      --card: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+      --glass: rgba(255,255,255,0.03);
+      --accent: #6EE7B7;
+      --muted: rgba(255,255,255,0.65);
+      --card-radius: 14px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: #fff;
+      color:#e6eef8;
+      padding:40px;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    .wrap{
+      max-width:1200px;
+      margin:0 auto;
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      margin-bottom:20px;\    }
+
+    header h1{font-size:20px;margin:0}
+    header p{color:var(--muted);margin:0;font-size:13px}
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap:18px;
+      align-items:start;
+      margin: 0px -40px 0px -40px;
+    }
+
+    /* card */
+    .card{
+      background: linear-gradient(45deg, #9C27B0, #6e84ff);
+      border-radius:var(--card-radius);
+      padding:18px;
+      position:relative;
+      overflow:visible;
+      box-shadow: 0 6px 20px rgb(201 209 245);
+      border:1px solid rgba(255,255,255,0.04);
+      transition: transform 0.35s cubic-bezier(.2,.9,.2,1), box-shadow 0.3s;
+      min-height:100px;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      color: #fff;
+      border-radius: 15px;
+    }
+.card.\31 {
+    background: linear-gradient(135deg, #00d2ff, #3a47d5)!important;
+}
+.card.\32 {
+    background: linear-gradient(135deg, #8BC34A, #009688) !important;
+}
+.card.\33 {
+    background: linear-gradient(135deg, #06beb6, #48b1bf) !important;
+}
+.card.\34 {
+    background: linear-gradient(135deg, #7f00ff, #e100ff)!important;
+}
+.card.\37  {
+    background: linear-gradient(135deg, #ff0844, #ffb199) !important;
+}
+.card.\36 {
+    background: linear-gradient(45deg, #740886, #673ab79e) !important;
+}
+    .card:hover{
+      transform: translateY(-10px) scale(1.01);
+      box-shadow: 0 5px 20px rgba(2, 6, 23, 0.6);
+      /* box-shadow: 0 18px 48px rgba(2,6,23,0.7);  */
+    }
+
+    .card .title{display:flex;align-items:center;justify-content:space-between}
+    .card .title h3{margin:0;font-size:14px;font-family: 'Poppins';}
+    .card .title .meta{font-size:12px;color:var(--muted)}
+
+    .value{font-size:24px;font-weight:600}
+    .desc{font-size:12px;color:var(--muted)}
+
+    /* floating icon cluster */
+    .icon-cluster{
+      position:absolute;
+      right:10px;
+      top:18px;
+      display:flex;
+      gap:8px;
+      align-items:center;
+      pointer-events:none; /* so hover targets card not icons */
+      transform-origin: right top;
+      transition: transform 0.45s cubic-bezier(.2,.9,.2,1);
+    }
+
+    /* each mini icon */
+    .icon{
+      width:43px;height:43px;border-radius:10px;
+      background: rgba(255,255,255,0.03);
+      border:1px solid rgba(255,255,255,0.03);
+      display:grid;place-items:center;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 6px 18px rgba(2,6,23,0.6);
+      transition: transform 0.5s cubic-bezier(.2,.9,.2,1), box-shadow 0.3s, opacity 0.25s;
+      transform: translateY(0);
+      opacity:0.95;
+      font-size: 28px;
+    }
+
+    .icon svg{width:20px;height:20px;display:block}
+
+    /* subtle floating animation so icons look alive */
+    @keyframes floaty{
+      0%{transform: translateY(0)}
+      50%{transform: translateY(-6px)}
+      100%{transform: translateY(0)}
+    }
+
+    /* when card is hovered, make the icon-cluster 'launch' and each icon offset and rotate slightly */
+    .card:hover .icon-cluster{ transform: translateY(-12px) }
+    .card:hover .icon:nth-child(1){ transform: translateY(-14px) rotate(-6deg) scale(1.03); animation: floaty 3s ease-in-out infinite }
+    .card:hover .icon:nth-child(2){ transform: translateY(-10px) rotate(6deg) scale(1.02); animation: floaty 3.2s ease-in-out 0.08s infinite }
+    .card:hover .icon:nth-child(3){ transform: translateY(-18px) rotate(-2deg) scale(1.04); animation: floaty 2.8s ease-in-out 0.04s infinite }
+
+    /* small badges */
+    .badge{font-size:11px;padding:6px 8px;border-radius:999px;background:linear-gradient(90deg,#111827,#0b1220);border:1px solid rgba(255,255,255,0.04);}
+
+    /* responsive */
+    @media (max-width:980px){ .grid{grid-template-columns: repeat(2, 1fr);} }
+    @media (max-width:520px){ .grid{grid-template-columns: 1fr;} header{flex-direction:column;gap:8px} }
+
+        .value {
+        font-size: 24px;
+        font-weight: 600;
+        margin-top: -12px;
+        margin-bottom: -16px !important;
+        color: #fff;
+    }
+}
+  </style>
+</head>
+
+<body>
+
+
+    <div class="loader-bg">
+        <div class="loader-track">
+            <div class="loader-fill"></div>
+        </div>
+    </div>
+    <!-- [ Pre-loader ] End -->
+    <!-- [ navigation menu ] start -->
+    <nav class="pcoded-navbar theme-horizontal menu-light">
+        <div class="navbar-wrapper container-fluid">
+            <div class="navbar-content sidenav-horizontal" id="layout-sidenav">
+                <ul class="nav pcoded-inner-navbar sidenav-inner">
+                    <li class="nav-item pcoded-menu-caption">
+                        <label>Navigation</label>
+                    </li>
+                    <li class="nav-item">
+                        <a href="UserDashboard.html" class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
+                    </li>
+                    <li class="nav-item pcoded-hasmenu">
+                        <a href="#!" class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-layout"></i></span><span
+                                class="pcoded-mtext">Pre-Establishment</span></a>
+                        <ul class="pcoded-submenu">
+                            <li><a href="Questionnaire.html" target="_blank">Questionnaire</a></li>
+                            <li><a href="layout-horizontal.html" target="_blank">Combined Application Form</a></li>
+                            <li><a href="#">Respond To Query</a></li>
+                            <li><a href="#">Print CFE</a></li>
+                            <li><a href="#">Print Acknowledgment </a></li>
+                            <li><a href="#">Print Acknowledgment with QR Code</a></li>
+                            <li><a href="#">View Receipt</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-file-text"></i></span><span class="pcoded-mtext">Land
+                                Allotment</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-file-text"></i></span><span
+                                class="pcoded-mtext">Pre-Establishment</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-file-text"></i></span><span
+                                class="pcoded-mtext">Pre-Operational</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-file-text"></i></span><span
+                                class="pcoded-mtext">Incentives</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-file-text"></i></span><span
+                                class="pcoded-mtext">Renewals</span></a>
+                    </li>
+                    
+                    <li class="nav-item pcoded-hasmenu">
+                        <a href="#!" class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-lock"></i></span><span
+                                class="pcoded-mtext">Authentication</span></a>
+                        <ul class="pcoded-submenu">
+                            <li><a href="auth-signup.html" target="_blank">Sign up</a></li>
+                            <li><a href="auth-signin.html" target="_blank">Sign in</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- [ navigation menu ] end -->
+    <!-- [ Header ] start -->
+    <header class="navbar pcoded-header navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <div class="m-header">
+                <a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
+                <a href="DepDashboard.html" class="b-brand">
+                    <!-- ========   change your logo hear   ============ -->
+                    <img src="assets/images/investup1.png" alt="" class="logo" style="width: 90%;">
+                    <img src="assets/images/logo-icon.png" alt="" class="logo-thumb">
+                </a>
+                <a href="#!" class="mob-toggler">
+                    <i class="feather icon-more-vertical"></i>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href="#!" class="pop-search"><i class="feather icon-search"></i></a>
+                        <div class="search-bar">
+                            <input type="text" class="form-control border-0 shadow-none" placeholder="Search hear">
+                            <button type="button" class="close" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a class="dropdown-toggle h-drop" href="#" data-toggle="dropdown">
+                                Dropdown
+                            </a>
+                            <div class="dropdown-menu profile-notification ">
+                                <ul class="pro-body">
+                                    <li><a href="user-profile.html" class="dropdown-item"><i class="fas fa-circle"></i>
+                                            Profile</a></li>
+                                    <li><a href="email_inbox.html" class="dropdown-item"><i class="fas fa-circle"></i>
+                                            My Messages</a></li>
+                                    <li><a href="auth-signin.html" class="dropdown-item"><i class="fas fa-circle"></i>
+                                            Lock Screen</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown mega-menu">
+                            <a class="dropdown-toggle h-drop" href="#" data-toggle="dropdown">
+                                Mega
+                            </a>
+                            <div class="dropdown-menu profile-notification ">
+                                <div class="row no-gutters">
+                                    <div class="col">
+                                        <h6 class="mega-title">UI Element</h6>
+                                        <ul class="pro-body">
+                                            <li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i>
+                                                    Alert</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i>
+                                                    Button</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i>
+                                                    Badges</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i>
+                                                    Cards</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i>
+                                                    Modal</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i> Tabs &
+                                                    pills</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col">
+                                        <h6 class="mega-title">Forms</h6>
+                                        <ul class="pro-body">
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-minus"></i>
+                                                    Elements</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-minus"></i>
+                                                    Validation</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-minus"></i>
+                                                    Masking</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-minus"></i>
+                                                    Wizard</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-minus"></i>
+                                                    Picker</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-minus"></i>
+                                                    Select</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col">
+                                        <h6 class="mega-title">Application</h6>
+                                        <ul class="pro-body">
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-mail"></i>
+                                                    Email</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i
+                                                        class="feather icon-clipboard"></i> Task</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i
+                                                        class="feather icon-check-square"></i> To-Do</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-image"></i>
+                                                    Gallery</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i
+                                                        class="feather icon-help-circle"></i> Helpdesk</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col">
+                                        <h6 class="mega-title">Extension</h6>
+                                        <ul class="pro-body">
+                                            <li><a href="#!" class="dropdown-item"><i
+                                                        class="feather icon-file-plus"></i> Editor</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i
+                                                        class="feather icon-file-minus"></i> Invoice</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-calendar"></i>
+                                                    Full calendar</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i
+                                                        class="feather icon-upload-cloud"></i> File upload</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-scissors"></i>
+                                                    Image cropper</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li>
+                        <div class="dropdown">
+                            <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+                                <i class="icon feather icon-bell"></i>
+                                <span class="badge badge-pill badge-danger">5</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right notification">
+                                <div class="noti-head">
+                                    <h6 class="d-inline-block m-b-0">Notifications</h6>
+                                    <div class="float-right">
+                                        <a href="#!" class="m-r-10">mark as read</a>
+                                        <a href="#!">clear all</a>
+                                    </div>
+                                </div>
+                                <ul class="noti-body">
+                                    <li class="n-title">
+                                        <p class="m-b-0">NEW</p>
+                                    </li>
+                                    <li class="notification">
+                                        <div class="media">
+                                            <img class="img-radius" src="assets/images/user/avatar-1.jpg"
+                                                alt="Generic placeholder image">
+                                            <div class="media-body">
+                                                <p><strong>John Doe</strong><span class="n-time text-muted"><i
+                                                            class="icon feather icon-clock m-r-10"></i>5 min</span></p>
+                                                <p>New ticket Added</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="n-title">
+                                        <p class="m-b-0">EARLIER</p>
+                                    </li>
+                                    <li class="notification">
+                                        <div class="media">
+                                            <img class="img-radius" src="assets/images/user/avatar-2.jpg"
+                                                alt="Generic placeholder image">
+                                            <div class="media-body">
+                                                <p><strong>Joseph William</strong><span class="n-time text-muted"><i
+                                                            class="icon feather icon-clock m-r-10"></i>10 min</span></p>
+                                                <p>Prchace New Theme and make payment</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="notification">
+                                        <div class="media">
+                                            <img class="img-radius" src="assets/images/user/avatar-1.jpg"
+                                                alt="Generic placeholder image">
+                                            <div class="media-body">
+                                                <p><strong>Sara Soudein</strong><span class="n-time text-muted"><i
+                                                            class="icon feather icon-clock m-r-10"></i>12 min</span></p>
+                                                <p>currently login</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="notification">
+                                        <div class="media">
+                                            <img class="img-radius" src="assets/images/user/avatar-2.jpg"
+                                                alt="Generic placeholder image">
+                                            <div class="media-body">
+                                                <p><strong>Joseph William</strong><span class="n-time text-muted"><i
+                                                            class="icon feather icon-clock m-r-10"></i>30 min</span></p>
+                                                <p>Prchace New Theme and make payment</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="noti-footer">
+                                    <a href="#!">show all</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown drp-user">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="feather icon-user"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right profile-notification">
+                                <div class="pro-head">
+                                    <img src="assets/images/user/avatar-1.jpg" class="img-radius"
+                                        alt="User-Profile-Image">
+                                    <span>John Doe</span>
+                                    <a href="auth-signin.html" class="dud-logout" title="Logout">
+                                        <i class="feather icon-log-out"></i>
+                                    </a>
+                                </div>
+                                <ul class="pro-body">
+                                    <li><a href="user-profile.html" class="dropdown-item"><i
+                                                class="feather icon-user"></i> Profile</a></li>
+                                    <li><a href="email_inbox.html" class="dropdown-item"><i
+                                                class="feather icon-mail"></i> My Messages</a></li>
+                                    <li><a href="auth-signin.html" class="dropdown-item"><i
+                                                class="feather icon-lock"></i> Lock Screen</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- [ Header ] end -->
+    <!-- [ Main Content ] start -->
+    <div class="pcoded-main-container">
+        <div class="pcoded-wrapper container-fluid" style="min-height: 500px;">
+            <div class="pcoded-content">
+                <div class="pcoded-inner-content">
+                    <div class="main-body">
+                        <div class="page-wrapper">
+                            <div class="page-header">
+                                <div class="page-block">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-12">
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- [ Main Content ] start -->
+                            <div class="card table-card review-card">
+                                <div class="card-header borderless ">
+                                    <h5>Application Status</h5>
+                                    
+                                </div>
+                              <div class="card-body countsdashbaord">
+                                <div class="wrap">
+    
+
+    <main class="grid mt-4">
+
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="title">
+          <h3>Approvals Required</h3>
+        </div>
+        <div class="value">15</div>
+        <div class="icon-cluster" aria-hidden="true">
+          <div class="icon" title="spark">
+            <i class="fi fi-tr-registration-paper"></i>
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card 1">
+        <div class="title">
+          <h3>Approvals already <br>obtained  </h3> 
+        </div>
+        <div class="value">8</div>
+        <div class="icon-cluster" aria-hidden="true">
+          <div class="icon" title="growth">
+            <i class="fi fi-tr-audit"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card 2">
+        <div class="title">
+          <h3>Yet to be applied </h3>
+        </div>
+        <div class="value">3</div>
+        <div class="icon-cluster" aria-hidden="true">    
+          <div class="icon" title="rocket">
+            <i class="fi fi-tr-terms-check"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card 3">
+        <div class="title">
+          <h3>Applied Approvals</h3> 
+        </div>
+        <div class="value">2</div>
+        <div class="icon-cluster" aria-hidden="true">   
+          <div class="icon" title="shield">
+             <i class="fi fi-tr-registration-paper"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="card 4">
+        <div class="title">
+          <h3>Payment Paid</h3>
+        </div>
+        <div class="value">3</div>
+        <div class="icon-cluster" aria-hidden="true">
+          <div class="icon" title="bell">
+            <i class="fi fi-tr-digital-payment"></i>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+                              </div>
+                            </div>
+                            <div class="card table-card review-card">
+                                <div class="card-header borderless ">
+                                    <h5>Pre-Scrutiny Stages</h5>
+                                    
+                                </div>
+                              <div class="card-body countsdashbaord">
+                                <div class="wrap">
+    
+
+    <main class="grid mt-4">
+
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="title">
+          <h3>Pending</h3>
+        </div>
+        <div class="value">2</div>
+        <div class="icon-cluster" aria-hidden="true">
+          <div class="icon" title="spark">
+            <i class="fi fi-tr-pending"></i>
+            <!-- spark -->
+            <!--<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>-->
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card 2">
+        <div class="title">
+          <h3>Completed</h3> 
+        </div>
+        <div class="value">0</div>
+        <div class="icon-cluster" aria-hidden="true">
+          <div class="icon" title="growth">
+            <i class="fi fi-tr-progress-complete"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card 7">
+        <div class="title">
+          <h3>Rejected</h3>
+        </div>
+        <div class="value">0</div>
+        <div class="icon-cluster" aria-hidden="true">    
+          <div class="icon" title="rocket">
+           <i class="fi fi-tr-vote-nay"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card 6">
+        <div class="title">
+          <h3>Query Raised </h3> 
+        </div>
+        <div class="value">0</div>
+        <div class="icon-cluster" aria-hidden="true">   
+          <div class="icon" title="shield">
+             <i class="fi fi-tr-search-alt"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="card 3">
+        <div class="title">
+          <h3> Query Responded </h3>
+        </div>
+        <div class="value">0</div>
+        <div class="icon-cluster" aria-hidden="true">
+          <div class="icon" title="bell">
+            <i class="fi fi-tr-memo"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="card 1">
+        <div class="title">
+          <h3> Yet to Respond</h3>
+        </div>
+        <div class="value">0</div>
+        <div class="icon-cluster" aria-hidden="true">
+          <div class="icon" title="bell">
+            <i class="fi fi-tr-search-alt"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="card 2">
+        <div class="title">
+          <h3>Additional Payment required</h3>
+        </div>
+        <div class="value">0</div>
+        <div class="icon-cluster" aria-hidden="true">
+          <div class="icon" title="bell">
+            <i class="fi fi-tr-digital-payment"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="card 3">
+        <div class="title">
+          <h3>Additional Payment<br> Paid</h3>
+        </div>
+        <div class="value">0</div>
+        <div class="icon-cluster" aria-hidden="true">
+          <div class="icon" title="bell">
+            <i class="fi fi-tr-digital-payment"></i>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+                              </div>
+                            </div>
+                            <div class="card table-card review-card">
+                                <div class="card-header borderless ">
+                                    <h5>Approval Stages</h5>
+                                    
+                                </div>
+                              <div class="card-body countsdashbaord">
+                                <div class="wrap">
+    
+
+    <main class="grid mt-4">
+
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="title">
+          <h3>Approval Pending</h3>
+        </div>
+        <div class="value">15</div>
+        <div class="icon-cluster" aria-hidden="true">
+          <div class="icon" title="spark">
+            <i class="fi fi-tr-registration-paper"></i>
+            <!-- spark -->
+            <!--<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>-->
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card 1">
+        <div class="title">
+          <h3>Total Applications</h3> 
+        </div>
+        <div class="value">8</div>
+        <div class="icon-cluster" aria-hidden="true">
+          <div class="icon" title="growth">
+            <i class="fi fi-tr-audit"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card 7">
+        <div class="title">
+          <h3>Applications Rejected</h3>
+        </div>
+        <div class="value">3</div>
+        <div class="icon-cluster" aria-hidden="true">    
+          <div class="icon" title="rocket">
+            <i class="fi fi-tr-vote-nay"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 
+      <div class="card">
+        <div class="title">
+          <h3>Applied Approvals</h3> 
+        </div>
+        <div class="value">2</div>
+        <div class="icon-cluster" aria-hidden="true">   
+          <div class="icon" title="shield">
+             <i class="fi fi-tr-registration-paper"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 
+      <div class="card">
+        <div class="title">
+          <h3>Payment Paid</h3>
+        </div>
+        <div class="value">3</div>
+        <div class="icon-cluster" aria-hidden="true">
+          <div class="icon" title="bell">
+            <i class="fi fi-tr-digital-payment"></i>
+          </div>
+        </div>
+      </div>-->
+
+    </main>
+  </div>
+
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="assets/js/vendor-all.min.js"></script>
+        <script src="assets/js/plugins/bootstrap.min.js"></script>
+        <script src="assets/js/pcoded.min.js"></script>
+        <!-- prism Js -->
+        <script src="assets/js/plugins/prism.js"></script>
+        <script src="assets/js/horizontal-menu.js"></script>
+        <script>
+            (function () {
+                if ($('#layout-sidenav').hasClass('sidenav-horizontal') || window.layoutHelpers.isSmallScreen()) {
+                    return;
+                }
+                try {
+                    window.layoutHelpers._getSetting("Rtl")
+                    window.layoutHelpers.setCollapsed(
+                        localStorage.getItem('layoutCollapsed') === 'true',
+                        false
+                    );
+                } catch (e) { }
+            })();
+            $(function () {
+                $('#layout-sidenav').each(function () {
+                    new SideNav(this, {
+                        orientation: $(this).hasClass('sidenav-horizontal') ? 'horizontal' : 'vertical'
+                    });
+                });
+                $('body').on('click', '.layout-sidenav-toggle', function (e) {
+                    e.preventDefault();
+                    window.layoutHelpers.toggleCollapsed();
+                    if (!window.layoutHelpers.isSmallScreen()) {
+                        try {
+                            localStorage.setItem('layoutCollapsed', String(window.layoutHelpers.isCollapsed()));
+                        } catch (e) { }
+                    }
+                });
+            });
+            $(document).ready(function () {
+                $("#pcoded").pcodedmenu({
+                    themelayout: 'horizontal',
+                    MenuTrigger: 'hover',
+                    SubMenuTrigger: 'hover',
+                });
+                // Initialize all tooltips
+                var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+                var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                    return new bootstrap.Tooltip(tooltipTriggerEl)
+                });
+            });
+
+        </script>
+        <script src="assets/js/analytics.js"></script>
+        <script src="assets/wizards/vendor/jquery/jquery.min.js"></script>
+        <script src="assets/wizards/js/bootstrap.bundle.js"></script>
+        <script src="assets/wizards/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+        <script src="assets/wizards/vendor/jquery-validation/dist/additional-methods.min.js"></script>
+        <script src="assets/wizards/vendor/jquery-steps/jquery.steps.min.js"></script>
+        <script src="assets/wizards/js/main.js"></script>
+</body>
+
+</html>
