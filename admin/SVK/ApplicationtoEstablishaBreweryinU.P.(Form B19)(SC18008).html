@@ -1,0 +1,2292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Nivesh Mitra V3.0 - Admin</title>
+    <!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 11]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="">
+    <meta name="author" content="Phoenixcoded" />
+    <!-- Favicon icon -->
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+    <!-- prism css -->
+    <link rel="stylesheet" href="assets/css/plugins/prism-coy.css">
+    <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css">
+
+    <!-- vendor css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/card.css">
+    <link rel="stylesheet" href="assets/fonts/material-icon/css/material-design-iconic-font.min.css">
+    <!-- Main css -->
+    <link rel="stylesheet" href="assets/wizards/css/style.css">
+    <link rel="stylesheet" href="assets/css/forest.css">
+    
+<style>
+            tr td {
+    vertical-align: middle !important;
+}
+thead.thead-light th {
+    text-transform: capitalize;
+}
+</style>
+    </style>
+</head>
+
+<body>
+ 
+   
+    <div class="loader-bg">
+        <div class="loader-track">
+            <div class="loader-fill"></div>
+        </div>
+    </div>
+    <!-- [ Pre-loader ] End -->
+    <!-- [ navigation menu ] start -->
+    <nav class="pcoded-navbar theme-horizontal menu-light">
+        <div class="navbar-wrapper container-fluid">
+            <div class="navbar-content sidenav-horizontal" id="layout-sidenav">
+                <ul class="nav pcoded-inner-navbar sidenav-inner">
+                    <li class="nav-item pcoded-menu-caption">
+                        <label>Navigation</label>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
+                    </li>
+                    <li class="nav-item pcoded-hasmenu">
+                        <a href="#!" class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-layout"></i></span><span
+                                class="pcoded-mtext">Pre-Establishment</span></a>
+                        <ul class="pcoded-submenu">
+                            <li><a href="Questionnaire.html" target="_blank">Questionnaire</a></li>
+                            <li><a href="layout-horizontal.html" target="_blank">Combined Application Form</a></li>
+                            <li><a href="#">Respond To Query</a></li>
+                            <li><a href="#">Print CFE</a></li>
+                            <li><a href="#">Print Acknowledgment </a></li>
+                            <li><a href="#">Print Acknowledgment with QR Code</a></li>
+                            <li><a href="#">View Receipt</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-file-text"></i></span><span class="pcoded-mtext">Land
+                                Allotment</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-file-text"></i></span><span
+                                class="pcoded-mtext">Pre-Establishment</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-file-text"></i></span><span
+                                class="pcoded-mtext">Pre-Operational</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-file-text"></i></span><span
+                                class="pcoded-mtext">Incentives</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-file-text"></i></span><span
+                                class="pcoded-mtext">Renewals</span></a>
+                    </li>
+                   
+                    <li class="nav-item pcoded-hasmenu">
+                        <a href="#!" class="nav-link "><span class="pcoded-micon"><i
+                                    class="feather icon-lock"></i></span><span
+                                class="pcoded-mtext">Authentication</span></a>
+                        <ul class="pcoded-submenu">
+                            <li><a href="auth-signup.html" target="_blank">Sign up</a></li>
+                            <li><a href="auth-signin.html" target="_blank">Sign in</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- [ navigation menu ] end -->
+    <!-- [ Header ] start -->
+    <header class="navbar pcoded-header navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <div class="m-header">
+                <a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
+                <a href="#!" class="b-brand">
+                    <!-- ========   change your logo hear   ============ -->
+                    <img src="assets/images/investup1.png" alt="" class="logo" style="width: 90%;">
+                    <img src="assets/images/logo-icon.png" alt="" class="logo-thumb">
+                </a>
+                <a href="#!" class="mob-toggler">
+                    <i class="feather icon-more-vertical"></i>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href="#!" class="pop-search"><i class="feather icon-search"></i></a>
+                        <div class="search-bar">
+                            <input type="text" class="form-control border-0 shadow-none" placeholder="Search hear">
+                            <button type="button" class="close" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a class="dropdown-toggle h-drop" href="#" data-toggle="dropdown">
+                                Dropdown
+                            </a>
+                            <div class="dropdown-menu profile-notification ">
+                                <ul class="pro-body">
+                                    <li><a href="user-profile.html" class="dropdown-item"><i class="fas fa-circle"></i>
+                                            Profile</a></li>
+                                    <li><a href="email_inbox.html" class="dropdown-item"><i class="fas fa-circle"></i>
+                                            My Messages</a></li>
+                                    <li><a href="auth-signin.html" class="dropdown-item"><i class="fas fa-circle"></i>
+                                            Lock Screen</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown mega-menu">
+                            <a class="dropdown-toggle h-drop" href="#" data-toggle="dropdown">
+                                Mega
+                            </a>
+                            <div class="dropdown-menu profile-notification ">
+                                <div class="row no-gutters">
+                                    <div class="col">
+                                        <h6 class="mega-title">UI Element</h6>
+                                        <ul class="pro-body">
+                                            <li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i>
+                                                    Alert</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i>
+                                                    Button</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i>
+                                                    Badges</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i>
+                                                    Cards</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i>
+                                                    Modal</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="fas fa-circle"></i> Tabs &
+                                                    pills</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col">
+                                        <h6 class="mega-title">Forms</h6>
+                                        <ul class="pro-body">
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-minus"></i>
+                                                    Elements</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-minus"></i>
+                                                    Validation</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-minus"></i>
+                                                    Masking</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-minus"></i>
+                                                    Wizard</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-minus"></i>
+                                                    Picker</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-minus"></i>
+                                                    Select</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col">
+                                        <h6 class="mega-title">Application</h6>
+                                        <ul class="pro-body">
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-mail"></i>
+                                                    Email</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i
+                                                        class="feather icon-clipboard"></i> Task</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i
+                                                        class="feather icon-check-square"></i> To-Do</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-image"></i>
+                                                    Gallery</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i
+                                                        class="feather icon-help-circle"></i> Helpdesk</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col">
+                                        <h6 class="mega-title">Extension</h6>
+                                        <ul class="pro-body">
+                                            <li><a href="#!" class="dropdown-item"><i
+                                                        class="feather icon-file-plus"></i> Editor</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i
+                                                        class="feather icon-file-minus"></i> Invoice</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-calendar"></i>
+                                                    Full calendar</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i
+                                                        class="feather icon-upload-cloud"></i> File upload</a></li>
+                                            <li><a href="#!" class="dropdown-item"><i class="feather icon-scissors"></i>
+                                                    Image cropper</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li>
+                        <div class="dropdown">
+                            <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+                                <i class="icon feather icon-bell"></i>
+                                <span class="badge badge-pill badge-danger">5</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right notification">
+                                <div class="noti-head">
+                                    <h6 class="d-inline-block m-b-0">Notifications</h6>
+                                    <div class="float-right">
+                                        <a href="#!" class="m-r-10">mark as read</a>
+                                        <a href="#!">clear all</a>
+                                    </div>
+                                </div>
+                                <ul class="noti-body">
+                                    <li class="n-title">
+                                        <p class="m-b-0">NEW</p>
+                                    </li>
+                                    <li class="notification">
+                                        <div class="media">
+                                            <img class="img-radius" src="assets/images/user/avatar-1.jpg"
+                                                alt="Generic placeholder image">
+                                            <div class="media-body">
+                                                <p><strong>John Doe</strong><span class="n-time text-muted"><i
+                                                            class="icon feather icon-clock m-r-10"></i>5 min</span></p>
+                                                <p>New ticket Added</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="n-title">
+                                        <p class="m-b-0">EARLIER</p>
+                                    </li>
+                                    <li class="notification">
+                                        <div class="media">
+                                            <img class="img-radius" src="assets/images/user/avatar-2.jpg"
+                                                alt="Generic placeholder image">
+                                            <div class="media-body">
+                                                <p><strong>Joseph William</strong><span class="n-time text-muted"><i
+                                                            class="icon feather icon-clock m-r-10"></i>10 min</span></p>
+                                                <p>Prchace New Theme and make payment</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="notification">
+                                        <div class="media">
+                                            <img class="img-radius" src="assets/images/user/avatar-1.jpg"
+                                                alt="Generic placeholder image">
+                                            <div class="media-body">
+                                                <p><strong>Sara Soudein</strong><span class="n-time text-muted"><i
+                                                            class="icon feather icon-clock m-r-10"></i>12 min</span></p>
+                                                <p>currently login</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="notification">
+                                        <div class="media">
+                                            <img class="img-radius" src="assets/images/user/avatar-2.jpg"
+                                                alt="Generic placeholder image">
+                                            <div class="media-body">
+                                                <p><strong>Joseph William</strong><span class="n-time text-muted"><i
+                                                            class="icon feather icon-clock m-r-10"></i>30 min</span></p>
+                                                <p>Prchace New Theme and make payment</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="noti-footer">
+                                    <a href="#!">show all</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown drp-user">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="feather icon-user"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right profile-notification">
+                                <div class="pro-head">
+                                    <img src="assets/images/user/avatar-1.jpg" class="img-radius"
+                                        alt="User-Profile-Image">
+                                    <span>John Doe</span>
+                                    <a href="auth-signin.html" class="dud-logout" title="Logout">
+                                        <i class="feather icon-log-out"></i>
+                                    </a>
+                                </div>
+                                <ul class="pro-body">
+                                    <li><a href="user-profile.html" class="dropdown-item"><i
+                                                class="feather icon-user"></i> Profile</a></li>
+                                    <li><a href="email_inbox.html" class="dropdown-item"><i
+                                                class="feather icon-mail"></i> My Messages</a></li>
+                                    <li><a href="auth-signin.html" class="dropdown-item"><i
+                                                class="feather icon-lock"></i> Lock Screen</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- [ Header ] end -->
+    <!-- [ Main Content ] start -->
+    <div class="pcoded-main-container">
+        <div class="pcoded-wrapper container-fluid">
+            <div class="pcoded-content">
+                <div class="pcoded-inner-content">
+                    <div class="main-body">
+                        <div class="page-wrapper">
+                            <div class="page-header">
+                                <div class="page-block">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-12">
+                                            <!-- <div class="page-header-title">
+                                       <h5 class="m-b-10">Welcome to Kalyanbabu!</h5>
+                                       </div> -->
+                                            <!-- <ul class="breadcrumb">
+                                       <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
+                                       <li class="breadcrumb-item"><a href="#!">Page Layout</a></li>
+                                       <li class="breadcrumb-item"><a href="#!">Horizontal Layout 2</a></li>
+                                       </ul> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- [ Main Content ] start -->
+                            <div class="card table-card review-card">
+                                <div class="card-header borderless ">
+                                    <h5>Application to Establish a Brewery</h5>
+                                    <div class="card-header-right">
+                                        <div class="btn-group card-option">
+                                            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false">
+                                                <i class="feather icon-more-horizontal"></i>
+                                            </button>
+                                            <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                                                <li class="dropdown-item full-card"><a href="#!"><span><i
+                                                                class="feather icon-maximize"></i> maximize</span><span
+                                                            style="display:none"><i class="feather icon-minimize"></i>
+                                                            Restore</span></a></li>
+                                                <li class="dropdown-item minimize-card"><a href="#!"><span><i
+                                                                class="feather icon-minus"></i> collapse</span><span
+                                                            style="display:none"><i class="feather icon-plus"></i>
+                                                            expand</span></a></li>
+                                                <li class="dropdown-item reload-card"><a href="#!"><i
+                                                            class="feather icon-refresh-cw"></i> reload</a></li>
+                                                <li class="dropdown-item close-card"><a href="#!"><i
+                                                            class="feather icon-trash"></i> remove</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body pb-0">
+                                    <div class="review-block" style="width: 100%; ">
+                                        <div class="row pt-0">
+                                            <form method="POST" id="signup-form" class="signup-form" enctype="">
+                                                <div class="card-body p-5" id="">
+
+                                                    <fieldset class="scheduler-border">
+                                                        <legend class="scheduler-border text-danger">
+                                                           Application to Establish a Brewery in U.P. (Form B 19)
+                                                        </legend>
+
+                                                        <div class="row">
+                                                         <div class="col-md-4">
+                                                                <div class="form-group row">
+                                                                    <label class="col-form-label required">Financial Year
+                                                                    </label>
+                                                                    <div class="col-lg-12 d-flex">
+                                                                        <select class="form-select">
+                                                                          <option value="">--Select--</option>
+                                                                            <option value="">2025-2026</option>
+                                                                            <option value="">2026-2027</option>
+                                                                        </select>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                             <div class="col-md-4">
+                                                                <div class="form-group row">
+                                                                    <label class="col-form-label ">Date of Application
+                                                                    </label>
+                                                                    <div class="col-lg-12 d-flex">
+                                                                        <input type="date" class="" id="colFormLabel">
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <div class="form-group row">
+                                                                    <label class="col-form-label required">License Type
+                                                                    </label>
+                                                                    <div class="col-lg-12 d-flex">
+                                                                        <input type="text" class="" id="colFormLabel">
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                           
+                                                               
+                                                          
+                                                        
+                                                        </div>
+
+                                               
+                                                        <fieldset class="scheduler-border">
+                                    <legend class="scheduler-border text-danger">
+                                        Applicant Details
+                                    </legend>
+                                    <div class="row">
+
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Salutation
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                   <select class="form-select">
+                                                                          <option value="">--Select--</option>
+                                                                            <option value="">Dr.</option>
+                                                                            <option value="">Mr.</option>
+                                                                            <option value="">Miss.</option>
+                                                                            <option value="">Mrs.</option>
+                                                                            <option value="">M/S</option>
+                                                                        </select>                           
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                          <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                               First Name
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                   <input type="text"  class=""  id="colFormLabel">
+                                                                               
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Middle Name
+
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text"  class=""  id="colFormLabel">
+                                                                               
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                                                    <div class="form-group row">
+                                                                        <label class="col-form-label required">Last Name
+                                                                        </label>
+                                                                        <div class="col-lg-12 d-flex">
+                                                                            <input type="text" class="disbled"
+                                                                                id="colFormLabel">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group row">
+                                                                        <label
+                                                                            class="col-form-label required">Gender
+                                                                        </label>
+                                                                        <div class="col-lg-12 d-flex">
+                                                                            <select class="form-select">
+                                                                                <option value="">--Select--</option>
+                                                                                <option value="">Male</option>
+                                                                                <option value="">Female</option>
+                                                                                <option value="">NA</option>
+                                                                                <option value="">Transgender</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                  <div class="col-md-4">
+                                                                    <div class="form-group row">
+                                                                        <label
+                                                                            class="col-form-label required">Mobile No.
+                                                                        </label>
+                                                                        <div class="col-lg-12 d-flex">
+                                                                            <input type="number" class=""
+                                                                                id="colFormLabel">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                 <div class="col-md-4">
+                                                                    <div class="form-group row" >
+                                                                        <label
+                                                                            class="col-form-label required">Mail ID 
+                                                                        </label>
+                                                                        <div class="col-lg-12 d-flex">
+                                                                            <input type="text" class=""
+                                                                                id="colFormLabel">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                   <div class="col-md-4">
+                                                                    <div class="form-group row">
+                                                                        <label
+                                                                            class="col-form-label required">Date of Birth
+                                                                        </label>
+                                                                        <div class="col-lg-12 d-flex">
+                                                                            <input type="date" class=""
+                                                                                id="colFormLabel">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                   <div class="col-md-4">
+                                                                    <div class="form-group row">
+                                                                        <label
+                                                                            class="col-form-label required">PAN Number
+                                                                        </label>
+                                                                        <div class="col-lg-12 d-flex">
+                                                                            <input type="number" class=""
+                                                                                id="colFormLabel">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                  <div class="col-md-4 mt-3">
+                                                                    <div class="form-group row">
+                                                                        <label
+                                                                            class="col-form-label required">Upload PAN (PNG/JPEG/PDF, upto 2 MB)
+                                                                        </label>
+                                                                        <div class="col-lg-12 d-flex mt-1">
+                                                                            <input type="file" width="100%">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group row" >
+                                                                        <label
+                                                                            class="col-form-label required">Photograph of the Applicant(PNG/JPG/JPEG/PDF, upto 2 MB)
+                                                                        </label>
+                                                                        <div class="col-lg-12 d-flex">
+                                                                            <input type="file" width="100%">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4 mt-3">
+                                                                    <div class="form-group row" >
+                                                                        <label
+                                                                            class="col-form-label required">Character Certificate (PDF, upto 2 MB)
+                                                                        </label>
+                                                                        <div class="col-lg-12 d-flex mt-1">
+                                                                            <input type="file" style="width: 100%;">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group row" >
+                                                                        <label
+                                                                            class="col-form-label required">Upload Affidavit for Eligibility (PNG/JPEG/PDF, upto 2 MB) 
+                                                                        </label>
+                                                                        <div class="col-lg-12 d-flex">
+                                                                            <input type="file" style="width: 100%;">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4 mt-3">
+                                                                    <div class="form-group row">
+                                                                        <label
+                                                                            class="col-form-label required">Name of Applicant's Father/Husband Name 
+                                                                        </label>
+                                                                        <div class="col-lg-12 d-flex mt-1">
+                                                                            <input type="text" class=""
+                                                                                id="colFormLabel">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                 
+                                                                
+                                 
+                                    </div>
+                                </fieldset>
+                                                    <fieldset class="scheduler-border">
+                                    <legend class="scheduler-border text-danger">
+                                        Applicant Address
+                                    </legend>
+                                    <div class="row">
+                                         <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Country
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="" id="col-form-label">                         
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                State
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <select class="form-select">
+                                                      <option value="">--Select--</option>            
+                                                     </select>                         
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                District
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <select class="form-select">
+                                                      <option value="">--Select--</option>            
+                                                     </select>                         
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Pincode
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                     <input type="number" class="" id="colFormLabel">                       
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Tehsil
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <select class="form-select">
+                                                      <option value="">--Select--</option>            
+                                                     </select>                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Urban/Rural
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <select class="form-select">
+                                                      <option value="">--Select--</option>
+                                                      <option value="">Urban</option>
+                                                      <option value="">Rural</option>            
+                                                     </select>                       
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Block
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                     <input type="text" class="" id="colFormLabel">                       
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Village
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                     <input type="text" class="" id="colFormLabel">                       
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Municipal Area
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                     <input type="text" class="" id="colFormLabel">                       
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Ward
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                     <input type="text" class="" id="colFormLabel">                       
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Locality
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                     <input type="text" class="" id="colFormLabel">                       
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Street/House Number
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                     <input type="text" class="" id="colFormLabel">                       
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Police Station
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                     <input type="text" class="" id="colFormLabel">                       
+                                                </div>
+                                            </div>
+                                        </div>
+                                          
+                                       
+                                 
+                                    </div>
+                                </fieldset>  
+                                <fieldset class="scheduler-border">
+                                    <legend class="scheduler-border text-danger">
+                                        Unit Details
+                                    </legend>
+                                    <div class="row">
+
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Unit Name
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="" id="colFormLabel">                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Owner Company (if Any)
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="" id="colFormLabel">                         
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Land Ownership Type
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                     <select class="form-select">
+                                                      <option value="">--Select--</option>   
+                                                      <option value="">Lease</option>
+                                                      <option value="">Own</option>
+                                                      <option value="">Rent</option>         
+                                                     </select>                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Ownership/Lease/Rent Document (PNG/JPG/JPEG/PDF, upto 2 MB)
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="file" width="100%">                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mt-3">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Entity Type
+                                                </label>
+                                                <div class="col-lg-12 d-flex mt-1">
+                                                    <select class="form-select">
+                                                      <option value="">--Select--</option>   
+                                                      <option value="">Individual</option>
+                                                      <option value="">Private</option>
+                                                      <option value="">Proprietary</option>  
+                                                      <option value="">Public</option>       
+                                                     </select>                     
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mt-3">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Estimated Production (KL)
+                                                </label>
+                                                <div class="col-lg-12 d-flex mt-1">
+                                                    <input type="number" class="" id="colFormLabel">                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                          
+                                       
+                                 
+                                    </div>
+                                </fieldset>  
+                                 <fieldset class="scheduler-border">
+                                    <legend class="scheduler-border text-danger">
+                                        Unit Address
+                                    </legend>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Country
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="" id="colFormLabel">                       
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                State
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <select class="form-select">
+                                                      <option value="">--Select--</option>            
+                                                     </select>                         
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                District
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <select class="form-select">
+                                                      <option value="">--Select--</option>            
+                                                     </select>                         
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Pincode
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <select class="form-select">
+                                                      <option value="">--Select--</option>            
+                                                     </select>                     
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Tehsil
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <select class="form-select">
+                                                      <option value="">--Select--</option>            
+                                                     </select>                       
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Urban/Rural
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <select class="form-select">
+                                                      <option value="">--Select--</option> 
+                                                      <option value="">Urban</option> 
+                                                      <option value="">Rural</option>            
+                                                    </select>                      
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Block
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="" id="colFormLabel">                       
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Village
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="" id="colFormLabel">                       
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Municipal Area
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="" id="colFormLabel">                       
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Ward
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="" id="colFormLabel">                       
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Locality
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="" id="colFormLabel">                       
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Street/House Number
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="" id="colFormLabel">                       
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Police Station
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="" id="colFormLabel">                
+                                                </div>
+                                            </div>
+                                        </div>
+                                          
+                                       
+                                 
+                                    </div>
+                                </fieldset>  
+                                 <fieldset class="scheduler-border">
+                                    <legend class="scheduler-border text-danger">
+                                        Power of Attorney Person Detail
+                                    </legend>
+                                    <div class="row">
+
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Salutation
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <select class="form-select">
+                                                      <option value="">--Select--</option>
+                                                      <option value="">Dr.</option>
+                                                      <option value="">Mr.</option>
+                                                      <option value="">Miss.</option>  
+                                                      <option value="">Mrs.</option>
+                                                      <option value="">M/S</option>          
+                                                    </select>                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                First Name
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="" id="colFormLabel">                             
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Middle Name
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                     <input type="text" class="" id="colFormLabel">                       
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Last Name
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="" id="colFormLabel">                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Gender
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                   <select class="form-select">
+                                                      <option value="">--Select--</option>
+                                                      <option value="">Male</option>
+                                                      <option value="">Female</option>
+                                                      <option value="">NA</option>
+                                                      <option value="">Transgender</option>            
+                                                     </select>                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Mobile No.
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="number" class="" id="colFormLabel">                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Mail ID of the Applicant
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="" id="colFormLabel">                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Date of Birth
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="date" class="" id="colFormLabel">                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                PAN Number
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="" id="colFormLabel">                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Upload PAN (PNG/JPEG/PDF, upto 2 MB)
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="file" width="100%">                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Father/Husband Name
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="" id="colFormLabel">                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                          
+                                       
+                                 
+                                    </div>
+                                </fieldset>  
+
+                                                    <fieldset class="scheduler-border">
+                                    <legend class="scheduler-border text-danger">
+                                        Power of Attorney Person Address
+                                    </legend>
+                                    <div class="row">
+                                         <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Country
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="" id="colFormLabel" value="INDIA">                      
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                State
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <select class="form-select">
+                                                      <option value="">--Select--</option>            
+                                                     </select>                         
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                District
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <select class="form-select">
+                                                      <option value="">--Select--</option>            
+                                                     </select>                         
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Pincode
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                     <select class="form-select">
+                                                      <option value="">--Select--</option>            
+                                                     </select>                      
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Tehsil
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <select class="form-select">
+                                                      <option value="">--Select--</option>            
+                                                     </select>                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Urban/Rural
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <select class="form-select">
+                                                      <option value="">--Select--</option>
+                                                      <option value="">Urban</option>
+                                                      <option value="">Rural</option>            
+                                                     </select>                       
+                                                </div>
+                                            </div>
+                                        </div>
+                                         <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Block
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="" id="colFormLabel">                       
+                                                </div>
+                                            </div>
+                                        </div>
+                                         <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Village
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="" id="colFormLabel">                       
+                                                </div>
+                                            </div>
+                                        </div>
+                                         <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                               Municipal Area
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="" id="colFormLabel">                       
+                                                </div>
+                                            </div>
+                                        </div>
+                                         <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Ward
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="" id="colFormLabel">                       
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Locality
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="" id="colFormLabel">                       
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Street/House Number
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="" id="colFormLabel">                       
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Police Station
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                         <input type="text" class="" id="colFormLabel">               
+                                                </div>
+                                            </div>
+                                        </div>
+                                          
+                                       
+                                 
+                                    </div>
+                                </fieldset>
+                                 <fieldset class="scheduler-border">
+                                    <legend class="scheduler-border text-danger">
+                                        Capital Structure
+                                    </legend>
+                                    <div class="row">
+
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <!--<label class="col-form-label required">
+                                                Capital Structure
+                                                </label>-->
+                                                <div class="col-lg-12 d-flex">
+                                                     <div class="form-check form-check-inline">
+                                                                            <input class="form-check-input" type="radio" name="option" id="yesOption1" value="">
+                                                                            <label class="form-check-label" for="yesOption1">Limited Company</label>
+                                                                        </div>
+                                                                        <div class="form-check form-check-inline">
+                                                                            <input class="form-check-input" type="radio" name="option" id="noOption2" value="">
+                                                                            <label class="form-check-label" for="noOption2">Others</label>
+                                                                        </div>                   
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group row">
+                                                <!--<label class="col-form-label required">
+                                                First Name
+                                                </label>-->
+                                                <div class="col-lg-12 d-flex">
+                                                    <table class="table">
+                                                                            <!--<thead class="thead-light">
+                                                                                <tr>
+                                                                                    <th scope="col">S.No</th>
+                                                                                    <th scope="col"></th>
+                                                                                    <th scope="col">Item of works</th>
+                                                                                    <th scope="col">Date</th> 
+                                                                                </tr>
+                                                                            </thead>-->
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td rowspan="6">Limited Company</td>
+                                                                                    <td style="padding-left: 25px;width: 53%;">Authorised</td>
+                                                                                    <td><input type="number" class="" id="colFormLabel"></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Issued</td>
+                                                                                    <td><input type="number" class="" id="colFormLabel"></td>
+                                                                                   
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Paid Up</td>
+                                                                                    <td><input type="number" class=""  id="colFormLabel"></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Borrowings, If any (for Proposed) (In Lakhs)</td>
+                                                                                    <td><input type="text" class="" id="colFormLabel"></td>
+                                                                                </tr>
+                                                                                 <tr>
+                                                                                    <td>Capital Deposit </td>
+                                                                                    <td><input type="text" class="" id="colFormLabel"></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Total Capital of Limited Company </td>
+                                                                                    <td><input type="text" class="" id="colFormLabel"></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td rowspan="2">Others</td>
+                                                                                    <td  style="padding-left: 25px;">Capital (In Lakhs)</td>
+                                                                                    <td><input type="number" class="" id="colFormLabel"></td> 
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Borrowings, If any (for Proposed) (In Lakhs)</td>
+                                                                                    <td><input type="number" class="" id="colFormLabel"></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td rowspan="10">Details of Investment (In Cr)</td>
+                                                                                    <td style="padding-left: 25px;">Fixed Assets (In cr)</td>
+                                                                                    <td><input type="number" class="" id="colFormLabel"></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    
+                                                                                    
+                                                                                    <td>Land (In Cr)</td>
+                                                                                    <td><input type="number" class="" id="colFormLabel"></td>
+                                                                                    
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Building and Structure (In Cr)</td>
+                                                                                    <td><input type="number" class="" id="colFormLabel"></td> 
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Plant and Machinery (In Cr)</td>
+                                                                                    <td><input type="text" class="" id="colFormLabel"></td> 
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Others Investment (In Cr)</td>
+                                                                                    <td><input type="text" class="" id="colFormLabel"></td> 
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>MFA (In Cr)</td>
+                                                                                    <td><input type="text" class="" id="colFormLabel"></td> 
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Contingencies @5% of m/c (In Cr)</td>
+                                                                                    <td><input type="text" class="" id="colFormLabel"></td> 
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Pre-Operatives (In Cr)</td>
+                                                                                    <td><input type="text" class="" id="colFormLabel"></td> 
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Margin for Working Capital (In Cr)</td>
+                                                                                    <td><input type="text" class="" id="colFormLabel"></td> 
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Total Of Investment (In Cr)</td>
+                                                                                    <td><input type="text" class="" id="colFormLabel"></td> 
+                                                                                </tr>
+                                                                               
+                                                                            </tbody>
+                                                                        </table>                             
+                                                </div>
+                                            </div>
+                                        </div>
+                                     
+                                        <div class="col-md-12">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Plant and Machinery (In Cr)
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <table class="table">
+                                                        <tbody>
+                                                                                <tr>
+                                                                                    <td rowspan="3" style="width: 22%;">Plant and Machinery (In Cr)</td>
+                                                                                    <td style="padding-left: 25px;">Value of plant and machinery to be imported or of imported origin (In Lacs)</td>
+                                                                                    <td><input type="number" class="" id="colFormLabel"></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td style="width: 53%;">Value of plant and machinery of Indigenous origin (In Lacs)</td>
+                                                                                    <td><input type="number" class="" id="colFormLabel"></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td style="width: 53%;">Is Completed?</td>
+                                                                                    <td><div class="col-md-4 d-flex">
+                                                                                            <div class="form-check form-check-inline">
+                                                                                                <input class="form-check-input" type="radio" name="option" id="yesOption" value="">
+                                                                                                <label class="form-check-label" for="yesOption">Yes</label>
+                                                                                            </div>
+                                                                                            <div class="form-check form-check-inline">
+                                                                                                <input class="form-check-input" type="radio" name="option" id="noOption" value="">
+                                                                                                <label class="form-check-label" for="noOption">No</label>
+                                                                                            </div>
+                                                                                        </div></td>
+                                                                                </tr>   
+                                                        </tbody>
+                                                    </table>                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Raw Material Required for Production / Quantity and Value of Raw Materials Including Hops
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                     <table class="table">
+                                                        <tbody>
+                                                                                <tr>
+                                                                                    <td rowspan="9" style="width: 22%;">Raw Material Required for <br>Production / Quantity and Value <br>of Raw MaterialsIncluding Hops</td>
+                                                                                    <td style="padding-left: 25px;">Quantity of Raw Material to be Imported or of Imported Origin (In Metric Ton)</td>
+                                                                                    <td><input type="text" class="" id="colFormLabel"></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Value of Raw Material to be Imported or of Imported Origin (In Lacs)</td>
+                                                                                    <td><input type="text" class="" id="colFormLabel"></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Quantity of Raw Material of Indigenous Origin (In Metric Ton)</td>
+                                                                                    <td><input type="text" class="" id="colFormLabel"></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Value of Raw Material of Indigenous Origin (In Lacs)</td>
+                                                                                    <td><input type="text" class="" id="colFormLabel"></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Quantity of Barley/Malt Required Per Year in the Manufacture of Beer (In Metric Ton)</td>
+                                                                                    <td><input type="text" class="" id="colFormLabel"></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Value of Barley/Malt Required Per Year in the Manufacture of Beer (In Lacs)</td>
+                                                                                    <td><input type="text" class="" id="colFormLabel"></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Weather it is Proposed to Procure Barley/Malt or Hops etc, from Private Sources</td>
+                                                                                    <td><div class="col-md-4 d-flex">
+                                                                                            <div class="form-check form-check-inline">
+                                                                                                <input class="form-check-input" type="radio" name="option" id="yesOption3" value="">
+                                                                                                <label class="form-check-label" for="yesOption3">Yes</label>
+                                                                                            </div>
+                                                                                            <div class="form-check form-check-inline">
+                                                                                                <input class="form-check-input" type="radio" name="option" id="noOption4" value="">
+                                                                                                <label class="form-check-label" for="noOption4">No</label>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                 <tr>
+                                                                                    <td>Without the Aid of the Government</td>
+                                                                                    <td><div class="col-md-4 d-flex">
+                                                                                            <div class="form-check form-check-inline">
+                                                                                                <input class="form-check-input" type="radio" name="option" id="yesOption5" value="">
+                                                                                                <label class="form-check-label" for="yesOption5">Yes</label>
+                                                                                            </div>
+                                                                                            <div class="form-check form-check-inline">
+                                                                                                <input class="form-check-input" type="radio" name="option" id="noOption6" value="">
+                                                                                                <label class="form-check-label" for="noOption6">No</label>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                 <tr>
+                                                                                    <td>Capacity of Brewery (HLPA)</td>
+                                                                                    <td><input type="text" class="" id="colFormLabel"></td>
+                                                                                </tr>
+                                                        </tbody>
+                                                    </table>                          
+                                                </div>
+                                            </div>
+                                        </div>
+                                       
+                                       
+                                        <div class="col-md-12">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Water and power requirements
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                     <table class="table">
+                                                        <tbody>
+                                                                                <tr>
+                                                                                    <td rowspan="5" style="width: 22%;">Water and power requirements</td>
+                                                                                    <td style="padding-left: 25px; width: 53%;">Quantity of Water (In Lacs-Litres)</td>
+                                                                                    <td><input type="number" class="" id="colFormLabel"></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Quantity of Power (MWH)</td>
+                                                                                    <td><input type="number" class="" id="colFormLabel"></td>
+                                                                                </tr>
+                                                                                  <tr>
+                                                                                    <td>Particulars of requirements</td>
+                                                                                    <td><input type="number" class="" id="colFormLabel"></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Weather Necessary Permission has been Secured</td>
+                                                                                    <td><div class="col-md-4 d-flex">
+                                                                                            <div class="form-check form-check-inline">
+                                                                                                <input class="form-check-input" type="radio" name="option" id="yesOption7" value="">
+                                                                                                <label class="form-check-label" for="yesOption7">Yes</label>
+                                                                                            </div>
+                                                                                            <div class="form-check form-check-inline">
+                                                                                                <input class="form-check-input" type="radio" name="option" id="noOption8" value="">
+                                                                                                <label class="form-check-label" for="noOption8">No</label>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>State Weather the Quality of Water Available is Fit for the Manufacture of Wine</td>
+                                                                                    <td><div class="col-md-4 d-flex">
+                                                                                            <div class="form-check form-check-inline">
+                                                                                                <input class="form-check-input" type="radio" name="option" id="yesOption9" value="">
+                                                                                                <label class="form-check-label" for="yesOption9">Yes</label>
+                                                                                            </div>
+                                                                                            <div class="form-check form-check-inline">
+                                                                                                <input class="form-check-input" type="radio" name="option" id="noOption10" value="">
+                                                                                                <label class="form-check-label" for="noOption10">No</label>
+                                                                                            </div>
+                                                                                        </div></td>
+                                                                                </tr>
+                                                        </tbody>
+                                                    </table>                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Process
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <table class="table">
+                                                        <tbody>
+                                                                                <tr>
+                                                                                    <td rowspan="3" style="width: 22%;">Process</td>
+                                                                                    <td style="padding-left: 25px; width:53%;">Brief Process of Manufacture</td>
+                                                                                    <td><input type="text" class="" id="colFormLabel"></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Standard and quantity of products proposed to be manufactured</td>
+                                                                                    <td><input type="text" class="" id="colFormLabel"></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Technical Assistance - Weather any foreign collaboration or know-how is <br>envisaged and if so, is the foreign exchange Involved</td>
+                                                                                    <td><div class="col-md-4 d-flex">
+                                                                                            <div class="form-check form-check-inline">
+                                                                                                <input class="form-check-input" type="radio" name="option" id="yesOption11" value="">
+                                                                                                <label class="form-check-label" for="yesOption11">Yes</label>
+                                                                                            </div>
+                                                                                            <div class="form-check form-check-inline">
+                                                                                                <input class="form-check-input" type="radio" name="option" id="noOption12" value="">
+                                                                                                <label class="form-check-label" for="noOption12">No</label>
+                                                                                            </div>
+                                                                                        </div></td>
+                                                                                </tr>
+                                                                            
+                                                        </tbody>
+                                                    </table>                         
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Forecast Assistance 
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                     <table class="table">
+                                                        <tbody>
+                                                                                <tr>
+                                                                                    <td rowspan="5" style="width: 22%;">Forecast Assistance</td>
+                                                                                    <td style="padding-left: 25px; width:53%;">Time Required to Secure Land, Building and Other Accommodation<br> after Licence in form of B20 is Issued (In Months)</td>
+                                                                                    <td><input type="number" class="" id="colFormLabel"></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Time Required Fetching Machinery and Starting Production after the <br>Licence is Granted (In Months)</td>
+                                                                                    <td><input type="number" class="" id="colFormLabel"></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Items Of Manufacture</td>
+                                                                                    <td><input type="text" class="" id="colFormLabel"></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Annual Capacity (HLPA)</td>
+                                                                                    <td><input type="number" class="" id="colFormLabel"></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Estimated Annual Production (HLPA)</td>
+                                                                                    <td><input type="number" class="" id="colFormLabel"></td>
+                                                                                </tr>
+                                                        </tbody>
+                                                    </table>                           
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Employment Potential
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <table class="table">
+                                                        <tbody>
+                                                                                <tr>
+                                                                                    <td rowspan="5" style="width: 22%;">Employment Potential</td>
+                                                                                    <td style="padding-left: 25px;width:53%;">Supervisory</td>
+                                                                                    <td><input type="number" class="" id="colFormLabel"></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Skilled</td>
+                                                                                    <td><input type="number" class="" id="colFormLabel"></td>
+                                                                                </tr>
+                                                                                  <tr>
+                                                                                    <td>Unskilled</td>
+                                                                                    <td><input type="number" class="" id="colFormLabel"></td>
+                                                                                </tr>
+                                                                                  <tr>
+                                                                                    <td>Any Special Facilities required from the Government</td>
+                                                                                    <td><input type="text" class="" id="colFormLabel"></td>
+                                                                                </tr>
+                                                                                  <tr>
+                                                                                    <td>Special Features, if any of the scheme</td>
+                                                                                    <td><input type="text" class="" id="colFormLabel"></td>
+                                                                                </tr>
+                                                        </tbody>
+                                                    </table>                                     
+                                                </div>
+                                            </div>
+                                        </div>
+                                          
+                                       
+                                 
+                                    </div>
+                                </fieldset>
+                               
+                                       
+                                
+                             
+
+                                                        <fieldset class="scheduler-border">
+                                    <legend class="scheduler-border text-danger">
+                                        Attachments
+                                    </legend>
+                                    <div class="row">
+
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                 NOC from Pollution Control Board UP (PDF, upto 2 MB)
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                   <input type="file" width="100%">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                             NOC from Ministry of Environment and Climate Change (PDF, upto 2 MB)
+
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="file" width="100%">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                            No Dues Certificate by DM Office (PDF, upto 2 MB)
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="file" width="100%">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                            Ministry of Industries registration certificate/application (PDF, upto 2 MB) 
+
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="file" width="100%">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                            Other Document (PDF, up to 2 MB)
+
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="file" width="100%">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                             No. of days in Fermentation Cycle Period (PDF, upto 2 MB)
+
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="file" width="100%">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                            Whether industry is located in ganga basin or not?
+
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                   <div class="form-check form-check-inline">
+                                                                                                <input class="form-check-input" type="radio" name="option" id="yesOption13" value="">
+                                                                                                <label class="form-check-label" for="yesOption13">Yes</label>
+                                                                                            </div>
+                                                                                            <div class="form-check form-check-inline">
+                                                                                                <input class="form-check-input" type="radio" name="option" id="noOption14" value="">
+                                                                                                <label class="form-check-label" for="noOption14">No</label>
+                                                                                            </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                             NOC from Fire Department (PDF, up to 2 MB)
+
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="file" width="100%">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                             Blue Print Showing all building/Plant/Machinery with Longitude and Latitude of Site of Proposed Brewery (PDF, upto 2 MB)
+
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="file" width="100%">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                             Copy of Blueprint of Plan and elevation of Fermentation Section (PDF, upto 2 MB)
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="file" width="100%">
+                                                </div>
+                                            </div>
+                                        </div>
+                                         <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                             Blueprint of Plan and elevation (PDF, upto 2 MB)
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="file" width="100%">
+                                                </div>
+                                            </div>
+                                        </div>
+                                         
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                             GSTIN of the Unit
+
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="" id="colFormLabel">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                             GST Registration Certificate (PDF, upto 2 MB)
+
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="file" width="100%">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                             Copy of MOA of the Company with List of Director (PDF, upto 2 MB)
+
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="file" width="100%">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                             Detailed Document of Plants and Machineries in form Prescribed by Excise Department (PDF, upto 2 MB)
+
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="file" width="100%">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                             Document Depicting Flow Diagram of Each and Every Section <br>(PDF, upto 2 MB)
+
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="file" width="100%">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                             Document Detailing the Land, Where Plant is to be Installed <br>(PDF, upto 2 MB)
+
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="file" width="100%">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                             Document Detailing Utility of Brewery with Blue Print <br>(PDF, upto 2 MB)
+
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="file" width="100%">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                             Document for Calculation of Capacity of Brewery on the Basis of Fermentation House (PDF, upto 2 MB)
+
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="file" width="100%">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                            Notarized Affidavit (Eligibility) Declaring that No Government Dues are Pending and Not Penalized in Cognizant Offense (PDF, upto 2 MB)
+
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="file" width="100%">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                             PAN No. of the unit
+
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="" id="colFormLabel">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                             Unit PAN Document (PNG/JPEG/PDF, upto 2 MB)
+
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="file" width="100%">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                             Select ITR
+
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <select class="form-select">
+                                                        <option value="">--Select--</option>  
+                                                        <option value="">Assesment Year 2022-2023 - ITR</option>
+                                                        <option value="">Assesment Year 2023-2024 - ITR</option>
+                                                        <option value="">Assesment Year 2024-2025 - ITR</option>
+                                                        <option value="">Others</option>          
+                                                     </select>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                             Upload ITR (PDF, upto 2 MB)
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="file" width="100%">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                 
+                                    </div>
+                                </fieldset>
+                                               <fieldset class="scheduler-border">
+                                    <legend class="scheduler-border text-danger">
+                                      Site details - Geographical Info
+                                    </legend>
+                                    <div class="row">
+
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Latitude
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="number" class="" id="colFormLabel">                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Longitude
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="number" class="" id="colFormLabel">                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                East
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <textarea class="form-control" id="colFormLabel" placeholder="" style="height: 100px !important; width: 98%; margin-left: 10px !important;"></textarea>                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                         <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                West
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <textarea class="form-control" id="colFormLabel" placeholder="" style="height: 100px !important; width: 98%; margin-left: 10px !important;"></textarea>                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                         <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                North
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <textarea class="form-control" id="colFormLabel" placeholder="" style="height: 100px !important; width: 98%; margin-left: 10px !important;"></textarea>                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                         <div class="col-md-6">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                South
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <textarea class="form-control" id="colFormLabel" placeholder="" style="height: 100px !important; width: 98%; margin-left: 10px !important;"></textarea>                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                         
+                                    </div>
+                                </fieldset>
+                                <fieldset class="scheduler-border">
+                                    <legend class="scheduler-border text-danger">
+                                       Premises Photos
+                                    </legend>
+                                    <div class="row">
+
+                                        <div class="col-md-12">
+                                            <div class="form-group row">
+                                                <!--<label class="col-form-label required">
+                                                Sr. No.
+                                                </label>-->
+                                                <div class="col-lg-12 d-flex">
+                                                    <table class="table">
+                                                                            <thead class="thead-light">
+                                                                                <tr>
+                                                                                    <th scope="col">SI. No.</th>
+                                                                                    <th scope="col">Premises Photo (PNG/JPG/JPEG, up to 2 MB)</th>
+                                                                                    <th scope="col">Premises Description</th>
+                                                                                     <th scope="col">Action</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <th scope="row">1</th>
+                                                                                    <td><input type="file" class="" id="colFormLabel"></td>
+                                                                                    <td><input type="text" class="" id="colFormLabel"></td>
+                                                                                    <td><button type="button" class="btn btn-success btn-sm">+ Action</button></td>
+                                                                                </tr>
+                                                                                
+                                                                            </tbody>
+                                                                        </table>                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </fieldset>
+                                 <fieldset class="scheduler-border">
+                                    <legend class="scheduler-border text-danger">
+                                      Bank Details
+                                    </legend>
+                                    <div class="row">
+
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Bank Account Number
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="number" class="" id="colFormLabel">                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Bank IFSC
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="" id="colFormLabel">                     
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Bank Name
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="" id="colFormLabel">                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 mt-3">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Bank Address
+                                                </label>
+                                                <div class="col-lg-12 d-flex mt-1">
+                                                    <input type="text" class="" id="colFormLabel">                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Upload Cancel Cheque <br>(PNG/JPEG/PDF, upto 2 MB)
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                   <input type="file" width="100%">                      
+                                                </div>
+                                            </div>
+                                        </div>
+                                         
+                                    </div>
+                                </fieldset>
+                                <fieldset class="scheduler-border">
+                                    <legend class="scheduler-border text-danger">
+                                      License Fee
+                                    </legend>
+                                    <div class="row">
+
+                                           <div class="col-md-4">
+                                            <div class="form-group row">
+                                                <label class="col-form-label required">
+                                                Licence Fee
+                                                </label>
+                                                <div class="col-lg-12 d-flex">
+                                                    <input type="text" class="form-control" id="col-form-label" readonly>                   
+                                                </div>
+                                            </div>
+                                        </div>
+                                         
+                                    </div>
+                                </fieldset>
+                                <fieldset class="scheduler-border">
+                                    <legend class="scheduler-border text-danger">
+                                      Applicant Consent
+                                    </legend>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group row">
+                                                <!--<label class="col-form-label required">
+                                                 Applicant Consent
+                                                </label>-->
+                                                <div class="col-lg-12 d-flex">
+                                                                        <div class="form-check">
+                                                                            <input type="checkbox"
+                                                                                class="form-check-input" id="option1"
+                                                                                value="Application Software">
+                                                                            <label class="form-check-label"
+                                                                                for="option1">I hereby declare that the information provided above is true and correct to the best of my knowledge and belief. I fully understand the consequences of giving false information. If the information/Affidavit uploaded found to be false in future, I shall be liable for prosecution and punishment under Indian Penal Code and/or any other law applicable thereto.<br>
+I hereby declare that I shall abide by the United Provinces Excise Act 1910 and the relevant rules made there under. The orders/directions issued by Excise Commissioner in this behalf from time to time.</label>
+                                                                        </div>                        
+                                                </div>
+                                            </div>
+                                        </div>
+                                         
+                                    </div>
+                                </fieldset>
+
+                                                    </fieldset>
+                                                    <div class="row mt-3">
+                                                        <div class="col-md-12">
+                                                            <div class="form-group d-flex justify-content-center">
+                                                                <button type="button"
+                                                                    class="btn btn-clear btn-sm mr-2">Clear All
+                                                                </button>
+                                                                <button type="submit"
+                                                                    class="btn btn-primary btn-sm mr-2">Save</button>
+                                                                <button type="button"
+                                                                    class="btn btn-danger btn-sm mr-2">Previous</button>
+                                                                <button type="button"
+                                                                    class="btn btn-success btn-sm">Next</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- [ Main Content ] end -->
+                                <!-- [ Main Content ] start -->
+                                <!-- [ Main Content ] end -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="assets/js/vendor-all.min.js"></script>
+        <script src="assets/js/plugins/bootstrap.min.js"></script>
+        <script src="assets/js/pcoded.min.js"></script>
+        <!-- prism Js -->
+        <script src="assets/js/plugins/prism.js"></script>
+        <script src="assets/js/horizontal-menu.js"></script>
+        <script>
+            (function () {
+                if ($('#layout-sidenav').hasClass('sidenav-horizontal') || window.layoutHelpers.isSmallScreen()) {
+                    return;
+                }
+                try {
+                    window.layoutHelpers._getSetting("Rtl")
+                    window.layoutHelpers.setCollapsed(
+                        localStorage.getItem('layoutCollapsed') === 'true',
+                        false
+                    );
+                } catch (e) { }
+            })();
+            $(function () {
+                $('#layout-sidenav').each(function () {
+                    new SideNav(this, {
+                        orientation: $(this).hasClass('sidenav-horizontal') ? 'horizontal' : 'vertical'
+                    });
+                });
+                $('body').on('click', '.layout-sidenav-toggle', function (e) {
+                    e.preventDefault();
+                    window.layoutHelpers.toggleCollapsed();
+                    if (!window.layoutHelpers.isSmallScreen()) {
+                        try {
+                            localStorage.setItem('layoutCollapsed', String(window.layoutHelpers.isCollapsed()));
+                        } catch (e) { }
+                    }
+                });
+            });
+            $(document).ready(function () {
+                $("#pcoded").pcodedmenu({
+                    themelayout: 'horizontal',
+                    MenuTrigger: 'hover',
+                    SubMenuTrigger: 'hover',
+                });
+                // Initialize all tooltips
+                var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+                var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                    return new bootstrap.Tooltip(tooltipTriggerEl)
+                });
+            });
+
+        </script>
+        <script src="assets/js/analytics.js"></script>
+        <script src="assets/wizards/vendor/jquery/jquery.min.js"></script>
+        <script src="assets/wizards/js/bootstrap.bundle.js"></script>
+        <script src="assets/wizards/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+        <script src="assets/wizards/vendor/jquery-validation/dist/additional-methods.min.js"></script>
+        <script src="assets/wizards/vendor/jquery-steps/jquery.steps.min.js"></script>
+        <script src="assets/wizards/js/main.js"></script>
+</body>
+
+</html>
